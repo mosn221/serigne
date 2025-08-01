@@ -126,3 +126,13 @@
   background: var(--yellow-accent);
   text-decoration: none;
 }
+
+.footer-mail {
+  color: #FFC300;
+  text-decoration: none;
+}
+
+.footer-mail:hover {
+  text-decoration: underline;
+}
+
