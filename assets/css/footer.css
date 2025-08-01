@@ -128,11 +128,14 @@
 }
 
 .footer-mail {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-mail:hover {
   color: #FFC300;
   text-decoration: none;
 }
 
-.footer-mail:hover {
-  text-decoration: underline;
-}
 
