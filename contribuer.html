@@ -86,8 +86,12 @@
       <!-- Rejoindre un projet -->
       <div class="tab-pane fade show active" id="projet">
         <h3>Rejoindre un projet existant</h3>
-        <form name="formulaire-projet" method="POST" data-netlify="true" action="merci.html">
+          <form name="formulaire-projet" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="merci.html">
+          <input type="hidden" name="form-name" value="formulaire-projet">
+          <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
           <input type="hidden" name="type_contribution" value="rejoindre">
+
+            
           <div class="mb-3">
             <label for="nom-rejoindre">Nom</label>
             <input type="text" class="form-control" id="nom-rejoindre" name="nom" required>
@@ -121,8 +125,11 @@
       <!-- Proposer un projet collaboratif -->
       <div class="tab-pane fade" id="collaboratif">
         <h3>Proposer un projet collaboratif</h3>
-        <form name="formulaire-collaboratif" method="POST" enctype="multipart/form-data" data-netlify="true" action="merci.html">
-          <input type="hidden" name="type_contribution" value="collaboratif">
+        <form name="formulaire-collaboratif" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="merci.html">
+  <input type="hidden" name="form-name" value="formulaire-collaboratif">
+  <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+  <input type="hidden" name="type_contribution" value="collaboratif">
+          
           <div class="mb-3">
             <label for="nom-collaboratif">Nom</label>
             <input type="text" class="form-control" id="nom-collaboratif" name="nom" required>
@@ -172,8 +179,10 @@
       <!-- Devenir partenaire -->
       <div class="tab-pane fade" id="partenariat">
         <h3>Soumettre un partenariat</h3>
-        <form name="formulaire-partenariat" method="POST" data-netlify="true" action="merci.html">
-          <input type="hidden" name="type_contribution" value="partenaire">
+        <form name="formulaire-partenariat" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="merci.html">
+  <input type="hidden" name="form-name" value="formulaire-partenariat">
+  <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+  <input type="hidden" name="type_contribution" value="partenaire">
           <div class="mb-3">
             <label for="nom-partenaire">Nom</label>
             <input type="text" class="form-control" id="nom-partenaire" name="nom" required>
