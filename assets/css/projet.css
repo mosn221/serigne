@@ -177,7 +177,7 @@
   white-space: nowrap;
 }
 
-.page-projet .btn-social {
+.page-projet .btn-share {
   background-color: #007C91;
   color: #ffffff;
   border: none;
@@ -187,9 +187,9 @@
   padding: 8px 12px;
 }
 
-.page-projet .btn-social:hover,
-.page-projet .btn-social:focus,
-.page-projet .btn-social:active {
+.page-projet .btn-share:hover,
+.page-projet .btn-share:focus,
+.page-projet .btn-share:active {
   background-color: var(--yellow-accent);
   color: var(--default-color);
 }
