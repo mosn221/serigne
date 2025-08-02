@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://pycodegroup.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services -->
+  <url><loc>https://pycodegroup.com/services/open-data.html</loc></url>
+  <url><loc>https://pycodegroup.com/services/innovation.html</loc></url>
+  <url><loc>https://pycodegroup.com/services/digitalisation.html</loc></url>
+  <url><loc>https://pycodegroup.com/services/formation.html</loc></url>
+
+  <!-- Projets -->
+  <url><loc>https://pycodegroup.com/projets/lekkantu.html</loc></url>
+  <url><loc>https://pycodegroup.com/projets/lekkantu-explorer.html</loc></url>
+  <url><loc>https://pycodegroup.com/projets/sunugoal.html</loc></url>
+  <url><loc>https://pycodegroup.com/projets/diwaanu-mashrabu.html</loc></url>
+
+  <!-- Articles -->
+  <url><loc>https://pycodegroup.com/articles/lekkantu.html</loc></url>
+  <url><loc>https://pycodegroup.com/articles/entreprenariat.html</loc></url>
+  <url><loc>https://pycodegroup.com/articles/pas-encore-ia.html</loc></url>
+
+  <!-- Contact -->
+  <url><loc>https://pycodegroup.com/contact/contribuer.html</loc></url>
+  <url><loc>https://pycodegroup.com/contact/merci.html</loc></url>
+
+  <!-- Pages légales -->
+  <url><loc>https://pycodegroup.com/legales/mentions.html</loc></url>
+  <url><loc>https://pycodegroup.com/legales/donnees.html</loc></url>
+  <url><loc>https://pycodegroup.com/legales/cookies.html</loc></url>
+  <url><loc>https://pycodegroup.com/legales/conditions.html</loc></url>
+
+</urlset>
