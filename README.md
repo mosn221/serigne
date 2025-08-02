@@ -1,13 +1,13 @@
 # PyCode Group 🌍📊
 
 **Données. Projets. Impact.**  
-Bienvenue sur le dépôt officiel du site web PyCodeGroup, une initiative dédiée à la donnée ouverte, à l'innovation locale et à l'engagement citoyen en Afrique.
+Bienvenue sur le dépôt officiel du site web PyCode Group, une initiative dédiée à la donnée ouverte, à l'innovation locale et à l'engagement citoyen en Afrique.
 
 ---
 
 ## 🚀 À propos
 
-PyCodeGroup développe des projets concrets autour de la **data**, de la **digitalisation**, de **l'open source** et de la **formation** :
+PyCode Group développe des projets concrets autour de la **data**, de la **digitalisation**, de **l'open source** et de la **formation** :
 
 - 🏟️ **SunuGoal** : plateforme pour valoriser le football local par la data
 - 🧠 **Lekkantu** : projet d'information nutritionnelle sur les produits locaux
