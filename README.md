@@ -56,6 +56,6 @@ CGU
 
 ✉️ Email : pycodegroup@gmail.com
 
-📱 WhatsApp : +221 75 631 75 91
+📱 WhatsApp : +221 75 631 05 91
 
 💼 LinkedIn : @pycodegroup
