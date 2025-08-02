@@ -1,4 +1,4 @@
-# PyCodeGroup 🌍📊
+# PyCode Group 🌍📊
 
 **Données. Projets. Impact.**  
 Bienvenue sur le dépôt officiel du site web PyCodeGroup, une initiative dédiée à la donnée ouverte, à l'innovation locale et à l'engagement citoyen en Afrique.
@@ -10,10 +10,8 @@ Bienvenue sur le dépôt officiel du site web PyCodeGroup, une initiative dédi�
 PyCodeGroup développe des projets concrets autour de la **data**, de la **digitalisation**, de **l'open source** et de la **formation** :
 
 - 🏟️ **SunuGoal** : plateforme pour valoriser le football local par la data
-- 🧠 **NutriTech** : projet d'information nutritionnelle sur les produits locaux
-- 🎤 **Mashrabu Chafi** : digitalisation des prestations religieuses à Touba
-- 🛍️ **byMadhi** : plateforme e-commerce durable
-- 🌿 **Farm&Tech**, 🧳 **GalsenTrip**... et bien plus à venir
+- 🧠 **Lekkantu** : projet d'information nutritionnelle sur les produits locaux
+- 🎤 **Diwaanu Mashrabu** : digitalisation des prestations religieuses à Touba
 
 ---
 
@@ -22,7 +20,6 @@ PyCodeGroup développe des projets concrets autour de la **data**, de la **digit
 - HTML5 / CSS3 / Bootstrap 5
 - JavaScript & Swiper.js
 - AOS (Animate On Scroll)
-- HeroBiz Template by BootstrapMade
 - Intégration future avec Django (backend)
 
 ---
@@ -57,7 +54,7 @@ CGU
 📫 Contact
 🌐 Site : pycodegroup.com
 
-✉️ Email : contact@pycodegroup.com
+✉️ Email : pycodegroup@gmail.com
 
 📱 WhatsApp : +221 75 631 75 91
 
