@@ -80,3 +80,7 @@
   }
 }
 
+select,
+select option {
+  font-family: 'Poppins', sans-serif;
+}
