@@ -97,7 +97,7 @@
 }
 
 .page-projet .page-title-blur {
-   /* Mets ici ton image */
+  background-image: url('/assets/img/projets/sunugoal.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
