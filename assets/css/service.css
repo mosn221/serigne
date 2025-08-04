@@ -49,6 +49,16 @@
   overflow: hidden;
 }
 
+.hero-section-modern-open-data {
+  background-image: url('/assets/img/services/open-data.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-section-modern::before {
   content: "";
   position: absolute;
