@@ -96,7 +96,7 @@
   opacity: 1;
 }
 
-.page-projet .page-title-blur {
+.page-projet .page-title-blur-sunugoal {
   background-image: url('/assets/img/projets/sunugoal.jpg');
   background-size: cover;
   background-position: center;
@@ -106,7 +106,48 @@
    margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
 }
 
-.page-projet .page-title-blur::before {
+
+.page-projet .page-title-blur-sunugoal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(240, 238, 233, 0.85); /* effet flouté doux */
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.page-projet .page-title-blur-lekkantu {
+  background-image: url('/assets/img/projets/lekkantu.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 80px 0 40px 0; /* plus serré en bas */
+  border-radius: 16px;
+   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
+}
+
+
+.page-projet .page-title-blur-lekkantu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(240, 238, 233, 0.85); /* effet flouté doux */
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.page-projet .page-title-blur-diwaanu-machrabu {
+  background-image: url('/assets/img/projets/diwaanu-machrabu.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 80px 0 40px 0; /* plus serré en bas */
+  border-radius: 16px;
+   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
+}
+
+
+.page-projet .page-title-blur-diwaanu-machrabu::before {
   content: '';
   position: absolute;
   inset: 0;
