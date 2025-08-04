@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Accueil -->
   <url>
     <loc>https://pycodegroup.com/</loc>
+    <lastmod>2025-08-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
@@ -17,7 +22,7 @@
   <url><loc>https://pycodegroup.com/projets/lekkantu.html</loc></url>
   <url><loc>https://pycodegroup.com/projets/lekkantu-explorer.html</loc></url>
   <url><loc>https://pycodegroup.com/projets/sunugoal.html</loc></url>
-  <url><loc>https://pycodegroup.com/projets/diwaanu-mashrabu.html</loc></url>
+  <url><loc>https://pycodegroup.com/projets/diwaanu-machrabu.html</loc></url>
 
   <!-- Articles -->
   <url><loc>https://pycodegroup.com/articles/lekkantu.html</loc></url>
