@@ -59,6 +59,26 @@
   overflow: hidden;
 }
 
+.hero-section-modern-innovation {
+  background-image: url('/assets/img/services/innovation.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section-modern-digitalisation {
+  background-image: url('/assets/img/services/digitalisation.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-section-modern::before {
   content: "";
   position: absolute;
