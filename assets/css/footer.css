@@ -124,7 +124,7 @@
 
 .footer .social-links a:hover {
   background: var(--yellow-accent);
-  color: #007C91;
+  color: var(--default-color);
   text-decoration: none;
 }
 
