@@ -1,8 +1,8 @@
 User-agent: *
 Disallow: /admin/
-Disallow: /mentions-legales
-Disallow: /politique-confidentialite
-Disallow: /donnes-personnelles
+Disallow: /mentions
+Disallow: /confidentialite
+Disallow: /donnes
 Disallow: /cookies
 
 Sitemap: https://pycodegroup.com/sitemap.xml
