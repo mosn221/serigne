@@ -4,5 +4,11 @@ Disallow: /mentions
 Disallow: /donnees
 Disallow: /conditions
 Disallow: /cookies
+Disallow: /projets/lekkantu/
+Disallow: /projets/yalistats/
+Disallow: /projets/lekkantu-explorer/
+Disallow: /projets/daaray-kurel/
+
+
 
 Sitemap: https://pycodegroup.com/sitemap.xml
