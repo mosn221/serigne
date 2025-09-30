@@ -8,72 +8,33 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Services -->
+  <!-- Activités / Services -->
   <url>
-    <loc>https://pycodegroup.com/services/open-data</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://pycodegroup.com/services/digitalisation</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://pycodegroup.com/services/formation</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://pycodegroup.com/services/innovation</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Projets -->
-  <url>
-    <loc>https://pycodegroup.com/projets/daaray-kurel</loc>
+    <loc>https://pycodegroup.com/services/open-data.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://pycodegroup.com/projets/yalistats</loc>
+    <loc>https://pycodegroup.com/services/innovation.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://pycodegroup.com/projets/lekkantu</loc>
+    <loc>https://pycodegroup.com/services/digitalisation.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://pycodegroup.com/projets/lekkantu-explorer</loc>
+    <loc>https://pycodegroup.com/services/formation.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Articles -->
+  <!-- Contribuer -->
   <url>
-    <loc>https://pycodegroup.com/articles/entreprenariat</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://pycodegroup.com/articles/lekkantu</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://pycodegroup.com/articles/pas-encore-ia</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- Page Contribuer -->
-  <url>
-    <loc>https://pycodegroup.com/contact/contribuer</loc>
+    <loc>https://pycodegroup.com/contact/contribuer.html</loc>
     <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
   </url>
 
 </urlset>
