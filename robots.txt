@@ -1,14 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /mentions
-Disallow: /donnees
-Disallow: /conditions
-Disallow: /cookies
-Disallow: /projets/lekkantu/
-Disallow: /projets/yalistats/
-Disallow: /projets/lekkantu-explorer/
-Disallow: /projets/daaray-kurel/
-
-
+Allow: /
 
 Sitemap: https://pycodegroup.com/sitemap.xml
