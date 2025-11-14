@@ -82,7 +82,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-.text-justify {
+p {
   text-align: justify;
   text-justify: inter-word;
 }
