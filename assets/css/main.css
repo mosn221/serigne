@@ -82,7 +82,10 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 /*--------------------------------------------------------------
 # Global Header
