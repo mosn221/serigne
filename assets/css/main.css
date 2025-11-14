@@ -431,3 +431,103 @@ section,
   }
 }
 
+/* ===========================
+   Section Contact - Premium
+   =========================== */
+
+.contact-section {
+  background: #F5F7FA; /* gris clair déjà utilisé sur le site */
+}
+
+.contact-panel {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.contact-kicker {
+  letter-spacing: 0.08em;
+  color: #FFC300; /* jaune solaire PyCode */
+}
+
+.contact-panel h2 {
+  color: #1A1A2E; /* bleu foncé */
+}
+
+.contact-panel p {
+  color: #4B5563; /* gris texte doux */
+}
+
+/* Bouton principal */
+.btn-contact-primary {
+  background-color: #007C91;     /* bleu pétrole */
+  color: #FFFFFF;
+  border-radius: 999px;
+  border: none;
+  padding: 0.85rem 1.4rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, 
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+.btn-contact-primary:hover,
+.btn-contact-primary:focus {
+  background-color: #005f6e;
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(0, 124, 145, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Bouton secondaire */
+.btn-contact-secondary {
+  background-color: transparent;
+  color: #007C91;
+  border-radius: 999px;
+  border: 1px solid #007C91;
+  padding: 0.85rem 1.4rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, 
+              color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+.btn-contact-secondary:hover,
+.btn-contact-secondary:focus {
+  background-color: #E0F4F7;
+  color: #005f6e;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Icônes */
+.btn-contact-primary i,
+.btn-contact-secondary i {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .contact-panel {
+    text-align: center;
+  }
+
+  .contact-panel .text-lg-end {
+    text-align: center !important;
+  }
+
+  .btn-contact-primary,
+  .btn-contact-secondary {
+    width: 100%;
+  }
+}
