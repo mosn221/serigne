@@ -48,12 +48,24 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+ <!-- Preload Google Fonts CSS -->
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap">
+
+<!-- Chargement réel des polices -->
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"> 
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
+<!-- Preload hero image (LCP) -->
+<link rel="preload"
+      as="image"
+      href="assets/img/hero-image.webp"
+      imagesrcset="assets/img/hero-image.webp 1536w"
+      imagesizes="100vw">
   <!-- Main CSS Files -->
   <link href="assets/css/index.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
