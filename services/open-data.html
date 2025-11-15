@@ -5,30 +5,30 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Données – Collecte, structuration & valorisation – PyCode Group</title>
-  <meta name="description" content="PyCode Group collecte, structure et valorise des données locales pour mieux comprendre les réalités africaines et éclairer les décisions, projets et politiques publiques.">
-  <meta name="keywords" content="données, Afrique, collecte terrain, structuration, analyse, visualisation, PyCode Group, data locale, impact, décision">
+  <title>Données – Collecte et valorisations des données africaines | PyCode Group</title>
+  <meta name="description" content="PyCode Group collecte, structure et valorise des données issues du terrain pour documenter l’Afrique et soutenir des projets utiles, durables et citoyens.">
+  <meta name="keywords" content="Open Data, Afrique, collecte de données, données locales, données ouvertes, PyCode Group, données citoyennes, data positive">
   <meta name="author" content="PyCode Group">
 
-  <!-- Canonical & hreflang -->
-  <link rel="canonical" href="https://pycodegroup.com/services/open-data.html">
-  <link rel="alternate" href="https://pycodegroup.com/services/open-data.html" hreflang="fr-fr">
-  <link rel="alternate" href="https://pycodegroup.com/services/open-data.html" hreflang="x-default">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Données – Collecte, structuration & valorisation – PyCode Group">
-  <meta property="og:description" content="Collecte terrain, structuration et visualisation de données africaines pour mieux décider et agir.">
+  <!-- Open Graph (LinkedIn, Facebook, WhatsApp) -->
+  <meta property="og:title" content="Données ouvertes & collecte terrain - PyCode Group">
+  <meta property="og:description" content="Collecter, structurer et valoriser la donnée depuis l’Afrique, au plus près du terrain.">
   <meta property="og:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
   <meta property="og:url" content="https://pycodegroup.com/services/open-data.html">
   <meta property="og:type" content="article">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Données – Collecte, structuration & valorisation – PyCode Group">
-  <meta name="twitter:description" content="Des données locales, structurées et utiles pour l’action publique, citoyenne et économique.">
+  <meta name="twitter:title" content="Données ouvertes & collecte terrain - PyCode Group">
+  <meta name="twitter:description" content="Collecter, structurer et libérer la donnée depuis l’Afrique. Pour raconter, décider, agir.">
   <meta name="twitter:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
 
-  <!-- Content Security Policy (alignée sur l’index, sans JSON-LD ici) -->
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://pycodegroup.com/services/open-data.html">
+  <link rel="alternate" href="https://pycodegroup.com/services/open-data.html" hreflang="fr-fr">
+  <link rel="alternate" href="https://pycodegroup.com/services/open-data.html" hreflang="x-default">
+
+  <!-- Content Security Policy (CSP) -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
                  script-src 'self' cdn.jsdelivr.net;
@@ -47,11 +47,11 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS -->
+  <!-- Vendor CSS Files -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!-- Main CSS Files -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/nav.css" rel="stylesheet">
   <link href="../assets/css/service.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="../index.html#hero">Bienvenue</a></li>
+          <li><a href="../index.html#hero">Bienvenue<br></a></li>
           <li><a href="../index.html#about">À propos</a></li>
           <li class="dropdown">
             <a href="../index.html#services" class="active">
@@ -98,59 +98,42 @@
   <main class="main">
 
     <!-- Hero service -->
-    <section class="service-hero service-hero-data section">
+    <section class="service-hero service-hero-data d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center gy-4">
-
           <div class="col-lg-7">
-            <p class="service-eyebrow">Service · Données</p>
-            <h1 class="service-hero-title">
-              Des données locales, structurées et utiles
+            <p class="service-kicker mb-2">Activité · Données</p>
+            <h1 class="service-hero-title mb-3">
+              Collecter, structurer et valoriser les données africaines
             </h1>
-            <p class="service-hero-lead">
-              PyCode Group vous accompagne sur toute la chaîne de la donnée :
-              collecte terrain, structuration, analyse et mise à disposition
-              responsable. Pour mieux comprendre les réalités africaines et
-              éclairer les décisions publiques, citoyennes et économiques.
+            <p class="service-hero-subtitle mb-4">
+              PyCode Group conçoit des dispositifs de collecte locale et des bases de données
+              structurées pour documenter le terrain, éclairer les décisions et soutenir des
+              projets utiles aux communautés.
             </p>
-
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <span class="service-pill"><i class="bi bi-geo-alt"></i> Collecte locale</span>
-              <span class="service-pill"><i class="bi bi-columns-gap"></i> Structuration & qualité</span>
-              <span class="service-pill"><i class="bi bi-bar-chart-line"></i> Visualisations & indicateurs</span>
-            </div>
-
-            <div class="d-flex flex-wrap gap-3">
-              <a href="../index.html#contact" class="btn btn-pycode">
-                <i class="bi bi-envelope me-2"></i> Discuter d’un besoin data
-              </a>
-              <a href="../contact/contribuer.html" class="btn btn-outline-light service-hero-secondary">
-                <i class="bi bi-ui-checks-grid me-2"></i> Proposer un projet
-              </a>
+            <!-- CTA n°1 (principal, discret) -->
+            <a href="../index.html#contact" class="btn btn-pycode">
+              <i class="bi bi-envelope me-2"></i>
+              Discuter de vos besoins en données
+            </a>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="service-hero-visual">
+              <img src="../assets/img/services/open-data.jpg"
+                   alt="Visualisation et collecte de données en Afrique"
+                   class="img-fluid rounded-4 shadow"
+                   loading="lazy">
             </div>
           </div>
-
-          <div class="col-lg-5">
-            <div class="service-hero-illustration">
-              <img
-                src="../assets/img/services/pourquoi_open-data.jpg"
-                alt="Illustration d’analyses et de données africaines"
-                class="img-fluid rounded-4 shadow"
-                loading="lazy"
-                width="1200"
-                height="800">
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
     <!-- /Hero service -->
 
     <!-- Fil d’Ariane -->
-    <section class="page-title2-blur position-relative text-center py-2">
+    <section class="service-breadcrumb-wrapper">
       <div class="container">
-        <nav class="d-flex justify-content-center" aria-label="Fil d’Ariane">
+        <nav aria-label="Fil d’Ariane" class="service-breadcrumb-nav">
           <ol class="breadcrumb bg-transparent p-0 m-0">
             <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
             <li class="breadcrumb-item"><a href="../index.html#services">Activités</a></li>
@@ -161,47 +144,125 @@
     </section>
     <!-- /Fil d’Ariane -->
 
-    <!-- Section 1 : Pourquoi travailler la donnée ? -->
+    <!-- Section 1 : Pourquoi la donnée ? -->
     <section class="section py-5">
       <div class="container section-boxed">
         <div class="row align-items-center gy-5">
           <div class="col-lg-6">
-            <h2 class="service-section-title">
-              Pourquoi travailler sérieusement la donnée ?
+            <img src="../assets/img/services/pourquoi_open-data.jpg"
+                 alt="Illustration de la dynamique de l'Open Data"
+                 class="img-fluid rounded-4 shadow"
+                 loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="service-section-title mb-3">
+              Pourquoi investir dans la donnée ?
             </h2>
             <p class="section-paragraph">
-              Dans de nombreux secteurs africains, les décisions sont encore prises avec
-              peu de visibilité : données fragmentées, fichiers dispersés, absence
-              d’historique ou d’indicateurs fiables. Nous aidons à transformer ces
-              informations brutes en un patrimoine structuré, exploitable et
-              partageable.
+              Dans de nombreux contextes africains, les données sont rares, dispersées
+              ou difficiles d’accès. Pourtant, elles sont essentielles pour documenter
+              le réel, piloter des politiques publiques, renforcer la transparence
+              ou encore imaginer de nouveaux services.
             </p>
-            <ul class="list-unstyled service-list">
-              <li>
+            <p class="section-paragraph">
+              Nous accompagnons les organisations qui souhaitent mieux comprendre
+              leur environnement, leur territoire ou leur secteur d’activité
+              à partir de données fiables, structurées et documentées.
+            </p>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2">
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
-                Mieux comprendre les réalités locales pour agir au bon endroit, au bon moment.
+                Renforcer la transparence et la redevabilité
               </li>
-              <li>
+              <li class="mb-2">
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
-                Documenter les projets et politiques pour suivre réellement leur impact.
+                Appuyer la décision publique, citoyenne ou stratégique
               </li>
-              <li>
+              <li class="mb-2">
                 <i class="bi bi-check-circle-fill text-success me-2"></i>
-                Donner de la visibilité à des sujets peu ou mal couverts par les
-                statistiques classiques.
+                Faire émerger de nouveaux usages, services et projets
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="col-lg-6">
-            <div class="service-highlight-box">
-              <p class="service-highlight-title">Une data ancrée dans le réel</p>
+    <!-- Section 2 : Nos axes d’action -->
+    <section class="section py-5 light-background" id="action">
+      <div class="container section-boxed">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 order-lg-2">
+            <img src="../assets/img/services/axe_open-data.jpg"
+                 alt="Outils numériques PyCode Group"
+                 class="img-fluid rounded-4 shadow"
+                 loading="lazy">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="service-section-title mb-3">Nos axes d’action</h2>
+            <p class="section-paragraph">
+              Notre approche combine travail de terrain, structuration technique
+              et restitution claire. Chaque projet est conçu avec une vision
+              d’impact, de durabilité et de respect des contextes locaux.
+            </p>
+            <ul class="list-unstyled mt-3 service-bullets">
+              <li class="mb-3">
+                <span class="service-bullet-icon">
+                  <i class="bi bi-clipboard-data"></i>
+                </span>
+                <div>
+                  <strong>Collecte locale & terrain</strong><br>
+                  Conception de dispositifs de collecte adaptés : enquêtes,
+                  relevés, suivi de matchs, observatoires thématiques…
+                </div>
+              </li>
+              <li class="mb-3">
+                <span class="service-bullet-icon">
+                  <i class="bi bi-diagram-3"></i>
+                </span>
+                <div>
+                  <strong>Structuration & qualité</strong><br>
+                  Modélisation des bases de données, normalisation, nettoyage,
+                  documentation et suivi dans le temps.
+                </div>
+              </li>
+              <li class="mb-3">
+                <span class="service-bullet-icon">
+                  <i class="bi bi-bar-chart-line"></i>
+                </span>
+                <div>
+                  <strong>Valorisation & partage</strong><br>
+                  Tableaux de bord, exports, supports de communication ou
+                  plateformes dédiées, selon les besoins et contraintes.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 : Encadré “Ce que nous ne sommes pas” (positionnement) -->
+    <section class="section py-5">
+      <div class="container section-boxed">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="service-note-panel">
+              <h3 class="mb-3">Un travail sur les données, pas une simple mise à disposition de fichiers</h3>
+              <p class="mb-2">
+                PyCode Group n’est pas une place de marché de données ni une
+                plateforme d’open data généraliste. Nous travaillons
+                principalement sur :
+              </p>
+              <ul class="mb-3">
+                <li>des projets ciblés, co-construits avec nos partenaires ;</li>
+                <li>des données collectées ou consolidées par nos soins ;</li>
+                <li>une logique de service : conception, structuration, restitution.</li>
+              </ul>
               <p class="mb-0">
-                Nos projets partent du terrain : feuille de match, produit de
-                consommation, événement culturel, initiative citoyenne… Nous
-                co-construisons les dispositifs de collecte avec vos équipes, vos
-                partenaires ou vos communautés, en gardant toujours en tête :
-                simplicité, fiabilité et respect des personnes.
+                Selon les projets, certaines données peuvent être ouvertes,
+                partagées ou restreintes. L’important pour nous : qu’elles soient
+                utiles, contextualisées et produites de manière responsable.
               </p>
             </div>
           </div>
@@ -209,94 +270,25 @@
       </div>
     </section>
 
-    <!-- Section 2 : Comment nous travaillons -->
-    <section class="section py-5 light-background" id="action">
+    <!-- CTA final (unique, discret) -->
+    <section class="section py-5 text-center">
       <div class="container section-boxed">
-        <div class="row gy-5 align-items-start">
-          <div class="col-lg-5">
-            <h2 class="service-section-title">
-              Comment nous travaillons avec vos données
-            </h2>
-            <p class="section-paragraph">
-              Nous intervenons sur l’ensemble de la chaîne de valeur de la donnée,
-              avec une approche progressive et pragmatique, adaptée à vos ressources
-              et à votre contexte.
-            </p>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="row gy-4 service-card-grid">
-
-              <div class="col-md-6">
-                <article class="service-card h-100">
-                  <h3>1. Collecte & structuration</h3>
-                  <p>
-                    Définition des variables, conception de gabarits de collecte,
-                    saisie terrain, nettoyage, normalisation et mise en base
-                    (tableurs ou bases de données).
-                  </p>
-                </article>
-              </div>
-
-              <div class="col-md-6">
-                <article class="service-card h-100">
-                  <h3>2. Analyse & visualisation</h3>
-                  <p>
-                    Construction d’indicateurs, tableaux de bord, cartes et
-                    visualisations pour suivre l’évolution d’un secteur, d’un
-                    territoire ou d’un projet dans le temps.
-                  </p>
-                </article>
-              </div>
-
-              <div class="col-md-6">
-                <article class="service-card h-100">
-                  <h3>3. Diffusion responsable</h3>
-                  <p>
-                    Mise à disposition des données sous des formats adaptés
-                    (exports, API, visualisations publiques) lorsque cela est
-                    possible et pertinent, dans le respect des droits et des
-                    personnes.
-                  </p>
-                </article>
-              </div>
-
-              <div class="col-md-6">
-                <article class="service-card h-100">
-                  <h3>4. Accompagnement & culture data</h3>
-                  <p>
-                    Sensibilisation, documentation et transfert de compétences
-                    pour installer une culture de la donnée durable dans votre
-                    organisation ou votre communauté.
-                  </p>
-                </article>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3 : Appel à action simple -->
-    <section class="section py-5">
-      <div class="container text-center">
-        <h2 class="service-section-title mb-3">
-          Vous avez un besoin data, même encore flou ?
-        </h2>
-        <p class="section-paragraph mx-auto mb-4" style="max-width: 640px;">
-          Nous pouvons vous aider à clarifier les enjeux, cadrer un dispositif
-          de collecte ou valoriser des données que vous possédez déjà.
+        <h2 class="mb-3">Vous avez un besoin de données sur un territoire ou un secteur ?</h2>
+        <p class="section-paragraph mb-4">
+          Nous pouvons vous aider à concevoir un dispositif de collecte, une base de données
+          ou un observatoire adapté à vos enjeux.
         </p>
-        <a class="btn btn-pycode" href="../index.html#contact">
-          <i class="bi bi-envelope"></i> Parler d’un projet avec PyCode Group
+        <!-- CTA n°2 (final) -->
+        <a href="../index.html#contact" class="btn btn-pycode">
+          <i class="bi bi-envelope me-2"></i>
+          Nous présenter votre projet
         </a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer (identique à l’index, avec chemins relatifs) -->
+  <!-- Footer (identique à index) -->
   <footer id="footer" class="footer dark-background">
 
     <div class="footer-top">
@@ -353,39 +345,3 @@
 
     <!-- Bas du footer -->
     <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row
-           justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © <strong><span>PyCode Group</span></strong> 2025
-          </div>
-          <div class="credits small text-muted">
-            Tous droits réservés
-          </div>
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-          <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Vendor JS -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-
-  <!-- Main JS -->
-  <script src="../assets/js/main.js" defer></script>
-
-</body>
-                                           </html>
