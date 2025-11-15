@@ -401,3 +401,11 @@
     font-size: 1.25rem;
   }
 }
+
+/* Justification institutionnelle pour les pages de contenu */
+.service-details-page p,
+.service-details-page li,
+.service-details-page .section-paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+}
