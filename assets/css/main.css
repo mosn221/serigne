@@ -351,6 +351,9 @@ section,
   text-align: justify;
 }
 
+#about p {
+  text-align: justify;
+}
 
 /* ===========================
    Domaines d'intervention
