@@ -4,10 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>PyCode Group – Data, Innovation & Projets à impact pour l’Afrique</title>
   <meta name="description" content="PyCode Group développe des projets tech et open data à impact positif en Afrique : transparence, football, nutrition, digitalisation.">
-  <meta name="keywords" content="PyCode Group, Afrique, open data, tech, impact, projets numériques, innovation">
-  <meta name ="author" content="PyCode Group" />
+  <meta name="keywords" content="PyCode Group, Afrique, open data, tech, impact, lekkantu, jomstats, projets numériques, innovation">
+  <meta name="author" content="PyCode Group">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pycodegroup.com/">
+
+  <!-- Hreflang -->
+  <link rel="alternate" href="https://pycodegroup.com/" hreflang="fr-fr">
+  <link rel="alternate" href="https://pycodegroup.com/" hreflang="x-default">
 
   <!-- Open Graph (réseaux sociaux) -->
   <meta property="og:title" content="PyCode Group – Data, Innovation & Projets pour l’Afrique">
@@ -23,7 +31,15 @@
   <meta name="twitter:image" content="https://pycodegroup.com/assets/img/hero-image.png">
 
   <!-- Content Security Policy (CSP) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src * data:; connect-src 'self'; object-src 'none';" />
+  <!-- ⚠ Pour permettre le JSON-LD inline, on ajoute 'unsafe-inline' -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
+                 style-src 'self' cdn.jsdelivr.net fonts.googleapis.com;
+                 font-src 'self' fonts.gstatic.com;
+                 img-src * data:;
+                 connect-src 'self';
+                 object-src 'none';">
 
   <!-- Favicons -->
   <link href="assets/img/Logo-Favicon.png" rel="icon">
@@ -38,11 +54,43 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS Files -->
   <link href="assets/css/index.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/nav.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
+
+  <!-- JSON-LD : Organisation + Site Web -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "PyCode Group",
+        "url": "https://pycodegroup.com/",
+        "logo": "https://pycodegroup.com/assets/img/logo-header.svg",
+        "description": "PyCode Group développe des projets tech et open data à impact positif en Afrique : transparence, football, nutrition, digitalisation.",
+        "email": "mailto:pycodegroup@gmail.com",
+        "sameAs": [
+          "https://x.com/pycodegroup",
+          "https://instagram.com/pycodegroup",
+          "https://linkedin.com/company/pycodegroup"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "PyCode Group",
+        "url": "https://pycodegroup.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pycodegroup.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="index-page">
@@ -87,16 +135,26 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section" aria-label="Section Héros - Introduction">
 
-      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative">
-        <img src="assets/img/hero-image.webp" class="img-fluid animated" alt="Illustration de projets data et innovation en Afrique"  loading ="eager">
-        <h1>Des données pour agir,<span> des projets pour impacter</span></h1>
-        <p class="mb-4">La data au service de l’innovation, du développement local et de la communauté</p>
-        <div class="d-flex">
-          <a href="#about" class="btn-get-started scrollto">🔍 En savoir plus</a>
-        </div>
-      </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative">
+    <img src="assets/img/hero-image.webp"
+         class="img-fluid animated"
+         alt="Illustration data et innovation en Afrique"
+         loading="eager"
+         width="1536"
+         height="1024">
+    <h1>
+      PyCode Group : des données pour agir,<span> des projets pour impacter l’Afrique</span>
+    </h1>
+    <p class="mb-4">
+      Data, innovation et open data au service de projets concrets, utiles et ancrés dans les réalités africaines.
+    </p>
+    <div class="d-flex">
+      <a href="#about" class="btn-get-started scrollto">🔍 En savoir plus</a>
+    </div>
+  </div>
 
-    </section><!-- /Hero Section -->
+    </section>
+    <!-- /Hero Section -->
 
      <!-- About Section -->
     
