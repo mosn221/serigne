@@ -274,9 +274,8 @@
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #FFC300; /* jaune PyCode */
+  color: #007C91; /* bleu pétrole institutionnel */
 }
-
 /* Titres sections service */
 .service-section .section-title {
   font-size: 1.6rem;
