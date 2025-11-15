@@ -402,6 +402,50 @@
   }
 }
 
+/* ============================
+   HERO — Page Innovation
+   ============================ */
+
+.service-hero-innovation {
+  background: radial-gradient(
+    circle at top left,
+    #00BFA6 0%,
+    #0090a4 35%,
+    #1A1A2E 100%
+  );
+  color: #ffffff;
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-hero-innovation .service-hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.service-hero-innovation .service-hero-lead {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 90%;
+}
+
+.service-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FFC300;
+  margin-bottom: 0.75rem;
+}
+
+.service-hero-illustration img {
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
 /* Justification institutionnelle pour les pages de contenu */
 .service-details-page p,
 .service-details-page li,
