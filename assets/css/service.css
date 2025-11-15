@@ -126,3 +126,127 @@
   margin-bottom: 40px; /* espace sous la bannière */
 }
 
+/* ===========================
+   Hero - Activité Données
+   =========================== */
+
+.service-hero {
+  background: linear-gradient(135deg, #007C91 0%, #00BFA6 45%, #1A1A2E 100%);
+  color: #FFFFFF;
+  padding: 4.5rem 0 3.5rem;
+}
+
+.service-hero .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #FFC300; /* jaune PyCode */
+}
+
+.service-hero-title {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 2.6vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.service-hero-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+}
+
+/* CTA du hero */
+.service-hero .btn-hero-cta {
+  margin-top: 1.8rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.6rem;
+  background-color: #FFC300;
+  color: #1A1A2E;
+  border: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-hero .btn-hero-cta:hover,
+.service-hero .btn-hero-cta:focus {
+  background-color: #ffb600;
+  color: #111827;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Responsive hero */
+@media (max-width: 767.98px) {
+  .service-hero {
+    padding: 3.2rem 0 2.8rem;
+  }
+
+  .service-hero-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+   Sections de contenu
+   =========================== */
+
+.section-boxed {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 1rem;
+}
+
+.section h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  border-radius: 999px;
+  background-color: #FFC300;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.section-paragraph {
+  color: #4B5563;
+  margin-bottom: 1.25rem;
+}
+
+/* Listes avec icônes */
+.section ul.list-unstyled li {
+  color: #111827;
+  font-size: 0.98rem;
+}
+
+.section ul.list-unstyled li i {
+  margin-right: 0.55rem;
+  font-size: 1rem;
+}
+
+/* Background clair pour la seconde section */
+.light-background {
+  background-color: #F5F7FA;
+}
