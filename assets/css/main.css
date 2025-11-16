@@ -884,10 +884,10 @@ section,
 }
 
 
-.hero .animated {
+/*.hero .animated {
   margin-bottom: 60px;
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
+}*/
 
 @media (min-width: 992px) {
   .hero .animated {
@@ -925,7 +925,7 @@ section,
   }
 }
 
-@keyframes up-down {
+/* @keyframes up-down {
   0% {
     transform: translateY(10px);
   }
@@ -933,7 +933,7 @@ section,
   100% {
     transform: translateY(-10px);
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Index - About Section
@@ -1218,4 +1218,17 @@ section,
   }
 .hero::after {
   display: none;
+}
+.hero .animated {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeHero 0.9s ease-out forwards;
+}
+
+@keyframes fadeHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
