@@ -150,6 +150,9 @@
   text-transform: uppercase;
   opacity: 0.95;
 }
+.service-kicker {
+  color: #FFC300;
+}
 
 .service-hero-title {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -423,7 +426,9 @@
   color: #ffffff;
   line-height: 1.2;
 }
-
+.service-kicker {
+  letter-spacing: 0.04em;
+}
 .service-hero-innovation .service-hero-lead {
   font-size: 1.1rem;
   line-height: 1.65;
@@ -439,6 +444,19 @@
   opacity: 1;
 }
 
+.service-kicker {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.service-kicker::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background: #FFC300;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
 .service-hero-illustration img {
   border-radius: 1.5rem;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
