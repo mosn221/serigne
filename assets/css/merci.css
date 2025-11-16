@@ -37,3 +37,24 @@
       color: var(--default-color);
     }
  
+* Style normal */
+.btn-pycode {
+  background-color: #007C91;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Survol */
+.btn-pycode:hover {
+  background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
+  color: var(--default-color);
+  
+}
+
+/* Clic (état actif) */
+.btn-pycode:active {
+  background: var(--accent-color);
+  color: var(--default-color);
+}
