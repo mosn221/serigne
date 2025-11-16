@@ -537,4 +537,6 @@ section,
   }
 }
 
-    
+  .services .service-item p {
+  text-align: justify;
+  }  
