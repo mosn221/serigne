@@ -437,7 +437,7 @@
 }
 
 .service-kicker {
-  color: #FFC300;/* Jaune de la charte*/
+  color: #007C91;/* Jaune de la charte*/
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -451,7 +451,7 @@
   content: "";
   width: 24px;
   height: 3px;
-  background: #FFC300;
+  background: #007C91;
   border-radius: 2px;
   display: inline-block;
   margin-right: 8px;
