@@ -206,19 +206,6 @@ section,
   }
 }
 
-
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-
-.project-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #007C91;
-  font-size: 2.3rem;
-}
-
-
-
 /*--------------------------------------------------------------
 # Domaines d'intervention 
 -----------------------------------*/
@@ -228,15 +215,10 @@ section,
   color: #007C91;
 }
 
-
-
-
 .domain-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.10);
 }
-
-
 
 .domain-card h4 {
   font-family: 'Montserrat', sans-serif;
@@ -252,8 +234,6 @@ section,
   border-radius: 2px;
   margin-bottom: 12px;
 }
-
-
 
 #about p {
   text-align: justify;
@@ -273,8 +253,6 @@ section,
   height: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 20px;
-  
-  
 }
 
 .domain-card-image img {
@@ -348,9 +326,6 @@ section,
 /* ===========================
    Section Contact - Premium
    =========================== */
-
-
-
 .contact-panel {
   background: #FFFFFF;
   border-radius: 1.5rem;
