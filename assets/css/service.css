@@ -432,11 +432,11 @@
 }
 
 .service-kicker {
-  color: #007C91; /* Bleu pétrole lisible */
+  color: #E0A800; /* Jaune doré lisible */
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .service-hero-illustration img {
