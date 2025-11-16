@@ -186,17 +186,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-
-
-/*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
 section,
@@ -256,26 +245,14 @@ section,
 }
 
 
-.domain-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+
 
 .domain-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.10);
 }
 
-.domain-card img {
-  border-radius: 10px;
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
+
 
 .domain-card h4 {
   font-family: 'Montserrat', sans-serif;
@@ -292,11 +269,7 @@ section,
   margin-bottom: 12px;
 }
 
-.domain-card p {
-  font-size: 15px;
-  color: #444;
-  text-align: justify;
-}
+
 
 #about p {
   text-align: justify;
@@ -320,12 +293,26 @@ section,
   height: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.domain-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
 .domain-card-image img {
   width: 100%;
   height: 190px;
   object-fit: cover;
   display: block;
+}
+.domain-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .domain-card-body {
@@ -360,6 +347,7 @@ section,
   font-size: 0.9rem;
   color: #555555;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /* Hover */
