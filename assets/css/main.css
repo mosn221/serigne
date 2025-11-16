@@ -239,6 +239,10 @@ section,
   color: var(--default-color);
 }
 
+/*--------------------------------------------------------------
+# Domaines d'intervention 
+-----------------------------------*/
+
 .card-title {
   font-family: 'Montserrat', sans-serif;
   color: #007C91;
@@ -275,10 +279,6 @@ section,
   text-align: justify;
 }
 
-/* ===========================
-   Domaines d'intervention
-   =========================== */
-
 .domains-grid {
   /* rien d'obligatoire ici, mais tu peux garder ce hook si besoin */
 }
@@ -292,13 +292,9 @@ section,
   flex-direction: column;
   height: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.domain-card {
-  background: #ffffff;
-  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  
 }
 
 .domain-card-image img {
