@@ -1186,7 +1186,7 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  color: #1A1A2E;
+  color: var(--default-color);
   background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
 }
 
