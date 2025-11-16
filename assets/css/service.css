@@ -144,12 +144,11 @@
 }
 
 .service-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
+  color: #007C91; /* Bleu pétrole lisible */
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #007C91;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.95;
 }
 
 .service-hero-title {
