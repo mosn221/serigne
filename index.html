@@ -120,14 +120,16 @@
         <ul>
           <li><a href="#hero" class="active">Bienvenue<br></a></li>
           <li><a href="#about">À propos</a></li>
-          <li class="dropdown"><a href="#services"><span>Activités</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-           <ul>
-              <li><a href="services/open-data.html">Données</a></li>
-              <li><a href="services/innovation.html">Innovation</a></li>
-              <li><a href="services/digitalisation.html">Digitalisation</a></li>
-              <li><a href="services/formation.html">Formation</a></li>
-            </ul>
-          </li>
+          <li class="dropdown">
+  <a href="index.html#services" class="active">
+    <span>Activités</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="services/data.html">Données & innovation</a></li>
+    <li><a href="services/digitalisation.html">Digitalisation</a></li>
+    <li><a href="services/formation.html">Transmission & formation</a></li>
+  </ul>
+</li>
           <li><a href="#portfolio">Domaines d'intervention</a></li>
           
           
@@ -226,92 +228,88 @@
  
     
     <!-- Services Section -->
-    <section id="services" class="services section" aria-label="Nos Activités">
+    <section id="services" class="services section" aria-label="Nos activités">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Nos activités</h2>
-        <p>Des initiatives autour de la donnée, de la transmission et de l'innovation ouverte</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title">
+    <h2>Nos activités</h2>
+    <p>Un travail par la donnée, au service de solutions concrètes et utiles.</p>
+  </div>
+  <!-- End Section Title -->
 
-      <div class="container" >
+  <div class="container">
+    <div class="row gy-5">
 
-        <div class="row gy-5">
-
-          <div class="col-xl-3 col-md-12">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services/open-data.jpg" class="img-fluid" loading = "lazy" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-bar-chart-line"></i>
-                </div>
-                <a href="services/open-data.html" class="stretched-link">
-                  <h3>Données</h3>
-                </a>
-                <p>Rendre la donnée accessible, utile et vivante.</p>
-              </div>
+      <!-- Carte 1 : Données & innovation -->
+      <div class="col-xl-4 col-md-12">
+        <div class="service-item">
+          <div class="img">
+            <img src="assets/img/services/open-data.jpg" class="img-fluid" loading="lazy" alt="Données et innovation PyCode Group">
+          </div>
+          <div class="details position-relative">
+            <div class="icon">
+              <i class="bi bi-bar-chart-line"></i>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-12">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services/innovation.jpg" class="img-fluid" loading = "lazy" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-stars"></i>
-                </div>
-                <a href="services/innovation.html" class="stretched-link">
-                  <h3>Innovation</h3>
-                </a>
-                <p>Innover localement, durablement et collectivement.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-12">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services/digitalisation.jpg" class="img-fluid" loading = "lazy" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-tablet"></i>
-                </div>
-                <a href="services/digitalisation.html" class="stretched-link">
-                  <h3>Digitalisation</h3>
-                </a>
-                <p>Accompagner la transition et la transformation numérique</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-12">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services/formation.jpg" class="img-fluid" loading = "lazy" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="services/formation.html" class="stretched-link">
-                  <h3>Formation</h3>
-                </a>
-                <p>Transmettre les compétences pour demain.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-
+            <a href="services/data.html" class="stretched-link">
+              <h3>Données & innovation</h3>
+            </a>
+            <p>
+              Collecter, structurer et expérimenter avec la donnée pour faire émerger
+              des solutions sobres, utiles et ancrées dans les réalités africaines.
+            </p>
+          </div>
         </div>
-
       </div>
+      <!-- End Service Item -->
 
-    </section><!-- /Services Section -->
+      <!-- Carte 2 : Digitalisation -->
+      <div class="col-xl-4 col-md-12">
+        <div class="service-item">
+          <div class="img">
+            <img src="assets/img/services/digitalisation.jpg" class="img-fluid" loading="lazy" alt="Digitalisation et outils numériques PyCode Group">
+          </div>
+          <div class="details position-relative">
+            <div class="icon">
+              <i class="bi bi-tablet"></i>
+            </div>
+            <a href="services/digitalisation.html" class="stretched-link">
+              <h3>Digitalisation</h3>
+            </a>
+            <p>
+              Concevoir des sites, outils et espaces numériques adaptés, pour
+              mieux organiser l’information et soutenir les activités du quotidien.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+      <!-- Carte 3 : Transmission & formation -->
+      <div class="col-xl-4 col-md-12">
+        <div class="service-item">
+          <div class="img">
+            <img src="assets/img/services/formation.jpg" class="img-fluid" loading="lazy" alt="Transmission et formation PyCode Group">
+          </div>
+          <div class="details position-relative">
+            <div class="icon">
+              <i class="bi bi-easel"></i>
+            </div>
+            <a href="services/formation.html" class="stretched-link">
+              <h3>Transmission & formation</h3>
+            </a>
+            <p>
+              Partager nos méthodes, retours d’expérience et bonnes pratiques,
+              à travers des contenus, ateliers et formats pédagogiques ciblés.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Item -->
+
+    </div>
+  </div>
+
+</section><!-- /Services Section -->
 
 
  
@@ -514,10 +512,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nos activités</h4>
           <ul>
-            <li><a href="services/open-data.html">Données</a></li>
-            <li><a href="services/innovation.html">Innovation</a></li>
+            <li><a href="services/data.html">Données & innovation</a></li>
             <li><a href="services/digitalisation.html">Digitalisation</a></li>
-            <li><a href="services/formation.html">Formation</a></li>
+            <li><a href="services/formation.html">Transmission et formation</a></li>
           </ul>
         </div>
 
