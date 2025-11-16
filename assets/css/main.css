@@ -1087,3 +1087,132 @@ section,
   margin-bottom: 0;
   }
 
+
+.hero {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 60px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Fond principal : dégradé Afrique data */
+  background:
+    radial-gradient(circle at top left, rgba(255, 195, 0, 0.22), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 191, 166, 0.18), transparent 55%),
+    linear-gradient(135deg, #1A1A2E 0%, #007C91 55%, #00BFA6 100%);
+
+  color: var(--contrast-color);
+  overflow: hidden;
+}
+
+/* Grille data en surcouche */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Quelques “nodes” data discrets */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  top: 10%;
+  right: 12%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 0 18px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Contenu du hero au-dessus du décor */
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typo hero */
+.hero h1 {
+  margin: 0 0 12px 0;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: var(--yellow-accent);
+}
+
+.hero p {
+  color: rgba(240, 238, 233, 0.92);
+  margin: 0 0 30px 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+/* Bouton */
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
+}
+
+/* Responsif */
+@media (max-width: 991px) {
+  .hero {
+    min-height: 70vh;
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    padding: 45px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  }
