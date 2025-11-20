@@ -2,7 +2,7 @@
 # hero Section service-detail
 --------------------------------------------------------------*/
 
-.hero-section {
+/*.hero-section {
   background-image: url('../img/portfolio/books-2.jpg');
   background-size: cover;
   background-position: center;
@@ -11,9 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+}*/
 
- .hero-section::before {
+ /*.hero-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .hero-section .container {
   position: relative;
