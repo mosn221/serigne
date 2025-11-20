@@ -1,42 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- SEO -->
-<title>Contribuer à PyCode Group – Projets, idées, partenariats - PyCode Group</title>
-<meta name="description" content="Envie de proposer un projet, de contribuer à un outil open source ou de soutenir une initiative en Afrique ? Rejoignez l’écosystème PyCode Group.">
-<meta name="keywords" content="contribuer, PyCode Group, projet, soutien, collaboration, open data, tech Afrique, financement, idée, engagement, formulaire, participation">
-<meta name="author" content="PyCode Group" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Contribuer à PyCode Group – Ensemble pour plus d’impact">
-<meta property="og:description" content="Proposez une idée, un projet, un partenariat ou un soutien. PyCode Group est ouvert aux contributions citoyennes, techniques et institutionnelles.">
-<meta property="og:image" content="https://pycodegroup.com/assets/img/contact/contribuer.jpg">
-<meta property="og:url" content="https://pycodegroup.com/contact/contribuer.html">
-<meta property="og:type" content="website">
+  <title>PyCode Group – Data, Innovation & Projets à impact pour l’Afrique</title>
+  <meta name="description" content="PyCode Group développe des projets data et numériques à impact positif en Afrique : transparence, sport, nutrition, culture, digitalisation.">
+  <meta name="author" content="PyCode Group">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contribuer à PyCode Group – Ensemble pour plus d’impact">
-<meta name="twitter:description" content="Participez à l’aventure PyCode Group : open source, innovation, data et projets utiles pour l’Afrique.">
-<meta name="twitter:image" content="https://pycodegroup.com/assets/img/contact/contribuer.jpg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pycodegroup.com/">
+
+  <!-- Hreflang -->
+  <link rel="alternate" href="https://pycodegroup.com/" hreflang="fr-fr">
+  <link rel="alternate" href="https://pycodegroup.com/" hreflang="x-default">
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="PyCode Group – Data, Innovation & Projets pour l’Afrique">
+  <meta property="og:description" content="Un collectif tech africain qui construit des plateformes utiles, ouvertes et durables.">
+  <meta property="og:image" content="https://pycodegroup.com/assets/img/hero-image.png">
+  <meta property="og:url" content="https://pycodegroup.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PyCode Group – Data, Innovation & Projets pour l’Afrique">
+  <meta name="twitter:description" content="Tech africain pour des projets data-driven et citoyens.">
+  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/hero-image.png">
 
   <!-- Content Security Policy (CSP) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src * data:; connect-src 'self'; object-src 'none';" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
- <link href="../assets/css/main.css" rel="stylesheet">
-  
- <link href="../assets/css/contribuer.css" rel="stylesheet">
- 
-  
-    <!-- Favicons -->
-  <link href="../assets/img/Logo-Favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- ⚠ Pour permettre le JSON-LD inline, on ajoute 'unsafe-inline' -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
+                 style-src 'self' cdn.jsdelivr.net fonts.googleapis.com;
+                 font-src 'self' fonts.gstatic.com;
+                 img-src * data:;
+                 connect-src 'self';
+                 object-src 'none';">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo-Favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+ <!-- Preload Google Fonts CSS -->
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
+
+<!-- Chargement réel des polices -->
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"> 
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<!-- Preload hero image (LCP) -->
+<link rel="preload"
+      as="image"
+      href="assets/img/hero-image.webp"
+      imagesrcset="assets/img/hero-image.webp 1536w"
+      imagesizes="100vw">
+  <!-- Main CSS Files -->
+
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- JSON-LD : Organisation + Site Web -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "PyCode Group",
+        "url": "https://pycodegroup.com/",
+        "logo": "https://pycodegroup.com/assets/img/logo-header.svg",
+        "description": "PyCode Group développe des projets tech et open data à impact positif en Afrique : transparence, football, nutrition, digitalisation.",
+        "email": "mailto:pycodegroup@gmail.com",
+        "sameAs": [
+          "https://x.com/pycodegroup",
+          "https://instagram.com/pycodegroup",
+          "https://linkedin.com/company/pycodegroup"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "PyCode Group",
+        "url": "https://pycodegroup.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pycodegroup.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 
 <body>
   <header id="header" class="header d-flex align-items-center sticky-top">
