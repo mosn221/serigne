@@ -23,10 +23,10 @@
   background: rgba(0, 0, 0, 0.5);
 }*/
 
-.hero-section .container {
+/*.hero-section .container {
   position: relative;
   z-index: 2;
-}
+}*/
 
 /*.hero-contribuer {
   background-image: url('../img/portfolio/product-3.jpg'); 
@@ -52,12 +52,12 @@
   z-index: 2;
 }
 
-.hero-title {
+/*.hero-title {
   font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 2.8rem;
   font-weight: 700;
-}
+}*/
 
 .hero-subtitle {
   font-family: 'Poppins', sans-serif;
