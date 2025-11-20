@@ -62,6 +62,7 @@
 .hero-subtitle {
   font-family: 'Poppins', sans-serif;
   color: #f0eee9;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
