@@ -99,17 +99,58 @@
 <main class="py-5">
   <div class="container">
     <ul class="nav nav-tabs justify-content-center mb-4" id="contribTabs" role="tablist">
-
-      <li class="nav-item"><button class="nav-link active"  data-bs-toggle="tab" data-bs-target="#collaboratif" type="button">💡 Vous avez un projet</button></li>
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#projet" type="button">🎯 Rejoindre un projet</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#collaboratif" type="button">💡 Proposer un projet collaboratif</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#partenariat" type="button">🤝 Devenir partenaire</button></li>
     </ul>
 
-  
+    <div class="tab-content bg-white shadow rounded p-4">
+      <!-- Rejoindre un projet -->
+      <div class="tab-pane fade show active" id="projet">
+        <h3>Rejoindre un projet existant</h3>
+          <form name="formulaire-projet" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/merci.html">
+          <input type="hidden" name="form-name" value="formulaire-projet">
+          <p class="honeypot"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <input type="hidden" name="type_contribution" value="rejoindre">
 
+            
+          <div class="mb-3">
+            <label for="nom-rejoindre">Nom</label>
+            <input type="text" class="form-control" id="nom-rejoindre" name="nom" required>
+          </div>
+          <div class="mb-3">
+            <label for="email-rejoindre">Email</label>
+            <input type="email" class="form-control" id="email-rejoindre" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Projet</label>
+            <select class="form-select" name="projet">
+              <option value="">Sélectionnez un projet</option>
+              <option>YaliStats</option>
+              <option>Lekkantu</option>
+              <option>Daaray Kurel</option>
+              
+            </select>
+            <small class="text-muted d-block mt-1">
+          Certains projets sont actuellement en cours de développement&nbsp;: vos contributions servent à poser leurs bases et accélérer leur mise en place.</small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Votre message</label>
+           
 
-      <!-- Vous avez un projet -->
+            <textarea class="form-control" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="accept1" required>
+            <label class="form-check-label" for="accept1">J'accepte les conditions générales et la politique de confidentialité.</label>
+          </div>
+          <button type="submit" class="btn btn-pycode">Contribuer</button>
+        </form>
+      </div>
+
+      <!-- Proposer un projet collaboratif -->
       <div class="tab-pane fade" id="collaboratif">
-        <h3>Vous avez un projet</h3>
+        <h3>Proposer un projet collaboratif</h3>
         <form name="formulaire-collaboratif" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/contact/merci.html">
         <input type="hidden" name="form-name" value="formulaire-collaboratif">
         <p class="honeypot"><label>Ne pas remplir : <input name="bot-field"></label></p>
@@ -123,7 +164,10 @@
             <label for="email-collaboratif">Email</label>
             <input type="email" class="form-control" id="email-collaboratif" name="email" required>
           </div>
-          
+          <div class="mb-3">
+            <label>Nom du projet</label>
+            <input type="text" class="form-control" name="nom_projet" required>
+          </div>
           <div class="mb-3">
             <label>Objectifs du projet</label>
             <textarea class="form-control" name="objectifs_projet" rows="3" required></textarea>
@@ -208,6 +252,7 @@
     </div>
   </div>
 </main>
+
 
   <!-- Footer (identique à l’index) -->
   <footer id="footer" class="footer dark-background">
