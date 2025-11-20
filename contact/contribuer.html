@@ -96,159 +96,182 @@
 </section>
 
 
-<main class="py-5">
+<main class="py-5 bg-light">
   <div class="container">
+
+    <!-- En-tête de section -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold mb-3" style="color:#1A1A2E;">
+        Entrer en contact avec PyCodeGroup
+      </h1>
+      <p class="lead mb-2" style="color:#4b4b4b;">
+        Vous souhaitez être accompagné sur un projet ou bâtir un partenariat structurant autour de la data et de l’innovation&nbsp;?
+      </p>
+      <p class="mb-0 text-muted">
+        Choisissez l’option qui correspond le mieux à votre situation. Nous reviendrons vers vous rapidement avec les prochaines étapes.
+      </p>
+    </div>
+
+    <!-- Onglets -->
     <ul class="nav nav-tabs justify-content-center mb-4" id="contribTabs" role="tablist">
-      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#projet" type="button">🎯 Rejoindre un projet</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#collaboratif" type="button">💡 Proposer un projet collaboratif</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#partenariat" type="button">🤝 Devenir partenaire</button></li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="projet-tab" data-bs-toggle="tab"
+                data-bs-target="#projet" type="button" role="tab" aria-controls="projet" aria-selected="true">
+          🎯 Vous avez un projet
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="partenariat-tab" data-bs-toggle="tab"
+                data-bs-target="#partenariat" type="button" role="tab" aria-controls="partenariat" aria-selected="false">
+          🤝 Devenir partenaire
+        </button>
+      </li>
     </ul>
 
-    <div class="tab-content bg-white shadow rounded p-4">
-      <!-- Rejoindre un projet -->
-      <div class="tab-pane fade show active" id="projet">
-        <h3>Rejoindre un projet existant</h3>
-          <form name="formulaire-projet" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/merci.html">
+    <div class="tab-content bg-white shadow rounded-3 p-4 p-md-5">
+
+      <!-- Onglet 1 : Vous avez un projet -->
+      <div class="tab-pane fade show active" id="projet" role="tabpanel" aria-labelledby="projet-tab">
+        <div class="mb-4">
+          <h2 class="h4 fw-bold mb-2" style="color:#1A1A2E;">Parlez-nous de votre projet</h2>
+          <p class="text-muted mb-1">
+            Besoin d’un site web, d’un tableau de bord, d’un outil data ou d’un accompagnement sur mesure&nbsp;?
+          </p>
+          <p class="text-muted mb-0">
+            Décrivez votre projet et vos attentes. Vous pouvez également joindre un document de présentation
+            (<span class="fw-semibold">facultatif</span>).
+          </p>
+        </div>
+
+        <form name="formulaire-projet"
+              method="POST"
+              enctype="multipart/form-data"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/contact/merci.html">
+
+          <!-- Champs Netlify -->
           <input type="hidden" name="form-name" value="formulaire-projet">
-          <p class="honeypot"><label>Ne pas remplir : <input name="bot-field"></label></p>
-          <input type="hidden" name="type_contribution" value="rejoindre">
+          <p class="honeypot">
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="type_contribution" value="projet">
 
-            
-          <div class="mb-3">
-            <label for="nom-rejoindre">Nom</label>
-            <input type="text" class="form-control" id="nom-rejoindre" name="nom" required>
-          </div>
-          <div class="mb-3">
-            <label for="email-rejoindre">Email</label>
-            <input type="email" class="form-control" id="email-rejoindre" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Projet</label>
-            <select class="form-select" name="projet">
-              <option value="">Sélectionnez un projet</option>
-              <option>YaliStats</option>
-              <option>Lekkantu</option>
-              <option>Daaray Kurel</option>
-              
-            </select>
-            <small class="text-muted d-block mt-1">
-          Certains projets sont actuellement en cours de développement&nbsp;: vos contributions servent à poser leurs bases et accélérer leur mise en place.</small>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Votre message</label>
-           
-
-            <textarea class="form-control" name="message" rows="5" required></textarea>
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="accept1" required>
-            <label class="form-check-label" for="accept1">J'accepte les conditions générales et la politique de confidentialité.</label>
-          </div>
-          <button type="submit" class="btn btn-pycode">Contribuer</button>
-        </form>
-      </div>
-
-      <!-- Proposer un projet collaboratif -->
-      <div class="tab-pane fade" id="collaboratif">
-        <h3>Proposer un projet collaboratif</h3>
-        <form name="formulaire-collaboratif" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" action="/contact/merci.html">
-        <input type="hidden" name="form-name" value="formulaire-collaboratif">
-        <p class="honeypot"><label>Ne pas remplir : <input name="bot-field"></label></p>
-        <input type="hidden" name="type_contribution" value="collaboratif">
-          
-          <div class="mb-3">
-            <label for="nom-collaboratif">Nom</label>
-            <input type="text" class="form-control" id="nom-collaboratif" name="nom" required>
-          </div>
-          <div class="mb-3">
-            <label for="email-collaboratif">Email</label>
-            <input type="email" class="form-control" id="email-collaboratif" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label>Nom du projet</label>
-            <input type="text" class="form-control" name="nom_projet" required>
-          </div>
-          <div class="mb-3">
-            <label>Objectifs du projet</label>
-            <textarea class="form-control" name="objectifs_projet" rows="3" required></textarea>
-          </div>
-          <div class="mb-3">
-            <label>Statut du projet</label>
-            <select class="form-select" name="statut_projet">
-              <option value="">Choisissez un statut</option>
-              <option>Idée</option>
-              <option>En cours</option>
-              <option>Prototype ou pilote</option>
-              <option>Déjà lancé</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label>Structure / Organisation (facultatif)</label>
-            <input type="text" class="form-control" name="structure">
-          </div>
-          <div class="mb-3">
-            <label>Message complémentaire</label>
-            <textarea class="form-control" name="message" rows="4"></textarea>
-          </div>
-          <div class="mb-3">
-            <label>Document joint (présentation, fiche projet…) – optionnel</label>
-            <input type="file" name="fichier" class="form-control" accept=".pdf,.doc,.ppt,.pptx">
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="accept-collab" required>
-            <label class="form-check-label" for="accept-collab">J'accepte les conditions générales et la politique de confidentialité.</label>
-          </div>
-          <button type="submit" class="btn btn-pycode">Envoyer la proposition</button>
-        </form>
-      </div>
-
-      <!-- Devenir partenaire -->
-      <div class="tab-pane fade" id="partenariat">
-        <h3>Soumettre un partenariat</h3>
-        <form name="formulaire-partenariat" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/merci.html">
-  <input type="hidden" name="form-name" value="formulaire-partenariat">
-  <p class="honeypot"><label>Ne pas remplir : <input name="bot-field"></label></p>
-  <input type="hidden" name="type_contribution" value="partenaire">
-          <div class="mb-3">
-            <label for="nom-partenaire">Nom</label>
-            <input type="text" class="form-control" id="nom-partenaire" name="nom" required>
-          </div>
-          <div class="mb-3">
-            <label for="email-partenaire">Email</label>
-            <input type="email" class="form-control" id="email-partenaire" name="email" required>
-          </div>
-        <div class="mb-3">
-  <label>Type de partenariat</label>
-  <select class="form-select" id="typePartenariat" name="type_partenariat" required>
-    <option value="">-- Sélectionnez une option --</option>
-    <option value="institutionnel">Soutien institutionnel</option>
-    <option value="financier">Soutien financier</option>
-    <option value="media">Partenariat média / visibilité</option>
-    <option value="logistique">Partenariat logistique / technique</option>
-    <option value="academique">Partenariat académique / recherche</option>
-    <option value="autre">Autre</option>
-  </select>
-</div>
-          <div class="mb-3 d-none" id="note-financier">
-            <div class="alert alert-info">
-              🙏 Merci pour votre intention de soutien. Nous prendrons contact avec vous personnellement pour organiser cela en toute simplicité et confiance.
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="nom-projet" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom-projet" name="nom" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="email-projet" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email-projet" name="email" required>
             </div>
           </div>
+
           <div class="mb-3">
-            <label>Structure / Organisation</label>
-            <input type="text" class="form-control" name="structure">
+            <label for="message-projet" class="form-label">Message</label>
+            <textarea class="form-control" id="message-projet" name="message" rows="5" required
+                      placeholder="Expliquez votre projet, le contexte, vos objectifs, vos contraintes de délai…"></textarea>
           </div>
+
           <div class="mb-3">
-            <label>Message</label>
-            <textarea class="form-control" name="description" rows="5" required></textarea>
+            <label for="doc-projet" class="form-label">
+              Document de présentation (facultatif)
+            </label>
+            <input type="file" class="form-control" id="doc-projet" name="document_projet"
+                   accept=".pdf,.doc,.docx,.ppt,.pptx">
+            <small class="text-muted">
+              Vous pouvez joindre une présentation, une note de cadrage ou toute pièce utile à la compréhension de votre projet.
+            </small>
           </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="accept2" required>
-            <label class="form-check-label" for="accept2">J'accepte les conditions générales et la politique de confidentialité.</label>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="accept-projet" required>
+            <label class="form-check-label" for="accept-projet">
+              J'accepte les conditions générales et la politique de confidentialité.
+            </label>
           </div>
-          <button type="submit" class="btn btn-pycode">Envoyer la proposition</button>
+
+          <button type="submit" class="btn btn-pycode px-4">
+            Envoyer mon projet
+          </button>
         </form>
       </div>
+
+      <!-- Onglet 2 : Devenir partenaire -->
+      <div class="tab-pane fade" id="partenariat" role="tabpanel" aria-labelledby="partenariat-tab">
+        <div class="mb-4">
+          <h2 class="h4 fw-bold mb-2" style="color:#1A1A2E;">Construire un partenariat avec PyCodeGroup</h2>
+          <p class="text-muted mb-1">
+            Vous représentez une entité (entreprise, institution, association, média, université…) et souhaitez explorer un partenariat autour de la data, de l’innovation ou de nos projets (Lekkantu, SunuGoal, etc.)&nbsp;?
+          </p>
+          <p class="text-muted mb-0">
+            Merci de présenter votre structure, votre domaine d’activité et votre intention de partenariat.  
+            Un document de présentation est <span class="fw-semibold">obligatoire</span> pour instruire votre demande.
+          </p>
+        </div>
+
+        <form name="formulaire-partenariat"
+              method="POST"
+              enctype="multipart/form-data"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/contact/merci.html">
+
+          <!-- Champs Netlify -->
+          <input type="hidden" name="form-name" value="formulaire-partenariat">
+          <p class="honeypot">
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="type_contribution" value="partenariat">
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="nom-entite" class="form-label">Nom de l'entité</label>
+              <input type="text" class="form-control" id="nom-entite" name="nom_entite" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="domaine-activite" class="form-label">Domaine d'activité</label>
+              <input type="text" class="form-control" id="domaine-activite" name="domaine_activite"
+                     placeholder="Ex. : data, santé, sport, éducation…" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email-partenaire" class="form-label">Email de contact</label>
+            <input type="email" class="form-control" id="email-partenaire" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message-partenaire" class="form-label">Message</label>
+            <textarea class="form-control" id="message-partenaire" name="message" rows="5" required
+                      placeholder="Présentez votre structure, vos enjeux et le type de partenariat envisagé."></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="doc-partenariat" class="form-label">
+              Document de présentation de l’entité (obligatoire)
+            </label>
+            <input type="file" class="form-control" id="doc-partenariat" name="document_partenariat"
+                   accept=".pdf,.doc,.docx,.ppt,.pptx" required>
+            <small class="text-muted">
+              Par exemple&nbsp;: plaquette institutionnelle, présentation PowerPoint, note de cadrage, dossier de partenariat, etc.
+            </small>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="accept-partenariat" required>
+            <label class="form-check-label" for="accept-partenariat">
+              J'accepte les conditions générales et la politique de confidentialité.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-pycode px-4">
+            Envoyer ma demande de partenariat
+          </button>
+        </form>
+      </div>
+
     </div>
   </div>
 </main>
