@@ -159,7 +159,7 @@
 
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="nom-projet" class="form-label">Nom</label>
+              <label for="nom-projet" class="form-label required" >Nom</label>
               <input type="text" class="form-control" id="nom-projet" name="nom" required>
             </div>
             <div class="col-md-6 mb-3">
@@ -169,14 +169,14 @@
           </div>
 
           <div class="mb-3">
-            <label for="message-projet" class="form-label">Message</label>
+            <label for="message-projet" class="form-label required"> Message</label>
             <textarea class="form-control" id="message-projet" name="message" rows="5" required
                       placeholder="Expliquez votre projet, le contexte, vos objectifs, vos contraintes de délai…"></textarea>
           </div>
 
           <div class="mb-3">
             <label for="doc-projet" class="form-label">
-              Document de présentation (facultatif)
+              Document de présentation 
             </label>
             <input type="file" class="form-control" id="doc-projet" name="document_projet"
                    accept=".pdf,.doc,.docx,.ppt,.pptx">
@@ -227,18 +227,18 @@
 
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="nom-entite" class="form-label">Nom de l'entité</label>
+              <label for="nom-entite" class="form-label required">Nom de l'entité</label>
               <input type="text" class="form-control" id="nom-entite" name="nom_entite" required>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="domaine-activite" class="form-label">Domaine d'activité</label>
+              <label for="domaine-activite" class=class="form-label required">Domaine d'activité</label>
               <input type="text" class="form-control" id="domaine-activite" name="domaine_activite"
                      placeholder="Ex. : data, santé, sport, éducation…" required>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="email-partenaire" class="form-label">Email de contact</label>
+            <label for="email-partenaire" class=class="form-label required">Email de contact</label>
             <input type="email" class="form-control" id="email-partenaire" name="email" required>
           </div>
 
@@ -249,8 +249,8 @@
           </div>
 
           <div class="mb-3">
-            <label for="doc-partenariat" class="form-label">
-              Document de présentation de l’entité (obligatoire)
+            <label for="doc-partenariat" class=class="form-label required">
+              Document de présentation de l’entité 
             </label>
             <input type="file" class="form-control" id="doc-partenariat" name="document_partenariat"
                    accept=".pdf,.doc,.docx,.ppt,.pptx" required>
@@ -364,6 +364,16 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <!-- Main JS -->
   <script src="../assets/js/main.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("input[required], textarea[required], select[required]").forEach(field => {
+    const label = field.closest('.mb-3')?.querySelector('label');
+    if (label && !label.classList.contains("required")) {
+      label.classList.add("required");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
