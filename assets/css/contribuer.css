@@ -28,8 +28,8 @@
   z-index: 2;
 }
 
-.hero-contribuer {
-  background-image: url('../img/portfolio/product-3.jpg'); /* à remplacer par ton image réelle */
+/*.hero-contribuer {
+  background-image: url('../img/portfolio/product-3.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 40px;
-}
+}*/
 
 .hero-contribuer::before {
   content: "";
