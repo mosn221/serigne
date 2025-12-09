@@ -1,232 +1,263 @@
 /*--------------------------------------------------------------
-# Portfolio Details Section
+# Pages projet PyCode Group
+# S'appuie sur main.css (couleurs & fonts)
 --------------------------------------------------------------*/
-.page-projet .swiper-slide .card-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  color: #1A1A2E;
-}
 
-.page-projet .underline-accent {
-  width: 60px;
-  height: 4px;
-  background-color: #FFC300;
-  border-radius: 2px;
-}
-
-.page-projet .swiper-container {
+/* Hero projet */
+.project-hero {
+  background-color: var(--surface-color);
+  border-bottom: 1px solid #E5E7EB;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
-.page-projet .swiper-slide .card-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #007C91;
+
+.project-breadcrumb .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 0.85rem;
 }
 
- .page-projet .nav-tabs .nav-link {
-      color: #007C91;
-      font-weight: 600;
-    }
-    .page-projet .nav-tabs .nav-link.active {
-      background-color: #FFC300;
-      color: #1A1A2E;
-      border: none;
-    }
-    .page-projet body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #F5F7FA;
-    }
-    
-    
-   
-   .page-projet .tab-content p {
-      color: #1A1A2E;
-      /* min-height: 238px; */ /* à commenter ou supprimer */
-     text-align : justify;
-    }
- 
-
-   .page-projet .cta-section {
-      background-color: #f0eee9;
-      color: #F0EEE9;
-      padding: 30px 0;
-    }
-    .page-projet.cta-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: #FFC300;
-    }
-   .page-projet .cta-section p {
-      font-family: 'Poppins', sans-serif;
-    }
-   .page-projet .rounded-img {
-      border-radius: 16px;
-      transition: transform 0.3s ease;
-    }
-    .page-projet.rounded-img:hover {
-      transform: scale(1.02);
-    }
-
-   .page-projet .image-hover-container {
-  position: relative;
-  display: inline-block;
+.project-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.page-projet .image-hover-container img {
-  transition: 0.3s ease-in-out;
-  }
+.project-breadcrumb a {
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+}
 
+.project-breadcrumb a:hover {
+  color: var(--accent-color);
+}
 
-
-.page-projet .image-hover-container .hover-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #007C91;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+/* Tag en haut du projet */
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 191, 166, 0.14); /* vert d’eau très léger */
+  color: #005f6e;
+  font-size: 0.78rem;
   font-weight: 600;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.page-projet .image-hover-container:hover .hover-button {
-  opacity: 1;
+.project-tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--yellow-accent); /* clin d’œil nutrition / soleil */
 }
 
-.page-projet .page-title-blur-sunugoal {
-  background-image: url('/assets/img/projets/yalistats.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 0 40px 0; /* plus serré en bas */
-  border-radius: 16px;
-   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
-}
-.page-projet .page-title-blur-lekkantu {
-  background-image: url('/assets/img/projets/lekkantu.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 0 40px 0; /* plus serré en bas */
-  border-radius: 16px;
-   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
-}
-
-.page-projet .page-title-blur-diwaanu-machrabu {
-  background-image: url('/assets/img/projets/daaray-kurel.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 0 40px 0; /* plus serré en bas */
-  border-radius: 16px;
-   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
-}
-
-.page-projet .page-title-blur-lekkantu-explorer {
-  background-image: url('/assets/img/projets/lekkantu-explorer.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 0 40px 0; /* plus serré en bas */
-  border-radius: 16px;
-   margin-bottom: 40px; /* ou 50px ou + selon l’effet désiré */
-}
-
-.page-projet .page-title-blur::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(240, 238, 233, 0.85); /* effet flouté doux */
-  backdrop-filter: blur(6px);
-  z-index: 0;
-}
-
-
-
-
-
-
-
-
-.page-projet .card-blur {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 0; /* 👈 supprime les coins arrondis */
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
+/* Titre & sous-titre */
 .project-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #007C91;
-  font-size: 2.3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.project-subtract {
-  font-family:'Poppins', sans-serif;
-   color:#1A1A2E;
-    font-size:1.1rem;
+.project-subtitle {
+  max-width: 40rem;
+  font-size: 0.98rem;
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
 }
 
-.page-projet .bg-rounded-shadow {
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 2rem;
+.project-meta-inline {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
-.page-projet .rounded-bottom-only {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+/* Image de couverture */
+.project-cover img {
+  max-width: 280px;
+  width: 100%;
 }
 
-.image-hover-container img {
-  max-height: 100%;
-  object-fit: contain;
+/* Corps projet */
+.project-section {
+  padding-top: 40px;
 }
 
-
-
-.nav-tabs {
-  overflow-x: auto;
-  overflow-y: hidden; /* empêche la scrollbar verticale */
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+.project-article {
+  background: var(--surface-color);
+  border-radius: 1.25rem;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
-/* Cache scrollbar dans WebKit (Chrome, Safari) */
-.nav-tabs::-webkit-scrollbar {
-  display: none;
-}
-}
-.nav-tabs .nav-item {
-  white-space: nowrap;
+.project-article h2 {
+  font-size: 1.35rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.7rem;
 }
 
-.page-projet .btn-share {
-  background-color: #007C91;
+.project-article p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.project-article ul,
+.project-article ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.project-article li {
+  margin-bottom: 0.25rem;
+}
+
+/* CTA principal */
+.project-cta {
+  margin-top: 1.6rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.project-btn-primary {
+  background-color: var(--accent-color);
+  border-radius: 999px;
   color: #ffffff;
+  font-weight: 500;
+  padding: 0.85rem 1.8rem;
   border: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  padding: 8px 12px;
 }
 
-.page-projet .btn-share:hover,
-.page-projet .btn-share:focus,
-.page-projet .btn-share:active {
-  background-color: var(--yellow-accent);
+.project-btn-primary:hover {
+  background-color: color-mix(in srgb, var(--yellow-accent), transparent 15%);
   color: var(--default-color);
 }
 
+/* Sidebar */
+.project-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-sidecard {
+  background-color: var(--surface-color);
+  border-radius: 1rem;
+  padding: 1.3rem 1.4rem;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+}
+
+.project-sidecard h3 {
+  font-size: 1rem;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.7rem;
+}
+
+.project-sidecard ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.project-sidecard ul li + li {
+  margin-top: 0.35rem;
+}
+
+/* Boutons sidebar */
+.project-btn-secondary {
+  background-color: transparent;
+  border-radius: 999px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+}
+
+.project-btn-secondary:hover {
+  background-color: #E0F4F7;
+  color: #005f6e;
+}
+
+.project-btn-link {
+  background-color: #1A1A2E;
+  border-radius: 999px;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+}
+
+.project-btn-link:hover {
+  background-color: #007C91;
+  color: #ffffff;
+}
+
+/* Autres projets */
+.project-related {
+  padding-top: 30px;
+}
+
+.other-project-card {
+  background-color: var(--surface-color);
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.other-project-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.55rem;
+}
+
+.other-project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #555555;
+  text-align: justify;
+}
+
+.other-project-card a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.other-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .project-article {
+    padding: 1.6rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.7rem;
+  }
+
+  .project-cover img {
+    max-width: 220px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .project-hero {
+    padding-top: 28px;
+    padding-bottom: 22px;
+  }
+
+  .project-article {
+    padding: 1.4rem 1.2rem;
+  }
+    }
