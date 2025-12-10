@@ -385,3 +385,73 @@
   border-radius: 1.4rem;
 }
 
+/* -------------------------------
+   SECTION – Autres projets
+-------------------------------- */
+
+.project-related-section {
+  padding: 60px 0 70px;
+}
+
+.project-related-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.project-related-sub {
+  font-size: 1rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* -------------------------------
+   Cartes projets associées
+-------------------------------- */
+
+.related-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 1.3rem;
+  text-decoration: none;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+  border: 1px solid rgba(230,230,230,0.8);
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.related-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 55px rgba(0,0,0,0.08);
+  border-color: var(--accent-color);
+}
+
+.related-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.related-card-body p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Flèche "→" moderne */
+.related-arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  transition: transform 0.2s ease;
+}
+
+.related-card:hover .related-arrow {
+  transform: translateX(6px);
+}
+
