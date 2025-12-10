@@ -357,7 +357,7 @@
 
 .project-hero-bg-lekkantu {
   position: relative;
-  background-image: url('../img/projets/bg-lekkantu.png'); /* ⬅️ METS TON IMAGE ICI */
+  background-image: url('../img/projets/bg-lekkantu.png'); /* ⬅️ METS TON IMAGE ICI 1800–2200 px de large */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
