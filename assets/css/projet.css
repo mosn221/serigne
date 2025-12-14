@@ -663,8 +663,38 @@
     justify-content: center;
   }
 
+  .project-summary {
+  padding: 70px 0; /* au lieu de 55 */
+}
+
+.project-summary-header h2 {
+  font-size: 2rem; /* +0.2rem */
+}
+
+.project-cta-section {
+  padding: 55px 0 20px; /* CTA plus affirmé */
+}
+
+  .qcard {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+}
+
+
   .project-cta-btn {
     width: 100%;
     justify-content: center;
   }
 }
+
+.project-context {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
