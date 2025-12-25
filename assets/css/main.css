@@ -1285,3 +1285,38 @@ section,
     width: 100%;
   }
   }
+
+/* Bouton institutionnel – cohérent avec "Contribuer" */
+.btn.btn-brand {
+  background-color: var(--accent-color); /* même bleu pétrole */
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px; /* même gabarit que Contribuer */
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+.btn.btn-brand:hover,
+.btn.btn-brand:focus {
+  background-color: color-mix(in srgb, var(--accent-color), #000 12%);
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0, 124, 145, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .about-cta {
+    text-align: center;
+  }
+
+  .btn.btn-brand {
+    width: 100%;
+  }
+}
