@@ -1320,3 +1320,24 @@ section,
     width: 100%;
   }
 }
+
+/* ===========================
+   Footer legal line
+   =========================== */
+.footer-legal {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 12px 0;
+  font-size: 0.85rem;
+  background-color: color-mix(in srgb, var(--background-color), white 4%);
+}
+
+.footer-legal a {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-legal a:hover {
+  color: var(--yellow-accent);
+  text-decoration: none;
+}
