@@ -245,9 +245,9 @@
   position: relative;
   padding: 90px 0 80px;
   background: linear-gradient(
-    120deg,
+    135deg,
     #007C91 0%,
-    #005F6E 40%,
+    #005F6E 45%,
     #1A1A2E 100%
   );
   color: #ffffff;
@@ -257,9 +257,24 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 195, 0, 0.06),
-    transparent 40%
-  );
+  background: rgba(26, 26, 46, 0.25); /* voile de lisibilité */
+}
+
+.hero-about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-about h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.hero-about p {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.9);
 }
