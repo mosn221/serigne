@@ -255,7 +255,7 @@
   padding: 70px 0 60px 0;
 
   /* Image hero (mettre en .webp si possible) */
-  background: url("../img/hero-pycode.webp") right center / cover no-repeat;
+  background: url("../img/hero-about.png") right center / cover no-repeat;
 }
 
 .hero.hero-pycode .hero-overlay {
