@@ -240,24 +240,20 @@
   }
   }
 
-
 .hero-about {
   position: relative;
-  padding: 90px 0 80px;
-  background: linear-gradient(
-    135deg,
-    #007C91 0%,
-    #005F6E 45%,
-    #1A1A2E 100%
-  );
-  color: #ffffff;
+  padding: 100px 0 90px;
+  background-color: #F0EEE9;
 }
 
-.hero-about::after {
+.hero-about::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 46, 0.25); /* voile de lisibilité */
+  background-image:
+    linear-gradient(rgba(26,26,46,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,26,46,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 .hero-about .container {
@@ -266,15 +262,14 @@
 }
 
 .hero-about h1 {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 600;
-  margin-bottom: 14px;
-  color: #ffffff;
+  color: #1A1A2E;
 }
 
 .hero-about p {
   font-size: 17px;
-  line-height: 1.6;
   max-width: 720px;
-  color: rgba(255, 255, 255, 0.9);
-}
+  color: #1A1A2E;
+                                }
+
