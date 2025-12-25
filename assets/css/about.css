@@ -241,105 +241,44 @@
   }
 
 
-
-/* ===========================
-   Hero PyCode (sans CTA)
-   =========================== */
-
-.hero.hero-pycode {
-  width: 100%;
-  min-height: 52vh;
+.hero-about {
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 70px 0 60px 0;
-
-  /* Image hero (mettre en .webp si possible) */
-  background: url("../img/hero-about.png") right center / cover no-repeat;
+  padding: 80px 0 70px 0;
+  background: linear-gradient(
+    135deg,
+    #007C91 0%,
+    #006A7E 35%,
+    #1A1A2E 100%
+  );
+  color: #FFFFFF;
 }
 
-.hero.hero-pycode .hero-overlay {
+.hero-about::after {
+  content: "";
   position: absolute;
   inset: 0;
-  /* Overlay premium : lisibilité + image visible */
-  background: linear-gradient(
-    90deg,
-    rgba(26, 26, 46, 0.78) 0%,
-    rgba(26, 26, 46, 0.58) 52%,
-    rgba(26, 26, 46, 0.28) 100%
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(255, 195, 0, 0.08),
+    transparent 60%
   );
 }
 
-.hero.hero-pycode .container {
+.hero-about .container {
   position: relative;
   z-index: 2;
 }
 
-.hero.hero-pycode h1 {
-  color: #FFFFFF;
-  font-size: 48px;
-  line-height: 1.15;
+.hero-about h1 {
+  font-size: 42px;
   font-weight: 600;
-  margin: 0 0 12px 0;
-  max-width: 920px;
+  margin-bottom: 12px;
+  color: #FFFFFF;
 }
 
-.hero.hero-pycode .hero-subtitle {
-  color: rgba(255, 255, 255, 0.88);
+.hero-about p {
   font-size: 18px;
   line-height: 1.7;
-  margin: 0 0 18px 0;
   max-width: 760px;
-}
-
-.hero.hero-pycode .hero-micro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.hero.hero-pycode .hero-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-}
-
-/* Responsive */
-@media (max-width: 991.98px) {
-  .hero.hero-pycode {
-    min-height: 48vh;
-    padding: 60px 0 50px 0;
-    background-position: center;
-  }
-
-  .hero.hero-pycode h1 {
-    font-size: 34px;
-  }
-
-  .hero.hero-pycode .hero-subtitle {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .hero.hero-pycode {
-    padding: 52px 0 42px 0;
-  }
-
-  .hero.hero-pycode h1 {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .hero.hero-pycode .hero-subtitle {
-    font-size: 15px;
-  }
+  color: rgba(255, 255, 255, 0.9);
    }
