@@ -38,30 +38,43 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Ajuste le logo si besoin -->
-        <!-- <img src="assets/img/logo.png" alt="PyCode Group" /> -->
-        <span>PyCode Group</span>
+      <a href="index.html#hero" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an  image logo -->
+      <img src="assets/img/logo-header.svg" alt=""> 
+    
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#services">Activités</a></li>
-          <li><a href="index.html#portfolio">Initiatives</a></li>
-          <li><a href="a-propos.html" class="active">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#hero" class="active">Bienvenue<br></a></li>
+          <li><a href="#about">À propos</a></li>
+          <li class="dropdown">
+  <a href="index.html#services">
+    <span>Activités</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="services/data.html">Données</a></li>
+    <li><a href="services/digitalisation.html">Digitalisation</a></li>
+    <li><a href="services/formation.html">Formation</a></li>
+  </ul>
+</li>
+          <li><a href="#portfolio">Initiatives</a></li>
+          
+          
+          
+          <li><a href="contact/contribuer.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#contribuer">Contribuer</a>
+      <a class="btn-getstarted" href="contact/contribuer.html">Contribuer</a>
 
     </div>
-  </header>
+    </header>
+  
   <!-- End Header -->
 
   <main id="main">
