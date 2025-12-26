@@ -731,3 +731,14 @@
   margin-bottom: 1rem;
   text-align: justify;
 }
+
+
+/* Ajustement espace avant le résumé */
+.project-summary {
+  padding-top: 20px;   /* au lieu de 60px implicites */
+  margin-top: -20px;   /* compense l’espace de la section précédente */
+}
+
+.project-summary-header h2 {
+  margin-bottom: 6px;
+}
