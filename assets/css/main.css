@@ -1341,3 +1341,22 @@ section,
   color: var(--yellow-accent);
   text-decoration: none;
 }
+
+
+/* Footer copyright */
+.footer-copyright {
+  color: var(--default-color);
+}
+
+.footer-copyright .footer-brand {
+  color: var(--default-color);
+}
+
+.footer-copyright .footer-year {
+  color: var(--default-color);
+  font-weight: 400;
+}
+
+.footer-copyright .credits {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
