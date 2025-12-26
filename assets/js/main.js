@@ -269,6 +269,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const yearEl = document.getElementById("copyright-year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const el = document.getElementById("copyright-year");
