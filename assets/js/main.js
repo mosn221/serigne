@@ -269,19 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const yearEl = document.getElementById("copyright-year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-});
 
-
-  (function () {
-    var yearEl = document.getElementById('copyright-year');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
-  })();
 
 
