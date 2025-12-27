@@ -345,3 +345,20 @@ body {
     padding-left: 16px;
   }
 }
+
+.about-values-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25rem;
+}
+
+.about-values-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #4B5563;
+}
+
+.about-values-list strong {
+  color: var(--default-color);
+  font-weight: 700;
+}
