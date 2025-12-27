@@ -188,3 +188,32 @@
   }
 }
 
+/* ---------- Justification du texte (article institutionnel) ---------- */
+
+/* Corps du texte uniquement */
+.about-article p,
+.about-callout li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* On garde les titres, listes et CTA non justifiés */
+.about-article h1,
+.about-article h2,
+.about-article h3,
+.about-article ul,
+.about-article blockquote,
+.about-strip,
+.about-hero,
+.about-hero p {
+  text-align: left;
+}
+
+/* Sur mobile, on enlève la justification (meilleure lisibilité) */
+@media (max-width: 768px) {
+  .about-article p,
+  .about-callout li {
+    text-align: left;
+  }
+}
