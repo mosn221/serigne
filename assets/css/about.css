@@ -280,3 +280,68 @@ body {
   text-align: center;
   color: #6c757d;
 }
+
+
+/* ---------- BLOCS ÉDITORIAUX (Genèse / Mission / Public) ---------- */
+
+.about-blocks {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.about-block {
+  background: #ffffff;
+  border: 1px solid #E7ECF3;
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 10px 28px rgba(17, 24, 39, 0.06);
+  position: relative;
+}
+
+.about-block::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  bottom: 18px;
+  width: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color), transparent 45%);
+}
+
+.about-block h2 {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  font-family: var(--heading-font);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.about-block p {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  color: #4B5563;
+  line-height: 1.8;
+}
+
+.about-block p.mb-0 {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-block {
+    padding: 22px 18px;
+  }
+
+  .about-block::before {
+    left: 14px;
+  }
+
+  .about-block h2,
+  .about-block p {
+    padding-left: 16px;
+  }
+}
