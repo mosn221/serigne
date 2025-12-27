@@ -362,3 +362,12 @@ body {
   color: var(--default-color);
   font-weight: 700;
 }
+
+.about-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  line-height: 1.8;
+}
