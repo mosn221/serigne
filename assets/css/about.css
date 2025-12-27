@@ -217,3 +217,29 @@
     text-align: left;
   }
 }
+
+
+.about-values-intro {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--default-color), transparent 14%);
+}
+
+.about-values-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-values-list li {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #4B5563;
+}
+
+.about-values-list strong {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 760;
+  color: var(--default-color);
+}
