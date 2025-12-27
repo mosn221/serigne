@@ -273,3 +273,10 @@ body {
     gap: 28px;
   }
 }
+
+.about-note{
+  max-width: 760px;
+  margin: 24px auto 0;
+  text-align: center;
+  color: #6c757d;
+}
