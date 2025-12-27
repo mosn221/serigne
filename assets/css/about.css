@@ -287,3 +287,101 @@
   color: #1A1A2E;
   font-weight: 500;
 }
+
+/* ===========================
+   ABOUT PAGE (éditorial)
+   Compatible main.css
+   =========================== */
+
+/* Hero: on garde tes styles main.css, on ne fait que cadrer le contenu */
+.about-hero {
+  padding-top: 90px;   /* ajuste si ton header est sticky */
+  padding-bottom: 50px;
+}
+
+/* Bloc éditorial: largeur maîtrisée + confort lecture */
+.about-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Valeurs: liste propre (pas de cards) */
+.about-values {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.about-values li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.about-values li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* CTA final (un seul bloc structuré) */
+.about-strip {
+  background: #f6f8fb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.about-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.about-strip-text h3 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-strip-text p {
+  margin-bottom: 0;
+  color: #6c757d;
+  max-width: 520px;
+}
+
+.about-strip-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-strip-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-strip-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-strip-actions .btn {
+    width: 100%;
+  }
+}
+
