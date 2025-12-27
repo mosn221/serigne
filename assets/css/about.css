@@ -234,3 +234,42 @@ body {
   opacity: 0.9;
 }
 
+/* ---------- VALEURS (3 colonnes premium) ---------- */
+
+.about-values-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-values-wrapper h2 {
+  margin-bottom: 36px;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.about-value h3 {
+  font-family: var(--heading-font);
+  font-weight: 780;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.about-value p {
+  margin: 0;
+  line-height: 1.75;
+  color: #4B5563;
+  font-size: 0.98rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
