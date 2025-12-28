@@ -243,3 +243,9 @@
   font-weight: 760;
   color: var(--default-color);
 }
+
+.about-cta {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #E7EAF0; /* plein, pas dashed */
+}
