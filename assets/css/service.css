@@ -483,3 +483,101 @@
   color: var(--yellow-accent);
   margin-right: .4rem;
 }
+
+
+.section-tight{ padding: 40px 0; }
+
+.service-pillars .pillar-card{
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-pillars .pillar-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+}
+.service-pillars .pillar-icon{
+  width: 44px; height: 44px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.service-pillars .pillar-title{
+  font-size: 1.05rem;
+  margin: 6px 0 8px;
+}
+.service-pillars p{ margin: 0; color: color-mix(in srgb, var(--default-color), transparent 25%); }
+
+.method-steps{
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+.method-step{
+  display:flex;
+  gap: 12px;
+  padding: 14px 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+.method-step:last-child{ border-bottom: 0; }
+.step-n{
+  font-weight: 700;
+  color: var(--accent-color);
+  min-width: 42px;
+}
+.method-step h3{
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+}
+.method-step p{
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.deliverables{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+.deliverables li{
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+}
+.deliverables i{
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+@media (max-width: 767px){
+  .deliverables{ grid-template-columns: 1fr; }
+}
+
+.example-card{
+  margin-top: 12px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+.example-card h3{ margin: 0 0 6px; }
+.example-card p{ color: color-mix(in srgb, var(--default-color), transparent 25%); }
