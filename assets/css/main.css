@@ -1446,3 +1446,12 @@ section,
     border-radius: 18px;
   }
 }
+
+
+#data .section-title{
+  padding-bottom: 18px; /* au lieu de 60px */
+}
+
+#data .data-intro{
+  margin-top: 0;
+}
