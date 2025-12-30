@@ -1443,7 +1443,7 @@ section,
 /* Section Données – intégration fluide au fond global */
 .data-intro {
   position: relative;
-  background-color: var(--page-bg, #F5F7FA); /* même fond que la page */
+  background-color: var(--background-color, #F5F7FA); /* même fond que la page */
   padding: 90px 0;
   overflow: hidden;
 }
@@ -1466,7 +1466,7 @@ section,
   inset: 0;
   background: linear-gradient(
     to bottom,
-    var(--page-bg, #F5F7FA) 0%,
+    var(--background-color, #F5F7FA) 0%,
     rgba(245,247,250,0.6) 20%,
     rgba(245,247,250,0.6) 80%,
     var(--page-bg, #F5F7FA) 100%
