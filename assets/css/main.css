@@ -1395,7 +1395,7 @@ section,
 
 .data-intro {
   position: relative;
-  background-image: url("assets/img/services/open-data.jpg");
+  background-image: url("../img/services/open-data.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
