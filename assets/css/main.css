@@ -1438,3 +1438,42 @@ section,
 .data-intro p {
   color: #fff;
 }
+
+
+/* Section Données – intégration fluide au fond global */
+.data-intro {
+  position: relative;
+  background-color: var(--page-bg, #F5F7FA); /* même fond que la page */
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+/* Image data très discrète */
+.data-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/services/open-data.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12; /* très faible pour rester subtil */
+}
+
+/* Dégradé de fusion haut/bas */
+.data-intro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--page-bg, #F5F7FA) 0%,
+    rgba(245,247,250,0.6) 20%,
+    rgba(245,247,250,0.6) 80%,
+    var(--page-bg, #F5F7FA) 100%
+  );
+}
+
+.data-intro .container {
+  position: relative;
+  z-index: 2;
+}
