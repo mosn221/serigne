@@ -1360,3 +1360,34 @@ section,
 .footer-copyright .credits {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
+
+.data-bg{
+  position: relative;
+  background-image: url("assets/img/services/open-data.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+/* overlay pour lisibilité + cohérence charte */
+.data-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    135deg,
+    rgba(26,26,46,0.88),
+    rgba(0,124,145,0.55)
+  );
+}
+
+.data-bg .container{
+  position: relative;
+  z-index: 2;
+}
+
+.data-bg h2,
+.data-bg p{
+  color:#fff;
+}
