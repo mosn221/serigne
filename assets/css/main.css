@@ -1449,7 +1449,7 @@ section,
 
 
 #data .section-title{
-  padding-bottom: 18px; /* au lieu de 60px */
+  padding-bottom: 30px; /* au lieu de 60px */
 }
 
 #data .data-intro{
