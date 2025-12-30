@@ -1361,119 +1361,41 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.data-bg{
+    /* Section Données – intégration fluide au fond existant */
+.data-intro{
   position: relative;
-  background-image: url("assets/img/services/open-data.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: #F0EEE9; /* fond réel de la page */
   padding: 90px 0;
   overflow: hidden;
 }
 
-/* overlay pour lisibilité + cohérence charte */
-.data-bg::before{
+/* Image open-data en texture discrète */
+.data-intro::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("../img/services/open-data.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10; /* très léger */
+}
+
+/* Fusion HAUT + BAS avec EXACTEMENT la même couleur */
+.data-intro::after{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(
-    135deg,
-    rgba(26,26,46,0.88),
-    rgba(0,124,145,0.55)
-  );
-}
-
-.data-bg .container{
-  position: relative;
-  z-index: 2;
-}
-
-.data-bg h2,
-.data-bg p{
-  color:#fff;
-}
-
-
-.data-intro {
-  position: relative;
-  background-image: url("../img/services/open-data.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 90px 0;
-  color: #fff;
-}
-
-/* overlay : lisibilité + identité PyCode */
-.data-intro::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(26, 26, 46, 0.85),
-      rgba(26, 26, 46, 0.65)
-    );
-}
-
-/* optionnel mais recommandé : léger grain pour éviter l’effet photo brute */
-.data-intro::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    rgba(255,255,255,0.06) 1px,
-    transparent 1px
-  );
-  background-size: 26px 26px;
-  opacity: 0.25;
-}
-
-.data-intro .container {
-  position: relative;
-  z-index: 2;
-}
-
-.data-intro h2,
-.data-intro p {
-  color: #fff;
-}
-
-
-/* Section Données – intégration fluide au fond global */
-.data-intro {
-  position: relative;
-  background-color: var(--background-color, #F5F7FA); /* même fond que la page */
-  padding: 90px 0;
-  overflow: hidden;
-}
-
-/* Image data très discrète */
-.data-intro::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/services/open-data.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.12; /* très faible pour rester subtil */
-}
-
-/* Dégradé de fusion haut/bas */
-.data-intro::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
     to bottom,
-    var(--background-color, #F5F7FA) 0%,
-    rgba(245,247,250,0.6) 20%,
-    rgba(245,247,250,0.6) 80%,
-    var(--page-bg, #F5F7FA) 100%
+    #F0EEE9 0%,
+    rgba(240,238,233,0.65) 18%,
+    rgba(240,238,233,0.65) 82%,
+    #F0EEE9 100%
   );
 }
 
-.data-intro .container {
+/* Le contenu reste au-dessus */
+.data-intro .container{
   position: relative;
   z-index: 2;
 }
