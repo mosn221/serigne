@@ -1377,7 +1377,7 @@ section,
   background-image: url("../img/services/open-data.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.32; /* très léger */
+  opacity: 0.27; /* très léger */
 }
 
 /* Fusion HAUT + BAS avec EXACTEMENT la même couleur */
@@ -1388,8 +1388,8 @@ section,
   background: linear-gradient(
     to bottom,
     #F0EEE9 0%,
-    rgba(240,238,233,0.30) 18%,
-    rgba(240,238,233,0.30) 82%,
+    rgba(240,238,233,0.34) 18%,
+    rgba(240,238,233,0.34) 82%,
     #F0EEE9 100%
   );
 }
