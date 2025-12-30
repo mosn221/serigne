@@ -1399,3 +1399,50 @@ section,
   position: relative;
   z-index: 2;
 }
+
+.data-intro{
+  position: relative;
+  background-color: #F0EEE9;
+  padding: 70px 40px;
+  overflow: hidden;
+  border-radius: 24px; /* optionnel */
+}
+
+/* image en texture */
+.data-intro::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("../img/services/open-data.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  filter: grayscale(22%) contrast(117%) brightness(102%);
+}
+
+/* overlay de fusion */
+.data-intro::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    #F0EEE9 0%,
+    rgba(240,238,233,0.32) 18%,
+    rgba(240,238,233,0.32) 82%,
+    #F0EEE9 100%
+  );
+}
+
+/* contenu au-dessus */
+.data-intro > *{
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px){
+  .data-intro{
+    padding: 60px 22px;
+    border-radius: 18px;
+  }
+}
