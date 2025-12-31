@@ -391,7 +391,14 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <!-- Main JS -->
   <script src="../assets/js/main.js" defer></script>
-
+<script>
+  (function () {
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+</script>
 </body>
 
                     </html>
