@@ -1749,3 +1749,35 @@ section,
   background: var(--accent-color);
   opacity: 0.85;
   }
+
+/* Projets - amélioration UX hover */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-link .domain-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-card-link:hover .domain-card,
+.project-card-link:focus-visible .domain-card {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+}
+
+/* Underline un peu plus "vivant" */
+.project-card-link .domain-underline {
+  width: 46px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent-color);
+  opacity: 0.9;
+  transition: width 0.18s ease;
+}
+
+.project-card-link:hover .domain-underline,
+.project-card-link:focus-visible .domain-underline {
+  width: 64px;
+}
