@@ -1703,68 +1703,7 @@ section,
   padding: 8px 16px;
 }
 
-/* Home - Notre approche (SEO + UX) */
-#approche.approach-section {
-  background: #f8f9fa; /* léger contraste */
-}
 
-#approche .approach-intro {
-  line-height: 1.75;
-  margin-bottom: 0;
-}
-
-#approche .approach-card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
-  padding: 18px 18px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-#approche .approach-card:hover {
-  transform: translateY(-2px);
-}
-
-#approche .approach-card-title {
-  font-weight: 700;
-  margin-bottom: 0.45rem;
-  line-height: 1.2;
-}
-
-#approche .approach-card-text {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  opacity: 0.95;
-}
-
-#approche .approach-divider {
-  width: 64px;
-  height: 3px;
-  border-radius: 2px;
-  margin: 28px auto 0;
-  background: var(--accent-color);
-}
-
-
-#approche .approach-card {
-  background: #ffffff;
-  border: 1px solid rgba(26, 26, 46, 0.08);
-  border-radius: 14px;
-  padding: 18px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-#approche .approach-card-title {
-  color: #1A1A2E;
-  font-weight: 700;
-}
-
-#approche .approach-card-text {
-  color: rgba(26, 26, 46, 0.85);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
 
 /* Notre approche (robuste) */
 .approach-section {
