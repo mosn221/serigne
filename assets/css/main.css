@@ -1765,3 +1765,48 @@ section,
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* Notre approche (robuste) */
+.approach-section {
+  background: #f8f9fa;
+}
+
+.approach-section .approach-intro {
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.approach-section .approach-card {
+  background: #ffffff;
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.approach-section .approach-card:hover {
+  transform: translateY(-2px);
+}
+
+.approach-section .approach-card-title {
+  color: #1A1A2E;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+.approach-section .approach-card-text {
+  color: rgba(26, 26, 46, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.approach-section .approach-divider {
+  width: 60px;
+  height: 2px;
+  margin: 32px auto 0;
+  border-radius: 2px;
+  background: var(--accent-color);
+  opacity: 0.85;
+  }
