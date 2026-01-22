@@ -1377,7 +1377,7 @@ section,
   background-image: url("../img/services/open-data.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.27; /* très léger */
+  opacity: 0.2; /* très léger */
 }
 
 /* Fusion HAUT + BAS avec EXACTEMENT la même couleur */
@@ -1416,7 +1416,7 @@ section,
   background-image: url("../img/services/open-data.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.27;
+  opacity: 0.2;
   filter: grayscale(22%) contrast(117%) brightness(102%);
 }
 
