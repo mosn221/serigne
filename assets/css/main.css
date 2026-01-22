@@ -1781,3 +1781,46 @@ section,
 .project-card-link:focus-visible .domain-underline {
   width: 64px;
 }
+
+/* ===== Projets: harmonisation + hover unique ===== */
+
+/* 1) Le lien doit porter l'interaction */
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 2) Désactive le hover direct sur .domain-card (évite double hover) */
+.domain-card:hover {
+  transform: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* 3) Hover/Focus géré uniquement via le lien */
+.project-card-link .domain-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-card-link:hover .domain-card,
+.project-card-link:focus-visible .domain-card {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* 4) Soulignement qui s'étire (micro-feedback) */
+.project-card-link .domain-underline {
+  transition: width 0.18s ease;
+}
+
+.project-card-link:hover .domain-underline,
+.project-card-link:focus-visible .domain-underline {
+  width: 64px;
+}
+
+/* 5) Images: assure une hauteur identique (cohérence grille) */
+.domain-card-image img,
+.domain-card img {
+  height: 160px; /* ajuste si tu veux 180 */
+  object-fit: cover;
+}
