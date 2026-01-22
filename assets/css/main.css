@@ -1618,3 +1618,87 @@ section,
 #data .btn-brand.btn-sm {
   padding: 8px 16px;
 }
+
+
+
+/* Home - Data UX improvements */
+#data .data-benefits {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+#data .benefit-item {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#data .benefit-item:hover {
+  transform: translateY(-2px);
+}
+
+#data .benefit-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+#data .benefit-text {
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+/* Proof bar */
+#data .data-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#data .proof-chip {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Steps (si pas déjà) */
+#data .data-steps {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+#data .data-step {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+#data .step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  background: var(--accent-color);
+}
+
+#data .step-title {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+#data .step-text {
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+/* CTA secondaire plus discret (home) */
+#data .btn-brand.btn-sm {
+  padding: 8px 16px;
+}
