@@ -1567,3 +1567,54 @@ section,
 .project-card-link:hover .project-card{
   transform: translateY(-2px);
 }
+
+
+
+
+/* Home - Data section */
+#data .data-points {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+#data .data-points li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+#data .data-steps {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+#data .data-step {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+#data .step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  background: var(--accent-color);
+}
+
+#data .step-title {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+#data .step-text {
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+/* CTA secondaire plus discret sur la home (optionnel) */
+#data .btn-brand.btn-sm {
+  padding: 8px 16px;
+}
