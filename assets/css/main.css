@@ -1745,3 +1745,23 @@ section,
   margin: 28px auto 0;
   background: var(--accent-color);
 }
+
+
+#approche .approach-card {
+  background: #ffffff;
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#approche .approach-card-title {
+  color: #1A1A2E;
+  font-weight: 700;
+}
+
+#approche .approach-card-text {
+  color: rgba(26, 26, 46, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
