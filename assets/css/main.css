@@ -1836,3 +1836,9 @@ section,
   color: rgba(26, 26, 46, 0.85);
   margin-bottom: 1rem;
 }
+
+/* Intro section Projets – largeur réduite */
+.section-intro-narrow {
+  max-width: 720px;   /* ajuste : 640 / 680 / 720 */
+  margin: 0 auto;
+}
