@@ -1,0 +1,42 @@
+/* Projets – ajustements page only */
+
+.projects-hero .section-title h1 {
+  margin-bottom: 0.35rem;
+}
+
+/* Réduit la largeur des intros (cohérence avec ta home) */
+.section-intro-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Intro éditoriale */
+.projects-lede {
+  line-height: 1.75;
+  margin: 0;
+  color: rgba(26, 26, 46, 0.85);
+}
+
+/* Légère séparation visuelle sans “nouveau design” */
+.projects-intro {
+  padding-top: 0;
+}
+
+/* Cartes : harmonise le clic + micro-feedback */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Si ton main.css a déjà un hover global sur .domain-card,
+   tu peux laisser tel quel. Sinon, ce hover reste léger. */
+.project-card-link:hover .domain-card,
+.project-card-link:focus-visible .domain-card {
+  transform: translateY(-3px);
+}
+
+/* Petite marge sous la grille */
+.projects-grid {
+  padding-top: 0;
+}
