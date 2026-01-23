@@ -1824,3 +1824,15 @@ section,
   height: 160px; /* ajuste si tu veux 180 */
   object-fit: cover;
 }
+
+/* Échanger */
+.exchange-section {
+  background-color: #ffffff;
+}
+
+.exchange-section .exchange-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(26, 26, 46, 0.85);
+  margin-bottom: 1rem;
+}
