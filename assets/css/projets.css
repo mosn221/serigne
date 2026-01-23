@@ -1,42 +1,191 @@
-/* Projets – ajustements page only */
+/* ===========================
+   Page Projets — style institutionnel (page-only)
+   Inspiré de service.css
+   =========================== */
 
-.projects-hero .section-title h1 {
-  margin-bottom: 0.35rem;
+.projects-hero {
+  padding: 4.5rem 0 3.5rem;
+  background: radial-gradient(circle at top left, #00BFA6 0, rgba(0, 191, 166, 0.12) 30%, transparent 60%),
+              radial-gradient(circle at bottom right, #007C91 0, rgba(0, 124, 145, 0.18) 35%, transparent 70%),
+              #F5F7FA;
+  border-bottom: 1px solid #E5E7EB;
 }
 
-/* Réduit la largeur des intros (cohérence avec ta home) */
-.section-intro-narrow {
-  max-width: 720px;
-  margin: 0 auto;
+.projects-kicker {
+  color: #FFC300;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: .6rem;
 }
 
-/* Intro éditoriale */
-.projects-lede {
-  line-height: 1.75;
-  margin: 0;
-  color: rgba(26, 26, 46, 0.85);
+.projects-status-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem .8rem;
+  margin-top: 1rem;
+  align-items:center;
 }
 
-/* Légère séparation visuelle sans “nouveau design” */
-.projects-intro {
-  padding-top: 0;
+.status-pill{
+  display:inline-flex;
+  gap:.45rem;
+  align-items:center;
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  font-size: .9rem;
+  color: #374151;
 }
 
-/* Cartes : harmonise le clic + micro-feedback */
-.project-card-link {
-  display: block;
-  text-decoration: none;
+.status-pill i{ color: var(--accent-color); }
+
+.section-tight{ padding: 40px 0; }
+
+/* Cards projets — sobre, institutionnel */
+.project-card-link{
+  text-decoration:none;
   color: inherit;
+  display:block;
 }
 
-/* Si ton main.css a déjà un hover global sur .domain-card,
-   tu peux laisser tel quel. Sinon, ce hover reste léger. */
-.project-card-link:hover .domain-card,
-.project-card-link:focus-visible .domain-card {
-  transform: translateY(-3px);
+.project-card{
+  background: var(--surface-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-/* Petite marge sous la grille */
-.projects-grid {
-  padding-top: 0;
+.project-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+}
+
+.project-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap:wrap;
+}
+
+.project-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  font-size: .9rem;
+  color: rgba(26,26,46,.80);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+}
+
+.project-status{
+  display:inline-flex;
+  align-items:center;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  color: rgba(26,26,46,.85);
+}
+.project-status.status-build{ border-color: rgba(0,124,145,.35); }
+.project-status.status-explore{ border-color: rgba(255,195,0,.45); }
+
+.project-title{
+  font-size: 1.05rem;
+  margin: 6px 0 8px;
+}
+
+.project-desc{
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  line-height: 1.65;
+}
+
+.project-cta{
+  margin-top: 12px;
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* Méthode — reprend l’esprit method-steps */
+.projects-method{
+  background: var(--surface-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+
+.method-step{
+  display:flex;
+  gap: 12px;
+  padding: 14px 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+.method-step:last-child{ border-bottom: 0; }
+
+.step-n{
+  font-weight: 700;
+  color: var(--accent-color);
+  min-width: 42px;
+}
+
+.method-step h3{
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+}
+.method-step p{
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/* Livrables */
+.projects-deliverables{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+.projects-deliverables li{
+  background: var(--surface-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+}
+.projects-deliverables i{
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+@media (max-width: 767px){
+  .projects-deliverables{ grid-template-columns: 1fr; }
+}
+
+/* Bloc échange */
+.projects-contact{
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
 }
