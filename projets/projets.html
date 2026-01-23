@@ -1,117 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Projets | PyCode Group</title>
-  <meta name="description" content="Découvrir les projets PyCode : initiatives progressives construites à partir de données structurées, orientées utilité et impact." />
-  <link rel="canonical" href="https://pycodegroup.com/projets.html" />
+  <title>Projets – Portefeuille et initiatives | PyCode Group</title>
+  <meta name="description" content="Les projets PyCode : initiatives progressives construites à partir de données structurées, orientées utilité et ancrées dans des usages concrets.">
+  <meta name="author" content="PyCode Group">
+
+  <link rel="canonical" href="https://pycodegroup.com/projets.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projets – Portefeuille et initiatives - PyCode Group">
+  <meta property="og:description" content="Trois projets phares : Lekkantu, SunuGoal et Kurel Facts. Une logique progressive, utile et documentée.">
+  <meta property="og:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
+  <meta property="og:url" content="https://pycodegroup.com/projets.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projets – Portefeuille et initiatives - PyCode Group">
+  <meta name="twitter:description" content="Lekkantu, SunuGoal, Kurel Facts : des projets data progressifs et utiles.">
+  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="../assets/img/Logo-Favicon.png" rel="icon">
 
-  <!-- Main CSS -->
-  <link href="../assets/css/main.css" rel="stylesheet" />
-  <!-- Page CSS -->
-  <link href="../assets/css/projets.css" rel="stylesheet" />
+  <!-- Vendor CSS (comme Données) -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS + Page CSS -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="...assets/css/projets.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="projects-page">
 
-  <!-- Header (reprendre ton header existant) -->
-  <!-- ... -->
+  <!-- Header : reprends celui de tes pages (même structure que data.html) -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-  <main id="main">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo-header.svg" alt="Logo PyCode Group">
+      </a>
 
-    <!-- ======= Hero Projets ======= -->
-    <section class="section projects-hero" aria-label="Page Projets">
-      <div class="container section-title">
-        <h1>Projets</h1>
-        <p class="section-intro-narrow">
-          Des projets construits à partir de données structurées, ancrés dans des usages concrets et pensés pour évoluer dans le temps.
-        </p>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services/data.html">Données</a></li>
+          <li><a href="projets.html" class="active">Projets</a></li>
+          <li><a href="mailto:pycodegroup@gmail.com">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- HERO INSTITUTIONNEL : PROJETS -->
+    <section class="projects-hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+
+          <div class="col-lg-7">
+            <p class="projects-kicker">Projets</p>
+            <h1>Un portefeuille progressif, orienté utilité</h1>
+            <p class="lead">
+              PyCode développe des projets thématiques construits à partir de données structurées.
+              L’objectif est de produire des ressources lisibles, comparables et réutilisables — avant d’accélérer.
+            </p>
+
+            <!-- Légende statuts (sobre, comme Données) -->
+            <div class="projects-status-legend" aria-label="Statuts des projets">
+              <span class="status-pill status-build"><i class="bi bi-hammer"></i> En structuration</span>
+              <span class="status-pill status-explore"><i class="bi bi-compass"></i> Exploratoire</span>
+            </div>
+          </div>
+
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="projects-hero-illustration">
+              <img
+                src="../assets/img/services/open-data.jpg"
+                alt="Illustration projets PyCode Group"
+                class="img-fluid rounded-4 shadow-sm"
+                loading="lazy">
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ======= Intro ======= -->
-    <section class="section projects-intro" aria-label="Introduction projets">
+    <!-- Intro courte (équivalent “Pourquoi la donnée ?”) -->
+    <section class="section section-tight">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-9 col-xl-8">
-            <p class="projects-lede">
-              PyCode développe des projets thématiques avec une démarche progressive : collecter, structurer, documenter et restituer des ressources utiles.
-              Certains projets sont encore en phase exploratoire ou de structuration — l’objectif est de bâtir des socles solides, réutilisables,
-              et adaptés aux réalités locales plutôt que de multiplier des annonces.
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Pourquoi fonctionner par projets&nbsp;?</h2>
+            <p>
+              Parce qu’un projet permet de transformer une intention en ressources concrètes&nbsp;: un périmètre, un schéma,
+              une méthode de collecte, des règles de structuration et une restitution claire.
+            </p>
+            <p class="text-secondary mt-3 mb-0">
+              Les projets avancent par étapes, avec un souci constant de documentation et de cohérence — plutôt que par accumulation d’annonces.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= Grille projets ======= -->
-    <section class="section projects-grid" aria-label="Liste des projets PyCode">
+    <!-- Grille projets (style “pillars” de Données) -->
+    <section class="section light-background">
       <div class="container">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="mb-1">Projets phares</h2>
+            <p class="mb-0 text-secondary">Trois initiatives au cœur du portefeuille PyCode.</p>
+          </div>
+        </div>
 
-        <div class="row gy-4 justify-content-center domains-grid">
+        <div class="row g-4 projects-cards">
 
           <!-- Lekkantu -->
-          <div class="col-lg-4 col-md-6">
-            <a href="projets/projet-lekkantu.html" class="project-card-link">
-              <article class="domain-card h-100 project-card" aria-label="Projet Lekkantu">
-                <div class="domain-card-image">
-                  <img src="assets/img/projets/lekkantu.jpg" alt="Illustration du projet Lekkantu">
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link" href="projets/projet-lekkantu.html" aria-label="Découvrir Lekkantu">
+              <div class="project-card">
+                <div class="project-card-head">
+                  <span class="project-tag"><i class="bi bi-egg-fried"></i> Nutrition & transparence</span>
                   <span class="project-status status-build">En structuration</span>
                 </div>
-                <div class="domain-card-body">
-                  <span class="domain-tag">Nutrition & transparence</span>
-                  <h3>Lekkantu</h3>
-                  <div class="domain-underline"></div>
-                  <p>
-                    Structurer des informations sur les produits alimentaires pour rendre les choix plus éclairés et l’information plus lisible.
-                  </p>
-                </div>
-              </article>
+                <h3 class="project-title">Lekkantu</h3>
+                <p class="project-desc">
+                  Structurer des informations sur les produits alimentaires (composition, repères, comparaisons)
+                  pour rendre l’information plus lisible et utile au grand public.
+                </p>
+                <span class="project-cta">Découvrir <i class="bi bi-arrow-right"></i></span>
+              </div>
             </a>
           </div>
 
           <!-- SunuGoal -->
-          <div class="col-lg-4 col-md-6">
-            <a href="projets/projet-sunugoal.html" class="project-card-link">
-              <article class="domain-card h-100 project-card" aria-label="Projet SunuGoal">
-                <div class="domain-card-image">
-                  <img src="assets/img/projets/sunugoal.jpg" alt="Illustration du projet SunuGoal">
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link" href="projets/projet-sunugoal.html" aria-label="Découvrir SunuGoal">
+              <div class="project-card">
+                <div class="project-card-head">
+                  <span class="project-tag"><i class="bi bi-dribbble"></i> Sport & données</span>
                   <span class="project-status status-explore">Exploratoire</span>
                 </div>
-                <div class="domain-card-body">
-                  <span class="domain-tag">Sport & données</span>
-                  <h3>SunuGoal</h3>
-                  <div class="domain-underline"></div>
-                  <p>
-                    Construire une base de données sur le football local pour suivre les évolutions, produire des statistiques et valoriser les talents.
-                  </p>
-                </div>
-              </article>
+                <h3 class="project-title">SunuGoal</h3>
+                <p class="project-desc">
+                  Construire une base sur le football local (matchs, événements, équipes, joueurs) pour produire des statistiques,
+                  suivre les évolutions et valoriser les talents.
+                </p>
+                <span class="project-cta">Découvrir <i class="bi bi-arrow-right"></i></span>
+              </div>
             </a>
           </div>
 
           <!-- Kurel Facts -->
-          <div class="col-lg-4 col-md-6">
-            <a href="projets/projet-kurel-facts.html" class="project-card-link">
-              <article class="domain-card h-100 project-card" aria-label="Projet Kurel Facts">
-                <div class="domain-card-image">
-                  <img src="assets/img/projets/kurel-facts.jpg" alt="Illustration du projet Kurel Facts">
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link" href="projets/projet-kurel-facts.html" aria-label="Découvrir Kurel Facts">
+              <div class="project-card">
+                <div class="project-card-head">
+                  <span class="project-tag"><i class="bi bi-journal-text"></i> Culture & mémoire</span>
                   <span class="project-status status-explore">Exploratoire</span>
                 </div>
-                <div class="domain-card-body">
-                  <span class="domain-tag">Culture & mémoire</span>
-                  <h3>Kurel Facts</h3>
-                  <div class="domain-underline"></div>
-                  <p>
-                    Structurer et documenter des ressources culturelles pour préserver, comprendre et transmettre des contenus de manière organisée.
-                  </p>
-                </div>
-              </article>
+                <h3 class="project-title">Kurel Facts</h3>
+                <p class="project-desc">
+                  Structurer et documenter des ressources culturelles pour préserver, retrouver et transmettre des contenus
+                  de manière organisée et durable.
+                </p>
+                <span class="project-cta">Découvrir <i class="bi bi-arrow-right"></i></span>
+              </div>
             </a>
           </div>
 
@@ -119,66 +183,97 @@
       </div>
     </section>
 
-    <!-- ======= Méthode appliquée ======= -->
-    <section class="section projects-method" aria-label="Méthode PyCode">
-      <div class="container section-title">
-        <h2>Une démarche commune</h2>
-        <p class="section-intro-narrow">
-          Chaque projet suit une chaîne de valeur simple, reproductible et orientée utilité.
-        </p>
-      </div>
-
+    <!-- Méthode (reprend l’esprit “method-steps” de Données) -->
+    <section class="section">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="approach-card h-100">
-              <h4 class="approach-card-title">Collecter</h4>
-              <p class="approach-card-text">Identifier des sources, organiser la collecte et fiabiliser l’information.</p>
-            </div>
+        <div class="row align-items-start g-4">
+          <div class="col-lg-6">
+            <h2>Comment un projet avance</h2>
+            <p>
+              Tous les projets suivent une chaîne de valeur commune&nbsp;: clarifier un périmètre, structurer, documenter,
+              puis restituer des formats utiles.
+            </p>
+            <p class="mb-0">
+              Le détail de la démarche est présenté sur la page <a href="services/data.html">Données</a>.
+            </p>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="approach-card h-100">
-              <h4 class="approach-card-title">Structurer</h4>
-              <p class="approach-card-text">Nettoyer, normaliser et rendre la donnée comparable et exploitable.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="approach-card h-100">
-              <h4 class="approach-card-title">Documenter</h4>
-              <p class="approach-card-text">Clarifier les définitions, les champs, les limites et le contexte.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="approach-card h-100">
-              <h4 class="approach-card-title">Restituer</h4>
-              <p class="approach-card-text">Publier des ressources lisibles : pages, tableaux, synthèses, visuels.</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="text-center mt-4">
-          <a href="services/data.html" class="btn btn-brand btn-lg">Découvrir la page Données</a>
+          <div class="col-lg-6">
+            <div class="projects-method">
+              <div class="method-step">
+                <span class="step-n">01</span>
+                <div>
+                  <h3>Collecte & cadrage</h3>
+                  <p>Sources, périmètre, règles de saisie, cohérence terrain.</p>
+                </div>
+              </div>
+              <div class="method-step">
+                <span class="step-n">02</span>
+                <div>
+                  <h3>Structuration & documentation</h3>
+                  <p>Schéma de données, normalisation, dictionnaire, contrôles qualité.</p>
+                </div>
+              </div>
+              <div class="method-step">
+                <span class="step-n">03</span>
+                <div>
+                  <h3>Restitution & diffusion</h3>
+                  <p>Pages de consultation, indicateurs, open data, supports de décision.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ======= Échanger ======= -->
-    <section class="section projects-exchange" aria-label="Échanger">
+    <!-- Formats / livrables (même esprit que Données) -->
+    <section class="section light-background">
       <div class="container">
-        <div class="contact-panel text-center">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <h2>Ce que produisent les projets</h2>
+            <p class="mb-0">
+              Des ressources consultables et réutilisables, adaptées aux usages et au contexte.
+            </p>
+          </div>
+
+          <div class="col-lg-10">
+            <ul class="projects-deliverables">
+              <li><i class="bi bi-database"></i> Jeux de données structurés et documentés</li>
+              <li><i class="bi bi-bar-chart-line"></i> Indicateurs et tableaux de bord légers</li>
+              <li><i class="bi bi-journal-text"></i> Synthèses thématiques et notes de cadrage</li>
+              <li><i class="bi bi-globe2"></i> Pages de consultation et ressources publiques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloc échange (même logique “panneau” que tu utilises ailleurs) -->
+    <section class="section">
+      <div class="container">
+        <div class="projects-contact text-center">
           <h2>Échanger</h2>
-          <p class="exchange-text">
-            Une question, une idée, une contribution, une piste terrain ? Ce point de contact est ouvert pour discuter et faire avancer des projets utiles.
+          <p class="mb-3">
+            Une question, une idée ou une piste terrain&nbsp;? Ce point de contact est ouvert pour discuter et faire avancer des projets utiles.
           </p>
-          <a href="contact.html" class="btn btn-brand btn-lg mt-2">Nous contacter</a>
+          <a href="mailto:pycodegroup@gmail.com" class="btn btn-brand">Nous contacter</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer (reprendre ton footer existant) -->
-  <!-- ... -->
+  <!-- Footer : reprends celui de tes pages -->
+  <footer id="footer" class="footer dark-background">
+    <!-- ... (copie de ton footer existant) -->
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="...assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
 
 </body>
 </html>
