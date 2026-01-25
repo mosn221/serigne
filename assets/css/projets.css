@@ -256,3 +256,41 @@
   line-height: 1.6;
   color: rgba(26, 26, 46, 0.85);
 }
+
+
+/* ===========================
+   Projets — section "À quoi servent ces projets ?"
+   =========================== */
+
+.projects-purpose .purpose-card {
+  background: #ffffff;
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+
+.projects-purpose .purpose-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.projects-purpose .purpose-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin: 0.6rem 0;
+  color: rgba(26, 26, 46, 0.85);
+  line-height: 1.6;
+}
+
+.projects-purpose .purpose-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.35rem;
+  top: 0;
+  color: #00BFA6;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
