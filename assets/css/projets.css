@@ -11,12 +11,17 @@
   border-bottom: 1px solid rgba(26, 26, 46, 0.08);
 }
 
+
+
+.projects-kicker {
+  color: #007C91; /* Bleu pétrole lisible */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
 .projects-kicker {
   color: #FFC300;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  margin-bottom: .6rem;
 }
 
 .projects-pills {
