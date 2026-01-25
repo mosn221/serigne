@@ -24,6 +24,32 @@
   color: #FFC300;
 }
 
+.projects-kicker {
+  letter-spacing: 0.04em;
+}
+
+.projects-kicker {
+  color: #007C91;/* Jaune de la charte*/
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.projects-kicker {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.projects-kicker::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background: #FFC300;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
 .projects-pills {
   display: flex;
   flex-wrap: wrap;
