@@ -2354,3 +2354,87 @@ section,
     right: auto;
   }
   }
+
+
+:root{
+  --solar-yellow: var(--yellow-accent, #FFC300);
+  --ink: var(--default-color, #1A1A2E);
+  --accent: var(--accent-color, #007C91);
+}
+
+/* Fond + pattern subtil */
+.cta-exchange{
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 15% -15%, color-mix(in srgb, var(--solar-yellow), transparent 70%), transparent 60%),
+    radial-gradient(800px 360px at 95% 0%, color-mix(in srgb, var(--accent), transparent 82%), transparent 58%),
+    linear-gradient(180deg, #fff, color-mix(in srgb, var(--solar-yellow), transparent 94%));
+  border-top: 1px solid color-mix(in srgb, var(--ink), transparent 90%);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink), transparent 90%);
+}
+
+.cta-exchange::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--accent), transparent 78%) 2px, transparent 2.5px) 0 0 / 34px 34px;
+  opacity:.28;
+  pointer-events:none;
+  mask-image: radial-gradient(closest-side, #000 55%, transparent 90%);
+}
+
+/* Boutons Bootstrap custom */
+.btn-solar{
+  background: var(--solar-yellow);
+  color:#111;
+  font-weight:800;
+  border: 1px solid color-mix(in srgb, #000, transparent 88%);
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+
+.btn-solar:hover{
+  color:#111;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.16);
+}
+
+.btn-outline-solar{
+  border-color: color-mix(in srgb, var(--ink), transparent 80%);
+  color: color-mix(in srgb, var(--ink), transparent 10%);
+  font-weight:800;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+}
+
+.btn-outline-solar:hover{
+  border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
+  box-shadow: 0 16px 38px rgba(0,0,0,.10);
+}
+
+/* Panneau droit */
+.cta-panel{
+  background: rgba(255,255,255,.76);
+  border: 1px solid color-mix(in srgb, var(--ink), transparent 86%);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.badge-solar{
+  background: var(--solar-yellow);
+  color:#111;
+  font-weight:800;
+  border-radius: 999px;
+  padding: .45rem .7rem;
+}
+
+.badge-ink{
+  background: color-mix(in srgb, var(--ink), transparent 92%);
+  color: color-mix(in srgb, var(--ink), transparent 5%);
+  font-weight:800;
+  border-radius: 999px;
+  padding: .45rem .7rem;
+}
