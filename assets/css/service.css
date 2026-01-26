@@ -688,4 +688,22 @@
   padding-bottom: 80px;
 }
 
+.data-cta-box .btn-brand {
+  padding: 14px 30px;
+  font-size: 1.05rem;
+}
+
+.btn-outline-brand {
+  border: 1.5px solid #007C91;
+  color: #007C91;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 600;
+}
+
+.btn-outline-brand:hover {
+  background: rgba(0,124,145,0.08);
+  color: #007C91;
+}
 
