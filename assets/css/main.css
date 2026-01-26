@@ -1916,3 +1916,12 @@ section,
   .hero h1{ font-size: 1.8rem; }
   .hero p{ font-size: 1rem; }
 }
+
+
+.section-intro{
+  max-width: 70ch;
+  margin: 0 auto 32px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
