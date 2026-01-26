@@ -581,3 +581,42 @@
 }
 .example-card h3{ margin: 0 0 6px; }
 .example-card p{ color: color-mix(in srgb, var(--default-color), transparent 25%); }
+
+/* Données - définition */
+.data-definition p{
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.7;
+}
+
+/* Données - Qualité */
+.data-quality-card{
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+
+.data-quality-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.data-quality-list li{
+  position: relative;
+  padding-left: 1.4rem;
+  margin: 0.55rem 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.6;
+}
+
+.data-quality-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0.35rem;
+  top: 0;
+  color: #00BFA6;
+  font-weight: 900;
+  font-size: 1.15rem;
+}
