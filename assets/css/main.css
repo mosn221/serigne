@@ -2160,3 +2160,197 @@ section,
 }
 
 .project-card{ cursor: pointer; }
+
+/* CTA Exchange — bold but clean */
+:root{
+  --solar-yellow: var(--yellow-accent, #FFC300);
+  --ink: var(--default-color, #1A1A2E);
+  --accent: var(--accent-color, #007C91);
+}
+
+.cta-exchange{
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(1000px 420px at 15% -20%, color-mix(in srgb, var(--solar-yellow), transparent 70%), transparent 60%),
+    radial-gradient(900px 380px at 90% 0%, color-mix(in srgb, var(--accent), transparent 78%), transparent 58%),
+    linear-gradient(180deg, #fff, color-mix(in srgb, var(--solar-yellow), transparent 94%));
+  border-top: 1px solid color-mix(in srgb, var(--ink), transparent 90%);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink), transparent 90%);
+}
+
+/* Subtle "data" pattern (pure CSS, no image) */
+.cta-exchange::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--accent), transparent 78%) 2px, transparent 2.5px) 0 0 / 34px 34px;
+  opacity: 0.28;
+  pointer-events: none;
+  mask-image: radial-gradient(closest-side, #000 55%, transparent 90%);
+}
+
+.cta-exchange__inner{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.cta-exchange__title{
+  font-size: 1.7rem;
+  margin: 0 0 10px;
+}
+
+.cta-exchange__text{
+  margin: 0 0 22px;
+  max-width: 62ch;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--ink), transparent 18%);
+}
+
+.cta-exchange__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.cta-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  will-change: transform;
+}
+
+.cta-btn span[aria-hidden="true"]{
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+.cta-btn--primary{
+  background: var(--solar-yellow);
+  color: #111;
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+  border: 1px solid color-mix(in srgb, #000, transparent 88%);
+}
+
+.cta-btn--ghost{
+  background: rgba(255,255,255,.75);
+  color: color-mix(in srgb, var(--ink), transparent 8%);
+  border: 1px solid color-mix(in srgb, var(--ink), transparent 85%);
+  backdrop-filter: blur(6px);
+}
+
+.cta-btn:hover{
+  transform: translateY(-2px);
+}
+
+.cta-btn:hover span[aria-hidden="true"]{
+  transform: translateX(4px);
+}
+
+.cta-btn--primary:hover{
+  box-shadow: 0 18px 42px rgba(0,0,0,.16);
+}
+
+.cta-btn--ghost:hover{
+  border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
+  box-shadow: 0 16px 38px rgba(0,0,0,.10);
+}
+
+.cta-btn:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--solar-yellow), transparent 18%);
+  outline-offset: 4px;
+}
+
+.cta-exchange__note{
+  margin: 14px 0 0;
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--ink), transparent 35%);
+}
+
+/* Right-side visual */
+.cta-exchange__visual{
+  position: relative;
+  min-height: 220px;
+}
+
+.cta-chip{
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: min(320px, 100%);
+  padding: 16px 16px 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid color-mix(in srgb, var(--ink), transparent 86%);
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+  backdrop-filter: blur(8px);
+  transform: rotate(1.2deg);
+}
+
+.cta-chip--alt{
+  top: 112px;
+  right: 18px;
+  transform: rotate(-1.2deg);
+  border-color: color-mix(in srgb, var(--solar-yellow), transparent 55%);
+}
+
+.cta-chip__kicker{
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  color: color-mix(in srgb, var(--ink), transparent 35%);
+  text-transform: uppercase;
+}
+
+.cta-chip__value{
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-top: 2px;
+  color: color-mix(in srgb, var(--ink), transparent 6%);
+}
+
+.cta-spark{
+  position: absolute;
+  left: 24px;
+  bottom: 10px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, var(--solar-yellow), transparent 58%),
+    radial-gradient(circle at 70% 70%, color-mix(in srgb, var(--accent), transparent 10%), transparent 58%);
+  opacity: .55;
+  filter: blur(2px);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .cta-exchange__inner{
+    grid-template-columns: 1fr;
+  }
+  .cta-exchange__visual{
+    min-height: 190px;
+  }
+  .cta-chip{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  .cta-chip--alt{
+    left: 0;
+    right: auto;
+  }
+  }
