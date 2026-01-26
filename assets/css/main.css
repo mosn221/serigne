@@ -2007,3 +2007,154 @@ section,
     text-align: left;
   }
 }
+
+:root{
+  --solar-yellow: var(--yellow-accent, #FFC300);
+  --ink: var(--default-color, #1A1A2E);
+  --accent: var(--accent-color, #007C91);
+}
+
+/* Section */
+.projects{
+  padding: 52px 0;
+}
+
+.projects-intro{
+  max-width: 72ch;
+  margin: 0 auto 34px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--ink), transparent 28%);
+  text-align: center;
+}
+
+/* Grid */
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Card link */
+.project-card{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Card shell */
+.project-card article{
+  height: 100%;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--ink), transparent 88%);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  will-change: transform;
+}
+
+/* Media */
+.project-media{
+  position: relative;
+}
+
+.project-media img{
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Yellow badge (tape mais maîtrisé) */
+.project-badge{
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  background: var(--solar-yellow);
+  color: #111;
+  box-shadow: 0 10px 26px rgba(0,0,0,.12);
+}
+
+/* Content */
+.project-content{
+  padding: 18px 18px 20px;
+}
+
+.project-title{
+  font-size: 1.22rem;
+  margin: 0 0 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Yellow accent underline */
+.project-title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--solar-yellow);
+  opacity: .9;
+  transition: width .2s ease;
+}
+
+.project-desc{
+  margin: 0 0 14px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--ink), transparent 18%);
+}
+
+/* Micro CTA */
+.project-cta{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--accent), transparent 0%);
+  opacity: .95;
+}
+
+/* Hover: plus “envie de cliquer” */
+.project-card:hover article{
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+}
+
+.project-card:hover .project-title::after{
+  width: 72px; /* petit effet “vivant” */
+}
+
+.project-card:hover .project-cta span[aria-hidden="true"]{
+  transform: translateX(4px);
+}
+
+.project-cta span[aria-hidden="true"]{
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+/* Focus clavier (important) */
+.project-card:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--solar-yellow), transparent 15%);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .projects-intro{ text-align: left; }
+  .project-media img{ height: 190px; }
+}
