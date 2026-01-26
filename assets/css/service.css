@@ -707,3 +707,9 @@
   color: #007C91;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
