@@ -2158,3 +2158,5 @@ section,
   .projects-intro{ text-align: left; }
   .project-media img{ height: 190px; }
 }
+
+.project-card{ cursor: pointer; }
