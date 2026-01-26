@@ -1879,3 +1879,40 @@ section,
   max-width: 720px;   /* ajuste : 640 / 680 / 720 */
   margin: 0 auto;
 }
+
+/* HERO — compact */
+.hero{
+  min-height: auto;
+  padding: 56px 0;          /* au lieu de 100px */
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero h1{
+  font-size: 2.1rem;        /* au lieu de 2.8rem */
+  margin-bottom: 10px;
+}
+
+.hero p{
+  font-size: 1.05rem;       /* au lieu de 1.2rem */
+  margin-bottom: 18px;      /* au lieu de 30px */
+  max-width: 62ch;          /* lecture propre */
+}
+
+/* option : rendre la grille de fond plus discrète */
+.hero::before{
+  opacity: 0.28;            /* au lieu de 0.5 */
+}
+
+/* CTA */
+.hero .btn-get-started{
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero{ padding: 44px 0; }
+  .hero h1{ font-size: 1.8rem; }
+  .hero p{ font-size: 1rem; }
+}
