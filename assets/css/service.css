@@ -713,3 +713,14 @@
     padding-bottom: 56px;
   }
 }
+
+.data-exergue{
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #1A1A2E;
+  background: rgba(0,124,145,0.06);
+  border-left: 4px solid #007C91;
+  padding: 14px 18px;
+  margin: 1.25rem 0 1.75rem;
+  border-radius: 6px;
+}
