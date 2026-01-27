@@ -1001,3 +1001,40 @@
     padding: 26px 24px;
   }
 }
+
+.data-links{
+  margin-top: 24px;
+}
+
+.data-link{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(26,26,46,0.10);
+  text-decoration: none;
+  color: #1A1A2E;
+  transition: background .15s ease;
+}
+
+.data-link strong{
+  font-weight: 700;
+}
+
+.data-link span{
+  display: block;
+  font-size: .95rem;
+  color: color-mix(in srgb, #1A1A2E, transparent 35%);
+}
+
+.data-link em{
+  align-self: center;
+  font-style: normal;
+  opacity: .4;
+}
+
+@media (hover:hover){
+  .data-link:hover{
+    background: rgba(255,255,255,0.6);
+  }
+}
