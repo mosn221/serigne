@@ -755,10 +755,14 @@
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg, rgba(0,124,145,.08) 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(0deg, rgba(0,124,145,.08) 1px, transparent 1px) 0 0 / 40px 40px,
-    radial-gradient(circle at 20px 20px, rgba(255,195,0,.35) 2px, transparent 3px);
-  opacity:.7;
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,124,145,.10),
+      rgba(0,124,145,.10) 6px,
+      transparent 6px,
+      transparent 18px
+    );
+  opacity:.45;
 }
 
 .hero.hero-sm h1{
