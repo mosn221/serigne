@@ -2458,3 +2458,12 @@ section,
   }
 }
 
+/* Burger + X en noir */
+.mobile-nav-toggle {
+  color: #1A1A2E; /* noir / bleu foncé PyCode */
+}
+
+/* Même quand le menu est ouvert */
+.mobile-nav-active .mobile-nav-toggle {
+  color: #1A1A2E;
+}
