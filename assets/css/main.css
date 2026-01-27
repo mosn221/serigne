@@ -2583,3 +2583,66 @@ section,
     background: rgba(255,255,255,0.6);
   }
 }
+
+
+@media (max-width: 1199px) {
+
+  /* Désactive le fullscreen */
+  .mobile-nav-active {
+    overflow: auto;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: relative;
+    background: transparent;
+  }
+
+  /* Le menu mobile = vrai panneau compact */
+  .navmenu > ul {
+    position: absolute;
+    top: 100%;
+    right: 12px;
+
+    width: auto;                 /* ← clé */
+    min-width: 200px;
+    max-width: 260px;
+
+    padding: 6px 0;              /* ← réduit */
+    margin-top: 10px;
+
+    display: none;
+
+    background-color: #F0EEE9;   /* blanc cassé */
+    border-radius: 10px;         /* plus petit */
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    z-index: 1000;
+  }
+
+  .mobile-nav-active .navmenu > ul {
+    display: block;
+  }
+
+  /* Items du menu */
+  .navmenu li {
+    padding: 0;
+  }
+
+  .navmenu a {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A1A2E;
+  }
+
+  .navmenu a:hover {
+    background: rgba(0,0,0,0.04);
+  }
+
+  /* Icône burger / close */
+  .mobile-nav-toggle {
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
