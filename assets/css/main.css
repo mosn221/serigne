@@ -2457,3 +2457,65 @@ section,
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------
+   Mobile nav override: compact panel (not full-screen overlay)
+-------------------------------------------------------------- */
+@media (max-width: 1199px) {
+
+  /* Ne pas bloquer le scroll de la page */
+  .mobile-nav-active {
+    overflow: auto;
+  }
+
+  /* Supprimer le fond sombre + plein écran */
+  .mobile-nav-active .navmenu {
+    position: relative;     /* au lieu de fixed */
+    inset: auto;
+    background: transparent;
+    overflow: visible;
+  }
+
+  /* Panneau menu (le UL) */
+  .navmenu > ul {
+    position: absolute;
+    top: calc(100% + 10px); /* juste sous la nav */
+    right: 0;
+    left: auto;
+
+    width: min(320px, calc(100vw - 32px));
+    max-height: 70vh;
+    overflow: auto;
+
+    display: none;          /* caché */
+    padding: 10px 0;
+    margin: 0;
+
+    border-radius: 14px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    z-index: 9998;
+  }
+
+  /* Afficher le panneau quand le menu est actif */
+  .mobile-nav-active .navmenu > ul {
+    display: block;
+  }
+
+  /* Le burger reste simple (pas en overlay) */
+  .mobile-nav-active .mobile-nav-toggle {
+    position: static;
+    color: var(--nav-color);
+    font-size: 28px;
+    z-index: 9999;
+  }
+
+  /* Si tu as un futur sous-menu, il restera dans le panneau */
+  .navmenu .dropdown ul {
+    position: static;
+    margin: 6px 14px 10px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  }
