@@ -741,28 +741,17 @@
 }
 
 /* HERO mini */
-.hero.hero-sm{
-  padding: 56px 0 28px;
-  position: relative;
-  overflow: hidden;
-  background: var(--pc-offwhite);
-}
+
 
 /* Pattern data subtil (sans image) */
 
-.hero.hero-sm::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(0,124,145,.10),
-      rgba(0,124,145,.10) 6px,
-      transparent 6px,
-      transparent 18px
-    );
-  opacity:.45;
+.hero.hero-sm{
+  background: linear-gradient(
+    135deg,
+    rgba(0,124,145,0.06) 0%,
+    rgba(240,238,233,1) 45%,
+    rgba(255,255,255,1) 100%
+  );
 }
 
 .hero.hero-sm h1{
