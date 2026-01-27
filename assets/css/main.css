@@ -2648,3 +2648,9 @@ section,
     cursor: pointer;
   }
 }
+
+@media (max-width: 1199px) {
+  .mobile-nav-active .navmenu > ul {
+    min-height: 160px;
+  }
+}
