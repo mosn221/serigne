@@ -2654,3 +2654,29 @@ section,
     min-height: 160px;
   }
 }
+
+
+@media (max-width: 1199px) {
+
+  .navmenu .dropdown-menu {
+    position: static;     /* 🔑 permet l’adaptation */
+    display: none;
+    margin: 4px 0 8px;
+    padding: 4px 0;
+  }
+
+  .navmenu .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .navmenu .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navmenu .dropdown-menu a {
+    padding-left: 28px; /* indentation légère */
+    font-size: 15px;
+  }
+}
