@@ -724,3 +724,202 @@
   margin: 1.25rem 0 1.75rem;
   border-radius: 6px;
 }
+
+
+/* ================================
+   Données – UI moderne + data pattern
+   À coller en fin de fichier CSS
+================================ */
+
+/* Variables (si tu les as déjà, garde celles existantes) */
+:root{
+  --pc-ink: #1A1A2E;
+  --pc-petrol: #007C91;
+  --pc-mint: #00BFA6;
+  --pc-sun: #FFC300;
+  --pc-offwhite: #F0EEE9;
+}
+
+/* HERO mini */
+.hero.hero-sm{
+  padding: 56px 0 28px;
+  position: relative;
+  overflow: hidden;
+  background: var(--pc-offwhite);
+}
+
+/* Pattern data subtil (sans image) */
+.hero.hero-sm::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  /* 1) points 2) grille fine 3) halo jaune très doux */
+  background:
+    radial-gradient(circle at 18px 18px,
+      rgba(0,124,145,0.10) 2px, transparent 2.4px) 0 0 / 26px 26px,
+    linear-gradient(to right,
+      rgba(26,26,46,0.06) 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(to bottom,
+      rgba(26,26,46,0.06) 1px, transparent 1px) 0 0 / 26px 26px,
+    radial-gradient(600px 220px at 90% 10%,
+      rgba(255,195,0,0.18), transparent 60%);
+  opacity: .9;
+}
+
+.hero.hero-sm h1{
+  margin: 0 0 10px;
+  font-family: var(--heading-font, inherit);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--pc-ink);
+}
+
+.hero.hero-sm .hero-subtitle{
+  max-width: 56ch;
+  margin: 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* Sections – un peu plus “premium” sans gonfler */
+.section{
+  padding: 56px 0;
+}
+
+.light-background{
+  background: var(--pc-offwhite);
+}
+
+/* Cartes Collecter / Structurer / Restituer */
+.data-card{
+  height: 100%;
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(26,26,46,0.08);
+  box-shadow: 0 10px 26px rgba(26,26,46,0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Trait accent “data” (pétrole + touche jaune) */
+.data-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pc-petrol), var(--pc-mint), var(--pc-sun));
+  opacity: .95;
+}
+
+.data-card h3{
+  margin: 10px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pc-ink);
+}
+
+.data-card p{
+  margin: 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 30%);
+  line-height: 1.6;
+  font-size: .98rem;
+}
+
+/* Hover (desktop only) */
+@media (hover:hover){
+  .data-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(0,124,145,0.25);
+    box-shadow: 0 14px 34px rgba(26,26,46,0.10);
+  }
+}
+
+/* Accès aux données */
+.section-intro{
+  max-width: 70ch;
+  margin: 10px 0 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 30%);
+  line-height: 1.65;
+}
+
+.data-access-list{
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 70ch;
+}
+
+.data-access-list li{
+  margin: 10px 0;
+}
+
+.data-access-list a{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(26,26,46,0.08);
+  color: var(--pc-ink);
+  text-decoration: none;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+/* Petite puce “data” */
+.data-access-list a::before{
+  content:"";
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--pc-sun);
+  box-shadow: 0 0 0 3px rgba(255,195,0,0.25);
+  flex: 0 0 auto;
+}
+
+@media (hover:hover){
+  .data-access-list a:hover{
+    transform: translateY(-1px);
+    border-color: rgba(0,124,145,0.25);
+    background: rgba(255,255,255,0.9);
+  }
+}
+
+/* CTA */
+.section-cta{
+  padding: 52px 0;
+}
+
+.section-cta p{
+  max-width: 70ch;
+  margin: 0 auto 14px;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+}
+
+/* Bouton (sans casser Bootstrap si tu l’utilises) */
+.section-cta .btn.btn-outline-primary{
+  border-radius: 999px;
+  padding: 10px 16px;
+  border-color: rgba(0,124,145,0.55);
+  color: var(--pc-petrol);
+}
+
+.section-cta .btn.btn-outline-primary:hover{
+  background: var(--pc-petrol);
+  border-color: var(--pc-petrol);
+  color: #fff;
+}
+
+/* Responsive : hero plus compact */
+@media (max-width: 576px){
+  .hero.hero-sm{
+    padding: 44px 0 22px;
+  }
+  .section{
+    padding: 48px 0;
+  }
+  }
