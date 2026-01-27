@@ -1243,3 +1243,12 @@
     opacity: .65;
   }
 }
+
+/* Colonnes des bandeaux */
+.row > [class*="col-"]{
+  display: flex;
+}
+
+.data-band{
+  height: 100%;
+}
