@@ -2600,6 +2600,7 @@ section,
   /* Le menu mobile = vrai panneau compact */
   .navmenu > ul {
     background-color: var(--nav-mobile-background-color);
+    background-color:#ff0000;
     position: absolute;
     top: 100%;
     right: 12px;
