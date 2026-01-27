@@ -2519,3 +2519,67 @@ section,
     box-shadow: none;
   }
   }
+
+@media (max-width: 1199px) {
+
+  .navmenu > ul {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    left: auto;
+
+    width: min(360px, calc(100vw - 24px));
+    max-height: none;              /* ← important */
+    overflow: visible;             /* ← important */
+
+    display: none;
+    padding: 14px 0;               /* plus aéré */
+    margin: 0;
+
+    border-radius: 16px;
+    background-color: var(--nav-panel-bg);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.15);
+    z-index: 9998;
+  }
+
+  .mobile-nav-active .navmenu > ul {
+    display: block;
+  }
+}
+
+:root {
+  --off-white: #F0EEE9;   /* blanc cassé PyCode */
+  --ink: #1A1A2E;
+}
+
+    @media (max-width: 1199px) {
+  .navmenu > ul {
+    background-color: var(--off-white);
+  }
+
+  .navmenu a {
+    color: var(--ink);
+  }
+
+  .navmenu a:hover {
+    color: #007C91; /* ton accent */
+  }
+      }
+
+
+
+@media (max-width: 1199px) {
+  .navmenu li {
+    padding: 6px 14px;
+  }
+
+  .navmenu a {
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .navmenu a:hover {
+    background: rgba(255,255,255,0.6);
+  }
+}
