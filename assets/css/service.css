@@ -749,23 +749,16 @@
 }
 
 /* Pattern data subtil (sans image) */
+
 .hero.hero-sm::before{
   content:"";
   position:absolute;
   inset:0;
-  pointer-events:none;
-
-  /* 1) points 2) grille fine 3) halo jaune très doux */
   background:
-    radial-gradient(circle at 18px 18px,
-      rgba(0,124,145,0.10) 2px, transparent 2.4px) 0 0 / 26px 26px,
-    linear-gradient(to right,
-      rgba(26,26,46,0.06) 1px, transparent 1px) 0 0 / 26px 26px,
-    linear-gradient(to bottom,
-      rgba(26,26,46,0.06) 1px, transparent 1px) 0 0 / 26px 26px,
-    radial-gradient(600px 220px at 90% 10%,
-      rgba(255,195,0,0.18), transparent 60%);
-  opacity: .9;
+    linear-gradient(90deg, rgba(0,124,145,.08) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(0deg, rgba(0,124,145,.08) 1px, transparent 1px) 0 0 / 40px 40px,
+    radial-gradient(circle at 20px 20px, rgba(255,195,0,.35) 2px, transparent 3px);
+  opacity:.7;
 }
 
 .hero.hero-sm h1{
