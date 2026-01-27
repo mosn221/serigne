@@ -2492,7 +2492,7 @@ section,
     margin: 0;
 
     border-radius: 14px;
-    background-color: var(--nav-mobile-background-color);
+    background-color: #f0eee9;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
     box-shadow: 0 20px 60px rgba(0,0,0,.18);
     z-index: 9998;
@@ -2599,8 +2599,8 @@ section,
 
   /* Le menu mobile = vrai panneau compact */
   .navmenu > ul {
-    background-color: var(--nav-mobile-background-color);
-    background-color:#ff0000;
+    
+    background-color:#f0eee9
     position: absolute;
     top: 100%;
     right: 12px;
