@@ -745,12 +745,15 @@
 
 /* Pattern data subtil (sans image) */
 
+
+
 .hero.hero-sm{
   background: linear-gradient(
     135deg,
     rgba(0,124,145,0.06) 0%,
-    rgba(240,238,233,1) 45%,
-    rgba(255,255,255,1) 100%
+    rgba(0,191,166,0.04) 30%,
+    rgba(240,238,233,1) 65%,
+    #ffffff 100%
   );
 }
 
