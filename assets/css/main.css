@@ -26,7 +26,7 @@
 :root {
   --nav-color: #1A1A2E;/* The default color of the main navmenu links */
   --nav-hover-color: #00BFA6;          /* vert d’eau pour hover : Applied to main navmenu links when they are hovered over or active*/
-  --nav-mobile-background-color: #ffffff;/* Used as the background color for mobile navigation menu */
+  --nav-mobile-background-color: #f0eee9;/* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff;/* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #1A1A2E;/* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #00BFA6;/* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -195,7 +195,7 @@ section,
   padding: 40px 0;
   scroll-margin-top: 100px;
   overflow: clip;
-}
+
 }
 
 @media (max-width: 1199px) {
@@ -683,7 +683,7 @@ section,
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    
     transition: 0.3s;
   }
 
