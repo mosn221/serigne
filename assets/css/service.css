@@ -679,12 +679,12 @@
   margin-right: auto;
 }
 
-.section {
+ .service-details-page .section {
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-.section h2 {
+.service-details-page  .section h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   }
@@ -708,7 +708,7 @@
 }
 
 @media (max-width: 768px) {
-  .section {
+   .service-details-page  .section {
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -778,7 +778,7 @@
   padding: 56px 0;
 }
 
- .light-background{
+.service-details-page   .light-background{
   background: var(--pc-offwhite);
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* Accès aux données */
-.section-intro{
+  .service-details-page .section-intro{
   max-width: 70ch;
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 30%);
@@ -908,7 +908,7 @@
   .hero.hero-sm{
     padding: 44px 0 22px;
   }
-  .section{
+  .service-details-page  .section{
     padding: 48px 0;
   }
   }
@@ -1245,7 +1245,7 @@
 }
 
 /* Colonnes des bandeaux */
-.row > [class*="col-"]{
+.service-details-page  .row > [class*="col-"]{
   display: flex;
 }
 
