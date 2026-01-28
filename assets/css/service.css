@@ -3,14 +3,10 @@
 --------------------------------------------------------------*/
  .hero-subtitle {
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #f0eee9;
   font-size: 1.1rem;
 }
 
-.hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  color: #f0eee9;
-}
 
 @media screen and (max-width: 768px) {
   .hero-subtitle {
@@ -19,8 +15,8 @@
 }
 
 /* Justification institutionnelle pour les pages de contenu */
-.service-details-page .service-content p,
-.service-details-page .service-content li,
+.service-content p,
+.service-content li,
 
   text-align: justify;
   text-justify: inter-word;
@@ -37,12 +33,12 @@
   box-shadow:none;
 }
 
- .service-details-page .section {
+  .section {
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-.service-details-page  .section h2 {
+ .section h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   }
@@ -66,7 +62,7 @@
 }
 
 @media (max-width: 768px) {
-   .service-details-page .service-content .section {
+   .service-content .section {
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -83,7 +79,7 @@
 }
 
 
-.service-details-page .hero.hero-sm{
+.hero.hero-sm{
   background: linear-gradient(
     135deg,
     rgba(0,124,145,0.06) 0%,
@@ -93,7 +89,7 @@
   );
 }
 
-.service-details-page .hero.hero-sm h1{
+.hero.hero-sm h1{
   margin: 0 0 10px;
   font-family: var(--heading-font, inherit);
   font-weight: 800;
