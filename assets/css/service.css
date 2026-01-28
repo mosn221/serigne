@@ -33,15 +33,20 @@
   box-shadow:none;
 }
 
-  .section {
+  . service-content .section {
   padding-top: 70px;
   padding-bottom: 70px;
+   padding: 56px 0;
 }
+
+
+
 
  .section h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   }
+
 .data-cta-box .btn-brand {
   padding: 14px 30px;
   font-size: 1.05rem;
@@ -97,7 +102,7 @@
   color: var(--pc-ink);
 }
 
-.service-details-page .hero.hero-sm .hero-subtitle{
+.hero.hero-sm .hero-subtitle{
   max-width: 56ch;
   margin: 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 28%);
@@ -105,12 +110,9 @@
   line-height: 1.55;
 }
 
-/* Sections – un peu plus “premium” sans gonfler */
-.service-details-page  . service-content .section{
-  padding: 56px 0;
-}
 
-.service-details-page  . service-content .light-background{
+
+. service-content .light-background{
   background: var(--pc-offwhite);
 }
 
@@ -161,7 +163,7 @@
 }
 
 /* Accès aux données */
-  .service-details-page .service-content .section-intro{
+ .service-content .section-intro{
   max-width: 70ch;
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 30%);
@@ -174,21 +176,15 @@
   .hero.hero-sm{
     padding: 44px 0 22px;
   }
-  .service-details-page .service-content  .section{
+  .service-content  .section{
     padding: 48px 0;
   }
   }
 
 /* CTA : aligné à gauche sur PC */
-@media (min-width: 992px){
-  .data-cta-box{
-    text-align: left;
-  }
-  }
 
-.data-cta-box{
-  text-align: center; /* mobile */
-}
+
+
 
 @media (min-width: 992px){
   .data-cta-box{
@@ -199,6 +195,11 @@
 /* =========================
    CTA box – rythme & design
 ========================= */
+
+.data-cta-box{
+  text-align: center; /* mobile */
+}
+
 .data-cta-box{
   position: relative;
   padding: 22px 18px;
