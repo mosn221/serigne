@@ -298,7 +298,7 @@
   color: #1A1A2E;
 }
 
-.service-step p {
+. service-content .service-step p {
   font-size: 0.9rem;
   margin: 0;
   color: #4B5563;
@@ -325,7 +325,7 @@
   margin: 0;
 }
 
-.service-checklist li {
+.service-content .service-checklist li {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -463,9 +463,9 @@
 }
 
 /* Justification institutionnelle pour les pages de contenu */
-.service-details-page p,
-.service-details-page li,
-.service-details-page .section-paragraph {
+.service-details-page .service-content p,
+.service-details-page .service-content li,
+.service-details-page .service-content .section-paragraph {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -708,7 +708,7 @@
 }
 
 @media (max-width: 768px) {
-   .service-details-page  .section {
+   .service-details-page .service-content .section {
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -774,11 +774,11 @@
 }
 
 /* Sections – un peu plus “premium” sans gonfler */
-.service-details-page  .section{
+.service-details-page  . service-content .section{
   padding: 56px 0;
 }
 
-.service-details-page   .light-background{
+.service-details-page  . service-content .light-background{
   background: var(--pc-offwhite);
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* Accès aux données */
-  .service-details-page .section-intro{
+  .service-details-page .service-content .section-intro{
   max-width: 70ch;
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 30%);
@@ -908,7 +908,7 @@
   .hero.hero-sm{
     padding: 44px 0 22px;
   }
-  .service-details-page  .section{
+  .service-details-page .service-content  .section{
     padding: 48px 0;
   }
   }
