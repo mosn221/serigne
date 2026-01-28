@@ -170,6 +170,7 @@
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 30%);
   line-height: 1.65;
+    margin-bottom: 40px;
 }
 
 /* Responsive : hero plus compact */
@@ -181,10 +182,6 @@
     padding: 48px 0;
   }
   }
-
-.service-content .section-intro{
-  margin-bottom: 40px;
-}
 
 /* CTA : aligné à gauche sur PC */
 @media (min-width: 992px){
