@@ -1252,3 +1252,7 @@
 .data-band{
   height: 100%;
 }
+
+.data-cta-box{
+  text-align: left;
+}
