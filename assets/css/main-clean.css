@@ -556,3 +556,61 @@ section,
 }
 
 
+/*--------------------------------------------------------------
+# Index - Hero Section
+--------------------------------------------------------------*/
+
+.hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.hero h1 span {
+  color: var(--accent-color);
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 0px 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.hero{
+  min-height: auto;
+  padding: 56px 0;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.hero::before{
+  opacity: 0.35; /* ta grille est un peu forte */
+}
+
+.hero-subtitle{
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+  color: rgba(240, 238, 233, 0.92);
+}
+
+
+
+
+
+
+
