@@ -242,12 +242,12 @@
 }
 
 
-}
+
 
 /* ==========================
    Accès aux données – bandeaux
 ========================== */
-
+.data-band {
 
   display: flex;
   align-items: center;
