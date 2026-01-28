@@ -747,7 +747,7 @@
 
 
 
-.hero.hero-sm{
+.service-details-page .hero.hero-sm{
   background: linear-gradient(
     135deg,
     rgba(0,124,145,0.06) 0%,
@@ -757,7 +757,7 @@
   );
 }
 
-.hero.hero-sm h1{
+.service-details-page .hero.hero-sm h1{
   margin: 0 0 10px;
   font-family: var(--heading-font, inherit);
   font-weight: 800;
@@ -765,7 +765,7 @@
   color: var(--pc-ink);
 }
 
-.hero.hero-sm .hero-subtitle{
+.service-details-page .hero.hero-sm .hero-subtitle{
   max-width: 56ch;
   margin: 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 28%);
@@ -774,11 +774,11 @@
 }
 
 /* Sections – un peu plus “premium” sans gonfler */
-.section{
+.service-details-page  .section{
   padding: 56px 0;
 }
 
-.light-background{
+ .light-background{
   background: var(--pc-offwhite);
 }
 
