@@ -248,7 +248,7 @@
    Accès aux données – bandeaux
 ========================== */
 
-.data-band{
+
   display: flex;
   align-items: center;
   gap: 14px;
@@ -271,7 +271,7 @@
   transition: transform .18s ease,
               box-shadow .18s ease,
               border-color .18s ease;
-  height: 100%;
+  
 }
 
 /* Icône */
@@ -320,5 +320,6 @@
   display: flex;
 }
 
-
-
+.data-band{
+height: 100%;
+}
