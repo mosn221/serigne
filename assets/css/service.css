@@ -339,7 +339,7 @@
 }
 
 /* Colonnes des bandeaux */
-.service-details-page  .row > [class*="col-"]{
+.service-content  .row > [class*="col-"]{
   display: flex;
 }
 
