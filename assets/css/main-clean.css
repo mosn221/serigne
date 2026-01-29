@@ -637,20 +637,6 @@ section,
 
 
 /*--------------------------------------------------------------
-# Index - About Section
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Index - Services Section
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Index - Contact Section
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
@@ -753,24 +739,9 @@ section,
   font-weight: 400;
 }
 
-/* Bouton */
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 999px;
-  transition: 0.3s;
-}
 
-.hero .btn-get-started:hover {
-  color: var(--default-color);
-  background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
-}
+
+
 
 /* Responsif */
 @media (max-width: 991px) {
@@ -801,12 +772,7 @@ section,
 .hero::after {
   display: none;
 }
-.hero .animated {
-  margin-bottom: 60px;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeHero 0.9s ease-out forwards;
-}
+
 
 @keyframes fadeHero {
   to {
@@ -815,114 +781,14 @@ section,
   }
 }
 
-/* About CTA (Accueil) */
-.about-cta {
-  margin-top: 1.5rem;
-}
 
-.about-cta .btn {
-  border-radius: 999px;
-  padding: 0.7rem 1.4rem;
-  font-weight: 500;
-}
 
-/* Mobile */
-@media (max-width: 767px) {
-  .about-cta {
-    text-align: center;
-  }
 
-  .about-cta .btn {
-    width: 100%;
-  }
-}
 
-/* About CTA – aligné avec bouton Contribuer */
-.btn-about {
-  background-color: var(--accent-color); /* bleu pétrole */
-  color: #ffffff;
-  border-radius: 999px;
-  padding: 0.7rem 1.4rem;
-  font-weight: 500;
-  border: none;
-  transition: background-color 0.2s ease,
-              box-shadow 0.2s ease,
-              transform 0.2s ease;
-}
 
-.btn-about:hover,
-.btn-about:focus {
-  background-color: color-mix(in srgb, var(--accent-color), #000 12%);
-  color: #ffffff;
-  box-shadow: 0 10px 28px rgba(0, 124, 145, 0.35);
-  transform: translateY(-1px);
-}
 
-@media (max-width: 767px) {
-  .about-cta {
-    text-align: center;
-  }
 
-  .btn-about {
-    width: 100%;
-  }
-  }
 
-/* Bouton institutionnel – cohérent avec "Contribuer" */
-.btn.btn-brand {
-  background-color: var(--accent-color); /* même bleu pétrole */
-  color: #ffffff;
-  border: none;
-  border-radius: 999px;
-  padding: 10px 20px; /* même gabarit que Contribuer */
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease,
-              box-shadow 0.2s ease,
-              transform 0.2s ease;
-}
-
-.btn.btn-brand:hover,
-.btn.btn-brand:focus {
-  background-color: color-mix(in srgb, var(--accent-color), #000 12%);
-  color: #ffffff;
-  box-shadow: 0 10px 28px rgba(0, 124, 145, 0.35);
-  transform: translateY(-1px);
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .about-cta {
-    text-align: center;
-  }
-
-  .btn.btn-brand {
-    width: 100%;
-  }
-}
-
-/* ===========================
-   Footer legal line
-   =========================== */
-.footer-legal {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 12px 0;
-  font-size: 0.85rem;
-  background-color: color-mix(in srgb, var(--background-color), white 4%);
-}
-
-.footer-legal a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-legal a:hover {
-  color: var(--yellow-accent);
-  text-decoration: none;
-}
 
 
 /* Footer copyright */
@@ -941,152 +807,6 @@ section,
 
 .footer-copyright .credits {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-    /* Section Données – intégration fluide au fond existant */
-.data-intro{
-  position: relative;
-  background-color: #F0EEE9; /* fond réel de la page */
-  padding: 90px 0;
-  overflow: hidden;
-}
-
-/* Image open-data en texture discrète */
-.data-intro::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image: url("../img/services/open-data.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; /* très léger */
-}
-
-/* Fusion HAUT + BAS avec EXACTEMENT la même couleur */
-.data-intro::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    to bottom,
-    #F0EEE9 0%,
-    rgba(240,238,233,0.34) 18%,
-    rgba(240,238,233,0.34) 82%,
-    #F0EEE9 100%
-  );
-}
-
-/* Le contenu reste au-dessus */
-.data-intro .container{
-  position: relative;
-  z-index: 2;
-}
-
-.data-intro{
-  position: relative;
-  background-color: #F0EEE9;
-  padding: 70px 40px;
-  overflow: hidden;
-  border-radius: 24px; /* optionnel */
-}
-
-/* image en texture */
-.data-intro::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image: url("../img/services/open-data.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  filter: grayscale(22%) contrast(117%) brightness(102%);
-}
-
-/* overlay de fusion */
-.data-intro::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    to bottom,
-    #F0EEE9 0%,
-    rgba(240,238,233,0.34) 18%,
-    rgba(240,238,233,0.34) 82%,
-    #F0EEE9 100%
-  );
-}
-
-/* contenu au-dessus */
-.data-intro > *{
-  position: relative;
-  z-index: 2;
-}
-
-@media (max-width: 768px){
-  .data-intro{
-    padding: 60px 22px;
-    border-radius: 18px;
-  }
-}
-
-
-#data .section-title{
-  padding-bottom: 30px; /* au lieu de 60px */
-}
-
-#data .data-intro{
-  margin-top: 0;
-}
-
-/* ===========================
-   Index - Données (nouvelle section)
-   =========================== */
-.data-panel {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-}
-
-.data-panel-title {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 14px;
-  color: var(--heading-color);
-}
-
-.data-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 16px 0;
-}
-
-.data-list li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 0;
-  border-bottom: 1px dashed color-mix(in srgb, var(--default-color), transparent 88%);
-}
-
-.data-list li:last-child {
-  border-bottom: 0;
-}
-
-.data-list i {
-  font-size: 1.1rem;
-  margin-top: 2px;
-  color: var(--accent-color);
-}
-
-.data-panel-note {
-  margin-top: 14px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--yellow-accent), transparent 88%);
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
-  font-size: 0.95rem;
 }
 
 /* ===========================
