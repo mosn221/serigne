@@ -571,10 +571,17 @@ section,
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 300;
+   margin: 0 0 12px 0;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #ffffff;
+    font-size: 2.1rem;        /* au lieu de 2.8rem */
+  margin-bottom: 10px;
 }
 
 .hero h1 span {
   color: var(--accent-color);
+  color: var(--yellow-accent);
 }
 
 .hero p {
@@ -582,6 +589,15 @@ section,
   margin: 0px 0 30px 0;
   font-size: 20px;
   font-weight: 400;
+
+   color: rgba(240, 238, 233, 0.92);
+  margin: 0 0 30px 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+
+   font-size: 1.05rem;       /* au lieu de 1.2rem */
+  margin-bottom: 18px;      /* au lieu de 30px */
+  max-width: 62ch;          /* lecture propre */
 }
 
 @media (max-width: 640px) {
@@ -694,21 +710,15 @@ section,
 
 /* Typo hero */
 .hero h1 {
-  margin: 0 0 12px 0;
-  font-size: 2.6rem;
-  font-weight: 400;
-  color: #ffffff;
+ 
 }
 
 .hero h1 span {
-  color: var(--yellow-accent);
+  
 }
 
 .hero p {
-  color: rgba(240, 238, 233, 0.92);
-  margin: 0 0 30px 0;
-  font-size: 1.15rem;
-  font-weight: 400;
+ 
 }
 
 
@@ -751,14 +761,11 @@ section,
 }
 
 .hero h1{
-  font-size: 2.1rem;        /* au lieu de 2.8rem */
-  margin-bottom: 10px;
+
 }
 
 .hero p{
-  font-size: 1.05rem;       /* au lieu de 1.2rem */
-  margin-bottom: 18px;      /* au lieu de 30px */
-  max-width: 62ch;          /* lecture propre */
+ 
 }
 
 /* option : rendre la grille de fond plus discrète */
