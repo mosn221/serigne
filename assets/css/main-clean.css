@@ -575,8 +575,6 @@ section,
   margin-bottom: 10px;
 }
 
-
-
 .hero p {
    color: rgba(240, 238, 233, 0.92);
   margin: 0 0 30px 0;
@@ -584,19 +582,6 @@ section,
    font-size: 1.05rem;       /* au lieu de 1.2rem */
   margin-bottom: 18px;      /* au lieu de 30px */
   max-width: 62ch;          /* lecture propre */
-}
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
 }
 
 .hero{
@@ -618,9 +603,7 @@ section,
 }
 
 .hero::before{
-  opacity: 0.35; /* ta grille est un peu forte */
-
-   content: "";
+  content: "";
   position: absolute;
   inset: 0;
   background-image:
@@ -635,10 +618,8 @@ section,
       transparent 1px
     );
   background-size: 40px 40px;
-  opacity: 0.55;
   pointer-events: none;
-
-   opacity: 0.28;            /* au lieu de 0.5 */
+  opacity: 0.28;            /* au lieu de 0.5 */
 }
 
 
@@ -651,11 +632,6 @@ section,
   color: rgba(240, 238, 233, 0.92);
 }
 
-
-/* Grille data en surcouche */
-.hero::before {
- 
-}
 
 /* Quelques “nodes” data discrets */
 .hero::after {
@@ -672,6 +648,7 @@ section,
     0 0 18px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
   pointer-events: none;
+  display: none;
 }
 
 /* Contenu du hero au-dessus du décor */
@@ -680,22 +657,19 @@ section,
   z-index: 1;
 }
 
-/* Typo hero */
-.hero h1 {
- 
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
-
-.hero h1 span {
-  
-}
-
-.hero p {
- 
-}
-
-
-
-
 
 /* Responsif */
 @media (max-width: 991px) {
@@ -703,49 +677,22 @@ section,
     min-height: 70vh;
     padding: 50px 0;
   }
-
   .hero h1 {
     font-size: 2rem;
     line-height: 1.3;
   }
-
   .hero p {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 575px) {
   .hero {
     padding: 45px 0;
   }
-
   .hero h1 {
     font-size: 1.7rem;
   }
   }
-.hero::after {
-  display: none;
-}
-
-/* HERO — compact */
-.hero{
-
-}
-
-.hero h1{
-
-}
-
-.hero p{
- 
-}
-
-/* option : rendre la grille de fond plus discrète */
-.hero::before{
- 
-}
-
-
 
 /* Responsive */
 @media (max-width: 768px){
