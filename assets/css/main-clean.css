@@ -668,10 +668,7 @@ section,
   line-height: 1.6;
   margin-bottom: 30px;
 }
-.hero{
-  min-height: 80vh;
-  padding: 80px 0;
-}
+
 
 /* <= 991px (tablette paysage / petit laptop) */
 @media (max-width: 991px){
