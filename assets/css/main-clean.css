@@ -604,6 +604,30 @@ section,
   padding: 56px 0;
   text-align: left;
   justify-content: flex-start;
+
+   width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 60px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Fond principal : dégradé Afrique data */
+  background:
+    radial-gradient(circle at top left, rgba(255, 195, 0, 0.22), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 191, 166, 0.18), transparent 55%),
+    linear-gradient(135deg, #1A1A2E 0%, #007C91 55%, #00BFA6 100%);
+
+  color: var(--contrast-color);
+  overflow: hidden;
+
+
+    min-height: auto;
+  padding: 56px 0;          /* au lieu de 100px */
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .hero::before{
@@ -621,23 +645,7 @@ section,
 }
 
 .hero {
-  width: 100%;
-  min-height: 60vh;
-  position: relative;
-  padding: 60px 0 60px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* Fond principal : dégradé Afrique data */
-  background:
-    radial-gradient(circle at top left, rgba(255, 195, 0, 0.22), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(0, 191, 166, 0.18), transparent 55%),
-    linear-gradient(135deg, #1A1A2E 0%, #007C91 55%, #00BFA6 100%);
-
-  color: var(--contrast-color);
-  overflow: hidden;
+ 
 }
 
 /* Grille data en surcouche */
@@ -739,10 +747,7 @@ section,
 
 /* HERO — compact */
 .hero{
-  min-height: auto;
-  padding: 56px 0;          /* au lieu de 100px */
-  justify-content: flex-start;
-  text-align: left;
+
 }
 
 .hero h1{
