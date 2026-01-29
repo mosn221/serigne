@@ -173,21 +173,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Domaines d'intervention 
------------------------------------*/
-
-
-
-/* ===========================
-   Section Contact - Premium
-   =========================== */
-
-/*----------------------
-------Services section----
------------------------*/
-
-
-/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
@@ -635,27 +620,6 @@ section,
   color: rgba(240, 238, 233, 0.92);
 }
 
-
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
-.section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
-}
-
-.section-title h2 {
-  font-size: 48px;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-
-.section-title p {
-  margin-bottom: 0;
-  }
-
-
 .hero {
   width: 100%;
   min-height: 60vh;
@@ -773,6 +737,61 @@ section,
   display: none;
 }
 
+/* HERO — compact */
+.hero{
+  min-height: auto;
+  padding: 56px 0;          /* au lieu de 100px */
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero h1{
+  font-size: 2.1rem;        /* au lieu de 2.8rem */
+  margin-bottom: 10px;
+}
+
+.hero p{
+  font-size: 1.05rem;       /* au lieu de 1.2rem */
+  margin-bottom: 18px;      /* au lieu de 30px */
+  max-width: 62ch;          /* lecture propre */
+}
+
+/* option : rendre la grille de fond plus discrète */
+.hero::before{
+  opacity: 0.28;            /* au lieu de 0.5 */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero{ padding: 44px 0; }
+  .hero h1{ font-size: 1.8rem; }
+  .hero p{ font-size: 1rem; }
+}
+
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  }
+
+
+
 
 @keyframes fadeHero {
   to {
@@ -812,38 +831,6 @@ section,
 }
 
 
-/* HERO — compact */
-.hero{
-  min-height: auto;
-  padding: 56px 0;          /* au lieu de 100px */
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.hero h1{
-  font-size: 2.1rem;        /* au lieu de 2.8rem */
-  margin-bottom: 10px;
-}
-
-.hero p{
-  font-size: 1.05rem;       /* au lieu de 1.2rem */
-  margin-bottom: 18px;      /* au lieu de 30px */
-  max-width: 62ch;          /* lecture propre */
-}
-
-/* option : rendre la grille de fond plus discrète */
-.hero::before{
-  opacity: 0.28;            /* au lieu de 0.5 */
-}
-
-
-
-/* Responsive */
-@media (max-width: 768px){
-  .hero{ padding: 44px 0; }
-  .hero h1{ font-size: 1.8rem; }
-  .hero p{ font-size: 1rem; }
-}
 
 
 .section-intro{
