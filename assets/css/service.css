@@ -163,7 +163,6 @@
   }
   }
 
-
 /* =========================
    CTA box – rythme & design
 ========================= */
@@ -240,9 +239,6 @@
   border-radius: 999px;
   padding: 10px 16px;
 }
-
-
-
 
 /* ==========================
    Accès aux données – bandeaux
@@ -322,6 +318,4 @@
   display: flex;
 }
 
-.data-band{
 
-}
