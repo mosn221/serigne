@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+# page legal
+--------------------------------------------------------------*/
+.page-legal {
+  background-color: #F5F7FA;
+  color: #1A1A2E;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.legal-wrapper {
+  max-width: 960px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 124, 145, 0.08);
+}
+
+.legal-wrapper p {
+   justify-content: center;
+}
+
+.page-legal h1 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #007C91;
+}
+
+.page-legal h2 {
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #007C91;
+  margin-top: 1.5rem;
+}
+
+.page-legal p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background-color: #F0EEE9;
+  border-left: 4px solid #FFC300;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  color: #007C91;
+  text-decoration: none;
+}
+
+
+
+
+
+.article-hero-modern {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.article-hero-modern .overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-badge {
+  background-color: #FFC300;
+  color: #1A1A2E;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  font-family: 'Poppins', sans-serif;
+  color: var(--default-color);
+}
+
+
+.back-link:hover {
+  text-decoration: underline;
+}
