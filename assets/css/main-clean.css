@@ -568,33 +568,19 @@ section,
 --------------------------------------------------------------*/
 
 .hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 300;
    margin: 0 0 12px 0;
-  font-size: 2.6rem;
-  font-weight: 400;
+    font-weight: 400;
   color: #ffffff;
     font-size: 2.1rem;        /* au lieu de 2.8rem */
   margin-bottom: 10px;
 }
 
-.hero h1 span {
-  color: var(--accent-color);
-  color: var(--yellow-accent);
-}
+
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 0px 0 30px 0;
-  font-size: 20px;
-  font-weight: 400;
-
    color: rgba(240, 238, 233, 0.92);
   margin: 0 0 30px 0;
-  font-size: 1.15rem;
-  font-weight: 400;
-
+    font-weight: 400;
    font-size: 1.05rem;       /* au lieu de 1.2rem */
   margin-bottom: 18px;      /* au lieu de 30px */
   max-width: 62ch;          /* lecture propre */
@@ -611,36 +597,21 @@ section,
     line-height: 24px;
     margin-bottom: 30px;
   }
-
-
 }
 
 .hero{
-  min-height: auto;
-  padding: 56px 0;
-  text-align: left;
-  justify-content: flex-start;
-
-   width: 100%;
-  min-height: 60vh;
+  width: 100%;
   position: relative;
-  padding: 60px 0 60px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* Fond principal : dégradé Afrique data */
+    /* Fond principal : dégradé Afrique data */
   background:
     radial-gradient(circle at top left, rgba(255, 195, 0, 0.22), transparent 55%),
     radial-gradient(circle at bottom right, rgba(0, 191, 166, 0.18), transparent 55%),
     linear-gradient(135deg, #1A1A2E 0%, #007C91 55%, #00BFA6 100%);
-
   color: var(--contrast-color);
   overflow: hidden;
-
-
-    min-height: auto;
+  min-height: auto;
   padding: 56px 0;          /* au lieu de 100px */
   justify-content: flex-start;
   text-align: left;
@@ -648,25 +619,8 @@ section,
 
 .hero::before{
   opacity: 0.35; /* ta grille est un peu forte */
-}
 
-
-
-
-
-.hero-subtitle{
-  font-size: 1.05rem;
-  margin-bottom: 22px;
-  color: rgba(240, 238, 233, 0.92);
-}
-
-.hero {
- 
-}
-
-/* Grille data en surcouche */
-.hero::before {
-  content: "";
+   content: "";
   position: absolute;
   inset: 0;
   background-image:
@@ -683,6 +637,24 @@ section,
   background-size: 40px 40px;
   opacity: 0.55;
   pointer-events: none;
+
+   opacity: 0.28;            /* au lieu de 0.5 */
+}
+
+
+
+
+
+.hero-subtitle{
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+  color: rgba(240, 238, 233, 0.92);
+}
+
+
+/* Grille data en surcouche */
+.hero::before {
+ 
 }
 
 /* Quelques “nodes” data discrets */
@@ -770,7 +742,7 @@ section,
 
 /* option : rendre la grille de fond plus discrète */
 .hero::before{
-  opacity: 0.28;            /* au lieu de 0.5 */
+ 
 }
 
 
