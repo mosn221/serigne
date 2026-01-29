@@ -562,6 +562,24 @@ section,
   text-decoration: none;
 }
 
+/* Footer copyright */
+.footer-copyright {
+  color: var(--default-color);
+}
+
+.footer-copyright .footer-brand {
+  color: var(--default-color);
+}
+
+.footer-copyright .footer-year {
+  color: var(--default-color);
+  font-weight: 400;
+}
+
+.footer-copyright .credits {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
 
 /*--------------------------------------------------------------
 # Index - Hero Section
@@ -573,6 +591,7 @@ section,
   color: #ffffff;
     font-size: 2.1rem;        /* au lieu de 2.8rem */
   margin-bottom: 10px;
+  line-height: 1.15;
 }
 
 .hero p {
@@ -582,6 +601,8 @@ section,
    font-size: 1.05rem;       /* au lieu de 1.2rem */
   margin-bottom: 18px;      /* au lieu de 30px */
   max-width: 62ch;          /* lecture propre */
+  line-height: 1.6;
+  
 }
 
 .hero{
@@ -658,18 +679,6 @@ section,
 }
 
 
-/* Base (desktop) : tu mets ici tes valeurs par défaut */
-.hero h1{
-  font-size: 2.5rem;
-  line-height: 1.15;
-}
-.hero p{
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-
 /* <= 991px (tablette paysage / petit laptop) */
 @media (max-width: 991px){
   .hero{
@@ -730,34 +739,6 @@ section,
   }
 
 
-
-
-@keyframes fadeHero {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* Footer copyright */
-.footer-copyright {
-  color: var(--default-color);
-}
-
-.footer-copyright .footer-brand {
-  color: var(--default-color);
-}
-
-.footer-copyright .footer-year {
-  color: var(--default-color);
-  font-weight: 400;
-}
-
-.footer-copyright .credits {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
 /* ===========================
    Index - Projets (cartes sans lien + statuts)
    =========================== */
@@ -769,9 +750,6 @@ section,
   transform: translateY(-6px); /* conserve ton hover existant */
 }
 
-
-
-
 .section-intro{
   max-width: 70ch;
   margin: 0 auto 32px auto;
@@ -779,7 +757,6 @@ section,
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
-
 
 /* Projects section */
 .projects {
@@ -798,9 +775,10 @@ section,
 /* Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
   gap: 28px;
-}
+  grid-template-columns: repeat(3, 1fr);
+  }
 
 /* Card */
 .project-card {
@@ -827,8 +805,6 @@ section,
 .project-content {
   padding: 18px 18px 20px;
 }
-
-
 
 .project-title {
   font-size: 1.2rem;
@@ -876,12 +852,7 @@ section,
   text-align: center;
 }
 
-/* Grid */
-.projects-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
+
 
 /* Card link */
 .project-card{
@@ -889,6 +860,34 @@ section,
   color: inherit;
   display: block;
 }
+
+/* Hover: plus “envie de cliquer” */
+.project-card:hover article{
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+}
+
+.project-card:hover .project-title::after{
+  width: 72px; /* petit effet “vivant” */
+}
+
+.project-card:hover .project-cta span[aria-hidden="true"]{
+  transform: translateX(4px);
+}
+
+.project-cta span[aria-hidden="true"]{
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+/* Focus clavier (important) */
+.project-card:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--solar-yellow), transparent 15%);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
 
 /* Card shell */
 .project-card article{
@@ -974,33 +973,6 @@ section,
   opacity: .95;
 }
 
-/* Hover: plus “envie de cliquer” */
-.project-card:hover article{
-  transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
-  box-shadow: 0 16px 40px rgba(0,0,0,.10);
-}
-
-.project-card:hover .project-title::after{
-  width: 72px; /* petit effet “vivant” */
-}
-
-.project-card:hover .project-cta span[aria-hidden="true"]{
-  transform: translateX(4px);
-}
-
-.project-cta span[aria-hidden="true"]{
-  display: inline-block;
-  transition: transform .2s ease;
-}
-
-/* Focus clavier (important) */
-.project-card:focus-visible{
-  outline: 3px solid color-mix(in srgb, var(--solar-yellow), transparent 15%);
-  outline-offset: 4px;
-  border-radius: 18px;
-}
-
 /* Mobile */
 @media (max-width: 640px){
   .projects-intro{ text-align: left; }
@@ -1039,10 +1011,6 @@ section,
   pointer-events: none;
   mask-image: radial-gradient(closest-side, #000 55%, transparent 90%);
 }
-
-
-
-
 
 :root{
   --solar-yellow: var(--yellow-accent, #FFC300);
@@ -1099,16 +1067,6 @@ section,
 .btn-outline-solar:hover{
   border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
   box-shadow: 0 16px 38px rgba(0,0,0,.10);
-}
-
-
-
-
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
 }
 
 @media (max-width: 992px) {
