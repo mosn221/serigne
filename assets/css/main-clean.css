@@ -673,7 +673,6 @@ section,
 /* <= 991px (tablette paysage / petit laptop) */
 @media (max-width: 991px){
   .hero{
-    min-height: 70vh;
     padding: 50px 0;
   }
   .hero h1{
