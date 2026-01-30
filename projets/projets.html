@@ -1,26 +1,18 @@
-<!-- ===========================
-File: /projets/projets.html
-Requires:
-- ../assets/css/main-clean.css
-- ../assets/css/projets.css
-=========================== -->
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projets | PyCode Group</title>
-  <meta name="description" content="Les projets PyCode : des chantiers thématiques publiés progressivement, avec des livrables concrets et consultables." />
+  <meta name="description" content="Projets PyCode Group : des chantiers thématiques publiés progressivement, avec des livrables concrets et consultables." />
 
-  <!-- CSS global -->
   <link rel="stylesheet" href="../assets/css/main-clean.css" />
-  <!-- CSS page -->
   <link rel="stylesheet" href="../assets/css/projets.css" />
 </head>
 
 <body>
 
-  <!-- Header : garde/colle ton header commun si tu en as déjà un -->
+  <!-- Header : garde ton header commun si identique partout -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="../index.html" class="logo d-flex align-items-center">
@@ -42,231 +34,247 @@ Requires:
 
   <main class="main">
 
-    <!-- ======= Hero (sans image, sans CTA) ======= -->
-    <section class="hero hero-projects-min" aria-label="Projets PyCode">
+    <!-- ======= Hero minimal (moderne, sans image, sans CTA) ======= -->
+    <section class="hero hero-projects" aria-label="Projets PyCode">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-9 text-center">
+        <div class="hero-shell">
+          <div class="hero-content">
             <h1>Projets</h1>
             <p class="hero-subtitle">
               Des chantiers thématiques, publiés progressivement, avec des livrables concrets et consultables.
             </p>
           </div>
+
+          <!-- mini nav interne : améliore la fluidité sans CTA “marketing” -->
+          <nav class="hero-nav" aria-label="Aller à une section">
+            <a href="#liste-projets" class="hero-chip">Voir les projets</a>
+            <a href="#livrables" class="hero-chip">Livrables</a>
+            <a href="#usages" class="hero-chip">Usages</a>
+            <a href="../services/data.html" class="hero-chip hero-chip--link">Page Données</a>
+          </nav>
         </div>
       </div>
     </section>
-    <!-- End Hero -->
 
-    <!-- ======= Projets (cartes) ======= -->
-    <section id="liste-projets" class="section projects-section" aria-label="Liste des projets">
+    <!-- ======= Projets ======= -->
+    <section id="liste-projets" class="section projects" aria-label="Liste des projets">
       <div class="container section-title text-center">
         <h2>Projets en cours</h2>
-        <p>Trois projets phares, structurés pour être visibles, lisibles et réutilisables.</p>
+        <p>Trois projets phares. Chaque fiche indique le statut, les livrables et les limites.</p>
+
         <p class="section-hint">
-          Pour comprendre la démarche (collecter → structurer → restituer), voir la page
+          Pour comprendre la démarche (collecter → structurer → restituer) :
           <a href="../services/data.html">Données</a>.
         </p>
       </div>
 
       <div class="container">
-        <div class="row g-4">
+        <div class="projects-grid">
 
-          <!-- Lekkantu -->
-          <div class="col-md-6 col-lg-4">
-            <article class="project-card h-100">
-              <div class="project-top">
-                <h3 class="project-title">Lekkantu</h3>
-                <span class="status-badge status-structuration">Structuration</span>
+          <!-- Card: Lekkantu -->
+          <article class="p-card" aria-label="Projet Lekkantu">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">🍃</span>
+                <h3>Lekkantu</h3>
               </div>
+              <span class="p-status p-status--build">Structuration</span>
+            </header>
 
-              <p class="project-desc">
-                Transparence nutritionnelle : recenser et documenter des produits (composition, formats, prix)
-                pour faciliter la lecture et la comparaison.
-              </p>
+            <p class="p-desc">
+              Transparence nutritionnelle : recenser et documenter des produits (composition, formats, prix)
+              pour faciliter la lecture et la comparaison.
+            </p>
 
-              <div class="project-tags" aria-label="Tags Lekkantu">
-                <span class="tag">dataset</span>
-                <span class="tag">nutrition</span>
-                <span class="tag">comparaison</span>
+            <div class="p-tags" aria-label="Tags Lekkantu">
+              <span class="p-tag">dataset</span>
+              <span class="p-tag">nutrition</span>
+              <span class="p-tag">consultation</span>
+            </div>
+
+            <ul class="p-list" aria-label="Livrables Lekkantu">
+              <li>Base produits structurée</li>
+              <li>Référentiels & catégories</li>
+              <li>Pages de consultation</li>
+            </ul>
+
+            <footer class="p-foot">
+              <a class="btn-brand btn-brand--soft" href="../projets/projet-lekkantu.html">Voir la fiche</a>
+            </footer>
+          </article>
+
+          <!-- Card: SunuGoal -->
+          <article class="p-card" aria-label="Projet SunuGoal">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">⚽</span>
+                <h3>SunuGoal</h3>
               </div>
+              <span class="p-status p-status--explore">Exploration</span>
+            </header>
 
-              <ul class="project-bullets" aria-label="Livrables Lekkantu">
-                <li>Base produits structurée</li>
-                <li>Catégories & référentiels</li>
-                <li>Page de consultation</li>
-              </ul>
+            <p class="p-desc">
+              Football local : structurer résultats, feuilles de match et événements pour suivre l’évolution
+              du championnat et valoriser les acteurs.
+            </p>
 
-              <div class="project-actions">
-                <a class="btn-brand btn-brand--soft" href="../projets/projet-lekkantu.html">Voir la fiche</a>
+            <div class="p-tags" aria-label="Tags SunuGoal">
+              <span class="p-tag">sport</span>
+              <span class="p-tag">référentiel</span>
+              <span class="p-tag">statistiques</span>
+            </div>
+
+            <ul class="p-list" aria-label="Livrables SunuGoal">
+              <li>Référentiel clubs & joueurs</li>
+              <li>Historique matchs & événements</li>
+              <li>Lectures comparables</li>
+            </ul>
+
+            <footer class="p-foot">
+              <a class="btn-brand btn-brand--soft" href="../projets/projet-sunugoal.html">Voir la fiche</a>
+            </footer>
+          </article>
+
+          <!-- Card: Kurel Facts -->
+          <article class="p-card" aria-label="Projet Kurel Facts">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">📚</span>
+                <h3>Kurel Facts</h3>
               </div>
-            </article>
-          </div>
+              <span class="p-status p-status--pilot">Pilote</span>
+            </header>
 
-          <!-- SunuGoal -->
-          <div class="col-md-6 col-lg-4">
-            <article class="project-card h-100">
-              <div class="project-top">
-                <h3 class="project-title">SunuGoal</h3>
-                <span class="status-badge status-exploration">Exploration</span>
-              </div>
+            <p class="p-desc">
+              Ressources documentaires autour d’un patrimoine vivant : structurer des repères, références,
+              et publier des formats consultables.
+            </p>
 
-              <p class="project-desc">
-                Football local : structurer résultats, feuilles de match et événements pour suivre l’évolution
-                du championnat et valoriser les acteurs.
-              </p>
+            <div class="p-tags" aria-label="Tags Kurel Facts">
+              <span class="p-tag">ressources</span>
+              <span class="p-tag">documentation</span>
+              <span class="p-tag">index</span>
+            </div>
 
-              <div class="project-tags" aria-label="Tags SunuGoal">
-                <span class="tag">sport</span>
-                <span class="tag">référentiel</span>
-                <span class="tag">statistiques</span>
-              </div>
+            <ul class="p-list" aria-label="Livrables Kurel Facts">
+              <li>Références & indexation</li>
+              <li>Fiches et ressources lisibles</li>
+              <li>Organisation par thèmes</li>
+            </ul>
 
-              <ul class="project-bullets" aria-label="Livrables SunuGoal">
-                <li>Référentiel clubs & joueurs</li>
-                <li>Historique matchs & événements</li>
-                <li>Lectures comparables</li>
-              </ul>
-
-              <div class="project-actions">
-                <a class="btn-brand btn-brand--soft" href="../projets/projet-sunugoal.html">Voir la fiche</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- Kurel Facts -->
-          <div class="col-md-6 col-lg-4">
-            <article class="project-card h-100">
-              <div class="project-top">
-                <h3 class="project-title">Kurel Facts</h3>
-                <span class="status-badge status-pilote">Pilote</span>
-              </div>
-
-              <p class="project-desc">
-                Ressources documentaires autour d’un patrimoine vivant : structurer des repères, des références,
-                et publier des formats consultables.
-              </p>
-
-              <div class="project-tags" aria-label="Tags Kurel Facts">
-                <span class="tag">ressources</span>
-                <span class="tag">documentation</span>
-                <span class="tag">mémoire</span>
-              </div>
-
-              <ul class="project-bullets" aria-label="Livrables Kurel Facts">
-                <li>Références & index</li>
-                <li>Fiches & ressources lisibles</li>
-                <li>Organisation par thèmes</li>
-              </ul>
-
-              <div class="project-actions">
-                <a class="btn-brand btn-brand--soft" href="../projets/projet-kurel-facts.html">Voir la fiche</a>
-              </div>
-            </article>
-          </div>
+            <footer class="p-foot">
+              <a class="btn-brand btn-brand--soft" href="../projets/projet-kurel-facts.html">Voir la fiche</a>
+            </footer>
+          </article>
 
         </div>
 
-        <!-- Mini bandeau (design + utilité) -->
-        <div class="projects-strip" role="note" aria-label="Note de publication">
-          <div class="projects-strip-inner">
-            <div class="strip-item">
-              <span class="strip-dot" aria-hidden="true"></span>
-              <strong>Publication progressive</strong> : les projets avancent par étapes, sans surpromesse.
+        <!-- Bandeau “atelier” (design + crédibilité) -->
+        <div class="info-band" role="note" aria-label="Note atelier">
+          <div class="info-band__item">
+            <span class="info-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Publication progressive</strong>
+              <div class="info-sub">Chaque étape apporte un livrable visible, même modeste.</div>
             </div>
-            <div class="strip-item">
-              <span class="strip-dot" aria-hidden="true"></span>
-              <strong>Traçabilité</strong> : sources, limites et statut sont indiqués sur les fiches.
+          </div>
+          <div class="info-band__item">
+            <span class="info-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Transparence</strong>
+              <div class="info-sub">Sources, limites et statut sont indiqués sur les fiches.</div>
+            </div>
+          </div>
+          <div class="info-band__item">
+            <span class="info-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Objectif</strong>
+              <div class="info-sub">Ressources utiles, lisibles et réutilisables.</div>
             </div>
           </div>
         </div>
 
       </div>
     </section>
-    <!-- End Projets -->
 
-    <!-- ======= Livrables (tuiles) ======= -->
-    <section class="section deliverables-section" aria-label="Livrables et ressources">
+    <!-- ======= Livrables ======= -->
+    <section id="livrables" class="section deliverables" aria-label="Livrables et ressources">
       <div class="container section-title text-center">
-        <h2>Livrables et ressources</h2>
-        <p>Ce que produisent les projets, sous des formats simples et réutilisables.</p>
+        <h2>Livrables</h2>
+        <p>Des formats simples, stables, et consultables.</p>
       </div>
 
       <div class="container">
-        <div class="deliverables-grid">
-          <div class="deliverable-card">
+        <div class="d-grid">
+          <div class="d-card">
             <h3>Jeux de données</h3>
-            <p>Tables, champs, formats et exports documentés (CSV, etc.).</p>
+            <p>Tables, champs, formats, exports (CSV) et documentation.</p>
           </div>
-          <div class="deliverable-card">
+          <div class="d-card">
             <h3>Référentiels</h3>
             <p>Noms, identifiants, catégories et règles de structuration.</p>
           </div>
-          <div class="deliverable-card">
+          <div class="d-card">
             <h3>Consultation</h3>
-            <p>Pages publiques lisibles (filtres, recherche, repères).</p>
+            <p>Pages publiques : recherche, filtres, repères lisibles.</p>
           </div>
-          <div class="deliverable-card">
+          <div class="d-card">
             <h3>Indicateurs</h3>
             <p>Lectures comparables dans le temps et entre entités.</p>
           </div>
-          <div class="deliverable-card">
+          <div class="d-card">
             <h3>Synthèses</h3>
             <p>Notes courtes : constats, limites, pistes d’amélioration.</p>
           </div>
-          <div class="deliverable-card">
+          <div class="d-card">
             <h3>Ressources publiques</h3>
-            <p>Liens vers dépôts et supports (GitHub, pages, docs).</p>
+            <p>Liens vers dépôts, documents et pages associées.</p>
           </div>
+        </div>
+
+        <div class="soft-linkline">
+          Démarche complète : <a href="../services/data.html">voir la page Données</a>.
         </div>
       </div>
     </section>
-    <!-- End Livrables -->
 
-    <!-- ======= Usages (cartes compactes) ======= -->
-    <section class="section uses-section" aria-label="Usages">
+    <!-- ======= Usages ======= -->
+    <section id="usages" class="section uses" aria-label="Usages">
       <div class="container section-title text-center">
         <h2>Usages</h2>
-        <p>Des ressources utiles pour lire, comparer, documenter et décider.</p>
+        <p>Lire, comparer, documenter, décider.</p>
       </div>
 
       <div class="container">
-        <div class="uses-grid">
-          <article class="use-card">
+        <div class="u-grid">
+          <article class="u-card">
             <h3>Citoyens</h3>
             <p>Comprendre et comparer avec des repères clairs.</p>
           </article>
-
-          <article class="use-card">
+          <article class="u-card">
             <h3>Organisations</h3>
             <p>Appuyer des projets avec des ressources structurées.</p>
           </article>
-
-          <article class="use-card">
+          <article class="u-card">
             <h3>Collectivités</h3>
             <p>Éclairer des décisions et suivre des évolutions.</p>
           </article>
-
-          <article class="use-card">
+          <article class="u-card">
             <h3>Médias & communauté</h3>
             <p>Accéder à des repères lisibles et mieux sourcés.</p>
           </article>
         </div>
       </div>
     </section>
-    <!-- End Usages -->
 
-    <!-- ======= CTA final (discret mais solide) ======= -->
-    <section class="section cta-section" aria-label="Échanger">
+    <!-- ======= CTA final (sobre, unique) ======= -->
+    <section class="section cta" aria-label="Échanger">
       <div class="container">
         <div class="cta-box">
           <div class="cta-text">
             <h2>Échanger</h2>
-            <p>
-              Une source, une correction, une idée utile ou une contribution ?
-              Écris-nous : on privilégie le concret.
-            </p>
+            <p>Une source, une correction ou une contribution ? On privilégie le concret.</p>
           </div>
-
           <div class="cta-actions">
             <a class="btn-brand" href="mailto:pycodegroup@gmail.com">Contacter</a>
             <a class="cta-link" href="../index.html#contact">Voir le contact</a>
@@ -274,11 +282,10 @@ Requires:
         </div>
       </div>
     </section>
-    <!-- End CTA -->
 
   </main>
 
-  <!-- Footer : garde/colle ton footer commun si tu en as déjà un -->
+  <!-- Footer : garde ton footer commun -->
   <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright text-center">
@@ -289,7 +296,18 @@ Requires:
 
   <script>
     document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+    // scroll doux si ton main.js ne le fait pas déjà
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   </script>
   <script src="../assets/js/main.js"></script>
 </body>
-</html>
+              </html>
