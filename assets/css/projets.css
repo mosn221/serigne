@@ -565,3 +565,92 @@ padding: 14px 30px;
   border-radius: 999px;
   padding: 10px 16px; /* identique à data.html */
 }
+
+
+/* CTA Projets — style proche de data.html */
+.contribute-box{
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+
+  padding: 22px 18px;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(0,124,145,0.08) 0%,
+      rgba(240,238,233,1) 45%,
+      rgba(255,255,255,1) 100%);
+
+  border: 1px solid rgba(26,26,46,0.08);
+  box-shadow: 0 14px 34px rgba(26,26,46,0.08);
+  overflow: hidden;
+
+  text-align: center; /* mobile par défaut */
+}
+
+@media (min-width: 992px){
+  .contribute-box{
+    text-align: left;        /* desktop */
+    padding: 26px 24px;      /* + d'air comme data */
+  }
+}
+
+/* Trait accent (jaune) comme data */
+.contribute-box::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: #FFC300;
+  opacity: .95;
+}
+
+/* Lueur discrète */
+.contribute-box::after{
+  content:"";
+  position:absolute;
+  right: -120px;
+  top: -120px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255,195,0,0.20), transparent 60%);
+  pointer-events:none;
+}
+
+/* H2 respire sous le trait */
+.contribute-text h2{
+  margin-top: 10px;
+  color: #1A1A2E;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.contribute-text p{
+  max-width: 70ch;
+  color: color-mix(in srgb, #1A1A2E, transparent 28%);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Actions */
+.contribute-actions{
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 992px){
+  .contribute-actions{
+    justify-content: flex-start;
+  }
+}
+
+/* Bouton dans la box (même “feel” que data) */
+.contribute-box .btn-brand{
+  border-radius: 999px;
+  padding: 10px 16px; /* identique à data.html */
+}
