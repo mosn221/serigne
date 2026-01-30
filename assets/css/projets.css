@@ -417,3 +417,22 @@
 @media (prefers-reduced-motion: reduce){
   .p-card{ transition: none !important; }
    }
+
+
+.projects-hero__inner{
+  max-width: 72ch;
+  text-align: left;
+}
+
+.projects-hero h1{
+  margin-bottom: 8px;
+}
+
+.projects-hero__lead{
+  margin-left: 0;
+}
+
+.projects-hero h1{
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
