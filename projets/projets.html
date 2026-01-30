@@ -12,6 +12,7 @@
 
 <body>
 
+  <!-- Header : colle ton header commun -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="../index.html" class="logo d-flex align-items-center">
@@ -33,237 +34,238 @@
 
   <main class="main">
 
-    <!-- ======= HERO FULL WIDTH (sans image, sans CTA) ======= -->
-    <section class="hero hero-projects-wide" aria-label="Projets PyCode">
-      <div class="container hero-wide-inner">
-        <div class="row justify-content-center">
-          <div class="col-lg-11 col-xl-10 text-center">
-
-            <h1>Projets</h1>
-
-            <p class="hero-subtitle">
-              PyCode avance par projets pour produire du concret : pages projet, ressources de consultation,
-              synthèses et fonctionnalités utiles — publiées progressivement.
-            </p>
-
-            <p class="hero-note">
-              La méthode, l’accès et la documentation des données sont détaillés sur la page
-              <a href="../services/data.html">Données</a>.
-            </p>
-
-          </div>
+    <!-- =========================
+         HERO (simple, direct, full width)
+         ========================= -->
+    <section class="projects-hero" aria-label="Projets PyCode">
+      <div class="container">
+        <div class="projects-hero__inner text-center">
+          <h1>Projets</h1>
+          <p class="projects-hero__lead">
+            Des projets utiles, publiés progressivement, pour rendre des informations plus lisibles et plus comparables.
+          </p>
         </div>
-
-        <!-- repères discrets (pas marketing) -->
-        <div class="hero-metrics" aria-label="Repères">
-          <div class="metric">
-            <span class="metric-label">Approche</span>
-            <span class="metric-value">progressive</span>
-          </div>
-          <div class="metric">
-            <span class="metric-label">Format</span>
-            <span class="metric-value">atelier</span>
-          </div>
-          <div class="metric">
-            <span class="metric-label">Objectif</span>
-            <span class="metric-value">utilité</span>
-          </div>
-        </div>
-
       </div>
     </section>
-    <!-- End Hero -->
 
-    <!-- ======= PROJETS ======= -->
-    <section id="liste-projets" class="section projects" aria-label="Liste des projets">
+    <!-- =========================
+         INTRO (court + lien Données)
+         ========================= -->
+    <section class="section projects-intro" aria-label="Introduction">
+      <div class="container">
+        <div class="intro-card">
+          <p class="intro-text">
+            Ici, on présente les projets : leur thème, leur périmètre, leur statut et les pages dédiées pour suivre l’avancement.
+            Pour comprendre la méthode et accéder aux ressources publiées, voir la page
+            <a href="../services/data.html">Données</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROJETS EN COURS (cartes)
+         ========================= -->
+    <section id="liste-projets" class="section projects-list" aria-label="Projets en cours">
       <div class="container section-title text-center">
         <h2>Projets en cours</h2>
-        <p>Chaque projet a un périmètre clair, un statut, et une fiche mise à jour.</p>
+        <p>Trois projets phares, chacun avec une fiche dédiée.</p>
       </div>
 
       <div class="container">
         <div class="projects-grid">
 
           <!-- Lekkantu -->
-          <article class="project-card project-card--accent" aria-label="Projet Lekkantu">
-            <header class="project-head">
-              <div class="project-titlewrap">
-                <span class="project-icon" aria-hidden="true">🍃</span>
-                <h3 class="project-title">Lekkantu</h3>
+          <article class="p-card" aria-label="Projet Lekkantu">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">🍃</span>
+                <h3>Lekkantu</h3>
               </div>
-              <span class="project-status status-structuration">Structuration</span>
+              <span class="p-status status-structuration">Structuration</span>
             </header>
 
-            <p class="project-desc">
-              Transparence nutritionnelle : structurer des informations produits pour faciliter la lecture,
-              la comparaison et la sensibilisation.
+            <p class="p-desc">
+              Mieux comprendre ce que l’on consomme, grâce à des repères simples et comparables.
             </p>
 
-            <div class="project-tags" aria-label="Tags Lekkantu">
-              <span class="tag">nutrition</span>
-              <span class="tag">comparaison</span>
-              <span class="tag">consultation</span>
-            </div>
-
-            <div class="project-scope" aria-label="Périmètre Lekkantu">
-              <div class="scope-item">
-                <span class="scope-label">Périmètre</span>
-                <span class="scope-value">Produits, composition, formats, repères</span>
+            <div class="p-meta" aria-label="Détails Lekkantu">
+              <div class="meta-item">
+                <span class="meta-label">Domaine</span>
+                <span class="meta-value">Nutrition</span>
               </div>
-              <div class="scope-item">
-                <span class="scope-label">Livrables projet</span>
-                <span class="scope-value">Fiche projet, pages de consultation, synthèses</span>
+              <div class="meta-item">
+                <span class="meta-label">Périmètre</span>
+                <span class="meta-value">Produits, composition, formats</span>
               </div>
             </div>
 
-            <footer class="project-foot">
-              <a class="btn-brand" href="../projets/projet-lekkantu.html">Voir la fiche</a>
+            <footer class="p-foot">
+              <a class="btn-brand" href="../projets/projet-lekkantu.html">En savoir plus</a>
             </footer>
           </article>
 
           <!-- SunuGoal -->
-          <article class="project-card project-card--accent" aria-label="Projet SunuGoal">
-            <header class="project-head">
-              <div class="project-titlewrap">
-                <span class="project-icon" aria-hidden="true">⚽</span>
-                <h3 class="project-title">SunuGoal</h3>
+          <article class="p-card" aria-label="Projet SunuGoal">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">⚽</span>
+                <h3>SunuGoal</h3>
               </div>
-              <span class="project-status status-exploration">Exploration</span>
+              <span class="p-status status-exploration">Exploration</span>
             </header>
 
-            <p class="project-desc">
-              Football local : suivre l’évolution du championnat via des repères structurés
-              (matchs, acteurs, tendances).
+            <p class="p-desc">
+              Suivre le football local avec des repères clairs, pour mieux lire l’évolution du championnat.
             </p>
 
-            <div class="project-tags" aria-label="Tags SunuGoal">
-              <span class="tag">sport</span>
-              <span class="tag">suivi</span>
-              <span class="tag">tendances</span>
-            </div>
-
-            <div class="project-scope" aria-label="Périmètre SunuGoal">
-              <div class="scope-item">
-                <span class="scope-label">Périmètre</span>
-                <span class="scope-value">Matchs, équipes, joueurs, stats, évolutions</span>
+            <div class="p-meta" aria-label="Détails SunuGoal">
+              <div class="meta-item">
+                <span class="meta-label">Domaine</span>
+                <span class="meta-value">Sport</span>
               </div>
-              <div class="scope-item">
-                <span class="scope-label">Livrables projet</span>
-                <span class="scope-value">Fiche projet, pages de lecture, notes de synthèse</span>
+              <div class="meta-item">
+                <span class="meta-label">Périmètre</span>
+                <span class="meta-value">Matchs, acteurs, tendances</span>
               </div>
             </div>
 
-            <footer class="project-foot">
-              <a class="btn-brand" href="../projets/projet-sunugoal.html">Voir la fiche</a>
+            <footer class="p-foot">
+              <a class="btn-brand" href="../projets/projet-sunugoal.html">En savoir plus</a>
             </footer>
           </article>
 
           <!-- Kurel Facts -->
-          <article class="project-card project-card--accent" aria-label="Projet Kurel Facts">
-            <header class="project-head">
-              <div class="project-titlewrap">
-                <span class="project-icon" aria-hidden="true">📚</span>
-                <h3 class="project-title">Kurel Facts</h3>
+          <article class="p-card" aria-label="Projet Kurel Facts">
+            <header class="p-head">
+              <div class="p-title">
+                <span class="p-icon" aria-hidden="true">📚</span>
+                <h3>Kurel Facts</h3>
               </div>
-              <span class="project-status status-pilote">Pilote</span>
+              <span class="p-status status-pilote">Pilote</span>
             </header>
 
-            <p class="project-desc">
-              Ressources documentaires : organiser des repères et contenus consultables
-              autour d’un patrimoine vivant.
+            <p class="p-desc">
+              Organiser des ressources et repères consultables, avec une structure simple et durable.
             </p>
 
-            <div class="project-tags" aria-label="Tags Kurel Facts">
-              <span class="tag">ressources</span>
-              <span class="tag">index</span>
-              <span class="tag">mémoire</span>
-            </div>
-
-            <div class="project-scope" aria-label="Périmètre Kurel Facts">
-              <div class="scope-item">
-                <span class="scope-label">Périmètre</span>
-                <span class="scope-value">Références, fiches, organisation thématique</span>
+            <div class="p-meta" aria-label="Détails Kurel Facts">
+              <div class="meta-item">
+                <span class="meta-label">Domaine</span>
+                <span class="meta-value">Ressources</span>
               </div>
-              <div class="scope-item">
-                <span class="scope-label">Livrables projet</span>
-                <span class="scope-value">Fiche projet, pages ressources, repères consultables</span>
+              <div class="meta-item">
+                <span class="meta-label">Périmètre</span>
+                <span class="meta-value">Index, fiches, thèmes</span>
               </div>
             </div>
 
-            <footer class="project-foot">
-              <a class="btn-brand" href="../projets/projet-kurel-facts.html">Voir la fiche</a>
+            <footer class="p-foot">
+              <a class="btn-brand" href="../projets/projet-kurel-facts.html">En savoir plus</a>
             </footer>
           </article>
 
         </div>
       </div>
     </section>
-    <!-- End Projets -->
 
-    <!-- ======= POURQUOI (ultra court + design) ======= -->
-    <section class="section rationale" aria-label="Pourquoi des projets">
+    <!-- =========================
+         CADRE COMMUN (texte SEO + listes modernes)
+         ========================= -->
+    <section class="section common-frame" aria-label="Cadre commun">
       <div class="container">
-        <div class="rationale-box">
-          <div class="rationale-text">
-            <h2>Pourquoi fonctionner par projets</h2>
+        <div class="frame">
+          <div class="frame__text">
+            <h2>Cadre commun</h2>
             <p>
-              Un projet fixe un périmètre, un objectif et des livrables publiables. Cela permet d’avancer
-              de manière progressive, sans surpromesse, avec une trace claire de ce qui est fait.
+              PyCode avance par étapes : un thème, un périmètre clair, et une publication progressive.
+              L’objectif est de produire des ressources simples, utiles et consultables — sans promesse inutile.
+            </p>
+            <p>
+              Les projets s’appuient sur nos propres données structurées au fil du temps.
+              Pour voir la méthode, l’accès et les ressources publiées : <a href="../services/data.html">page Données</a>.
             </p>
           </div>
 
-          <ul class="rationale-points" aria-label="Principes">
-            <li><strong>Périmètre clair</strong> : un thème, un besoin, un cadre.</li>
-            <li><strong>Livrables</strong> : pages, consultations, synthèses, fonctionnalités.</li>
-            <li><strong>Transparence</strong> : statut, limites, prochaines étapes.</li>
+          <ul class="frame__list" aria-label="Principes communs">
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Périmètre clair</strong>
+                <span>On définit ce qui est inclus (et ce qui ne l’est pas).</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Publication progressive</strong>
+                <span>On publie dès qu’un élément est stable et utile.</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Traçabilité</strong>
+                <span>Statut, limites et prochaines étapes sont affichés.</span>
+              </div>
+            </li>
+            <li>
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Ressources consultables</strong>
+                <span>Pages simples, repères clairs, navigation pratique.</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ======= USAGES (non redondant avec Données) ======= -->
+    <!-- =========================
+         USAGES (ON, minimal, grand public)
+         ========================= -->
     <section class="section uses" aria-label="Usages">
       <div class="container section-title text-center">
-        <h2>Usages</h2>
-        <p>Ce que ces projets permettent de faire, concrètement.</p>
+        <h2>À quoi ça sert</h2>
+        <p>Des usages simples, pour tout le monde.</p>
       </div>
 
       <div class="container">
         <div class="uses-grid">
           <article class="use-card">
             <h3>Consulter</h3>
-            <p>Accéder à des pages lisibles, avec des repères et une navigation claire.</p>
+            <p>Accéder à des pages lisibles, avec des repères.</p>
           </article>
           <article class="use-card">
             <h3>Comparer</h3>
-            <p>Mettre en perspective avec des critères stables (produits, matchs, ressources).</p>
+            <p>Mettre en perspective avec des critères stables.</p>
           </article>
           <article class="use-card">
             <h3>Comprendre</h3>
-            <p>Lire des synthèses courtes : constats, limites et points de vigilance.</p>
+            <p>Lire des synthèses courtes et des points clés.</p>
           </article>
           <article class="use-card">
             <h3>Contribuer</h3>
-            <p>Proposer des sources et corrections : amélioration progressive et traçable.</p>
+            <p>Proposer une source, corriger, enrichir.</p>
           </article>
-        </div>
-
-        <div class="uses-linkline">
-          Démarche et ressources : <a href="../services/data.html">voir la page Données</a>.
         </div>
       </div>
     </section>
 
-    <!-- ======= CTA FINAL UNIQUE ======= -->
-    <section class="section cta" aria-label="Échanger">
+    <!-- =========================
+         CTA CONTRIBUER (unique)
+         ========================= -->
+    <section class="section cta" aria-label="Contribuer aux projets">
       <div class="container">
         <div class="cta-box">
           <div class="cta-text">
-            <h2>Échanger</h2>
-            <p>Une source, une correction ou une contribution ? On privilégie le concret.</p>
+            <h2>Contribuer aux projets</h2>
+            <p>Une idée, une source, une correction ? Ta contribution peut faire avancer un projet.</p>
           </div>
+
           <div class="cta-actions">
-            <a class="btn-brand" href="mailto:pycodegroup@gmail.com">Contacter</a>
+            <!-- adapte vers ta page contribuer si elle existe -->
+            <a class="btn-brand" href="../contribuer.html">Contribuer</a>
             <a class="cta-link" href="../services/data.html">Voir Données</a>
           </div>
         </div>
@@ -285,4 +287,4 @@
   </script>
   <script src="../assets/js/main.js"></script>
 </body>
-  </html>
+              </html>
