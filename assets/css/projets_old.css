@@ -438,3 +438,80 @@
 @media (max-width: 991px){
   .common-wrap{ grid-template-columns: 1fr; }
 }
+
+/* =========================
+   CTA box – rythme & design
+========================= */
+
+/* CTA : aligné à gauche sur PC */
+
+.data-cta-box{
+  background:#F5F7FA;
+    max-width: 860px;
+  margin: 0 auto;
+   position: relative;
+   padding: 22px 18px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg,
+      rgba(0,124,145,0.08) 0%,
+      rgba(240,238,233,1) 45%,
+      rgba(255,255,255,1) 100%);
+  border: 1px solid rgba(26,26,46,0.08);
+  box-shadow: 0 14px 34px rgba(26,26,46,0.08);
+  overflow: hidden;
+}
+
+@media (min-width: 992px){
+  .data-cta-box{
+    text-align: left; /* desktop */
+   padding: 26px 24px; /* Desktop : plus “air” */
+  }
+}
+
+.data-cta-box{
+  text-align: center; /* mobile */
+}
+
+/* Trait accent (jaune solaire) */
+.data-cta-box::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: #FFC300;
+  opacity: .95;
+}
+
+/* Petite “lueur” discrète */
+.data-cta-box::after{
+  content:"";
+  position:absolute;
+  right: -120px;
+  top: -120px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255,195,0,0.20), transparent 60%);
+  pointer-events:none;
+}
+
+.data-cta-box h2{
+  margin-top: 10px; /* laisse respirer sous le trait */
+  color: #1A1A2E;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.data-cta-box .pc-muted{
+  max-width: 70ch;
+  color: color-mix(in srgb, #1A1A2E, transparent 28%);
+}
+
+/* Bouton : un peu plus premium */
+.data-cta-box .btn-brand{
+  border-radius: 999px;
+  padding: 10px 16px;
+}
