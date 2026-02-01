@@ -470,3 +470,27 @@
 .project-desc{
   padding-bottom: 6px;
 }
+
+
+/* HERO — Aurora light (innovant, clair) */
+.projects-hero{
+  position: relative;
+  padding: 78px 0 56px;
+  border-bottom: 1px solid var(--p-border);
+  overflow: hidden;
+
+  background:
+    radial-gradient(70% 60% at 12% 22%, rgba(0,124,145,0.28), transparent 60%),
+    radial-gradient(60% 55% at 88% 18%, rgba(255,195,0,0.22), transparent 62%),
+    radial-gradient(55% 55% at 72% 92%, rgba(0,191,166,0.18), transparent 60%),
+    radial-gradient(120% 90% at 50% -20%, rgba(26,26,46,0.10), transparent 65%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.95) 45%,
+      rgba(255,255,255,1) 100%);
+
+  color: #1A1A2E;
+}
+
+.projects-hero h1{ color:#1A1A2E; }
+.projects-hero__lead{ color: rgba(26,26,46,0.85); }
