@@ -444,3 +444,21 @@
 .contribute-text p{
   color: rgba(26,26,46,0.85);
 }
+
+
+/* Cartes : structure verticale propre */
+.project-card{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le bloc du bas descend en bas de carte */
+.project-foot{
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* Évite tout chevauchement en forçant un espace */
+.project-desc{
+  padding-bottom: 6px;
+}
