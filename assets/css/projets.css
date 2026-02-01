@@ -19,29 +19,24 @@
 /* =========================
    HERO (full width + variations)
    ========================= */
+/* HERO — nuancier moderne (ni trop sombre, ni trop clair) */
 .projects-hero{
   position: relative;
-  padding: 72px 0 54px;
+  padding: 78px 0 56px;
   border-bottom: 1px solid var(--p-border);
-
-  background:
-    radial-gradient(circle at 12% 20%, rgba(0,124,145,0.18), transparent 56%),
-    radial-gradient(circle at 88% 12%, rgba(255,195,0,0.20), transparent 58%),
-    linear-gradient(135deg,
-      rgba(0,124,145,0.10) 0%,
-      rgba(240,238,233,0.95) 48%,
-      rgba(255,255,255,1) 100%);
-
-  color: #1A1A2E;
   overflow: hidden;
-}
 
-.projects-hero h1{
-  color: #1A1A2E;
-}
+  /* Nuancier: pétrole + bleu nuit + touche chaude */
+  background:
+    radial-gradient(circle at 12% 18%, rgba(0,124,145,0.35), transparent 55%),
+    radial-gradient(circle at 88% 12%, rgba(255,195,0,0.22), transparent 58%),
+    radial-gradient(circle at 70% 85%, rgba(0,191,166,0.18), transparent 55%),
+    linear-gradient(135deg,
+      rgba(10, 26, 36, 0.92) 0%,
+      rgba(0, 124, 145, 0.22) 45%,
+      rgba(240,238,233,0.55) 100%);
 
-.projects-hero__lead{
-  color: color-mix(in srgb, #1A1A2E, transparent 25%);
+  color: #ffffff;
 }
 
 .projects-hero__inner{
@@ -50,8 +45,8 @@
 }
 
 .projects-hero h1{
-  color: #fff;
-  margin: 0 0 8px;
+  color: #ffffff;
+  margin: 0 0 10px;
   font-weight: 900;
   letter-spacing: -0.02em;
 }
