@@ -1,320 +1,223 @@
-/* ============================================================
-   Projets — CSS page
-   Moderne, fluide, charte PyCode (sans sur-information)
-   ============================================================ */
+/* =========================
+   PROJETS — page-only
+   (main-clean.css reste intact)
+   ========================= */
 
-:root{
-  --p-radius: 22px;
+.projects-page{
+  --p-ink: color-mix(in srgb, var(--default-color), transparent 6%);
+  --p-muted: color-mix(in srgb, var(--default-color), transparent 28%);
   --p-border: color-mix(in srgb, var(--default-color), transparent 90%);
-  --p-ink: color-mix(in srgb, var(--default-color), transparent 10%);
-  --p-muted: color-mix(in srgb, var(--default-color), transparent 32%);
-  --p-shadow: 0 22px 70px rgba(0,0,0,.12);
-  --p-shadow-soft: 0 14px 45px rgba(0,0,0,.08);
+  --p-soft: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+
+/* Section plus compacte (évite les grands trous) */
+.section-tight{
+  padding-top: 54px;
+  padding-bottom: 54px;
 }
 
 /* =========================
-   HERO full width (min-height auto)
+   HERO (full width + variations)
    ========================= */
 .projects-hero{
-  width: 100%;
   position: relative;
-  overflow: hidden;
-  padding: 78px 0 46px;
-
+  padding: 72px 0 54px;
+  border-bottom: 1px solid var(--p-border);
   background:
-    radial-gradient(900px 520px at 12% 20%, color-mix(in srgb, var(--accent-color), transparent 78%), transparent 60%),
-    radial-gradient(760px 520px at 90% 18%, color-mix(in srgb, var(--yellow-accent), transparent 80%), transparent 62%),
-    linear-gradient(180deg,
-      color-mix(in srgb, var(--background-color), white 6%),
-      color-mix(in srgb, var(--background-color), white 0%)
-    );
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
-.projects-hero::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  pointer-events:none;
-  opacity:.18;
-  background-image:
-    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--default-color), transparent 70%) 1px, transparent 0);
-  background-size: 18px 18px;
-  mask-image: radial-gradient(closest-side, rgba(0,0,0,.65), rgba(0,0,0,.10) 64%, rgba(0,0,0,0));
+    radial-gradient(circle at 10% 15%, rgba(0, 124, 145, 0.18), transparent 52%),
+    radial-gradient(circle at 85% 18%, rgba(255, 195, 0, 0.18), transparent 55%),
+    linear-gradient(135deg, rgba(26,26,46,0.92), rgba(0,124,145,0.28)),
+    #1A1A2E;
+  color: #fff;
+  overflow: hidden;
 }
 
 .projects-hero__inner{
-  position: relative;
-  z-index: 1;
+  max-width: 72ch;
+  text-align: left;
 }
 
 .projects-hero h1{
-  margin: 0 0 10px;
-  font-weight: 950;
-  letter-spacing: -0.25px;
-  color: var(--heading-color);
+  color: #fff;
+  margin: 0 0 8px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .projects-hero__lead{
-  margin: 0 auto;
-  max-width: 78ch;
-  line-height: 1.75;
-  color: var(--p-ink);
-  font-size: 1.08rem;
+  margin: 0;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* =========================
-   Intro card
+   Intro
    ========================= */
-.intro-card{
-  border-radius: calc(var(--p-radius) + 2px);
-  border: 1px solid var(--p-border);
-  background: var(--surface-color);
-  padding: 18px;
-  box-shadow: var(--p-shadow-soft);
+.projects-page .section h2{
+  margin-bottom: 10px;
 }
 
-.intro-text{
-  margin: 0;
-  line-height: 1.75;
-  color: var(--p-ink);
-}
-
-.intro-text a{
+.projects-page .section a{
   color: var(--accent-color);
-  font-weight: 950;
+  font-weight: 700;
   text-decoration: none;
 }
-.intro-text a:hover{
+.projects-page .section a:hover{
   color: color-mix(in srgb, var(--accent-color), #000 12%);
 }
 
 /* =========================
-   Projets grid 3/2/1
+   Cartes projets (premium, sobres)
    ========================= */
-.projects-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+.project-card-link{
+  text-decoration: none;
+  display: block;
+  height: 100%;
 }
 
-@media (max-width: 991px){
-  .projects-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 575px){
-  .projects-grid{ grid-template-columns: 1fr; }
-  .projects-hero{ padding: 66px 0 38px; }
-  .projects-hero__lead{ font-size: 1rem; }
-}
-
-/* =========================
-   Project card (premium)
-   ========================= */
-.p-card{
-  position: relative;
-  border-radius: var(--p-radius);
+.project-card{
+  border-radius: 18px;
   border: 1px solid var(--p-border);
-  background: linear-gradient(180deg,
-    color-mix(in srgb, var(--surface-color), white 3%),
-    var(--surface-color)
-  );
+  background: var(--surface-color);
   padding: 18px 18px 16px;
-  overflow: hidden;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: 0 12px 26px rgba(26,26,46,0.06);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  position: relative;
 }
 
-.p-card::before{
-  content:"";
-  position:absolute;
-  left: 0;
-  top: 0;
-  height: 3px;
-  width: 100%;
-  background: linear-gradient(90deg, var(--accent-color), var(--yellow-accent));
-  opacity: .95;
+.project-card:hover{
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 75%);
+  box-shadow: 0 18px 34px rgba(26,26,46,0.10);
 }
 
-.p-card::after{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  pointer-events:none;
-  opacity: 0;
-  background:
-    radial-gradient(520px 280px at 10% 0%, color-mix(in srgb, var(--accent-color), transparent 86%), transparent 55%),
-    radial-gradient(460px 240px at 90% 10%, color-mix(in srgb, var(--yellow-accent), transparent 88%), transparent 55%);
-  transition: opacity .18s ease;
-}
-
-.p-card:hover{
-  transform: translateY(-3px);
-  box-shadow: var(--p-shadow);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-.p-card:hover::after{ opacity: 1; }
-
-.p-head{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.p-title{
-  display:flex;
-  align-items:center;
+.project-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
-.p-icon{
-  width: 40px;
-  height: 40px;
-  display:inline-grid;
-  place-items:center;
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 76%);
-  font-size: 1.1rem;
-}
-
-.p-title h3{
-  margin: 0;
-  font-size: 1.26rem;
-  font-weight: 950;
-  color: var(--heading-color);
-  letter-spacing: -0.12px;
-}
-
-/* Status */
-.p-status{
-  display:inline-flex;
-  align-items:center;
-  padding: 7px 10px;
+.project-status{
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 6px 10px;
   border-radius: 999px;
-  font-weight: 950;
-  font-size: .82rem;
-  border: 1px solid transparent;
+  border: 1px solid var(--p-border);
+  background: color-mix(in srgb, var(--surface-color), transparent 6%);
+  color: var(--p-ink);
   white-space: nowrap;
 }
 
-.status-exploration{
-  background: rgba(255,195,0,.18);
-  border-color: rgba(255,195,0,.35);
-}
-.status-structuration{
-  background: rgba(0,124,145,.10);
-  border-color: rgba(0,124,145,.25);
-}
-.status-pilote{
-  background: rgba(0,191,166,.12);
-  border-color: rgba(0,191,166,.25);
+.status-live{
+  border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: color-mix(in srgb, var(--accent-color), #000 18%);
 }
 
-/* Badges (domaine + angle) */
-.p-badges{
-  display:flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 4px 0 8px;
+.status-build{
+  border-color: color-mix(in srgb, var(--yellow-accent), transparent 55%);
+  background: color-mix(in srgb, var(--yellow-accent), transparent 88%);
+  color: color-mix(in srgb, #1A1A2E, transparent 8%);
 }
 
-.p-badge{
-  display:inline-flex;
-  align-items:center;
+.project-badge{
+  font-size: .82rem;
   padding: 6px 10px;
   border-radius: 999px;
-  font-weight: 950;
-  font-size: .84rem;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
-  color: color-mix(in srgb, var(--default-color), transparent 6%);
+  background: var(--p-soft);
+  color: color-mix(in srgb, var(--accent-color), #000 10%);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.p-badge--soft{
-  background: color-mix(in srgb, var(--background-color), white 10%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  color: color-mix(in srgb, var(--default-color), transparent 12%);
+.project-title{
+  color: var(--heading-color);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
 }
 
-/* Description SEO */
-.p-desc{
+.project-desc{
   margin: 0;
-  line-height: 1.72;
-  color: var(--p-ink);
+  color: var(--p-muted);
+  line-height: 1.65;
 }
 
-.p-foot{
-  margin-top: 14px;
+.project-foot{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-cta{
+  color: var(--accent-color);
+  font-weight: 900;
+}
+
+/* Cartes désactivées (pages pas prêtes) */
+.project-card-link.is-disabled{
+  cursor: default;
+}
+.project-card-link.is-disabled .project-card{
+  opacity: .82;
+}
+.project-card-link.is-disabled .project-card:hover{
+  transform: none;
+  box-shadow: 0 12px 26px rgba(26,26,46,0.06);
+  border-color: var(--p-border);
 }
 
 /* =========================
-   Cadre commun (institutionnel) — split + listes modernes
+   Cadre commun (variation différente de data)
    ========================= */
 .common-wrap{
   border-radius: 24px;
   border: 1px solid var(--p-border);
   background:
-    linear-gradient(180deg,
-      color-mix(in srgb, var(--accent-color), transparent 95%),
-      var(--surface-color)
-    );
+    linear-gradient(135deg,
+      rgba(240,238,233,0.9) 0%,
+      rgba(0,124,145,0.08) 42%,
+      rgba(255,255,255,1) 100%);
   padding: 18px;
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: 16px;
+  box-shadow: 0 14px 34px rgba(26,26,46,0.06);
 }
 
 .common-left h2{
   margin: 0 0 10px;
 }
 
-.common-lead{
+.common-lead, .common-text{
   margin: 0 0 10px;
   line-height: 1.75;
   color: var(--p-ink);
 }
 
-.common-text{
-  margin: 0 0 12px;
-  line-height: 1.75;
-  color: var(--p-ink);
-}
-
-.common-text a{
-  color: var(--accent-color);
-  font-weight: 950;
-  text-decoration: none;
-}
-.common-text a:hover{
-  color: color-mix(in srgb, var(--accent-color), #000 12%);
-}
-
 .common-note{
-  border-left: 3px solid var(--accent-color);
+  border-left: 3px solid var(--yellow-accent);
   padding: 10px 12px;
   border-radius: 14px;
-  background: color-mix(in srgb, var(--surface-color), transparent 6%);
-  color: color-mix(in srgb, var(--default-color), transparent 14%);
-}
-
-.common-right{
-  display: grid;
-  gap: 12px;
+  background: rgba(255,255,255,0.72);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
 }
 
 .common-block{
   border-radius: 18px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-  background: color-mix(in srgb, var(--surface-color), transparent 4%);
+  border: 1px solid var(--p-border);
+  background: rgba(255,255,255,0.72);
   padding: 14px;
 }
 
 .common-block h3{
   margin: 0 0 10px;
   font-size: 1.05rem;
-  font-weight: 950;
+  font-weight: 900;
   color: var(--heading-color);
 }
 
@@ -341,14 +244,11 @@
   margin-top: 6px;
   opacity: .95;
 }
-.bullet--yellow{
-  background: var(--yellow-accent);
-}
 
 .common-list strong{
   display: block;
   color: var(--heading-color);
-  font-weight: 950;
+  font-weight: 900;
 }
 .common-list span{
   display: block;
@@ -357,79 +257,152 @@
   line-height: 1.55;
 }
 
-@media (max-width: 991px){
-  .common-wrap{ grid-template-columns: 1fr; }
+.common-actions{
+  margin-top: 12px;
 }
 
-/* =========================
-   Contribuer (fond nuancé, 2 boutons)
-   ========================= */
-.contribute-box{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 16px;
-  padding: 20px;
-  border-radius: 24px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  background:
-    radial-gradient(520px 260px at 12% 30%, color-mix(in srgb, var(--accent-color), transparent 86%), transparent 60%),
-    radial-gradient(520px 260px at 88% 20%, color-mix(in srgb, var(--yellow-accent), transparent 86%), transparent 60%),
-    color-mix(in srgb, var(--surface-color), white 2%);
-}
-
-.contribute-text h2{
-  margin: 0 0 6px;
-}
-.contribute-text p{
-  margin: 0;
-  line-height: 1.7;
-  color: var(--p-ink);
-  max-width: 68ch;
-}
-
-.contribute-actions{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* bouton secondaire : même btn-brand mais en version "ghost" */
+/* Variante bouton secondaire (ghost) — scoped */
 .btn-brand--ghost{
   background: transparent !important;
   color: var(--accent-color) !important;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 35%) !important;
+  box-shadow: none !important;
 }
-
-.btn-brand--ghost:hover{
+.btn-brand--ghost:hover,
+.btn-brand--ghost:focus{
   background: color-mix(in srgb, var(--accent-color), transparent 92%) !important;
 }
 
-@media (max-width: 575px){
+/* =========================
+   Finalité
+   ========================= */
+.purpose-card{
+  border-radius: 18px;
+  border: 1px solid var(--p-border);
+  background: var(--surface-color);
+  padding: 16px 16px;
+  box-shadow: 0 12px 26px rgba(26,26,46,0.06);
+}
+
+.purpose-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.purpose-list li{
+  position: relative;
+  padding-left: 18px;
+  color: var(--p-ink);
+  line-height: 1.6;
+}
+.purpose-list li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--yellow-accent);
+  opacity: .95;
+}
+
+/* =========================
+   CTA final Contribuer (variation premium)
+   ========================= */
+.contribute-box{
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  padding: 22px 18px;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(circle at 90% -10%, rgba(0,124,145,0.18), transparent 55%),
+    linear-gradient(135deg,
+      rgba(255,255,255,1) 0%,
+      rgba(240,238,233,1) 42%,
+      rgba(0,124,145,0.08) 100%);
+
+  border: 1px solid var(--p-border);
+  box-shadow: 0 14px 34px rgba(26,26,46,0.08);
+  overflow: hidden;
+
+  text-align: center;
+}
+
+@media (min-width: 992px){
   .contribute-box{
-    flex-direction: column;
-    align-items: flex-start;
+    text-align: left;
+    padding: 26px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
   }
 }
 
-/* Motion safe */
-@media (prefers-reduced-motion: reduce){
-  .p-card{ transition: none !important; }
+.contribute-box::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--yellow-accent);
+  opacity: .95;
+}
+
+.contribute-text h2{
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: var(--heading-color);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.contribute-text p{
+  margin: 0;
+  max-width: 70ch;
+  color: var(--p-muted);
+  line-height: 1.7;
+}
+
+.contribute-actions{
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 992px){
+  .contribute-actions{
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Taille du bouton dans le CTA final (sans toucher global) */
+.contribute-box .btn.btn-brand{
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 991px){
+  .common-wrap{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px){
+  .projects-hero{
+    padding: 58px 0 44px;
+  }
+  .projects-hero__lead{
+    font-size: 1rem;
+  }
    }
-
-
-.projects-hero__inner{
-  max-width: 72ch;
-  text-align: left;
-}
-
-.projects-hero h1{
-  margin-bottom: 8px;
-}
-
-.projects-hero__lead{
-  margin-left: 0;
-}
-
-  
