@@ -23,13 +23,25 @@
   position: relative;
   padding: 72px 0 54px;
   border-bottom: 1px solid var(--p-border);
+
   background:
-    radial-gradient(circle at 10% 15%, rgba(0, 124, 145, 0.18), transparent 52%),
-    radial-gradient(circle at 85% 18%, rgba(255, 195, 0, 0.18), transparent 55%),
-    linear-gradient(135deg, rgba(26,26,46,0.92), rgba(0,124,145,0.28)),
-    #1A1A2E;
-  color: #fff;
+    radial-gradient(circle at 12% 20%, rgba(0,124,145,0.18), transparent 56%),
+    radial-gradient(circle at 88% 12%, rgba(255,195,0,0.20), transparent 58%),
+    linear-gradient(135deg,
+      rgba(0,124,145,0.10) 0%,
+      rgba(240,238,233,0.95) 48%,
+      rgba(255,255,255,1) 100%);
+
+  color: #1A1A2E;
   overflow: hidden;
+}
+
+.projects-hero h1{
+  color: #1A1A2E;
+}
+
+.projects-hero__lead{
+  color: color-mix(in srgb, #1A1A2E, transparent 25%);
 }
 
 .projects-hero__inner{
@@ -406,3 +418,29 @@
     font-size: 1rem;
   }
    }
+
+/* Cartes : structure verticale propre */
+.project-card{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le bloc du bas descend en bas de carte */
+.project-foot{
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* Évite tout chevauchement en forçant un espace */
+.project-desc{
+  padding-bottom: 6px;
+}
+
+/* CTA Contribuer : lisibilité garantie */
+.contribute-text h2{
+  color: #1A1A2E;
+}
+
+.contribute-text p{
+  color: rgba(26,26,46,0.85);
+}
