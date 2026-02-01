@@ -58,6 +58,19 @@
   font-size: 1.05rem;
 }
 
+/* HERO — texte noir pour lisibilité */
+.projects-hero{
+  color: #1A1A2E;
+}
+
+.projects-hero h1{
+  color: #1A1A2E;
+}
+
+.projects-hero__lead{
+  color: rgba(26,26,46,0.85);
+}
+
 /* =========================
    Intro
    ========================= */
