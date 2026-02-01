@@ -1,31 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projets | PyCode Group</title>
-  <meta name="description" content="Découvrez les projets PyCode : des chantiers thématiques publiés progressivement, avec des pages dédiées et des ressources consultables." />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <link rel="stylesheet" href="../assets/css/main-clean.css" />
-  <link rel="stylesheet" href="../assets/css/projets.css" />
+  <title>Projets | PyCode Group</title>
+  <meta name="description" content="Découvrez les projets phares de PyCode : Lekkantu, SunuGoal et Kurel Facts. Des initiatives progressives construites à partir de données structurées, orientées utilité." />
+  <link rel="canonical" href="https://pycodegroup.com/projets/projets.html" />
+
+  <link href="../assets/img/Logo-Favicon.png" rel="icon" />
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap" />
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- IMPORTANT: main-clean.css reste inchangé -->
+  <link href="../assets/css/main-clean.css" rel="stylesheet" />
+  <link href="../assets/css/projets.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="projects-page">
 
-  <!-- Header (reprend ton header commun) -->
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="../index.html" class="logo d-flex align-items-center">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html#hero" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="../assets/img/logo-header.svg" alt="PyCode Group" />
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="../index.html">Accueil</a></li>
-          <li><a href="../a-propos.html">À propos</a></li>
           <li><a href="../services/data.html">Données</a></li>
-          <li><a class="active" href="projets.html">Projets</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="projets.html" class="active">Projets</a></li>
+          <li><a href="../index.html#nous_contacter">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -34,132 +46,119 @@
 
   <main class="main">
 
-    <!-- =========================
-         HERO (simple, full width)
-         ========================= -->
+    <!-- HERO -->
     <section class="projects-hero" aria-label="Projets PyCode">
       <div class="container">
         <div class="projects-hero__inner">
           <h1>Projets</h1>
           <p class="projects-hero__lead">
-            Des projets concrets, publiés progressivement, pour rendre l’information plus lisible, plus comparable et plus utile.
+            Des initiatives thématiques construites pas à pas, avec un objectif simple :
+            rendre l’information plus utile, plus lisible et plus exploitable.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         INTRO + lien Données
-         ========================= -->
-    <section class="section projects-intro" aria-label="Introduction">
+    <!-- INTRO COURTE -->
+    <section class="section section-tight" aria-label="Introduction projets">
       <div class="container">
-        <div class="intro-card">
-          <p class="intro-text">
-            Cette page présente les projets : leur thème, leur statut et les pages dédiées pour suivre l’avancement.
-            Pour comprendre la méthode de travail et accéder aux ressources publiées, voir la page
-            <a href="../services/data.html">Données</a>.
-          </p>
+        <div class="row">
+          <div class="col-lg-9 col-xl-8">
+            <h2>Pourquoi fonctionner par projets&nbsp;?</h2>
+            <p>
+              Un projet donne un cadre clair : une thématique, un périmètre, des livrables et une trajectoire.
+              Cela permet de transformer une idée en ressources concrètes et consultables.
+            </p>
+            <p class="mb-0">
+              La démarche de publication et l’accès aux ressources sont détaillés sur la page
+              <a href="../services/data.html">Données</a>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         PROJETS EN COURS
-         ========================= -->
-    <section id="liste-projets" class="section projects-list" aria-label="Projets en cours">
-      <div class="container section-title text-center">
-        <h2>Projets en cours</h2>
-        <p>Trois projets phares, chacun avec une fiche dédiée.</p>
-      </div>
-
+    <!-- PROJETS PHARES -->
+    <section id="liste-projets" class="section light-background" aria-label="Projets phares">
       <div class="container">
-        <div class="projects-grid">
+        <div class="section-title">
+          <h2>Projets phares</h2>
+          <p>Trois initiatives au cœur du portefeuille PyCode.</p>
+        </div>
+
+        <div class="row g-4 mt-1">
 
           <!-- Lekkantu -->
-          <article class="p-card" aria-label="Projet Lekkantu">
-            <header class="p-head">
-              <div class="p-title">
-                <span class="p-icon" aria-hidden="true">🍃</span>
-                <h3>Lekkantu</h3>
-              </div>
-              <span class="p-status status-structuration">Structuration</span>
-            </header>
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link" href="projet-lekkantu.html" aria-label="Découvrir Lekkantu">
+              <article class="project-card h-100">
+                <div class="project-top">
+                  <span class="project-status status-live">En cours</span>
+                  <span class="project-badge"><i class="bi bi-egg-fried"></i> Nutrition</span>
+                </div>
 
-            <div class="p-badges" aria-label="Domaine Lekkantu">
-              <span class="p-badge">Nutrition</span>
-              <span class="p-badge p-badge--soft">Transparence</span>
-            </div>
+                <h3 class="project-title">Lekkantu</h3>
+                <p class="project-desc">
+                  Structurer l’information produit pour la rendre lisible et comparable.
+                  Fiches, repères et analyses progressives autour de la composition, des usages et de la transparence.
+                </p>
 
-            <p class="p-desc">
-              Lekkantu vise à rendre l’information produit plus simple à lire : ingrédients, repères, formats,
-              et éléments utiles pour comparer. Le projet avance étape par étape, avec des pages consultables
-              et des repères clairs, pensés pour le grand public comme pour les organisations.
-            </p>
+                <div class="project-foot">
+                  <span class="project-cta">En savoir plus <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </article>
+            </a>
+          </div>
 
-            <footer class="p-foot">
-              <a class="btn-brand" href="../projets/projet-lekkantu.html">En savoir plus</a>
-            </footer>
-          </article>
+          <!-- SunuGoal (si page pas prête : carte désactivée) -->
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link is-disabled" href="#" aria-label="SunuGoal (bientôt disponible)" aria-disabled="true">
+              <article class="project-card h-100">
+                <div class="project-top">
+                  <span class="project-status status-build">Collecte</span>
+                  <span class="project-badge"><i class="bi bi-dribbble"></i> Sport</span>
+                </div>
 
-          <!-- SunuGoal -->
-          <article class="p-card" aria-label="Projet SunuGoal">
-            <header class="p-head">
-              <div class="p-title">
-                <span class="p-icon" aria-hidden="true">⚽</span>
-                <h3>SunuGoal</h3>
-              </div>
-              <span class="p-status status-exploration">Exploration</span>
-            </header>
+                <h3 class="project-title">SunuGoal</h3>
+                <p class="project-desc">
+                  Documenter le sport local pour produire des bilans, comparaisons et analyses accessibles.
+                  Une base structurée, construite dans la durée, au service de la lisibilité du championnat.
+                </p>
 
-            <div class="p-badges" aria-label="Domaine SunuGoal">
-              <span class="p-badge">Sport</span>
-              <span class="p-badge p-badge--soft">Championnat</span>
-            </div>
+                <div class="project-foot">
+                  <span class="project-cta">Bientôt <i class="bi bi-hourglass-split"></i></span>
+                </div>
+              </article>
+            </a>
+          </div>
 
-            <p class="p-desc">
-              SunuGoal structure des repères autour du football local : résultats, match après match,
-              et éléments de lecture pour mieux suivre l’évolution du championnat. L’objectif est de rendre
-              le parcours plus lisible, avec une progression par étapes et des pages simples à consulter.
-            </p>
+          <!-- Kurel Facts (si page pas prête : carte désactivée) -->
+          <div class="col-md-6 col-lg-4">
+            <a class="project-card-link is-disabled" href="#" aria-label="Kurel Facts (bientôt disponible)" aria-disabled="true">
+              <article class="project-card h-100">
+                <div class="project-top">
+                  <span class="project-status status-build">À venir</span>
+                  <span class="project-badge"><i class="bi bi-journal-text"></i> Culture</span>
+                </div>
 
-            <footer class="p-foot">
-              <a class="btn-brand" href="../projets/projet-sunugoal.html">En savoir plus</a>
-            </footer>
-          </article>
+                <h3 class="project-title">Kurel Facts</h3>
+                <p class="project-desc">
+                  Organiser et documenter des ressources souvent dispersées pour faciliter la recherche,
+                  la compréhension et la transmission. Un travail patient, structuré et réutilisable.
+                </p>
 
-          <!-- Kurel Facts -->
-          <article class="p-card" aria-label="Projet Kurel Facts">
-            <header class="p-head">
-              <div class="p-title">
-                <span class="p-icon" aria-hidden="true">📚</span>
-                <h3>Kurel Facts</h3>
-              </div>
-              <span class="p-status status-pilote">Pilote</span>
-            </header>
-
-            <div class="p-badges" aria-label="Domaine Kurel Facts">
-              <span class="p-badge">Ressources</span>
-              <span class="p-badge p-badge--soft">Index</span>
-            </div>
-
-            <p class="p-desc">
-              Kurel Facts organise des ressources consultables : repères, fiches, références et structure thématique.
-              L’idée est de rendre l’information navigable, durable et facile à retrouver, avec un cadre simple,
-              transparent et évolutif.
-            </p>
-
-            <footer class="p-foot">
-              <a class="btn-brand" href="../projets/projet-kurel-facts.html">En savoir plus</a>
-            </footer>
-          </article>
+                <div class="project-foot">
+                  <span class="project-cta">Bientôt <i class="bi bi-hourglass-split"></i></span>
+                </div>
+              </article>
+            </a>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- =========================
-         CADRE COMMUN (institutionnel)
-         ========================= -->
+    <!-- CADRE COMMUN -->
     <section class="section common-frame" aria-label="Cadre commun">
       <div class="container">
         <div class="common-wrap">
@@ -167,170 +166,84 @@
             <h2>Cadre commun</h2>
 
             <p class="common-lead">
-              PyCode développe des projets thématiques et publie des ressources au fil de l’avancement.
-              Le cadre est volontairement clair : utile, lisible et vérifiable.
+              PyCode développe des projets thématiques et publie des ressources au fil de l’avancement,
+              avec un cadre de travail clair : utile, lisible et vérifiable.
             </p>
 
             <p class="common-text">
-              Les projets s’appuient sur nos propres données, structurées progressivement, puis mises à disposition
-              sous forme de pages consultables et de ressources partagées. La démarche, l’accès et les ressources publiées
-              sont détaillés sur la page <a href="../services/data.html">Données</a>.
+              Les projets s’appuient sur des données collectées et structurées par PyCode, puis publiées progressivement
+              sous forme de pages consultables et de repères partagés. Les principes et l’accès aux ressources sont détaillés
+              sur la page <a href="../services/data.html">Données</a>.
             </p>
 
-            <div class="common-note">
-              <strong>Collaborations possibles</strong> : ONG, organisations, collectivités, médias,
-              chercheurs, communautés et partenaires locaux, selon le projet et le besoin.
+            <div class="common-note" role="note">
+              <strong>Principe :</strong> publier tôt ce qui est stable, indiquer clairement ce qui reste à consolider,
+              et améliorer sans bruit.
             </div>
           </div>
 
-          <div class="common-right" aria-label="Engagements et collaboration">
+          <div class="common-right" aria-label="Engagements">
             <div class="common-block">
               <h3>Engagements</h3>
+
               <ul class="common-list">
                 <li>
                   <span class="bullet" aria-hidden="true"></span>
-                  <div>
-                    <strong>Périmètre clair</strong>
-                    <span>Ce qui est inclus (et ce qui ne l’est pas) est explicitement indiqué.</span>
-                  </div>
+                  <div><strong>Périmètre explicite</strong><span>Chaque projet précise ce qu’il couvre, et ce qu’il ne couvre pas.</span></div>
                 </li>
                 <li>
                   <span class="bullet" aria-hidden="true"></span>
-                  <div>
-                    <strong>Publication progressive</strong>
-                    <span>On publie dès qu’un élément est stable et utile.</span>
-                  </div>
+                  <div><strong>Progression par étapes</strong><span>Avancer avec des livrables simples, plutôt qu’attendre un “grand lancement”.</span></div>
                 </li>
                 <li>
                   <span class="bullet" aria-hidden="true"></span>
-                  <div>
-                    <strong>Traçabilité</strong>
-                    <span>Statut, limites, sources et prochaines étapes visibles.</span>
-                  </div>
+                  <div><strong>Transparence</strong><span>Statut, limites, hypothèses et prochaines étapes affichés.</span></div>
                 </li>
                 <li>
                   <span class="bullet" aria-hidden="true"></span>
-                  <div>
-                    <strong>Ressources consultables</strong>
-                    <span>Pages simples, repères clairs, navigation pratique.</span>
-                  </div>
+                  <div><strong>Ressources consultables</strong><span>Pages lisibles, repères concrets, navigation simple.</span></div>
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true"></span>
+                  <div><strong>Qualité pragmatique</strong><span>Clarté et cohérence d’abord, amélioration continue ensuite.</span></div>
                 </li>
               </ul>
-            </div>
 
-            <div class="common-block">
-              <h3>Collaboration</h3>
-              <ul class="common-list">
-                <li>
-                  <span class="bullet bullet--yellow" aria-hidden="true"></span>
-                  <div>
-                    <strong>Partenaires terrain</strong>
-                    <span>Collecte, vérification et contextualisation locale.</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="bullet bullet--yellow" aria-hidden="true"></span>
-                  <div>
-                    <strong>Organisations</strong>
-                    <span>Besoins ciblés, usages, mise en commun de repères.</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="bullet bullet--yellow" aria-hidden="true"></span>
-                  <div>
-                    <strong>Communautés</strong>
-                    <span>Corrections, enrichissements, signalement de sources.</span>
-                  </div>
-                </li>
-              </ul>
+              <div class="common-actions">
+                <a href="../services/data.html" class="btn btn-brand btn-brand--ghost">Voir la page Données</a>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section common-frame" aria-label="Cadre commun">
-  <div class="container">
-    <div class="common-wrap">
-      <!-- Colonne gauche : texte institutionnel -->
-      <div class="common-left">
-        <h2>Cadre commun</h2>
-
-        <p class="common-lead">
-          PyCode développe des projets thématiques et publie des ressources au fil de l’avancement,
-          avec un cadre de travail clair : utile, lisible et vérifiable.
-        </p>
-
-        <p class="common-text">
-          Les projets s’appuient sur des données collectées et structurées par PyCode, puis publiées progressivement
-          sous forme de pages consultables et de repères partagés. La méthode, les principes de publication et l’accès
-          aux ressources sont détaillés sur la page <a href="../services/data.html">Données</a>.
-        </p>
-
-        <div class="common-highlight" role="note">
-          <strong>Principe :</strong> publier tôt ce qui est stable, indiquer clairement ce qui reste à consolider,
-          et améliorer sans bruit.
+    <!-- FINALITÉ (léger) -->
+    <section class="section projects-purpose" aria-label="Finalité des projets">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <h2>Finalité</h2>
+            <p class="mb-0">
+              L’objectif n’est pas d’accumuler des informations, mais de produire des ressources utiles,
+              compréhensibles et réutilisables, adaptées à des contextes réels.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="purpose-card">
+              <ul class="purpose-list mb-0">
+                <li>Clarifier ce qui est dispersé et difficile à comparer</li>
+                <li>Documenter ce qui est flou ou peu accessible</li>
+                <li>Produire des repères concrets (fiches, bilans, comparaisons)</li>
+                <li>Faciliter des décisions plus éclairées, individuelles ou collectives</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Colonne droite : engagements (sans appel) -->
-      <div class="common-right" aria-label="Engagements">
-        <div class="common-block">
-          <h3>Engagements</h3>
-
-          <ul class="common-list">
-            <li>
-              <span class="bullet" aria-hidden="true"></span>
-              <div>
-                <strong>Périmètre explicite</strong>
-                <span>Chaque projet précise ce qu’il couvre, et ce qu’il ne couvre pas.</span>
-              </div>
-            </li>
-
-            <li>
-              <span class="bullet" aria-hidden="true"></span>
-              <div>
-                <strong>Progression par étapes</strong>
-                <span>Avancer avec des livrables simples, au lieu d’attendre un “grand lancement”.</span>
-              </div>
-            </li>
-
-            <li>
-              <span class="bullet" aria-hidden="true"></span>
-              <div>
-                <strong>Transparence</strong>
-                <span>Statut, limites, hypothèses et prochaines étapes affichés.</span>
-              </div>
-            </li>
-
-            <li>
-              <span class="bullet" aria-hidden="true"></span>
-              <div>
-                <strong>Ressources consultables</strong>
-                <span>Des pages lisibles, des repères concrets, une navigation simple.</span>
-              </div>
-            </li>
-
-            <li>
-              <span class="bullet" aria-hidden="true"></span>
-              <div>
-                <strong>Qualité pragmatique</strong>
-                <span>Clarté et cohérence d’abord, puis amélioration continue.</span>
-              </div>
-            </li>
-          </ul>
-
-          
-        </div>
-      </div>
-    </div>
-  </div>
     </section>
 
-    <!-- =========================
-         CONTRIBUER (comme les autres pages)
-         ========================= -->
+    <!-- CTA FINAL -->
     <section class="section contribute" aria-label="Contribuer">
       <div class="container">
         <div class="contribute-box">
@@ -341,7 +254,6 @@
 
           <div class="contribute-actions">
             <a class="btn btn-brand" href="../contribuer.html">Contribuer</a>
-          
           </div>
         </div>
       </div>
@@ -349,17 +261,7 @@
 
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center">
-        © <span id="copyright-year"></span> <strong>PyCode Group</strong>. Tous droits réservés.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("copyright-year").textContent = new Date().getFullYear();
-  </script>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
 </body>
-                      </html>
+</html>
