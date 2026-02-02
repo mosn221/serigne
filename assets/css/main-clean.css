@@ -786,14 +786,25 @@ section,
   color: inherit;
 }
 
-.project-card article {
+/*.project-card article {
   height: 100%;
   background: #fff;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
   border-radius: 16px;
   overflow: hidden;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}*/
+
+.project-card{
+  height: 100%;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--ink), transparent 88%);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  will-change: transform;
 }
+
 
 .project-card img {
   width: 100%;
@@ -862,7 +873,7 @@ section,
 }
 
 /* Hover: plus “envie de cliquer” */
-.project-card:hover article{
+.project-card:hover{
   transform: translateY(-6px);
   border-color: color-mix(in srgb, var(--solar-yellow), transparent 45%);
   box-shadow: 0 16px 40px rgba(0,0,0,.10);
@@ -890,7 +901,7 @@ section,
 
 
 /* Card shell */
-.project-card article{
+.project-card{
   height: 100%;
   background: #fff;
   border: 1px solid color-mix(in srgb, var(--ink), transparent 88%);
@@ -899,6 +910,7 @@ section,
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   will-change: transform;
 }
+
 
 /* Media */
 .project-media{
@@ -1128,4 +1140,10 @@ section,
   .btn.btn-brand {
     width: 100%;
   }
+}
+
+.project-link{
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
