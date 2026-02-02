@@ -45,33 +45,27 @@
 </head>
 
 <body>
+ <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an  image logo -->
-      <img src="../assets/img/logo-header.svg" alt=""> 
-    
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
       </a>
+      <nav id="navmenu" class="navmenu">
+  <ul>
+      <li><a href="../index.html">Accueil</a></li>
+    <li><a href="data.html" class="active">Données</a></li>
+    <li><a href="../projets/projets_old.html">Projets</a></li>
+    <li><a href="../contact/contact.html">Contact</a></li>
+  </ul>
 
-       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="../index.html">Bienvenue</a></li>
-          <li><a href="../a-propos.html">À propos</a></li>
-          <li><a href="../services/data.html">Données</a></li>
-          
-          
-          <li><a href="../projets/projet-lekkantu.html">Lekkantu</a></li>
-          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-
-      
-
-    </div>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>  
+</nav>
+ </div>
   </header>
+  <!-- /Header -->
+
 
  <section class="hero-contribuer d-flex align-items-center">
   <div class="container text-center text-white" data-aos="fade-up">
@@ -268,121 +262,86 @@
     </div>
   </div>
 
-  <section id="contact" class="section contact-simple">
-
-      <div class="container">
-
-        <!-- Titre -->
-        <div class="section-title text-center">
-          <h1>Échanger</h1>
-          <p>
-            Pour toute question, idée ou piste de collaboration autour de la donnée et des projets.
-          </p>
-        </div>
-
-        <!-- Contenu -->
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-
-            <p class="contact-text text-center">
-              PyCode Group reste ouvert aux échanges autour de la donnée, de l’innovation
-              et des initiatives locales.  
-              Vous pouvez nous contacter librement pour initier un premier échange.
-            </p>
-
-            <!-- CTA -->
-            <div class="contact-actions text-center mt-4">
-
-              <a href="mailto:pycodegroup@gmail.com" class="btn btn-brand">
-                Nous écrire
-              </a>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End
+ 
+    <!-- End-->
   
 </main>
 
 
-  <!-- Footer (identique à l’index) -->
-  <footer id="footer" class="footer dark-background">
+ <!-- Footer (identique à l’index) -->
+   <footer id="footer" class="footer dark-background">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-
-          <!-- Identité -->
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="../index.html" class="logo d-flex align-items-center mb-3">
-              <img src="../assets/img/logo-footer.svg" alt="Logo PyCode Group" loading="lazy">
-            </a>
-            <p class="text-muted small">
-              Data, innovation & projets pour l’Afrique.
-            </p>
-          </div>
-
-          <!-- Navigation -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Navigation</h4>
-            <ul>
-              <li><a href="../index.html#hero">Bienvenue</a></li>
-              <li><a href="../index.html#about">A propos</a></li>
-              <li><a href="../index.html#services">Activités</a></li>
-            </ul>
-          </div>
-
-          <!-- Activités -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Activités</h4>
-            <ul>
-              <li><a href="../services/data.html">Données</a></li>
-              <li><a href="../services/digitalisation.html">Digitalisation</a></li>
-              <li><a href="../services/formation.html">Formation</a></li>
-            </ul>
-          </div>
-
-          <!-- Légal -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Termes & services</h4>
-            <ul>
-              <li><a href="../legales/mentions.html">Mentions légales</a></li>
-              <li><a href="../legales/conditions.html">Conditions générales</a></li>
-              <li><a href="../legales/cookies.html">Cookies</a></li>
-              
-            </ul>
-          </div>
-
+        <!-- Identité -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="../index.html" class="logo d-flex align-items-center mb-3">
+            <img src="../assets/img/logo-footer.svg" alt="">
+          </a>
+          <p class="text-white-50 small">
+            Data, innovation & projets pour l’Afrique.
+          </p>
         </div>
+
+        <!-- Liens utiles -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="data.html">Données</a></li>
+            <li><a href="../projets/projets_old.html">Projets</a></li>
+          </ul>
+        </div>
+
+        <!-- Activités -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Projets</h4>
+          <ul>
+            <li><a href="../projets/projet-lekkantu.html">Lekkantu</a></li>
+            <li><a href="../projets/projets.html">SunuGoal</a></li>
+            <li><a href="../projets/projets.html">Kurel Facts</a>   </li>
+          </ul>
+        </div> 
+
+        <!-- Légal -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Infos légales</h4>
+          <ul>
+            <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
+            <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
+            
+            <li><a href="../legales/conditions.html">Conditions</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Bas du footer -->
-    <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row
-           justify-content-center justify-content-lg-between align-items-center">
+  <!-- Bas du footer -->
+  <div class="copyright text-center">
+    <div class="container d-flex flex-column flex-lg-row
+         justify-content-center justify-content-lg-between align-items-center">
 
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © <strong><span>PyCode Group</span></strong> 2026
-          </div>
-          <div class="credits small text-muted">
-            Tous droits réservés
-          </div>
-        </div>
-
+      <div class="d-flex flex-column align-items-center align-items-lg-start footer-copyright">
+  <div>
+    © <strong><span class="footer-brand">PyCode Group</span></strong>
+    <span id="copyright-year" class="footer-year"></span>
+  </div>
+  <div class="credits small">
+    Tous droits réservés
+  </div>
+      </div>
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-          <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
-        </div>
-
+        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
       </div>
+
     </div>
+  </div>
 
   </footer>
 
@@ -395,6 +354,13 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <!-- Main JS -->
   <script src="../assets/js/main.js" defer></script>
-
+  <script>
+  (function () {
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+  </script>
 </body>
 </html>
