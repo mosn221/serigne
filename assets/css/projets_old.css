@@ -108,9 +108,9 @@
 } */
 
 
- =========================
+/* =========================
    Cadre commun (institutionnel) — split + listes modernes
-   ========================= 
+   ========================= */
 .common-wrap{
   border-radius: 24px;
   border: 1px solid var(--p-border);
