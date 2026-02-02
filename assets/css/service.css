@@ -330,8 +330,8 @@
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(26,26,46,0.08);
- padding-bottom:80px;
-   padding-top:80px;
+ padding-bottom:68px;
+   padding-top:68px;
 
   background:
     radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
