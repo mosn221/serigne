@@ -58,7 +58,7 @@
   }
 }
 
-/* Variables (si tu les as déjà, garde celles existantes) */
+ Variables (si tu les as déjà, garde celles existantes) 
 :root{
   --pc-ink: #1A1A2E;
   --pc-petrol: #007C91;
@@ -93,6 +93,10 @@
   font-size: 1.05rem;
   line-height: 1.55;
 }
+
+
+
+
 
 . service-content .light-background{
   background: var(--pc-offwhite);
