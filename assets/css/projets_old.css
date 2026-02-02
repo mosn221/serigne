@@ -515,3 +515,341 @@
   border-radius: 999px;
   padding: 10px 16px;
 }
+
+/*--------------------------------------------------------------
+# hero Section
+--------------------------------------------------------------*/
+ .hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  color: #f0eee9;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Justification institutionnelle pour les pages de contenu */
+.service-content p,
+.service-content li,
+
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+  . service-content .section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+   padding: 56px 0;
+}
+
+ .section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  }
+
+.data-cta-box .btn-brand {
+  padding: 14px 30px;
+  font-size: 1.05rem;
+}
+
+.btn-outline-brand {
+  border: 1.5px solid #007C91;
+  color: #007C91;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 600;
+}
+
+.btn-outline-brand:hover {
+  background: rgba(0,124,145,0.08);
+  color: #007C91;
+}
+
+@media (max-width: 768px) {
+   .service-content .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* Variables (si tu les as déjà, garde celles existantes) */
+:root{
+  --pc-ink: #1A1A2E;
+  --pc-petrol: #007C91;
+  --pc-mint: #00BFA6;
+  --pc-sun: #FFC300;
+  --pc-offwhite: #F0EEE9;
+}
+
+
+.hero.hero-sm{
+  background: linear-gradient(
+    135deg,
+    rgba(0,124,145,0.06) 0%,
+    rgba(0,191,166,0.04) 30%,
+    rgba(240,238,233,1) 65%,
+    #ffffff 100%
+  );
+}
+
+.hero.hero-sm h1{
+  margin: 0 0 10px;
+  font-family: var(--heading-font, inherit);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--pc-ink);
+}
+
+.hero.hero-sm .hero-subtitle{
+  max-width: 56ch;
+  margin: 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+. service-content .light-background{
+  background: var(--pc-offwhite);
+}
+
+/* Cartes Collecter / Structurer / Restituer */
+.data-card{
+  height: 100%;
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(26,26,46,0.08);
+  box-shadow: 0 10px 26px rgba(26,26,46,0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Trait accent “data” (pétrole + touche jaune) */
+.data-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pc-petrol), var(--pc-mint), var(--pc-sun));
+  opacity: .95;
+}
+
+.data-card h3{
+  margin: 10px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--pc-ink);
+}
+
+.data-card p{
+  margin: 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 30%);
+  line-height: 1.6;
+  font-size: .98rem;
+}
+
+/* Hover (desktop only) */
+@media (hover:hover){
+  .data-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(0,124,145,0.25);
+    box-shadow: 0 14px 34px rgba(26,26,46,0.10);
+  }
+}
+
+/* Accès aux données */
+ .service-content .section-intro{
+  max-width: 70ch;
+  margin: 10px 0 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 30%);
+  line-height: 1.65;
+    margin-bottom: 40px;
+}
+
+/* Responsive : hero plus compact */
+@media (max-width: 576px){
+  .hero.hero-sm{
+    padding: 44px 0 22px;
+  }
+  .service-content  .section{
+    padding: 48px 0;
+  }
+  }
+
+/* =========================
+   CTA box – rythme & design
+========================= */
+
+/* CTA : aligné à gauche sur PC */
+
+.data-cta-box{
+  background:#F5F7FA;
+    max-width: 860px;
+  margin: 0 auto;
+   position: relative;
+   padding: 22px 18px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg,
+      rgba(0,124,145,0.08) 0%,
+      rgba(240,238,233,1) 45%,
+      rgba(255,255,255,1) 100%);
+  border: 1px solid rgba(26,26,46,0.08);
+  box-shadow: 0 14px 34px rgba(26,26,46,0.08);
+  overflow: hidden;
+}
+
+@media (min-width: 992px){
+  .data-cta-box{
+    text-align: left; /* desktop */
+   padding: 26px 24px; /* Desktop : plus “air” */
+  }
+}
+
+.data-cta-box{
+  text-align: center; /* mobile */
+}
+
+/* Trait accent (jaune solaire) */
+.data-cta-box::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: #FFC300;
+  opacity: .95;
+}
+
+/* Petite “lueur” discrète */
+.data-cta-box::after{
+  content:"";
+  position:absolute;
+  right: -120px;
+  top: -120px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255,195,0,0.20), transparent 60%);
+  pointer-events:none;
+}
+
+.data-cta-box h2{
+  margin-top: 10px; /* laisse respirer sous le trait */
+  color: #1A1A2E;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.data-cta-box .pc-muted{
+  max-width: 70ch;
+  color: color-mix(in srgb, #1A1A2E, transparent 28%);
+}
+
+/* Bouton : un peu plus premium */
+.data-cta-box .btn-brand{
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+/* ==========================
+   Accès aux données – bandeaux
+========================== */
+.data-band {
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 18px;
+  border-radius: 16px;
+
+  /* Dégradé data discret */
+  background: linear-gradient(
+    135deg,
+    rgba(0,124,145,0.14),
+    rgba(240,238,233,1) 55%,
+    rgba(255,255,255,1) 100%
+  );
+
+  border: 1px solid rgba(26,26,46,0.10);
+  text-decoration: none;
+  color: #1A1A2E;
+
+  transition: transform .18s ease,
+              box-shadow .18s ease,
+              border-color .18s ease;
+
+ height: 100%;
+  
+}
+
+/* Icône */
+.data-band-icon{
+  font-size: 1.4rem;
+  color: #007C91;
+  flex-shrink: 0;
+}
+
+/* Texte */
+.data-band-body strong{
+  display: block;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.data-band-body span{
+  display: block;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, #1A1A2E, transparent 35%);
+}
+
+/* Flèche */
+.data-band-arrow{
+  margin-left: auto;
+  opacity: .35;
+  font-weight: 700;
+}
+
+/* Hover desktop */
+@media (hover:hover){
+  .data-band:hover{
+    transform: translateY(-3px);
+    border-color: rgba(0,124,145,0.35);
+    box-shadow: 0 14px 34px rgba(26,26,46,0.12);
+  }
+  .data-band:hover .data-band-arrow{
+    opacity: .65;
+  }
+}
+
+/* Colonnes des bandeaux */
+.service-content  .row > [class*="col-"]{
+  display: flex;
+}
+
+
+/* =========================
+   Intro
+   ========================= */
+.projects-page .section h2{
+  margin-bottom: 10px;
+}
+
+.projects-page .section a{
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+.projects-page .section a:hover{
+  color: color-mix(in srgb, var(--accent-color), #000 12%);
+}
+
