@@ -853,3 +853,6 @@
   border-radius: 999px;
   padding: 10px 16px;
 }
+a.btn.btn-brand {
+   text-color:#ffffff;
+}
