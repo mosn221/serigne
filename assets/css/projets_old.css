@@ -631,7 +631,7 @@
 
 @media (max-width: 991px){
   .common-wrap{
-    outline: 4px solid red;
+    
     grid-template-columns: 1fr;
   }
 }
