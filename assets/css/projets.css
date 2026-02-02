@@ -702,3 +702,15 @@
   border-color: color-mix(in srgb, var(--default-color), transparent 90%);
   box-shadow: 0 14px 32px rgba(26,26,46,0.06);
 }
+
+
+/* Cartes projets — version sans icône */
+.pcg-card__head{
+  justify-content: flex-end; /* statut à droite */
+  padding-top: 12px;
+}
+
+/* Supprime toute dépendance visuelle à l’icône */
+.pcg-card__icon{
+  display: none;
+}
