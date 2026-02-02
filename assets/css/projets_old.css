@@ -10,7 +10,7 @@
     #F5F7FA;
   border-bottom: 1px solid rgba(26, 26, 46, 0.08);
 }
-
+ 
 
 
 
@@ -50,7 +50,7 @@
 .status-pill.status-build { border-color: rgba(0, 124, 145, 0.35); }
 .status-pill.status-explore { border-color: rgba(255, 195, 0, 0.50); }
 
-/* Cartes projets 
+ Cartes projets 
 .project-card-link {
   text-decoration: none;
   color: inherit;
@@ -168,7 +168,7 @@
   margin-top: 2px;
 }
 
-/* Bloc contact 
+ Bloc contact 
 .projects-contact {
   max-width: 860px;
   margin: 0 auto;
@@ -182,7 +182,7 @@
 
 
 
-/* =========================
+ =========================
    Intro
    ========================= 
 .projects-page .section h2{
@@ -199,7 +199,7 @@
 }
 
 
-/* =========================
+ =========================
    Cadre commun (institutionnel) — split + listes modernes
    ========================= 
 .common-wrap{
@@ -316,7 +316,7 @@
    Section : Publics cibles
    ===========================
 
-/* .pycode-audience {
+ .pycode-audience {
   background: #ffffff;
 } 
 
@@ -355,7 +355,7 @@
 }
 
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 # hero Section
 -------------------------------------------------------------
  .hero-subtitle {
@@ -370,7 +370,7 @@
   }
 }
 
-/* Justification institutionnelle pour les pages de contenu
+ Justification institutionnelle pour les pages de contenu
 .service-content p,
 .service-content li,
 
@@ -395,7 +395,7 @@
 
 
 
-/* Variables (si tu les as déjà, garde celles existantes) 
+ Variables (si tu les as déjà, garde celles existantes) 
 :root{
   --pc-ink: #1A1A2E;
   --pc-petrol: #007C91;
@@ -429,14 +429,14 @@
   color: color-mix(in srgb, var(--pc-ink), transparent 28%);
   font-size: 1.05rem;
   line-height: 1.55;
-}
+} */
 
 
 
 
 
 
-/* Responsive : hero plus compact 
+Responsive : hero plus compact 
 @media (max-width: 576px){
   .hero.hero-sm{
     padding: 44px 0 22px;
@@ -446,7 +446,7 @@
   }
   }
 
-*/
+
 
 
 /* =========================
