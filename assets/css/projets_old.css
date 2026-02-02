@@ -302,6 +302,8 @@
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(26,26,46,0.08);
+   padding-bottom:96px;
+   padding-top:96px;
 
   /* Dégradé + halos data (clair mais vivant) */
   background:
@@ -328,7 +330,7 @@
   mix-blend-mode: multiply;
 }
 
-/* Petit trait accent jaune (signature) */
+/* Petit trait accent jaune (signature) 
 .hero.hero-sm::before{
   content:"";
   position:absolute;
@@ -340,7 +342,7 @@
   background: var(--pc-sun, #FFC300);
   opacity: .95;
   pointer-events:none;
-}
+} */
 
 .hero.hero-sm h1{
   color: var(--pc-ink, #1A1A2E);
