@@ -309,16 +309,14 @@
 
 @media (max-width: 991px){
   .common-wrap{ grid-template-columns: 1fr; }
-}
+} */
 
 
 /* ===========================
    Section : Publics cibles
-   ===========================
+   =========================== */
 
- .pycode-audience {
-  background: #ffffff;
-} 
+
 
 .pycode-audience .lead {
   max-width: 760px;
@@ -352,7 +350,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(26, 26, 46, 0.85);
-} */
+} 
 
 
 --------------------------------------------------------------
@@ -376,11 +374,7 @@
   text-justify: inter-word;
 }
 
-  . service-content .section {
-  padding-top: 70px;
-  padding-bottom: 70px;
-   padding: 56px 0;
-}
+  
 
  .section h2 {
   margin-top: 0;
