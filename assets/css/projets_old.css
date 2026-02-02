@@ -565,13 +565,13 @@
 
 /* Texte */
 .hero.hero-sm h1{
-  color: var(--pc-ink);
+  color: #1a1a2e;
   font-weight: 800;
 }
 
 .hero.hero-sm .hero-subtitle{
   max-width: 56ch;
-  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+  color: 1a1a2e;
   line-height: 1.6;
 }
 
