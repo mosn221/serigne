@@ -91,9 +91,9 @@
   gap: .35rem;
 }
 
- =========================
+/* =========================
    Intro
-   ========================= 
+   ========================= */
 .projects-page .section h2{
   margin-bottom: 10px;
 }
@@ -626,4 +626,12 @@
 
 .hero.hero-sm .hero-subtitle{
   color: rgba(26,26,46,0.85);
+}
+
+
+@media (max-width: 991px){
+  .common-wrap{
+    outline: 4px solid red;
+    grid-template-columns: 1fr;
+  }
 }
