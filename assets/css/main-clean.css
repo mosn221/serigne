@@ -929,6 +929,12 @@ section,
   box-shadow: 0 10px 26px rgba(0,0,0,.12);
 }
 
+
+.coming-soon{
+  cursor: default;
+}
+
+
 /* Content */
 .project-content{
   padding: 18px 18px 20px;
