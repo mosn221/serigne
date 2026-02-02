@@ -636,3 +636,99 @@
   }
 }
 
+
+/* ===========================
+   Projets – Cartes (version finale sans is-soon)
+   =========================== */
+
+/* Wrapper lien (uniquement quand la page existe) */
+.project-card-link{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Carte projet (composant visuel UNIQUE) */
+.project-card{
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+/* Hover UNIQUEMENT si la carte est dans un lien */
+.project-card-link:hover .project-card{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+  border-color: rgba(0,124,145,0.35);
+}
+
+/* Media */
+.project-media{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #F5F7FA;
+}
+
+.project-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenu */
+.project-body{
+  padding: 18px 18px 16px;
+}
+
+.project-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: rgba(0, 124, 145, 0.08);
+  color: rgba(26, 26, 46, 0.85);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+/* Icônes dans les tags (optionnel) */
+.project-tag i{
+  display: none;
+}
+
+.project-title{
+  margin: .7rem 0 .4rem;
+  font-size: 1.1rem;
+}
+
+.project-desc{
+  margin: 0;
+  color: rgba(26, 26, 46, 0.78);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.project-foot{
+  margin-top: 12px;
+}
+
+.project-link{
+  color: #007C91;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .project-media{
+    aspect-ratio: 16 / 10;
+  }
+   }
