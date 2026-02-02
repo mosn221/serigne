@@ -196,7 +196,7 @@
 }
 .projects-page .section a:hover{
   color: color-mix(in srgb, var(--accent-color), #000 12%);
-}
+} */
 
 
  =========================
@@ -309,7 +309,7 @@
 
 @media (max-width: 991px){
   .common-wrap{ grid-template-columns: 1fr; }
-} */
+} 
 
 
 /* ===========================
