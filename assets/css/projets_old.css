@@ -189,10 +189,10 @@
   margin-bottom: 10px;
 }
 
-.projects-page .section a{
+/* .projects-page .section a{
   color: var(--accent-color);
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none; */
 }
 .projects-page .section a:hover{
   color: color-mix(in srgb, var(--accent-color), #000 12%);
