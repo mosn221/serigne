@@ -83,8 +83,8 @@
 
 .project-desc {
   margin: 0;
-  color: rgba(26, 26, 46);
-  /* color: rgba(26, 26, 46, 0.80); */
+  
+  color: rgba(26, 26, 46, 0.80);
   line-height: 1.65;
 }
 
