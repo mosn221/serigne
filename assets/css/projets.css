@@ -714,3 +714,12 @@
 .pcg-card__icon{
   display: none;
 }
+
+/* Relever le titre projet sous le trait jaune */
+.pcg-card{
+  padding-top: 14px; /* réduit l'espace global en haut */
+}
+
+.pcg-card__title{
+  margin-top: 6px;   /* rapproche le titre du trait */
+}
