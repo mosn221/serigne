@@ -220,6 +220,23 @@
   .common-wrap{ grid-template-columns: 1fr; }
 } 
 
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 991px){
+  .common-wrap{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px){
+  .projects-hero{
+    padding: 58px 0 44px;
+  }
+  .projects-hero__lead{
+    font-size: 1rem;
+  }
+}
 
 /* ===========================
    Section : Publics cibles
@@ -260,9 +277,9 @@
 } 
 
 
---------------------------------------------------------------
+/* --------------------------------------------------------------
 # hero Section
--------------------------------------------------------------
+-------------------------------------------------------------*/
  .hero-subtitle {
   font-family: 'Poppins', sans-serif;
   color: #f0eee9;
