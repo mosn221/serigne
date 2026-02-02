@@ -95,6 +95,87 @@
 }
 
 
+/* =========================================
+   HERO commun — Données & Projets (fix)
+   ========================================= */
+
+.hero.hero-sm{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.08);
+ padding-bottom:68px;
+   padding-top:68px;
+
+  background:
+    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
+    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
+    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.18), transparent 58%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.96) 48%,
+      rgba(255,255,255,1) 100%);
+}
+
+/* Motif data discret */
+.hero.hero-sm::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(26,26,46,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26,26,46,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.22;
+  pointer-events:none;
+}
+
+/* Texte */
+.hero.hero-sm h1{
+  color: #1a1a2e;
+  font-weight: 800;
+}
+
+.hero.hero-sm .hero-subtitle{
+  max-width: 56ch;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+.hero.hero-sm{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.08);
+
+  background:
+    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
+    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
+    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.22), transparent 58%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.96) 48%,
+      rgba(255,255,255,1) 100%);
+}
+
+.hero.hero-sm::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: #FFC300;
+}
+
+
+.hero.hero-sm h1{
+  color: #1A1A2E;
+}
+
+.hero.hero-sm .hero-subtitle{
+  color: rgba(26,26,46,0.85);
+}
+
 
 
 
@@ -320,85 +401,4 @@
 /* Colonnes des bandeaux */
 .service-content  .row > [class*="col-"]{
   display: flex;
-}
-
-/* =========================================
-   HERO commun — Données & Projets (fix)
-   ========================================= */
-
-.hero.hero-sm{
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(26,26,46,0.08);
- padding-bottom:68px;
-   padding-top:68px;
-
-  background:
-    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
-    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
-    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.18), transparent 58%),
-    linear-gradient(135deg,
-      rgba(245,247,250,1) 0%,
-      rgba(240,238,233,0.96) 48%,
-      rgba(255,255,255,1) 100%);
-}
-
-/* Motif data discret */
-.hero.hero-sm::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(to right, rgba(26,26,46,0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26,26,46,0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-  opacity: 0.22;
-  pointer-events:none;
-}
-
-/* Texte */
-.hero.hero-sm h1{
-  color: #1a1a2e;
-  font-weight: 800;
-}
-
-.hero.hero-sm .hero-subtitle{
-  max-width: 56ch;
-  color: #1a1a2e;
-  line-height: 1.6;
-}
-
-.hero.hero-sm{
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(26,26,46,0.08);
-
-  background:
-    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
-    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
-    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.22), transparent 58%),
-    linear-gradient(135deg,
-      rgba(245,247,250,1) 0%,
-      rgba(240,238,233,0.96) 48%,
-      rgba(255,255,255,1) 100%);
-}
-
-.hero.hero-sm::before{
-  content:"";
-  position:absolute;
-  left: 18px;
-  top: 18px;
-  width: 56px;
-  height: 4px;
-  border-radius: 999px;
-  background: #FFC300;
-}
-
-
-.hero.hero-sm h1{
-  color: #1A1A2E;
-}
-
-.hero.hero-sm .hero-subtitle{
-  color: rgba(26,26,46,0.85);
 }
