@@ -293,30 +293,61 @@
 }
 
 
+/* ==================================================
+   HERO (Projets) — Nuancier Tech moderne + motif
+   (écrase l'ancien hero.hero-sm)
+   ================================================== */
+
 .hero.hero-sm{
-  background: linear-gradient(
-    135deg,
-    rgba(0,124,145,0.06) 0%,
-    rgba(0,191,166,0.04) 30%,
-    rgba(240,238,233,1) 65%,
-    #ffffff 100%
-  );
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.08);
+
+  /* Dégradé + halos data (clair mais vivant) */
+  background:
+    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.26), transparent 62%),
+    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
+    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.16), transparent 58%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.96) 48%,
+      rgba(255,255,255,1) 100%);
+}
+
+/* Motif “grid” discret (tech / data) */
+.hero.hero-sm::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(26,26,46,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26,26,46,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.22;
+  pointer-events:none;
+  mix-blend-mode: multiply;
+}
+
+/* Petit trait accent jaune (signature) */
+.hero.hero-sm::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 62px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--pc-sun, #FFC300);
+  opacity: .95;
+  pointer-events:none;
 }
 
 .hero.hero-sm h1{
-  margin: 0 0 10px;
-  font-family: var(--heading-font, inherit);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--pc-ink);
+  color: var(--pc-ink, #1A1A2E);
 }
 
 .hero.hero-sm .hero-subtitle{
-  max-width: 56ch;
-  margin: 0;
-  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
-  font-size: 1.05rem;
-  line-height: 1.55;
+  color: color-mix(in srgb, var(--pc-ink, #1A1A2E), transparent 28%);
 }
 
 
@@ -324,7 +355,8 @@
 
 
 
-Responsive : hero plus compact 
+
+/*Responsive : hero plus compact */
 @media (max-width: 576px){
   .hero.hero-sm{
     padding: 44px 0 22px;
