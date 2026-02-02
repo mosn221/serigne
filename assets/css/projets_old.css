@@ -352,7 +352,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(26, 26, 46, 0.85);
-}
+} */
 
 
 --------------------------------------------------------------
@@ -370,9 +370,7 @@
   }
 }
 
- Justification institutionnelle pour les pages de contenu
-.service-content p,
-.service-content li,
+ 
 
   text-align: justify;
   text-justify: inter-word;
@@ -387,7 +385,7 @@
  .section h2 {
   margin-top: 0;
   margin-bottom: 1rem;
-  } */
+  } 
 
 
 
