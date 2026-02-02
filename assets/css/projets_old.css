@@ -13,78 +13,15 @@
 
 
 
-.projects-kicker {
-  color: #007C91; /* Bleu pétrole lisible */
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0.95;
-}
-.projects-kicker {
-  color: #FFC300;
-}
 
-.projects-kicker {
-  letter-spacing: 0.04em;
-}
 
-.projects-kicker {
-  color: #007C91;/* Jaune de la charte*/
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 1;
-}
 
-.projects-kicker {
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-}
-.projects-kicker::before {
-  content: "";
-  width: 24px;
-  height: 3px;
-  background: #FFC300;
-  border-radius: 2px;
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 3px;
-}
-
-.projects-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
-  margin-top: 1rem;
-}
-
-.projects-pills .pill {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .5rem .8rem;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid rgba(26, 26, 46, 0.10);
-  color: rgba(26, 26, 46, 0.85);
-  font-size: .92rem;
-  font-weight: 600;
-}
 
 .projects-cta {
   margin-top: 1.2rem;
 }
 
-/* Bouton outline cohérent (si tu n’as pas déjà un style) */
-.btn-outline-brand {
-  background: transparent;
-  border: 2px solid #007C91;
-  color: #007C91;
-}
-.btn-outline-brand:hover,
-.btn-outline-brand:focus {
-  background: #007C91;
-  color: #fff;
-}
+
 
 /* Header projets */
 .projects-head {
@@ -95,11 +32,7 @@
   justify-content: space-between;
 }
 
-.projects-status-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
-}
+
 
 .status-pill {
   display: inline-flex;
@@ -853,6 +786,4 @@
   border-radius: 999px;
   padding: 10px 16px;
 }
-a.btn.btn-brand {
-   text-color:#ffffff;
-}
+
