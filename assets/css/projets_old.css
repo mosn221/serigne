@@ -11,9 +11,6 @@
   justify-content: space-between;
 }
 
-
-
-
  Cartes projets 
 .project-card-link {
   text-decoration: none;
@@ -47,7 +44,6 @@
   object-fit: cover;
   display: block;
 }
-
 
 .project-body {
   padding: 18px 18px 16px;
@@ -296,7 +292,6 @@
   --pc-sun: #FFC300;
   --pc-offwhite: #F0EEE9;
 }
-
 
 /* ==================================================
    HERO (Projets) — Nuancier Tech moderne + motif
