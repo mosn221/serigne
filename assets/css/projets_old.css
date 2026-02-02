@@ -635,3 +635,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.coming-soon{
+  cursor: default;
+   }
