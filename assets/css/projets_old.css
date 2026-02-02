@@ -2,14 +2,7 @@
    Projets — page only
    =========================== 
 
-.projects-hero {
-  padding: 4.5rem 0 3.5rem;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(0, 191, 166, 0.14), transparent 55%),
-    radial-gradient(circle at 85% 25%, rgba(0, 124, 145, 0.18), transparent 55%),
-    #F5F7FA;
-  border-bottom: 1px solid rgba(26, 26, 46, 0.08);
-}
+
  
 
 
@@ -17,13 +10,10 @@
 
 
 
-.projects-cta {
-  margin-top: 1.2rem;
-}
 
 
 
-/* Header projets 
+/* Header projets */
 .projects-head {
   display: flex;
   flex-wrap: wrap;
@@ -34,21 +24,6 @@
 
 
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .5rem .8rem;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid rgba(26, 26, 46, 0.10);
-  font-size: .9rem;
-  font-weight: 600;
-  color: rgba(26, 26, 46, 0.85);
-}
-
-.status-pill.status-build { border-color: rgba(0, 124, 145, 0.35); }
-.status-pill.status-explore { border-color: rgba(255, 195, 0, 0.50); }
 
  Cartes projets 
 .project-card-link {
@@ -84,21 +59,6 @@
   display: block;
 }
 
-.project-status {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: .35rem .6rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,.95);
-  border: 1px solid rgba(26,26,46,.10);
-  font-size: .85rem;
-  font-weight: 700;
-  color: rgba(26, 26, 46, 0.85);
-}
-
-.project-status.status-build { border-color: rgba(0, 124, 145, 0.35); }
-.project-status.status-explore { border-color: rgba(255, 195, 0, 0.50); }
 
 .project-body {
   padding: 18px 18px 16px;
@@ -139,45 +99,12 @@
   gap: .35rem;
 }
 
-/* Bloc puces (démarche commune) 
-.projects-bullets {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 46, 0.08);
-  border-radius: 18px;
-  padding: 16px 16px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.06);
-}
 
-.projects-bullets ul {
-  padding-left: 0;
-  list-style: none;
-}
 
-.projects-bullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: .55rem;
-  padding: .5rem 0;
-  color: rgba(26, 26, 46, 0.85);
-  line-height: 1.6;
-}
 
-.projects-bullets i {
-  color: #00BFA6;
-  font-size: 1.1rem;
-  margin-top: 2px;
-}
 
- Bloc contact 
-.projects-contact {
-  max-width: 860px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid rgba(26, 26, 46, 0.08);
-  border-radius: 18px;
-  padding: 22px 18px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.06);
-} */
+
+
 
 
 
@@ -189,10 +116,10 @@
   margin-bottom: 10px;
 }
 
-/* .projects-page .section a{
-  color: var(--accent-color);
+ .projects-page .section a{
+  /* color: var(--accent-color); */
   font-weight: 700;
-  text-decoration: none; */
+  text-decoration: none;
 }
 .projects-page .section a:hover{
   color: color-mix(in srgb, var(--accent-color), #000 12%);
