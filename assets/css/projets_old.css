@@ -361,14 +361,100 @@ Responsive : hero plus compact
   .hero.hero-sm{
     padding: 44px 0 22px;
   }
-  .service-content  .section{
-    padding: 48px 0;
-  }
+ 
   }
 
 
 
+/* =========================
+   Cadre commun (variation différente de data)
+   ========================= */
+.common-wrap{
+  border-radius: 24px;
+  border: 1px solid var(--p-border);
+  background:
+    linear-gradient(135deg,
+      rgba(240,238,233,0.9) 0%,
+      rgba(0,124,145,0.08) 42%,
+      rgba(255,255,255,1) 100%);
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 16px;
+  box-shadow: 0 14px 34px rgba(26,26,46,0.06);
+}
 
+.common-left h2{
+  margin: 0 0 10px;
+}
+
+.common-lead, .common-text{
+  margin: 0 0 10px;
+  line-height: 1.75;
+  color: var(--p-ink);
+}
+
+.common-note{
+  border-left: 3px solid var(--yellow-accent);
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.72);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
+}
+
+.common-block{
+  border-radius: 18px;
+  border: 1px solid var(--p-border);
+  background: rgba(255,255,255,0.72);
+  padding: 14px;
+}
+
+.common-block h3{
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--heading-color);
+}
+
+.common-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.common-list li{
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.bullet{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent-color);
+  margin-top: 6px;
+  opacity: .95;
+}
+
+.common-list strong{
+  display: block;
+  color: var(--heading-color);
+  font-weight: 900;
+}
+.common-list span{
+  display: block;
+  margin-top: 2px;
+  color: var(--p-muted);
+  line-height: 1.55;
+}
+
+.common-actions{
+  margin-top: 12px;
+}
 /* =========================
    CTA box – rythme & design
 ========================= */
