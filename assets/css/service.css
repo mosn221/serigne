@@ -356,7 +356,7 @@
 
 /* Texte */
 .hero.hero-sm h1{
-  color: var(--pc-ink);
+  color: color-mix(in sgrb, var (--pc-ink),transparent 15%);
   font-weight: 800;
 }
 
