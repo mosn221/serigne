@@ -723,3 +723,82 @@
 .pcg-card__title{
   margin-top: 6px;   /* rapproche le titre du trait */
 }
+
+/* ==================================================
+   DESIGN 1 v2 — Cartes "dossier" (pcg2-*)
+   Sans icône domaine
+   ================================================== */
+
+.pcg2-link{
+  display:block;
+  text-decoration:none;
+  height:100%;
+}
+
+.pcg2-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  border-radius:20px;
+  padding:16px 18px 18px;
+  background:#fff;
+  border:1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 14px 32px rgba(26,26,46,0.06);
+  overflow:hidden;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+/* Halo discret + trait jaune (signature) */
+.pcg2-card::before{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-90px;
+  width:220px;
+  height:220px;
+  background: radial-gradient(circle, rgba(0,124,145,0.14), transparent 62%);
+  pointer-events:none;
+}
+
+.pcg2-card::after{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:18px;
+  width:52px;
+  height:4px;
+  border-radius:999px;
+  background: var(--yellow-accent);
+  opacity:.95;
+  pointer-events:none;
+}
+
+.pcg2-card:hover{
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 72%);
+  box-shadow: 0 18px 40px rgba(26,26,46,0.10);
+}
+
+/* Head: statut à droite, mais sobre */
+.pcg2-head{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding-top: 10px; /* respiration sous le trait */
+  margin-bottom: 8px;
+}
+
+.pcg2-status{
+  font-size:.72rem;
+  font-weight:800;
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  background: color-mix(in srgb, #fff, transparent 2%);
+  color: rgba(26,26,46,0.86);
+  white-space:nowrap;
+}
+
+.pcg2-status--live{
+  border-color: color-mix(in srgb, var(--accent-color), transparent
