@@ -151,7 +151,7 @@
   }
 }
 
-/* Accès aux données */
+
  .service-content .section-intro{
   max-width: 70ch;
   margin: 10px 0 0;
@@ -174,7 +174,6 @@
    Accès aux données – bandeaux
 ========================== */
 .data-band {
-
   display: flex;
   align-items: center;
   gap: 14px;
