@@ -65,6 +65,11 @@
   font-weight: 600;
 }
 
+/* Masquer les icônes dans les tags (optionnel) */
+.project-tag i{
+  display:none;
+}
+
 .project-title {
   margin: .7rem 0 .4rem;
   font-size: 1.1rem;
