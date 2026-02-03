@@ -1,66 +1,67 @@
+/* ==================================================
+   Page Merci – Confirmation
+   ================================================== */
 
-    .merci-container {
-      max-width: 700px;
-      margin: 100px auto;
-      padding: 40px;
-      background-color: var(--surface-color);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .merci-container h1 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--accent-color);
-      font-size: 2.5rem;
-    }
-
-    .merci-container p {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      margin-top: 15px;
-    }
-
-    .merci-container a.btn-pycode {
-      margin-top: 30px;
-      display: inline-block;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .merci-container a.btn-pycode:hover {
-      background-color: var(--yellow-accent);
-      color: var(--default-color);
-    }
- 
-* Style normal */
-.btn-pycode {
-  background-color: #007C91;
-  color: white;
-  border-radius: 8px;
-  padding: 10px 20px;
-  transition: background-color 0.3s, color 0.3s;
+.contact-confirmation {
+  padding: 72px 0 48px;
 }
 
-/* Survol */
-.btn-pycode:hover {
-  background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
-  color: var(--default-color);
-  
+.confirmation-wrap {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-/* Clic (état actif) */
-.btn-pycode:active {
-  background: var(--accent-color);
+.confirmation-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: var(--default-color);
 }
 
-label.required::after {
-  content: " *";
-  color: #d9534f;
-  font-weight: bold;
+.confirmation-lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
+
+.confirmation-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.confirmation-actions {
+  margin-top: 12px;
+}
+
+/* Liens secondaires (cohérents pages légales) */
+.page-backlinks {
+  padding-bottom: 64px;
+  font-size: 0.95rem;
+}
+
+.page-backlinks a {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-backlinks a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .contact-confirmation {
+    padding: 56px 0 36px;
+  }
+
+  .confirmation-title {
+    font-size: 1.6rem;
+  }
+}
+
+
