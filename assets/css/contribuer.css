@@ -208,38 +208,10 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   Liens de continuité – Contact
-   ========================= */
-
-.contact-backlinks{
-  margin-top: 48px;
-}
-
-.contact-backlinks__text{
-  font-size: 0.95rem;
-  color: color-mix(in srgb, var(--default-color), transparent 45%);
-}
-
-.contact-backlinks__text a{
-  color: var(--accent-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-backlinks__text a:hover{
-  text-decoration: underline;
-}
-
-.contact-backlinks__sep{
-  margin: 0 6px;
-  color: color-mix(in srgb, var(--default-color), transparent 65%);
- }
-
 
 /* Réduction de l'espace entre intro et formulaire */
 .contact-intro{
-  padding-bottom: 24px; /* au lieu de 48px / 52px */
+  padding-bottom: 12px; /* au lieu de 48px / 52px */
 }
 
 .contact-form{
