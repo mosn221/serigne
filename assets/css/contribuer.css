@@ -111,18 +111,50 @@
 /*--------------------------------------------------------------
 # hero Section service-detail
 --------------------------------------------------------------*/
+/* Hero Contact — même gabarit que hero.hero-sm (Données/Projets) */
+.hero.hero-sm.hero-contribuer{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.08);
 
+  /* même hauteur perçue que Projets */
+  padding-top: 68px;
+  padding-bottom: 68px;
 
-.hero-contribuer {
-  background-image: url('../img/portfolio/product-3.jpg'); 
+  /* image */
+  background-image: url('../img/portfolio/product-3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 30vh;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 40px;
 }
+
+/* Nuancier spécifique Contact */
+.hero.hero-sm.hero-contribuer::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0,124,145,0.82),
+    rgba(255,195,0,0.45)
+  );
+  z-index: 1;
+}
+
+/* Contenu au-dessus */
+.hero.hero-sm.hero-contribuer .container{
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive : même logique que Projets */
+@media (max-width: 576px){
+  .hero.hero-sm.hero-contribuer{
+    padding: 44px 0 22px;
+  }
+}
+
+
 
 .hero-contribuer::before {
   content: "";
