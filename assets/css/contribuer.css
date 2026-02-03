@@ -114,3 +114,17 @@ select option {
   background: var(--accent-color);
   color: var(--default-color);
 }
+
+.page-backlinks{
+  font-size: 0.95rem;
+}
+
+.page-backlinks a{
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-backlinks a:hover{
+  text-decoration: underline;
+}
