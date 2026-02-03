@@ -98,7 +98,13 @@
 
 /*Responsive : hero plus compact */
 
-
+/*Responsive : hero plus compact */
+@media (max-width: 576px){
+  .hero.hero-sm{
+    padding: 44px 0 22px;
+  }
+ 
+                    }
 
 
 
