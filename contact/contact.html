@@ -90,6 +90,81 @@
   </div>
  </section>
 
+  <section class="contact-intro" aria-label="Contact">
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="contact-intro__wrap">
+      <h2 class="contact-intro__title">Entrer en contact</h2>
+
+      <p class="contact-intro__lead">
+        Cette page permet de nous écrire à propos d’une idée, d’un projet ou d’un échange
+        lié à la donnée et aux initiatives portées par PyCode.
+      </p>
+
+      <p class="contact-intro__note">
+        <strong>Principe :</strong> un message libre, un cadre simple,
+        et une réponse lorsque le calendrier le permet.
+      </p>
+    </div>
+
+    <!-- Formulaire -->
+    <form class="contact-form"
+          name="contact-pycode"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          enctype="multipart/form-data"
+          action="/contact/merci.html">
+
+      <input type="hidden" name="form-name" value="contact-pycode">
+      <p class="honeypot">
+        <label>Ne pas remplir : <input name="bot-field"></label>
+      </p>
+
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" id="nom" name="nom" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Adresse email</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="sujet" class="form-label">Sujet</label>
+        <input type="text" id="sujet" name="sujet" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="6"
+                  class="form-control" required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label for="document" class="form-label">
+          Document joint (facultatif)
+        </label>
+        <input type="file" id="document" name="document"
+               class="form-control"
+               accept=".pdf,.doc,.docx,.ppt,.pptx">
+      </div>
+
+      <button type="submit" class="btn btn-pycode">
+        Envoyer le message
+      </button>
+
+      <p class="form-note">
+        Aucun démarchage. Les messages sont lus manuellement.
+      </p>
+
+    </form>
+
+  </div>
+  </section>
+
   <section class="contact-intro" aria-label="Introduction contact">
   <div class="container">
     <div class="contact-intro__wrap">
