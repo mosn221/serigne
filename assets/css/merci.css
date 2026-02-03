@@ -1,67 +1,95 @@
 /* ==================================================
-   Page Merci – Confirmation
+   Merci – Séparateur (remplace hero)
    ================================================== */
 
-.contact-confirmation {
-  padding: 72px 0 48px;
+.page-separator{
+  height: 10px;
+  border-bottom: 1px solid rgba(26,26,46,0.10);
+  background:
+    linear-gradient(90deg,
+      rgba(0,124,145,0.18) 0%,
+      rgba(255,195,0,0.18) 45%,
+      rgba(0,191,166,0.10) 100%);
 }
 
-.confirmation-wrap {
-  max-width: 620px;
+/* ==================================================
+   Merci – Contenu élégant
+   ================================================== */
+
+.thankyou{
+  padding: 76px 0 64px;
+}
+
+.thankyou__wrap{
+  max-width: 720px;
   margin: 0 auto;
-  text-align: left;
 }
 
-.confirmation-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+.thankyou__mark{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+}
+
+.thankyou__title{
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 1.85rem;
   color: var(--default-color);
 }
 
-.confirmation-lead {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+.thankyou__lead{
+  margin: 0 0 10px;
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
 }
 
-.confirmation-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 28px;
+.thankyou__text{
+  margin: 0 0 22px;
+  line-height: 1.65;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.confirmation-actions {
-  margin-top: 12px;
+.thankyou__actions{
+  margin-top: 6px;
 }
 
-/* Liens secondaires (cohérents pages légales) */
-.page-backlinks {
-  padding-bottom: 64px;
+.thankyou__links{
+  margin-top: 18px;
   font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 45%);
 }
 
-.page-backlinks a {
+.thankyou__links a{
   color: var(--accent-color);
   font-weight: 600;
   text-decoration: none;
 }
 
-.page-backlinks a:hover {
+.thankyou__links a:hover{
   text-decoration: underline;
 }
 
-/* Mobile */
-@media (max-width: 640px) {
-  .contact-confirmation {
-    padding: 56px 0 36px;
-  }
-
-  .confirmation-title {
-    font-size: 1.6rem;
-  }
+.thankyou__links span{
+  margin: 0 8px;
+  color: color-mix(in srgb, var(--default-color), transparent 65%);
 }
 
+/* Mobile */
+@media (max-width: 640px){
+  .thankyou{
+    padding: 56px 0 48px;
+  }
 
+  .thankyou__title{
+    font-size: 1.55rem;
+  }
+}
