@@ -170,18 +170,7 @@
   z-index: 2;
 }
 
-.hero-title {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 2.8rem;
-  font-weight: 700;
-}
 
-.hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  color: #f0eee9;
-
-}
 
 @media screen and (max-width: 768px) {
   .hero-contribuer {
@@ -190,13 +179,6 @@
     text-align: center;
   }
 
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
 }
 
 select,
