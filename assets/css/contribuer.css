@@ -90,14 +90,6 @@
   color: color-mix(in srgb, var(--pc-ink, #1A1A2E), transparent 28%);
 }
 
-
-
-
-
-
-
-/*Responsive : hero plus compact */
-
 /*Responsive : hero plus compact */
 @media (max-width: 576px){
   .hero.hero-sm{
@@ -105,62 +97,6 @@
   }
  
                     }
-
-
-
-
-
-
-
-
-
-select,
-select option {
-  font-family: 'Poppins', sans-serif;
-}
-
-.honeypot {
-  display: none !important;
-  visibility: hidden;
-  position: absolute;
-  left: -9999px;
-}
-
-/* Style normal */
-.btn-pycode {
-  background-color: #007C91;
-  color: white;
-  border-radius: 8px;
-  padding: 10px 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Survol */
-.btn-pycode:hover {
-  background: color-mix(in srgb, var(--yellow-accent), transparent 15%);
-  color: var(--default-color);
-  
-}
-
-/* Clic (état actif) */
-.btn-pycode:active {
-  background: var(--accent-color);
-  color: var(--default-color);
-}
-
-.page-backlinks{
-  font-size: 0.95rem;
-}
-
-.page-backlinks a{
-  color: var(--accent-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.page-backlinks a:hover{
-  text-decoration: underline;
-}
 
 /* Intro après hero (Contact) */
 .contact-intro{
@@ -200,3 +136,38 @@ select option {
 .contact-intro__note strong{
   color: color-mix(in srgb, var(--default-color, #1A1A2E), transparent 0%);
                     }
+
+
+/* =========================
+   Contact – Formulaire
+   ========================= */
+
+form{
+  max-width: 720px;
+}
+
+.form-label{
+  font-weight: 600;
+}
+
+.form-control{
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.form-control:focus{
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.form-note{
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+/* Netlify honeypot */
+.honeypot{
+  display: none !important;
+}
