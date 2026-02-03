@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Message envoyé – PyCode Group</title>
-  <meta name="description" content="Votre message a bien été transmis à PyCode Group. Nous reviendrons vers vous lorsque le calendrier le permettra.">
+  <meta name="description" content="Votre message a bien été transmis à PyCode Group.">
+  <meta name="robots" content="noindex">
 
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/contribuer.css" rel="stylesheet">
 
@@ -16,63 +18,76 @@
 
 <body>
 
-<!-- Header -->
-<header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
-    <a href="../index.html" class="logo d-flex align-items-center">
-      <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
-    </a>
-  </div>
-</header>
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
-<main class="main">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
+      </a>
 
-  <!-- Confirmation -->
-  <section class="contact-confirmation" aria-label="Confirmation envoi message">
-    <div class="container">
-      <div class="confirmation-wrap">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../services/data.html">Données</a></li>
+          <li><a href="../projets/projets.html">Projets</a></li>
+          <li><a href="../contact/contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-        <h1 class="confirmation-title">
-          Message bien reçu
-        </h1>
+    </div>
+  </header>
 
-        <p class="confirmation-lead">
-          Merci pour votre message.
-        </p>
+  <!-- Séparateur (remplace le hero) -->
+  <div class="page-separator" aria-hidden="true"></div>
 
-        <p class="confirmation-text">
-          Il a bien été transmis à PyCode Group.  
-          Nous revenons vers vous lorsque le calendrier et le périmètre le permettent.
-        </p>
+  <main class="bg-light">
 
-        <div class="confirmation-actions">
-          <a href="../index.html" class="btn btn-brand">
-            Retour à l’accueil
-          </a>
+    <!-- Contenu élégant -->
+    <section class="thankyou" aria-label="Confirmation envoi">
+      <div class="container">
+
+        <div class="thankyou__wrap">
+          <div class="thankyou__mark" aria-hidden="true">
+            <i class="bi bi-check2"></i>
+          </div>
+
+          <h1 class="thankyou__title">Message bien reçu</h1>
+          <p class="thankyou__lead">
+            Merci. Votre message a bien été transmis.
+          </p>
+
+          <p class="thankyou__text">
+            Il sera lu manuellement. Nous reviendrons vers vous lorsque le calendrier et le périmètre le permettent.
+          </p>
+
+          <div class="thankyou__actions">
+            <a href="../index.html" class="btn btn-brand">
+              Retour à l’accueil
+              <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="thankyou__links">
+            <a href="../projets/projets.html">Découvrir les projets</a>
+            <span aria-hidden="true">·</span>
+            <a href="../services/data.html">Explorer les données</a>
+          </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Liens de continuité -->
-  <section class="page-backlinks container" aria-label="Navigation secondaire">
-    <p class="text-muted text-center mb-0">
-      <a href="../projets/projets.html">Découvrir les projets</a>
-      ·
-      <a href="../services/data.html">Explorer les données</a>
-    </p>
-  </section>
+  </main>
 
-</main>
+  <!-- Footer (identique au site) -->
+  <footer id="footer" class="footer dark-background">
+    <!-- ton footer habituel -->
+  </footer>
 
-<!-- Footer -->
-<footer id="footer" class="footer dark-background">
-  <!-- footer identique au reste du site -->
-</footer>
-
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-<script src="../assets/js/main.js" defer></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
 
 </body>
-</html>
+  </html>
