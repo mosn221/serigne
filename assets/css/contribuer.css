@@ -245,3 +245,37 @@
 .contact-form{
   margin-top: 24px; /* espace maîtrisé */
 }
+
+/* =========================
+   Liens de continuité – layout
+   ========================= */
+
+.contact-backlinks{
+  margin-top: 32px; /* réduit aussi l’espace global */
+}
+
+.contact-backlinks__wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-backlinks__link{
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact-backlinks__link:hover{
+  text-decoration: underline;
+}
+
+/* Mobile : recentrage */
+@media (max-width: 576px){
+  .contact-backlinks__wrap{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
