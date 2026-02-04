@@ -884,6 +884,18 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.projects-outro{
+  margin-top: 28px;   /* espace avec les cartes */
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+@media (min-width: 992px){
+  .projects-outro{
+    margin-top: 36px;
+  }
+  }
+
 :root{
   --solar-yellow: var(--yellow-accent, #FFC300);
   --ink: var(--default-color, #1A1A2E);
