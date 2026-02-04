@@ -769,7 +769,7 @@ section,
   font-size: 1rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
-  text-align: center;
+  text-align: left;
 }
 
 /* Intro projets – exergue */
