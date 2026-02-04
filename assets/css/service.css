@@ -384,7 +384,7 @@
   display: block;
   height: 1px;
   max-width: 160px;
-  margin: 12px 0 20px;
+  margin: 12px 0 12px;
   background: color-mix(in srgb, var(--pc-ink), transparent 80%);
 }
 
