@@ -873,6 +873,14 @@ section,
   }
 }
 
+
+.projects-outro{
+  max-width: 74ch;
+  margin: 22px auto 0;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
 :root{
   --solar-yellow: var(--yellow-accent, #FFC300);
   --ink: var(--default-color, #1A1A2E);
