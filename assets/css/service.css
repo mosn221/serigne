@@ -400,3 +400,10 @@
   max-width: 70ch;          /* même largeur que tes textes */
   margin-top: 32px;
 }
+
+
+.data-intro p,
+.data-outro {
+  text-align: justify;
+  text-justify: inter-word;
+}
