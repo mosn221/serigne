@@ -876,7 +876,7 @@ section,
 
 .projects-outro{
   max-width: 74ch;
-  margin: 22px auto 0;
+  
   font-size: 0.95rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -894,11 +894,11 @@ section,
 
 .projects-intro{
   max-width: 72ch;
-  margin: 0 auto 34px auto;
+  
   font-size: 1rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--ink), transparent 28%);
-  text-align: center;
+  text-align: left;
 }
 
 
