@@ -377,7 +377,7 @@
 
 /* Séparateur de sections */
 .section-separator{
-  padding: 8px 0 24px;
+  padding: 0; /* pas d"espace propre*/
 }
 
 .section-separator span{
