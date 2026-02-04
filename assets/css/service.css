@@ -329,4 +329,25 @@
   padding: 10px 16px;
 }
 
+/* =========================
+   Intro Données
+========================= */
 
+.data-intro-wrap{
+  max-width: 70ch;
+  margin: 0 0 32px;
+}
+
+.data-intro{
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .data-intro-wrap{
+    margin-bottom: 24px;
+  }
+}
