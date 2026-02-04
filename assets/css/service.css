@@ -368,5 +368,9 @@
 
 /* Réduction espace entre intro Données et triptyque */
 .data-intro-section{
-  padding-bottom: 24px;   /* au lieu du padding par défaut */
+  padding-bottom: 16px;   /* au lieu du padding par défaut */
+}
+
+.data-intro-wrap{
+  margin-bottom: 0;
 }
