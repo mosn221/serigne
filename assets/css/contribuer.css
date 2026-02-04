@@ -108,6 +108,14 @@
       rgba(0,191,166,0.85) 100%);
 }
 
+.page-contact .hero.hero-sm h1{
+  color: #ffffff;
+}
+
+.page-contact .hero.hero-sm .hero-subtitle{
+  color: rgba(240,238,233,0.92);
+}
+
 /* Intro après hero (Contact) */
 .contact-intro{
   padding: 28px 0 10px;
