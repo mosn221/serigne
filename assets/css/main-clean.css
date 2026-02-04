@@ -772,6 +772,36 @@ section,
   text-align: center;
 }
 
+/* Intro projets – exergue */
+
+.projects-intro{
+  max-width: 74ch;
+  margin: 0 auto 22px;
+}
+
+.projects-intro p{
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+/* Paragraphe en exergue */
+.projects-intro__highlight{
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 16px;
+  border-left: 4px solid var(--accent-color);
+  color: var(--default-color);
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .projects-intro__highlight{
+    font-size: 1.05rem;
+    padding-left: 12px;
+  }
+}
+
 /* Grid */
 .projects-grid {
   display: grid;
