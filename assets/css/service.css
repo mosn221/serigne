@@ -365,3 +365,8 @@
     margin-top: 40px;
   }
 }
+
+/* Réduction espace entre intro Données et triptyque */
+.data-intro-section{
+  padding-bottom: 24px;   /* au lieu du padding par défaut */
+}
