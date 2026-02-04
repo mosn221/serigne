@@ -9,6 +9,8 @@
   gap: 12px 18px;
   align-items: flex-end;
   justify-content: space-between;
+   max-width:74ch;
+   margin: 0 0 24px 0;
 }
 
  /*Cartes projets */
