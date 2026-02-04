@@ -269,3 +269,48 @@
     flex-wrap: wrap;
   }
 }
+
+
+/* Colonne centrée (hors hero) */
+.contact-shell{
+  max-width: 78ch;      /* même logique que ton intro */
+  margin: 0 auto;       /* centre dans le container */
+}
+
+/* Formulaire : il prend la largeur de la colonne */
+.contact-form{
+  max-width: 100%;
+  margin-top: 12px;     /* espace maîtrisé */
+}
+
+/* Backlinks : ne déborde jamais */
+.contact-backlinks__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;      /* autorise retour ligne si besoin */
+}
+
+.contact-backlinks__link{
+  min-width: 0;         /* évite certains débordements en flex */
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* PC : lien droite aligné à droite */
+.contact-backlinks__link--right{
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Mobile : recentrer */
+@media (max-width: 576px){
+  .contact-backlinks__wrap{
+    justify-content: center;
+  }
+  .contact-backlinks__link--right{
+    margin-left: 0;
+    text-align: left;
+  }
+}
