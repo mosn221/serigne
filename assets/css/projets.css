@@ -349,19 +349,6 @@
   mix-blend-mode: multiply;
 }
 
-/* Petit trait accent jaune (signature) 
-.hero.hero-sm::before{
-  content:"";
-  position:absolute;
-  left: 18px;
-  top: 18px;
-  width: 62px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--pc-sun, #FFC300);
-  opacity: .95;
-  pointer-events:none;
-} */
 
 .hero.hero-sm h1{
   color: var(--pc-ink, #1A1A2E);
