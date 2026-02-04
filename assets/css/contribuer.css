@@ -109,11 +109,11 @@
 }
 
 .page-contact .hero.hero-sm h1{
-  color: #ffffff;
+  color: #f0eee9;
 }
 
 .page-contact .hero.hero-sm .hero-subtitle{
-  color: rgba(240,238,233,0.92);
+  color: color-mix(in srgb, #f0eee9, transparent 12%);
 }
 
 /* Intro après hero (Contact) */
