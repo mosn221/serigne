@@ -764,8 +764,27 @@ section,
 }
 
 
+/* Intro projets – alignée exactement comme le hero */
+.projects-intro{
+  margin: 0 0 28px 0;     /* espace avant les cartes */
+  text-align: left;
+}
 
-/* Intro projets – exergue */
+.projects-intro p{
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+/* Paragraphe en exergue */
+.projects-intro__highlight{
+  margin-top: 14px;
+  padding-left: 16px;
+  border-left: 4px solid var(--accent-color);
+  font-weight: 600;
+  color: var(--default-color);
+}
+
 
 
 
