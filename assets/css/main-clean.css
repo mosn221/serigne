@@ -763,27 +763,11 @@ section,
   padding: 48px 0;
 }
 
-.projects-intro {
-  max-width: 70ch;
-  
-  font-size: 1rem;
-  line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  text-align: left;
-}
+
 
 /* Intro projets – exergue */
 
-.projects-intro{
-  max-width: 74ch;
-  margin: 0 auto 22px;
-}
 
-.projects-intro p{
-  margin: 0 0 12px;
-  line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 22%);
-}
 
 /* Paragraphe en exergue */
 .projects-intro__highlight{
