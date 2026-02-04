@@ -199,14 +199,62 @@
       </div>
 
       <!-- Formulaire -->
+      
+
+
       <form class="contact-form"
-            name="contact-pycode"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            enctype="multipart/form-data"
-            action="/contact/merci.html">
-        ...
+          name="contact-pycode"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          enctype="multipart/form-data"
+          action="/contact/merci.html">
+
+      <input type="hidden" name="form-name" value="contact-pycode">
+      <p class="honeypot">
+        <label>Ne pas remplir : <input name="bot-field"></label>
+      </p>
+
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" id="nom" name="nom" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Adresse email</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="sujet" class="form-label">Sujet</label>
+        <input type="text" id="sujet" name="sujet" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="6"
+                  class="form-control" required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label for="document" class="form-label">
+          Document joint (facultatif)
+        </label>
+        <input type="file" id="document" name="document"
+               class="form-control"
+               accept=".pdf,.doc,.docx,.ppt,.pptx">
+      </div>
+
+      
+      <button type="submit" class="btn btn-brand">
+  Envoyer le message
+  <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+      </button>
+
+      <p class="form-note">
+        En soumettant ce formulaire, vous acceptez les conditions générales et la politique de confidentialité.
+      </p>
+
       </form>
     </div>
 
