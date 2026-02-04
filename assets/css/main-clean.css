@@ -864,6 +864,16 @@ section,
 }
 
 
+.projects-intro a{
+  font-weight: 600;          /* ou 700 si tu veux un peu plus d’assise */
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.projects-intro a:hover{
+  text-decoration: underline;
+}
+
 
 /* Card link */
 .project-card{
