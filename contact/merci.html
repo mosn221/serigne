@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Message envoyé – PyCode Group</title>
-  <meta name="description" content="Votre message a bien été transmis à PyCode Group.">
+  <title>Merci – Message envoyé | PyCode Group</title>
+  <meta name="description" content="Votre message a bien été envoyé à PyCode Group.">
   <meta name="robots" content="noindex">
 
+  <!-- Fonts -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
+
+  <!-- Vendor CSS -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/css/main.css" rel="stylesheet">
-  <link href="../assets/css/contribuer.css" rel="stylesheet">
 
-  <link rel="icon" href="../assets/img/Logo-Favicon.png">
+  <!-- Main CSS -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link href="../assets/img/Logo-Favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body>
 
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="../index.html" class="logo d-flex align-items-center">
+      <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
       </a>
 
@@ -38,56 +46,77 @@
 
     </div>
   </header>
+  <!-- /Header -->
 
-  <!-- Séparateur (remplace le hero) -->
-  <div class="page-separator" aria-hidden="true"></div>
+  <main class="py-5 bg-light">
+    <div class="container">
 
-  <main class="bg-light">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
 
-    <!-- Contenu élégant -->
-    <section class="thankyou" aria-label="Confirmation envoi">
-      <div class="container">
+          <!-- Carte confirmation -->
+          <article class="bg-white border rounded-4 shadow-sm p-4 p-md-5">
 
-        <div class="thankyou__wrap">
-          <div class="thankyou__mark" aria-hidden="true">
-            <i class="bi bi-check2"></i>
-          </div>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <div class="rounded-circle d-inline-flex align-items-center justify-content-center"
+                   style="width:44px;height:44px;background:rgba(0,124,145,0.10);color:#007C91;">
+                <i class="bi bi-check2" style="font-size:1.4rem;" aria-hidden="true"></i>
+              </div>
 
-          <h1 class="thankyou__title">Message bien reçu</h1>
-          <p class="thankyou__lead">
-            Merci. Votre message a bien été transmis.
-          </p>
+              <div>
+                <h1 class="h3 fw-bold mb-1" style="color:#1A1A2E;">Message bien reçu</h1>
+                <p class="mb-0 text-secondary">
+                  Merci. Votre message a bien été transmis.
+                </p>
+              </div>
+            </div>
 
-          <p class="thankyou__text">
-            Il sera lu manuellement. Nous reviendrons vers vous lorsque le calendrier et le périmètre le permettent.
-          </p>
+            <p class="mb-4" style="color:rgba(26,26,46,0.78); line-height:1.65;">
+              Il sera lu manuellement. Nous reviendrons vers vous lorsque le calendrier et le périmètre le permettent.
+            </p>
 
-          <div class="thankyou__actions">
-            <a href="../index.html" class="btn btn-brand">
-              Retour à l’accueil
-              <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-            </a>
-          </div>
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+              <a href="../index.html" class="btn btn-brand">
+                Retour à l’accueil <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+              </a>
 
-          <div class="thankyou__links">
-            <a href="../projets/projets.html">Découvrir les projets</a>
-            <span aria-hidden="true">·</span>
-            <a href="../services/data.html">Explorer les données</a>
-          </div>
+              <span class="text-muted small">ou</span>
+
+              <a href="../contact/contact.html" class="text-decoration-none fw-semibold"
+                 style="color:#007C91;">
+                envoyer un autre message
+              </a>
+            </div>
+
+            <!-- Liens continuité (style pages légales) -->
+            <hr class="my-4">
+
+            <p class="text-muted mb-0" style="font-size:0.95rem;">
+              <a href="../projets/projets.html" class="fw-semibold text-decoration-none" style="color:#007C91;">
+                Découvrir les projets
+              </a>
+              <span class="mx-1">·</span>
+              <a href="../services/data.html" class="fw-semibold text-decoration-none" style="color:#007C91;">
+                Explorer les données
+              </a>
+            </p>
+
+          </article>
+
         </div>
-
       </div>
-    </section>
 
+    </div>
   </main>
 
-  <!-- Footer (identique au site) -->
+  <!-- Footer (identique au reste du site) -->
   <footer id="footer" class="footer dark-background">
-    <!-- ton footer habituel -->
+    <!-- colle ton footer habituel ici -->
   </footer>
 
+  <!-- JS -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
 
 </body>
-  </html>
+</html>
