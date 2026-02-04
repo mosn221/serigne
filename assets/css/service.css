@@ -394,3 +394,8 @@
   background: var(--accent-color);
   opacity: .25;
 }
+
+.data-outro-wrap{
+  max-width: 70ch;          /* même largeur que tes textes */
+  margin-top: 32px;
+}
