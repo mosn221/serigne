@@ -374,3 +374,23 @@
 .data-intro-wrap{
   margin-bottom: 0;
 }
+
+/* Séparateur de sections */
+.section-separator{
+  padding: 8px 0 24px;
+}
+
+.section-separator span{
+  display: block;
+  height: 1px;
+  max-width: 160px;
+  background: color-mix(in srgb, var(--pc-ink), transparent 80%);
+}
+
+
+.section-separator span{
+  height: 2px;
+  max-width: 120px;
+  background: var(--accent-color);
+  opacity: .25;
+}
