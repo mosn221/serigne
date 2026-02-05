@@ -382,9 +382,9 @@
 
 
 .section-before-separator{
-   padding-bottom: 24px;
+   padding-bottom: 24px! important ;
 }
 
 .section-after-separator{
-   padding-top: 24px;
+   padding-top: 24px! important ;
 }
