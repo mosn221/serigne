@@ -92,8 +92,8 @@ body.projects-page .hero.hero-sm .hero-subtitle{
    ================================================== */
 .projects-head{
   display: block;
-  max-width: 72ch;
-  margin: 0 auto 18px;
+  max-width: 56ch;
+  margin: 0 0 18px;
 }
 
 .projects-head p{
