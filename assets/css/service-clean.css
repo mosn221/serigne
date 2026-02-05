@@ -390,3 +390,9 @@
 .service-details-page .section.section-after-separator{
   padding-top: 24px;
 }
+
+@media (max-width: 576px){
+  .service-details-page .section-before-separator{
+    padding-bottom: 16px;
+  }
+}
