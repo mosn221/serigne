@@ -159,7 +159,9 @@
 /* ==================================================
    Section intro (texte court) + Triptyque
 ================================================== */
-
+.section-after-separator{
+padding-top : 24px;
+}
 .service-content .section-intro{
   max-width: 70ch;
   margin: 0 0 28px;
