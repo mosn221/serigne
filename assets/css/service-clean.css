@@ -159,13 +159,7 @@
 /* ==================================================
    Section intro (texte court) + Triptyque
 ================================================== */
-.section-before-separator{
-   padding-bottom: 24px;
-}
 
-.section-after-separator{
-   padding-top: 24px;
-}
 
 .service-content .section-intro{
   max-width: 70ch;
@@ -385,3 +379,12 @@
 }
 
 /* Le bouton btn-brand est défini dans main-clean.css */
+
+
+.section-before-separator{
+   padding-bottom: 24px;
+}
+
+.section-after-separator{
+   padding-top: 24px;
+}
