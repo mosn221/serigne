@@ -3,16 +3,16 @@
  * - Menu mobile toggle
  * - Scroll-to-top
  * - Active state nav on scroll (si sections id=...)
- * Aucun AOS / GLightbox / Swiper / Isotope / imagesLoaded
  */
 
 (function () {
   "use strict";
 
   /**
-   * Helpers
+   * Helpers (CSS selectors only)
    */
   const select = (el, all = false) => {
+    if (typeof el !== "string") return null;
     el = el.trim();
     return all ? [...document.querySelectorAll(el)] : document.querySelector(el);
   };
@@ -44,17 +44,23 @@
   });
 
   /**
-   * Close mobile nav when clicking nav links (useful UX)
+   * Close mobile nav when clicking nav links
    */
-  on("click", "#navmenu a", function () {
-    if (!document.body.classList.contains("mobile-nav-active")) return;
-    mobileNavToggle();
-  }, true);
+  on(
+    "click",
+    "#navmenu a",
+    function () {
+      if (!document.body.classList.contains("mobile-nav-active")) return;
+      mobileNavToggle();
+    },
+    true
+  );
 
   /**
-   * Close mobile nav when clicking outside nav (optional but nice)
+   * Close mobile nav when clicking outside nav
+   * (no helper here — document is not a selector)
    */
-  on("click", document, function (e) {
+  document.addEventListener("click", (e) => {
     if (!document.body.classList.contains("mobile-nav-active")) return;
 
     const nav = select("#navmenu");
@@ -87,8 +93,7 @@
   }
 
   /**
-   * Active nav links on scroll (only works if links are anchor #section)
-   * Safe: does nothing if there are no hash links.
+   * Active nav links on scroll (only hash links)
    */
   const navLinks = select("#navmenu a", true) || [];
 
@@ -100,7 +105,10 @@
       const section = select(link.hash);
       if (!section) return;
 
-      if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight) {
+      if (
+        position >= section.offsetTop &&
+        position <= section.offsetTop + section.offsetHeight
+      ) {
         link.classList.add("active");
       } else {
         link.classList.remove("active");
@@ -110,4 +118,10 @@
 
   window.addEventListener("load", navActiveOnScroll);
   window.addEventListener("scroll", navActiveOnScroll);
+
+  /**
+   * Dynamic copyright year
+   */
+  const yearEl = document.getElementById("copyright-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
