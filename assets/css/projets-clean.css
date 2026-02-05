@@ -1,0 +1,191 @@
+/* =========================================================
+   PyCodeGroup — PROJETS (projets.css)
+   Objectif :
+   - Ne pas toucher main-clean.css
+   - Donner au HERO le nuancier "interne" (Données & Projets)
+   - Nettoyer / stabiliser la section intro + cartes
+   ========================================================= */
+
+/* ---------- Variables locales (si non déjà définies ailleurs) ---------- */
+:root{
+  --pc-ink: #1A1A2E;
+  --pc-petrol: #007C91;
+  --pc-mint: #00BFA6;
+  --pc-sun: #FFC300;
+  --pc-offwhite: #F0EEE9;
+}
+
+/* ==================================================
+   HERO commun — Données & Projets
+   (écrase ce que main-clean.css pourrait définir)
+   Cible : <section class="hero hero-sm">
+   ================================================== */
+body.projects-page .hero.hero-sm{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.08);
+  padding: 68px 0;
+  background:
+    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
+    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
+    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.18), transparent 58%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.96) 48%,
+      rgba(255,255,255,1) 100%);
+}
+
+body.projects-page .hero.hero-sm::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(26,26,46,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26,26,46,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.22;
+  pointer-events:none;
+  mix-blend-mode: multiply;
+}
+
+body.projects-page .hero.hero-sm h1{
+  margin: 0 0 10px;
+  color: var(--pc-ink);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+body.projects-page .hero.hero-sm .hero-subtitle{
+  margin: 0;
+  max-width: 56ch;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+}
+
+@media (max-width: 576px){
+  body.projects-page .hero.hero-sm{
+    padding: 44px 0 22px;
+  }
+  body.projects-page .hero.hero-sm .hero-subtitle{
+    font-size: 1rem;
+  }
+}
+
+/* ==================================================
+   Section intro au-dessus des cartes
+   (Ton .projects-head prenait trop de largeur car flex)
+   ================================================== */
+.projects-head{
+  /* on neutralise le flex pour éviter l’effet “pleine largeur” */
+  display: block;
+  max-width: 72ch;
+  margin: 0 auto 18px;
+}
+
+.projects-head p{
+  margin: 0 0 10px;
+}
+
+/* ==================================================
+   Cartes projets (lien enveloppant)
+   ================================================== */
+.project-card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card{
+  background: #fff;
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.project-card-link:hover .project-card{
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--pc-sun), transparent 45%);
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+}
+
+.project-media{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #F5F7FA;
+}
+
+.project-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-body{
+  padding: 18px 18px 16px;
+}
+
+.project-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: rgba(0, 124, 145, 0.08);
+  color: rgba(26, 26, 46, 0.85);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+/* optionnel : si tu veux masquer l’icône dans le tag */
+.project-tag i{ display:none; }
+
+.project-title{
+  margin: .7rem 0 .4rem;
+  font-size: 1.1rem;
+  color: var(--pc-ink);
+}
+
+.project-desc{
+  margin: 0;
+  color: rgba(26, 26, 46, 0.78);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.project-foot{
+  margin-top: 12px;
+}
+
+.project-link{
+  color: var(--pc-petrol);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* ==================================================
+   "Coming soon" : garde le look mais pas de navigation
+   ================================================== */
+.coming-soon{
+  cursor: default;
+}
+
+.coming-soon{
+  pointer-events: none;
+}
+
+.coming-soon .project-link{
+  opacity: .9;
+}
+
+/* Accessibilité (si un lien reste focusable) */
+.project-card-link:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--pc-sun), transparent 15%);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
