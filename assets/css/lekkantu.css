@@ -1,0 +1,286 @@
+/* ==========================================================
+   Lekkantu — CSS spécifique page projet
+   Dépend de main-clean.css (global)
+   ========================================================== */
+
+:root{
+  --pc-ink: var(--default-color, #1A1A2E);
+  --pc-accent: var(--accent-color, #007C91);
+  --pc-sun: var(--yellow-accent, #FFC300);
+  --pc-bg: var(--background-color, #F0EEE9);
+}
+
+/* -------------------------
+   HERO Projet
+-------------------------- */
+.project-hero{
+  position: relative;
+  overflow: hidden;
+  padding: 68px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--pc-ink), transparent 90%);
+  background: #fff; /* fallback */
+}
+
+.project-hero-bg-lekkantu{
+  background:
+    radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.18), transparent 62%),
+    radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.18), transparent 60%),
+    radial-gradient(60% 60% at 78% 88%, rgba(0,191,166,0.12), transparent 58%),
+    linear-gradient(135deg,
+      rgba(245,247,250,1) 0%,
+      rgba(240,238,233,0.96) 48%,
+      rgba(255,255,255,1) 100%);
+}
+
+.project-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(26,26,46,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26,26,46,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: .20;
+  pointer-events:none;
+  mix-blend-mode: multiply;
+}
+
+.project-hero .container{ position: relative; z-index: 1; }
+
+.project-title{
+  margin: 10px 0 10px;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  color: var(--pc-ink);
+}
+
+.project-subtitle{
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--pc-ink), transparent 28%);
+  font-size: 1.05rem;
+}
+
+.project-hero-side-img{
+  max-width: 420px;
+}
+
+@media (max-width: 991px){
+  .project-hero{ padding: 52px 0; }
+  .project-title{ font-size: 1.85rem; }
+  .project-hero-side-img{ max-width: 100%; }
+}
+
+/* -------------------------
+   Breadcrumb
+-------------------------- */
+.project-breadcrumb .breadcrumb{
+  margin: 0;
+}
+.project-breadcrumb a{
+  font-weight: 600;
+  color: var(--pc-accent);
+  text-decoration: none;
+}
+.project-breadcrumb a:hover{
+  text-decoration: underline;
+}
+
+/* -------------------------
+   Tag
+-------------------------- */
+.project-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .9rem;
+  background: rgba(0,124,145,0.08);
+  color: color-mix(in srgb, var(--pc-ink), transparent 12%);
+}
+
+.project-tag-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pc-sun);
+  box-shadow: 0 0 0 3px rgba(255,195,0,0.22);
+}
+
+/* -------------------------
+   Contenu (blocs texte)
+-------------------------- */
+.project-content.section{
+  padding: 44px 0;
+}
+
+.project-block{
+  max-width: 74ch;
+  margin: 0 0 26px;
+}
+
+.project-block h2{
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.project-block p{
+  margin: 0 0 12px;
+  line-height: 1.75;
+  color: color-mix(in srgb, var(--pc-ink), transparent 18%);
+}
+
+/* -------------------------
+   “Le projet en 4 points”
+-------------------------- */
+.project-summary{
+  padding: 44px 0 54px;
+}
+
+.project-summary-header{
+  max-width: 74ch;
+  margin: 0 auto 20px;
+}
+
+.project-summary-sub{
+  margin: 0;
+  color: color-mix(in srgb, var(--pc-ink), transparent 30%);
+}
+
+.qcard{
+  height: 100%;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--pc-ink), transparent 90%);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.qcard:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+  border-color: color-mix(in srgb, var(--pc-accent), transparent 60%);
+}
+
+.qcard-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.qbadge{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: .78rem;
+  background: color-mix(in srgb, var(--pc-sun), transparent 70%);
+  color: color-mix(in srgb, var(--pc-ink), transparent 10%);
+}
+
+.qcard h3{
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.qcard p{
+  margin: 0 0 10px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--pc-ink), transparent 20%);
+}
+
+.qcard-hint{
+  color: color-mix(in srgb, var(--pc-ink), transparent 38%);
+}
+
+/* -------------------------
+   CTA (liens vers lekkantu.com + LinkedIn)
+-------------------------- */
+.project-cta-section{
+  padding: 50px 0 60px;
+}
+
+.project-cta-card{
+  background:
+    radial-gradient(900px 420px at 15% -15%, color-mix(in srgb, var(--pc-sun), transparent 70%), transparent 60%),
+    radial-gradient(800px 360px at 95% 0%, color-mix(in srgb, var(--pc-accent), transparent 82%), transparent 58%),
+    linear-gradient(180deg, #fff, color-mix(in srgb, var(--pc-sun), transparent 94%));
+  border: 1px solid color-mix(in srgb, var(--pc-ink), transparent 90%);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 16px 44px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-cta-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--pc-accent), transparent 78%) 2px, transparent 2.5px) 0 0 / 34px 34px;
+  opacity: .22;
+  pointer-events:none;
+  mask-image: radial-gradient(closest-side, #000 55%, transparent 90%);
+}
+
+.project-cta-eyebrow{
+  font-weight: 800;
+  color: color-mix(in srgb, var(--pc-ink), transparent 35%);
+}
+
+.project-cta-title{
+  margin: 0;
+}
+
+.project-cta-text{
+  color: color-mix(in srgb, var(--pc-ink), transparent 25%);
+  line-height: 1.65;
+}
+
+.project-cta-actions{
+  display: grid;
+  gap: 10px;
+}
+
+.project-cta-btn{
+  width: 100%;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 800;
+}
+
+.project-btn-primary{
+  background: var(--pc-sun);
+  color:#111;
+  border: 1px solid color-mix(in srgb, #000, transparent 88%);
+}
+
+.project-btn-primary:hover{
+  color:#111;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.14);
+}
+
+.project-btn-secondary{
+  background: rgba(255,255,255,.75);
+  border: 1px solid color-mix(in srgb, var(--pc-ink), transparent 80%);
+  color: color-mix(in srgb, var(--pc-ink), transparent 10%);
+  backdrop-filter: blur(6px);
+}
+
+.project-btn-secondary:hover{
+  border-color: color-mix(in srgb, var(--pc-sun), transparent 45%);
+  box-shadow: 0 16px 38px rgba(0,0,0,.10);
+}
+
+@media (min-width: 992px){
+  .project-cta-actions{ justify-items: end; }
+  .project-cta-btn{ width: auto; }
+    }
