@@ -74,10 +74,8 @@ body.projects-page .hero.hero-sm .hero-subtitle{
 
 /* ==================================================
    Section intro au-dessus des cartes
-   (Ton .projects-head prenait trop de largeur car flex)
    ================================================== */
 .projects-head{
-  /* on neutralise le flex pour éviter l’effet “pleine largeur” */
   display: block;
   max-width: 72ch;
   margin: 0 auto 18px;
@@ -88,7 +86,7 @@ body.projects-page .hero.hero-sm .hero-subtitle{
 }
 
 /* ==================================================
-   Cartes projets (lien enveloppant)
+   Cartes projets
    ================================================== */
 .project-card-link{
   text-decoration: none;
@@ -140,7 +138,6 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   font-weight: 600;
 }
 
-/* optionnel : si tu veux masquer l’icône dans le tag */
 .project-tag i{ display:none; }
 
 .project-title{
@@ -156,9 +153,7 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   font-weight: 400;
 }
 
-.project-foot{
-  margin-top: 12px;
-}
+.project-foot{ margin-top: 12px; }
 
 .project-link{
   color: var(--pc-petrol);
@@ -169,208 +164,20 @@ body.projects-page .hero.hero-sm .hero-subtitle{
 }
 
 /* ==================================================
-   "Coming soon" : garde le look mais pas de navigation
+   Coming soon : pas de navigation
    ================================================== */
-.coming-soon{
-  cursor: default;
-}
+.coming-soon{ cursor: default; pointer-events: none; }
+.coming-soon .project-link{ opacity: .9; }
 
-.coming-soon{
-  pointer-events: none;
-}
-
-.coming-soon .project-link{
-  opacity: .9;
-}
-
-/* Accessibilité (si un lien reste focusable) */
 .project-card-link:focus-visible{
   outline: 3px solid color-mix(in srgb, var(--pc-sun), transparent 15%);
   outline-offset: 4px;
   border-radius: 18px;
 }
 
-
-
-/* ==================================================
-   Projets — correctifs Cadre commun + CTA
-   (autonome, ne dépend pas de main-clean.css)
-   ================================================== */
-
-.projects-page{
-  /* Nuancier Projets/Données (pas celui de l’accueil) */
-  --pc-ink: #1A1A2E;
-  --pc-petrol: #007C91;
-  --pc-mint: #00BFA6;
-  --pc-sun: #FFC300;
-
-  --pc-surface: #FFFFFF;
-  --pc-soft: #F5F7FA;
-  --pc-border: rgba(26,26,46,.10);
-  --pc-muted: rgba(26,26,46,.78);
-}
-
-/* ---------- Cadre commun ---------- */
-.common-frame{
-  padding: 48px 0;
-}
-
-.common-wrap{
-  border-radius: 22px;
-  border: 1px solid var(--pc-border);
-  background:
-    radial-gradient(70% 80% at 10% 15%, rgba(0,124,145,.10), transparent 60%),
-    radial-gradient(60% 70% at 90% 20%, rgba(255,195,0,.10), transparent 55%),
-    linear-gradient(180deg, rgba(245,247,250,1), rgba(255,255,255,1));
-  padding: 22px;
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 18px;
-}
-
-.common-left h2{
-  margin: 0 0 10px;
-  color: var(--pc-ink);
-}
-
-.common-lead{
-  margin: 0 0 10px;
-  line-height: 1.7;
-  color: var(--pc-muted);
-}
-
-.common-text{
-  margin: 0 0 12px;
-  line-height: 1.7;
-  color: var(--pc-muted);
-}
-
-.common-text a{
-  color: var(--pc-petrol);
-  font-weight: 700;
-  text-decoration: none;
-}
-.common-text a:hover{ text-decoration: underline; }
-
-.common-note{
-  margin-top: 10px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,124,145,.18);
-  background: rgba(0,124,145,.06);
-  color: rgba(26,26,46,.88);
-}
-
-.common-right{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.common-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.common-item{
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 10px;
-  align-items: start;
-}
-
-.bullet{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--pc-petrol);
-  margin-top: 6px;
-  opacity: .95;
-}
-.bullet--yellow{ background: var(--pc-sun); }
-
-.common-list strong{
-  display: block;
-  color: var(--pc-ink);
-  font-weight: 800;
-}
-.common-list span{
-  display: block;
-  margin-top: 2px;
-  color: var(--pc-muted);
-  line-height: 1.55;
-}
-
-@media (max-width: 991px){
-  .common-wrap{ grid-template-columns: 1fr; }
-}
-
-/* ---------- CTA “Échanger” ---------- */
-.cta-exchange{
-  padding: 54px 0;
-  background: var(--pc-soft);
-  border-top: 1px solid rgba(26,26,46,.08);
-}
-
-.cta-exchange h2{
-  color: var(--pc-ink);
-}
-
-.cta-exchange p{
-  color: rgba(26,26,46,.74);
-}
-
-/* Boutons dédiés au CTA (sans casser btn-brand) */
-.btn-solar{
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  background: var(--pc-petrol);
-  color: #fff;
-  border: 1px solid var(--pc-petrol);
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
-}
-
-.btn-solar:hover{
-  background: color-mix(in srgb, var(--pc-petrol), #000 10%);
-  box-shadow: 0 14px 34px rgba(0,0,0,.10);
-  transform: translateY(-1px);
-  color: #fff;
-}
-
-.btn-outline-solar{
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  background: transparent;
-  color: var(--pc-petrol);
-  border: 1px solid rgba(0,124,145,.35);
-  border-radius: 10px;
-  font-weight: 800;
-  text-decoration: none;
-  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease;
-}
-
-.btn-outline-solar:hover{
-  background: rgba(0,124,145,.08);
-  border-color: rgba(0,124,145,.55);
-  box-shadow: 0 14px 34px rgba(0,0,0,.08);
-  transform: translateY(-1px);
-}
-
-
 /* ==================================================
    PROJETS — Cadre commun (version stable)
-   - ne dépend pas de --p-*
-   - garde le style “institutionnel”
    ================================================== */
-
 .projects-page{
   /* fallback locaux si jamais main-clean ne les a pas */
   --pc-ink: var(--default-color, #1A1A2E);
@@ -424,11 +231,8 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   font-weight: 800;
   text-decoration: none;
 }
-.common-text a:hover{
-  text-decoration: underline;
-}
+.common-text a:hover{ text-decoration: underline; }
 
-/* si tu remets un jour .common-note, elle sera propre */
 .common-note{
   border-left: 3px solid var(--pc-sun);
   padding: 10px 12px;
@@ -492,10 +296,7 @@ body.projects-page .hero.hero-sm .hero-subtitle{
 
 /* ==================================================
    PROJETS — CTA final (version stable)
-   - 1 seul bloc (pas de double text-align)
-   - s’appuie sur .btn-brand (déjà dans main-clean)
    ================================================== */
-
 .data-cta-box{
   max-width: 860px;
   margin: 0 auto;
@@ -512,7 +313,7 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   box-shadow: 0 14px 34px rgba(26,26,46,0.08);
   overflow: hidden;
 
-  text-align: left; /* ✅ desktop = aligné comme le reste */
+  text-align: left;
 }
 
 @media (max-width: 640px){
@@ -543,7 +344,6 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   color: color-mix(in srgb, var(--pc-ink), transparent 28%);
 }
 
-/* bouton plus premium sans casser btn-brand global */
 .data-cta-box .btn-brand{
   border-radius: 999px;
   padding: 10px 16px;
