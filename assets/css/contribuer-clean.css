@@ -1,0 +1,210 @@
+/* ==================================================
+   CONTACT — CSS CLEAN (page-contact uniquement)
+   Dépend de main-clean.css (variables, header, footer, etc.)
+   ================================================== */
+
+/* ---------------------------
+   HERO (structure commune hero-sm)
+   --------------------------- */
+.page-contact .hero.hero-sm{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26,26,46,0.10);
+  padding: 68px 0;
+}
+
+/* Grid discret */
+.page-contact .hero.hero-sm::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.22;
+  pointer-events:none;
+  mix-blend-mode: overlay;
+}
+
+/* Nuancier CONTACT (différent de Données/Projets) */
+.page-contact .hero.hero-sm{
+  background:
+    radial-gradient(70% 60% at 15% 20%, rgba(0,124,145,0.32), transparent 65%),
+    radial-gradient(60% 60% at 85% 80%, rgba(0,191,166,0.22), transparent 60%),
+    linear-gradient(135deg,
+      rgba(26,26,46,1) 0%,
+      rgba(0,124,145,0.96) 55%,
+      rgba(0,191,166,0.86) 100%);
+}
+
+.page-contact .hero.hero-sm .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* Typo hero */
+.page-contact .hero.hero-sm h1{
+  margin: 0 0 10px;
+  font-family: var(--heading-font, "Montserrat", sans-serif);
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: color-mix(in srgb, var(--background-color), white 18%); /* blanc cassé */
+}
+
+.page-contact .hero.hero-sm .hero-subtitle{
+  margin: 0;
+  max-width: 68ch;
+  line-height: 1.6;
+  color: color-mix(in srgb, #ffffff, transparent 12%);
+}
+
+/* Responsive hero */
+@media (max-width: 576px){
+  .page-contact .hero.hero-sm{
+    padding: 44px 0 22px;
+  }
+}
+
+
+/* ---------------------------
+   COLONNE CENTRÉE (hors hero)
+   --------------------------- */
+.page-contact .contact-shell{
+  max-width: 78ch;  /* cohérent avec tes autres pages */
+  margin: 0 auto;
+}
+
+/* ---------------------------
+   INTRO
+   --------------------------- */
+.page-contact .contact-intro{
+  padding: 28px 0 14px; /* compact */
+}
+
+.page-contact .contact-intro__wrap{
+  max-width: 78ch;
+}
+
+.page-contact .contact-intro__lead{
+  margin: 0 0 14px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color, #1A1A2E), transparent 28%);
+}
+
+.page-contact .contact-intro__note{
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--default-color, #1A1A2E), transparent 88%);
+  background:
+    linear-gradient(135deg,
+      rgba(240,238,233,0.85) 0%,
+      rgba(0,124,145,0.06) 45%,
+      rgba(255,255,255,0.95) 100%);
+  color: color-mix(in srgb, var(--default-color, #1A1A2E), transparent 22%);
+}
+
+.page-contact .contact-intro__note strong{
+  color: var(--default-color, #1A1A2E);
+}
+
+/* ---------------------------
+   FORMULAIRE (Netlify friendly)
+   --------------------------- */
+.page-contact .honeypot{
+  display:none !important;
+  visibility:hidden;
+  position:absolute;
+  left:-9999px;
+}
+
+.page-contact .contact-form{
+  margin-top: 12px;
+}
+
+.page-contact .contact-form .form-label{
+  font-weight: 600;
+}
+
+.page-contact .contact-form .form-control{
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.page-contact .contact-form .form-control:focus{
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+/* Bouton : on exploite btn-brand déjà dans main-clean.css
+   -> ici on ajoute seulement un “lift” doux */
+.page-contact .contact-form .btn-brand{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(26,26,46,.10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.page-contact .contact-form .btn-brand:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(26,26,46,.14);
+}
+
+.page-contact .contact-form .btn-brand:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--yellow-accent), transparent 25%);
+  outline-offset: 4px;
+}
+
+.page-contact .form-note{
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+
+/* ---------------------------
+   BACKLINKS
+   --------------------------- */
+.page-contact .contact-backlinks{
+  padding: 18px 0 32px; /* compact, pas une “grosse section” */
+}
+
+.page-contact .contact-backlinks__wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;      /* évite tout débordement */
+}
+
+.page-contact .contact-backlinks__link{
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  min-width: 0;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.page-contact .contact-backlinks__link:hover{
+  text-decoration: underline;
+}
+
+.page-contact .contact-backlinks__link--right{
+  margin-left:auto;
+  text-align:right;
+}
+
+@media (max-width: 576px){
+  .page-contact .contact-backlinks__wrap{
+    justify-content:center;
+  }
+  .page-contact .contact-backlinks__link--right{
+    margin-left:0;
+    text-align:left;
+  }
+  }
