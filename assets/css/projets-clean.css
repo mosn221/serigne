@@ -48,6 +48,18 @@ body.projects-page .hero.hero-sm::after{
   mix-blend-mode: multiply;
 }
 
+/* Trait accent */
+.hero.hero-sm::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--pc-sun);
+}
+
 body.projects-page .hero.hero-sm h1{
   margin: 0 0 10px;
   color: var(--pc-ink);
@@ -73,17 +85,7 @@ body.projects-page .hero.hero-sm .hero-subtitle{
 }
 
 
-body.projects-page .hero.hero-sm::before{
-  content:"";
-  position:absolute;
-  left: 18px;
-  top: 18px;
-  width: 56px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--pc-sun);
-  opacity: .95;
-}
+
 
 /* ==================================================
    Section intro au-dessus des cartes
