@@ -618,7 +618,7 @@ section,
   color: var(--contrast-color);
   overflow: hidden;
   min-height: auto;
-  padding: 56px 0;          /* au lieu de 100px */
+  padding: 32px 0;          /* au lieu de 100px */
   justify-content: flex-start;
   text-align: left;
 }
