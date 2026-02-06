@@ -24,7 +24,7 @@ body.projects-page .hero.hero-sm{
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(26,26,46,0.08);
-  padding: 68px 0;
+  padding: 32px 0;
   background:
     radial-gradient(80% 70% at 12% 18%, rgba(0,124,145,0.28), transparent 62%),
     radial-gradient(70% 60% at 88% 12%, rgba(255,195,0,0.22), transparent 60%),
