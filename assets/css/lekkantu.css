@@ -358,6 +358,9 @@
   }
 }
 
+
+/* Backlink fin de page projet */
+
 .page-backlinks{
   font-size: 0.95rem;
 }
@@ -370,4 +373,10 @@
 
 .page-backlinks a:hover{
   text-decoration: underline;
+}
+
+
+.page-backlinks {
+  margin-top: 24px;   /* espace avec la section précédente */
+  margin-bottom: 40px; /* respiration avant le footer */
 }
