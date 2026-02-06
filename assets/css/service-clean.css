@@ -382,17 +382,21 @@
 
 
 
-/* Ajustement autour du séparateur — scoped à la page */
-.service-details-page .section.section-before-separator{
-  padding-bottom: 24px;
+/* ==================================================
+   Données — gestion fine des espacements autour
+   du séparateur
+   ================================================== */
+
+.service-details-page .section-before-separator {
+  padding-bottom: 16px;
+  margin-bottom: 0;
 }
 
-.service-details-page .section.section-after-separator{
-  padding-top: 24px;
+.service-details-page .section-separator {
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 576px){
-  .service-details-page .section-before-separator{
-    padding-bottom: 16px;
-  }
+.service-details-page .section-after-separator {
+  margin-top: 40px;
 }
