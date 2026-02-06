@@ -388,7 +388,7 @@
    ================================================== */
 
 .service-details-page .section-before-separator {
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   margin-bottom: 0;
 }
 
@@ -398,5 +398,5 @@
 }
 
 .service-details-page .section-after-separator {
-  margin-top: 40px;
+  margin-top: 24px;
 }
