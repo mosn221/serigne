@@ -100,6 +100,11 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   margin: 0 0 10px;
 }
 
+.projects-head a {
+    color: var(--pc-accent);
+    font-weight: 800;
+    text-decoration: none;
+
 /* ==================================================
    Cartes projets
    ================================================== */
