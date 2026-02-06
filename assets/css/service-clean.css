@@ -315,7 +315,7 @@
 
 .data-cta-box{
   max-width: 860px;
-  margin: 0 auto;
+  margin: 0 0 0;
   position: relative;
   padding: 22px 18px;
   border-radius: 18px;
