@@ -373,3 +373,15 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   line-height: 1;
   vertical-align: -0.12em; /* ajuste très légèrement */
 }
+
+
+/* Liens dans l’intro projets */
+.projects-head a{
+  color: var(--pc-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.projects-head a:hover{
+  text-decoration: underline;
+}
