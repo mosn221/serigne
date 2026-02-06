@@ -167,10 +167,8 @@
 /* blocs éditoriaux */
 .project-block{
   max-width: 78ch;
-  margin: 0 0 0;
+  margin: 0 auto 18px;
 }
-
-
 
 .project-block h2{
   color: var(--pc-ink);
@@ -195,6 +193,13 @@
   text-decoration: underline;
 }
 
+/* alignement à gauche du texte éditorial */
+
+@media(min-width:992px):{
+.project-block{
+   margin: 0 0 0;
+}  
+}
 /* ==========================================================
    SUMMARY — "Le projet en 4 points"
    ========================================================== */
@@ -359,11 +364,3 @@
   }
 }
 
-/* alignement à gauche du texte éditorial */
-
-@media(min-width:992px):{
-.body.project-content.project-block{
-   margin: 0 0 0;
-}
-   
-}
