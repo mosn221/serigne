@@ -40,8 +40,8 @@
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(26,26,46,0.08);
-   padding-bottom:68px;
-   padding-top:68px;
+   padding-bottom:24px;
+   padding-top:24px;
 
   /* Dégradé + halos data (clair mais vivant) */
   background:
