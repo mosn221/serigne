@@ -363,3 +363,11 @@ body.projects-page .hero.hero-sm .hero-subtitle{
   border-radius: 999px;
   padding: 10px 16px;
 }
+
+
+/* Alignement icône sablier avec le texte */
+.project-link i{
+  display: inline-block;
+  line-height: 1;
+  vertical-align: -0.12em; /* ajuste très légèrement */
+}
