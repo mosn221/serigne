@@ -362,7 +362,7 @@
 /* alignement à gauche du texte éditorial */
 
 @media(min-width:992px):{
-.project-content.project-block{
+.body.project-content.project-block{
    margin: 0 0 0;
 }
    
