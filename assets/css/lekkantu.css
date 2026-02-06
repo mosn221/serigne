@@ -170,6 +170,14 @@
   margin: 0 auto 18px;
 }
 
+@media(min-width:992px):{
+.project-block{
+   margin-left:0;
+   margin-right:auto;
+}
+   
+}
+
 .project-block h2{
   color: var(--pc-ink);
   font-size: 1.35rem;
