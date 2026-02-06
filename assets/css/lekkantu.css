@@ -377,6 +377,6 @@
 
 
 .page-backlinks {
-  margin-top: 24px;   /* espace avec la section précédente */
-  margin-bottom: 40px; /* respiration avant le footer */
+  margin-top: 16px;   /* espace avec la section précédente */
+  margin-bottom: 32px; /* respiration avant le footer */
 }
