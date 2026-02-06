@@ -167,7 +167,7 @@
 /* blocs éditoriaux */
 .project-block{
   max-width: 78ch;
-  margin: 0 auto 18px;
+  margin: 0 0 18px;
 }
 
 .project-block h2{
@@ -193,13 +193,7 @@
   text-decoration: underline;
 }
 
-/* alignement à gauche du texte éditorial */
 
-@media(min-width:992px):{
-.project-block{
-   margin: 0 0 0;
-}  
-}
 /* ==========================================================
    SUMMARY — "Le projet en 4 points"
    ========================================================== */
