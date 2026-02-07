@@ -1210,3 +1210,8 @@ section,
   text-decoration: none;
   color: inherit;
 }
+
+/* Index – section projets : titre aligné à gauche */
+.projects .section-title {
+  text-align: left;
+}
