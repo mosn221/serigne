@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
+
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -1223,4 +1223,11 @@ section,
 /* Index – section projets : titre aligné à gauche */
 .projects .section-title {
   text-align: left;
+}
+
+
+.mobile-nav-toggle {
+  border: none;
+  background: transparent;
+  padding: 0;
 }
