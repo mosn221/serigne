@@ -32,7 +32,11 @@
   <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PyCode Group — Initiatives et projets autour de la donnée">
 <meta name="twitter:description" content="Initiative indépendante développant des projets à partir de données structurées.">
+  <meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
 <meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+  
 
   <!-- Content Security Policy (CSP) -->
   <!-- ⚠ Pour permettre le JSON-LD inline, on ajoute 'unsafe-inline' -->
@@ -58,9 +62,20 @@
         form-action 'self';
         object-src 'none';
       ">
+
+
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+      ">
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Favicons -->
   <link href="assets/img/Logo-Favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -70,9 +85,6 @@
   <link href="https://fonts.gstatic.com" crossorigin> 
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
-
-<!-- Chargement réel des polices -->
-
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -98,7 +110,7 @@
 
  <!-- Navigation -->
 
-<nav id="navmenu" class="navmenu">
+<nav id="navmenu" class="navmenu" aria-label="Navigation principale">
   <ul>
     <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
     <li><a href="services/data.html">Données</a></li>
@@ -120,7 +132,7 @@
   <div class="container">
     <h1>PyCode Group</h1>
     <p class="hero-subtitle">
-      Initiative indépendante autour de projets data en Afrique.
+      Initiative indépendante : collecte et structuration de données au Sénégal.
     </p>
   </div>
     </section>
@@ -169,7 +181,7 @@
           <div class="project-content">
             <h3 class="project-title">Lekkantu</h3>
             <p class="project-desc"> 
-            Produits alimentaires, compositions nutritionnelles pour une lecture éclairée de notre consommation 
+            Produits alimentaires, compositions nutritionnelles pour une lecture éclairée de notre consommation.
             </p>
             <span class="project-cta">Découvrir <span aria-hidden="true">→</span></span>
           </div>
@@ -189,9 +201,9 @@
             <h3 class="project-title">SunuGoal</h3>
             <p class="project-desc">
 
-              Compétitions sportives suivis à l’échelle locale : joueurs, résultats, matchs, infrastructures et performances
+              Compétitions sportives suivies à l’échelle locale : joueurs, résultats, matchs, infrastructures et performances
             </p>
-            <span class="project-cta">Bientôt<i class="bi bi-hourglass"></i> <span aria-hidden="true"></span></span>
+            <span class="project-cta">Voir la fiche<i class="bi bi-hourglass"></i> <span aria-hidden="true"></span></span>
           </div>
         </article>
       </a>
@@ -212,7 +224,7 @@
 Sauvegarder le patrimoine culturel et religieux pour faciliter leur suivi, l’accès et la consultation.
               
             </p>
-            <span class="project-cta">Bientôt<i class="bi bi-hourglass"></i>  <span aria-hidden="true"></span></span>
+            <span class="project-cta">Voir la fiche<i class="bi bi-hourglass"></i>  <span aria-hidden="true"></span></span>
           </div>
         </article>
       </a>
@@ -250,7 +262,7 @@ Sauvegarder le patrimoine culturel et religieux pour faciliter leur suivi, l’a
             Nous contacter<span class="ms-1" aria-hidden="true">→</span>
           </a>
 
-          <a href="https://linkedin.com/company/pycodegroup"
+          <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"
              class="btn btn-outline-solar px-4 py-2">
             Nous suivre<span class="ms-1" aria-hidden="true">↗</span>
           </a>
@@ -335,9 +347,9 @@ Sauvegarder le patrimoine culturel et religieux pour faciliter leur suivi, l’a
       
 
       <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
