@@ -26,13 +26,13 @@
 <meta property="og:description" content="Initiative indépendante développant des projets thématiques à partir de données structurées et d’usages concrets.">
 <meta property="og:url" content="https://pycodegroup.com/">
 <meta property="og:site_name" content="PyCode Group">
-<meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.jpg">
+<meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PyCode Group — Initiatives et projets autour de la donnée">
 <meta name="twitter:description" content="Initiative indépendante développant des projets à partir de données structurées.">
-<meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.jpg">
+<meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
 
   <!-- Content Security Policy (CSP) -->
   <!-- ⚠ Pour permettre le JSON-LD inline, on ajoute 'unsafe-inline' -->
@@ -51,28 +51,21 @@
   <link href="assets/img/Logo-Favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts preload + chargement -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
- <!-- Preload Google Fonts CSS -->
+  <link href="https://fonts.gstatic.com" crossorigin> 
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
 
 <!-- Chargement réel des polices -->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"> 
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<!-- Preload hero image (LCP) -->
-<link rel="preload"
-      as="image"
-      href="assets/img/hero-image.webp"
-      imagesrcset="assets/img/hero-image.webp 1536w"
-      imagesizes="100vw">
-  <!-- Main CSS Files -->
 
+
+  <!-- Main CSS Files -->
   <link href="assets/css/main-clean.css" rel="stylesheet">
 
   
@@ -84,8 +77,8 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an  image logo -->
-      <img src="assets/img/logo-header.svg" alt="PyCode Group"> 
+        
+      <img src="assets/img/logo-header.svg" width="120" height="30" alt="PyCode Group"> 
     
       </a>
 
@@ -93,7 +86,7 @@
 
 <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
     <li><a href="services/data.html">Données</a></li>
     <li><a href="projets/projets.html">Projets</a></li>
     <li><a href="contact/contact.html">Contact</a></li>
@@ -134,9 +127,6 @@
     souvent dispersées, hétérogènes ou peu accessibles. Elle s’appuie sur une organisation
     par projets thématiques, chacun conçu comme un cadre de travail autonome.
   </p>
-  
-  
- <h2 class="section-title mt-4">Projets</h2>
 
   <p>
     Chaque projet définit un périmètre précis, identifie des sources de données,
@@ -158,7 +148,7 @@
           <div class="project-media">
             <img src="assets/img/projets/lekkantu.jpg"
                  alt="Lekkantu – données sur les produits alimentaires"
-                 loading="lazy">
+                 loading="lazy" width="1024" height="768">
             <span class="project-badge">Nutrition</span>
           </div>
 
@@ -177,7 +167,7 @@
           <div class="project-media">
             <img src="assets/img/projets/yalistats.jpg"
                  alt="SunuGoal – données du football sénégalais"
-                 loading="lazy">
+                 loading="lazy" width="1024" height="768">
             <span class="project-badge">Sport</span>
           </div>
 
@@ -197,7 +187,7 @@
           <div class="project-media">
             <img src="assets/img/projets/daaray-kurel.jpg"
                  alt="Kurel Facts – documentation de contenus culturels"
-                 loading="lazy">
+                 loading="lazy" width="1024" height="768">
             <span class="project-badge">Culture</span>
           </div>
 
@@ -268,7 +258,7 @@ Sauvegarder le patrimoine culturel et religieux pour faciliter leur suivi, l’a
         <!-- Identité -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center mb-3">
-            <img src="assets/img/logo-footer.svg" alt="">
+            <img src="assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
           </a>
           <p class="text-white-50 small">
             Data, innovation & projets pour l’Afrique.
