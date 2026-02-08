@@ -344,6 +344,20 @@ Sauvegarder le patrimoine culturel et religieux pour faciliter leur suivi, l’a
 
   <!-- Main JS File -->
   <script src="assets/js/main-clean.js" ></script>
+
+  
+  <script>
+    /**
+   * Dynamic copyright year
+   */  
+  (function () {
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+
+  </script>
   
 </body>
 
