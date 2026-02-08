@@ -101,13 +101,13 @@ h6 {
 
 
 .header .logo img {
-  height: 36px;   /* desktop */
+  height: 48px;   /* desktop */
   width: auto;
 }
 
 @media (max-width: 576px) {
   .header .logo img {
-    height: 30px; /* mobile */
+    height: 36px; /* mobile */
   }
 }
 
