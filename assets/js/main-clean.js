@@ -119,3 +119,6 @@
   window.addEventListener("load", navActiveOnScroll);
   window.addEventListener("scroll", navActiveOnScroll);
 
+  })();
+
+
