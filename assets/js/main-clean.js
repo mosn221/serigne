@@ -119,3 +119,9 @@
   window.addEventListener("load", navActiveOnScroll);
   window.addEventListener("scroll", navActiveOnScroll);
 
+  /**
+   * Dynamic copyright year
+   */
+  const yearEl = document.getElementById("copyright-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
