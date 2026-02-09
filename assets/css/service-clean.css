@@ -327,7 +327,7 @@
   border: 1px solid rgba(26,26,46,0.08);
   box-shadow: 0 14px 34px rgba(26,26,46,0.08);
   overflow: hidden;
-  text-align: center; /* mobile-first */
+  text-align: left; /* mobile-first */
 }
 
 .data-cta-box::before{
