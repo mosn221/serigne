@@ -7,7 +7,41 @@
 
   <title>Projets – Portefeuille | PyCode Group</title>
   <meta name="description" content="Découvrez les projets PyCode : Lekkantu, SunuGoal et Kurel Facts. Des initiatives progressives construites à partir de données structurées et orientées utilité.">
+
+   <!-- Canonical & hreflang -->
   <link rel="canonical" href="https://pycodegroup.com/projets/projets.html">
+  <link rel="alternate" href="https://pycodegroup.com/projets/projets.html" hreflang="fr-FR">
+  <link rel="alternate" href="https://pycodegroup.com/projets/projets.html" hreflang="x-default">
+
+    <!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyCode Group — Données locales et projets thématiques">
+<meta property="og:description" content="Collecte, structuration et restitution de données locales pour des projets thématiques, documentés et progressifs.">
+<meta property="og:url" content="https://pycodegroup.com/projets/projets.html">
+<meta property="og:site_name" content="PyCode Group">
+<meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+
+  <!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
 
       <!-- Favicons -->
   <link href="../assets/img/Logo-Favicon.png" rel="icon">
@@ -17,18 +51,13 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   
- <!-- Preload Google Fonts CSS -->
+ <!-- Fonts preload + chargement -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" crossorigin> 
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
-
   
-  
-<!-- Chargement réel des polices -->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"> 
-  
-
-  <!-- Vendor CSS -->
+    <!-- Vendor CSS -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
@@ -39,41 +68,34 @@
 
 <body class="projects-page">
 
-  <!-- Header : reprends EXACTEMENT ton header existant -->
-  <!-- ... -->
 
    <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="../index.html#hero" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an  image logo -->
-      <img src="../assets/img/logo-header.svg" alt=""> 
-    
+      <img src="../assets/img/logo-header.svg" width="160" height="48" alt="PyCode Group"> 
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../services/data.html">Données</a></li>
-    <li><a href="projets.html" class ="active">Projets</a></li>
-    <li><a href="../contact/contact.html">Contact</a></li>
- 
-          
-          
-          
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <li><a href="../services/data.html">Données</a></li>
+          <li><a href="projets.html" class ="active">Projets</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+         </ul>
+        
+          <button class="mobile-nav-toggle d-xl-none bi bi-list"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-controls="navmenu"></button>  
       </nav>
-
-      
-
     </div>
     </header>
   
   <main class="main">
 
-   <!-- HERO INSTITUTIONNEL : DONNÉES & INNOVATION -->
+   <!-- HERO -->
 
     <section class="hero hero-sm">
   <div class="container">
@@ -86,16 +108,6 @@
     </section>
     
     <!-- /HERO -->
-
-
-
-     <!--Trypique: collecter, structurer, restituer -->
-    
-    
-  
-
-    <!-- ======= INTRO (court, non redondant) ======= -->
-  
 
         <!-- ======= LISTE PROJETS ======= -->
     <section id="liste-projets" class="section light-background">
@@ -125,8 +137,8 @@
 
           <!-- Lekkantu -->
           <div class="col-md-6 col-lg-4">
-            <a class="project-card-link" href="projet-lekkantu.html" aria-label="Découvrir Lekkantu">
-              <article class="project-card h-100">
+            <a class="project-card-link" href="projet-lekkantu.html" aria-label="Découvrir Lekkantu" width="1024" height="768">
+              <article class="project-card h-100" id="lekkantu">
                 <div class="project-media">
                   <img src="../assets/img/projets/lekkantu.jpg" alt="Illustration du projet Lekkantu" loading="lazy">
                   
@@ -135,10 +147,10 @@
                   <span class="project-tag"><i class="bi bi-egg-fried"></i> Nutrition & transparence</span>
                   <h3 class="project-title">Lekkantu</h3>
                   <p class="project-desc">
-  Lekkantu structure l’information produit pour la rendre lisible et comparable.
-  Le projet vise à produire des fiches, analyses et comparaisons utiles au quotidien à destination du grand public
-  et des acteurs de la consommation.
-</p>
+                  Lekkantu structure l’information produit pour la rendre lisible et comparable.
+                  Le projet vise à produire des fiches, analyses et comparaisons utiles au quotidien à destination du grand public
+                  et des acteurs de la consommation.
+                  </p>
                   <div class="project-foot">
                     <span class="project-link">Découvrir <i class="bi bi-arrow-right"></i></span>
                   </div>
@@ -150,11 +162,9 @@
 
           <!-- SunuGoal -->
           <div class="col-md-6 col-lg-4">
-            
-              <article class="project-card h-100">
+          <article class="project-card h-100" id="sunugoal">
                 <div class="project-media">
-                  <img src="../assets/img/projets/yalistats.jpg" alt="Illustration du projet SunuGoal" loading="lazy">
-                  
+                  <img src="../assets/img/projets/yalistats.jpg" alt="Illustration du projet SunuGoal" loading="lazy" width="1024" height="768">
                 </div>
                 <div class="project-body">
                   <span class="project-tag"><i class="bi bi-dribbble"></i> Sport & données</span>
@@ -169,16 +179,13 @@
                   </div>
                 </div>
               </article> 
-          
           </div>
 
           <!-- Kurel Facts -->
           <div class="col-md-6 col-lg-4">
-            
-              <article class="project-card h-100">
+              <article class="project-card h-100" id="kurel-facts">
                 <div class="project-media">
-                  <img src="../assets/img/projets/daaray-kurel.jpg" alt="Illustration du projet Kurel Facts" loading="lazy">
-                  
+                  <img src="../assets/img/projets/daaray-kurel.jpg" alt="Illustration du projet Kurel Facts" loading="lazy" width="1024" height="768">
                 </div>
                 <div class="project-body">
                   <span class="project-tag"><i class="bi bi-journal-text"></i> Culture & mémoire</span>
