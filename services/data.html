@@ -9,8 +9,6 @@
   
   <meta name="description"
 content="Cadre méthodologique de PyCode pour la collecte, la structuration et la restitution de données locales au service des projets." />
-  
-  <meta name="keywords" content="PyCode Group, données, innovation, Afrique, collecte de données, structuration, exploration, projets, local, initiative, indépendant documentation">
   <meta name="author" content="PyCode Group">
 
   <!-- Canonical & hreflang -->
@@ -20,8 +18,11 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
 
   <!-- Open Graph -->
   <meta property="og:title" content="Données – Cadre et méthodologie | PyCode Group">
-<meta property="og:description" content="Collecte, structuration et restitution de données locales dans un cadre méthodologique clair et documenté.">
-  <meta property="og:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
+  <meta property="og:description" content="Collecte, structuration et restitution de données locales dans un cadre méthodologique clair et documenté.">
+  <meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://pycodegroup.com/services/data.html">
   <meta property="og:type" content="article">
 
@@ -29,17 +30,32 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Données – Cadre et méthodologie | PyCode Group     ">
   <meta name="twitter:description" content="Collecte, structuration et restitution de données locales dans un cadre méthodologique clair et documenté">
-  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/services/open-data.jpg">
+  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
 
-    <!-- Favicons -->
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
+
+  <!-- Favicons -->
   <link href="../assets/img/Logo-Favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
+  <!-- Fonts : preload + chargement -->
+   <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" crossorigin> 
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">  
 
   <!-- Vendor CSS -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,23 +66,26 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
  <link href="../assets/css/service-clean.css" rel="stylesheet"> 
 </head>
 
+  
 <body class="service-details-page">
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group" width="160" height="48">
       </a>
       <nav id="navmenu" class="navmenu">
   <ul>
       <li><a href="../index.html">Accueil</a></li>
-    <li><a href="data.html" class="active">Données</a></li>
+    <li><a href="data.html" class="active" aria-current="page">Données</a></li>
     <li><a href="../projets/projets.html">Projets</a></li>
     <li><a href="../contact/contact.html">Contact</a></li>
   </ul>
 
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>  
+   <button class="mobile-nav-toggle d-xl-none bi bi-list"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="navmenu"></button>   
 </nav>
  </div>
   </header>
@@ -75,7 +94,6 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
   <main class="main service-content">
 
     <!-- HERO INSTITUTIONNEL : DONNÉES & INNOVATION -->
-
     <section class="hero hero-sm">
   <div class="container">
     <h1>Données</h1>
@@ -95,8 +113,7 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
         Elle est abordée comme une matière vivante, ancrée dans des contextes locaux,
         nécessitant rigueur, traçabilité et interprétation.
       </p>
-      
-    </div>
+          </div>
   </div>
 </section>
     
@@ -117,7 +134,8 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
   Les données sont travaillées et structurées afin d’être rendues
   lisibles, comparables et exploitables dans des contextes concrets.
     </p>
-    
+
+    <h2 class="section-title mt-4">Projets</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="data-card">
@@ -166,7 +184,7 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
       <div class="col-lg-4 col-md-4">
         <a href="https://github.com/PyCodeGROUP"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            class="data-band">
           <span class="data-band-icon bi bi-shield-check"></span>
           <div class="data-band-body">
@@ -180,7 +198,7 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
       <div class="col-lg-4 col-md-4">
         <a href="https://www.kaggle.com/pycodegroup"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            class="data-band">
           <span class="data-band-icon bi bi-table"></span>
           <div class="data-band-body">
@@ -194,7 +212,7 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
       <div class="col-lg-4 col-md-4">
         <a href="https://github.com/PyCodeGROUP"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            class="data-band">
           <span class="data-band-icon bi bi-journal-text"></span>
           <div class="data-band-body">
@@ -243,7 +261,7 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
         <!-- Identité -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="../index.html" class="logo d-flex align-items-center mb-3">
-            <img src="../assets/img/logo-footer.svg" alt="PyCode Group">
+            <img src="../assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
           </a>
           <p class="text-white-50 small">
             Données locales et projets.
@@ -277,11 +295,9 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
           <ul>
             <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
             <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
-            
             <li><a href="../legales/conditions.html">Conditions</a></li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
@@ -301,14 +317,12 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
   </div>
       </div>
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </div>
-
   </footer>
     
   <!-- Scroll Top -->
@@ -319,7 +333,16 @@ content="Cadre méthodologique de PyCode pour la collecte, la structuration et l
 
   <!-- Main JS File -->
   <script src="../assets/js/main-clean.js" defer></script>
-
+  
+  <!-- Dynamic Year -->
+  <script>
+  (function () {
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+  </script>
   
 </body>
 
