@@ -359,7 +359,6 @@
 }
 
 
-
 /* Backlink fin de page projet */
 
 .page-backlinks{
@@ -380,4 +379,4 @@
 .page-backlinks {
   margin-top: 16px;   /* espace avec la section précédente */
   margin-bottom: 32px; /* respiration avant le footer */
-}
+   }
