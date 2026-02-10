@@ -358,6 +358,17 @@
   }
 }
 
+.project-cta-link{
+  font-weight: 800;
+  color: var(--pc-ink);
+  text-decoration: underline;
+  padding: .78rem .2rem;
+  border-radius: 999px;
+}
+.project-cta-link:hover{
+  color: var(--pc-accent);
+  text-decoration: none;
+}
 
 /* Backlink fin de page projet */
 
