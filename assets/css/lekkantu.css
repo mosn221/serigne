@@ -358,6 +358,22 @@
   }
 }
 
+.project-cta-contact{
+  margin-top: 10px;
+  font-size: .95rem;
+  color: color-mix(in srgb, var(--pc-ink), transparent 35%);
+}
+
+.project-cta-contact a{
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.project-cta-contact a:hover{
+  color: var(--pc-accent);
+  text-decoration: none;
+}
+
 
 /* Backlink fin de page projet */
 
