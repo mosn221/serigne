@@ -398,3 +398,13 @@
   margin-top: 16px;   /* espace avec la section précédente */
   margin-bottom: 32px; /* respiration avant le footer */
    }
+
+.project-list{
+  padding-left: 1.1rem;
+  margin: .6rem 0 1.2rem;
+}
+
+.project-list li{
+  margin-bottom: .35rem;
+  line-height: 1.6;
+}
