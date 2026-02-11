@@ -447,3 +447,11 @@
   background: color-mix(in srgb, var(--pc-sun), transparent 88%);
   color: var(--pc-ink);
 }
+
+.project-pivot{
+  margin: 18px 0 10px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--pc-ink);
+}
