@@ -449,9 +449,10 @@
 }
 
 .project-pivot{
-  margin: 18px 0 10px;
-  text-align: center;
-  font-style: italic;
+  margin: 20px 0;
+  padding: 14px 16px;
+  border-left: 4px solid var(--pc-accent);
+  background: color-mix(in srgb, var(--pc-accent), transparent 92%);
+  border-radius: 12px;
   font-weight: 600;
-  color: var(--pc-ink);
 }
