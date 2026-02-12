@@ -211,7 +211,9 @@
   margin: 0;
   color: color-mix(in srgb, var(--pc-ink), transparent 30%);
 }
-
+.project-summary-header h2{
+  margin: 0 0 14px;
+}
 /* Cards 4 points */
 .qcard{
   background: var(--pc-surface);
