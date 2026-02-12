@@ -84,7 +84,7 @@
 
 .page-contact .contact-intro__wrap{
   max-width: 78ch;
-   padding-bottom: 36px;
+  
 }
 
 .page-contact .contact-intro__lead{
@@ -216,6 +216,6 @@
   height: 3px;
   margin: 28px 0 0;
   border-radius: 999px;
-  background: red;
+  background: #FFC300;
   opacity: 0.9;
 }
