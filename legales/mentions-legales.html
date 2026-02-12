@@ -53,7 +53,7 @@
     <div class="legal-wrapper">
 
       <div class="legal-top">
-        <span class="category-badge"><i class="bi bi-shield-check"></i> Mentions</span>
+        <span class="category-badge"><i class="bi bi-shield-check"></i> Mentions légales</span>
 
         <div class="legal-nav" aria-label="Navigation légale">
           <a href="confidentialite.html"><i class="bi bi-lock"></i> Confidentialité</a>
@@ -82,7 +82,6 @@
       <h2>Hébergement</h2>
       <p>
         Hébergeur : <strong>Netlify</strong><br>
-        Adresse : USA, Californie<br>
         Site web : netlify.com
       </p>
 
@@ -120,6 +119,7 @@
     </div>
   </main>
 
+ <!-- Footer (identique à l’index) -->
    <footer id="footer" class="footer dark-background">
   <div class="footer-top">
     <div class="container">
@@ -128,10 +128,10 @@
         <!-- Identité -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="../index.html" class="logo d-flex align-items-center mb-3">
-            <img src="../assets/img/logo-footer.svg" alt="">
+            <img src="../assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
           </a>
           <p class="text-white-50 small">
-            Data, innovation & projets pour l’Afrique.
+            Données locales et projets.
           </p>
         </div>
 
@@ -151,8 +151,8 @@
           <h4>Projets</h4>
           <ul>
             <li><a href="../projets/projet-lekkantu.html">Lekkantu</a></li>
-            <li><a href="../projets/projets.html">Sunugoal</a>
-            <li><a href="../projets/projets.html">Kurel Facts</a></li>
+            <li><a href="../projets/projets.html#sunugoal">SunuGoal</a></li>
+            <li><a href="../projets/projets.html#kurel-facts">Kurel Facts</a>   </li>
           </ul>
         </div> 
 
@@ -160,13 +160,11 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Infos légales</h4>
           <ul>
-            <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
-            <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
-            
-            <li><a href="../legales/conditions.html">Conditions</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="conditions.html">Conditions</a></li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
@@ -186,25 +184,24 @@
   </div>
       </div>
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </div>
-
   </footer>
-
+    
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS -->
+  <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <!-- Main JS -->
+
+  <!-- Main JS File -->
   <script src="../assets/js/main-clean.js" defer></script>
+  
+  <!-- Dynamic Year -->
   <script>
   (function () {
     var yearEl = document.getElementById('copyright-year');
