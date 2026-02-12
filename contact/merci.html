@@ -8,9 +8,46 @@
   <meta name="description" content="Votre message a bien été envoyé à PyCode Group.">
   <meta name="robots" content="noindex">
 
-  <!-- Fonts -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
+    <!-- Open Graph -->
+<meta property="og:title" content="Contact | PyCode">
+<meta property="og:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
+<meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://pycodegroup.com/contact/merci.html">
+<meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | PyCode">
+<meta name="twitter:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
+<meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
+
+  <!-- Favicons -->
+  <link href="../assets/img/Logo-Favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts : preload + chargement -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">  
+
 
   <!-- Vendor CSS -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,39 +56,33 @@
   <!-- Main CSS -->
   <link href="../assets/css/main-clean.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="../assets/img/Logo-Favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ 
 </head>
 
 <body>
 
-  <!-- Header -->
+ <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="../index.html#hero" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an  image logo -->
-      <img src="../assets/img/logo-header.svg" alt=""> 
-    
+      <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group" width="160" height="48">
       </a>
-
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../services/data.html">Données</a></li>
-    <li><a href="../projets/projets_old.html" >Projets</a></li>
-    <li><a href="../contact/contact.html" class="active" >Contact</a></li>
- 
-          
-          
-          
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+  <ul>
+      <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../services/data.html" >Données</a></li>
+    <li><a href="../projets/projets.html">Projets</a></li>
+    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+  </ul>
 
-      
-
+   <button class="mobile-nav-toggle d-xl-none bi bi-list"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="navmenu"></button>   
+</nav>
+ </div>
+  </header>
+  <!-- /Header -->
     </div>
   </header>
 
@@ -114,7 +145,8 @@
 
     </div>
   </main>
-    <footer id="footer" class="footer dark-background">
+ <!-- Footer (identique à l’index) -->
+   <footer id="footer" class="footer dark-background">
   <div class="footer-top">
     <div class="container">
       <div class="row gy-4">
@@ -122,10 +154,10 @@
         <!-- Identité -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="../index.html" class="logo d-flex align-items-center mb-3">
-            <img src="../assets/img/logo-footer.svg" alt="">
+            <img src="../assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
           </a>
           <p class="text-white-50 small">
-            Data, innovation & projets pour l’Afrique.
+            Données locales et projets.
           </p>
         </div>
 
@@ -136,7 +168,7 @@
             
             <li><a href="../index.html">Accueil</a></li>
             <li><a href="../services/data.html">Données</a></li>
-            <li><a href="../projets/projets_old.html">Projets</a></li>
+            <li><a href="../projets/projets.html">Projets</a></li>
           </ul>
         </div>
 
@@ -145,8 +177,8 @@
           <h4>Projets</h4>
           <ul>
             <li><a href="../projets/projet-lekkantu.html">Lekkantu</a></li>
-            <li><a href="../projets/projets.html">Sunugoal</a>
-            <li><a href="../projets/projets.html">Kurel Facts</a></li>
+            <li><a href="../projets/projets.html#sunugoal">SunuGoal</a></li>
+            <li><a href="../projets/projets.html#kurel-facts">Kurel Facts</a>   </li>
           </ul>
         </div> 
 
@@ -156,11 +188,9 @@
           <ul>
             <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
             <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
-            
             <li><a href="../legales/conditions.html">Conditions</a></li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
@@ -180,25 +210,24 @@
   </div>
       </div>
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </div>
-
   </footer>
-
+    
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS -->
+  <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <!-- Main JS -->
+
+  <!-- Main JS File -->
   <script src="../assets/js/main-clean.js" defer></script>
+  
+  <!-- Dynamic Year -->
   <script>
   (function () {
     var yearEl = document.getElementById('copyright-year');
@@ -207,7 +236,6 @@
     }
   })();
   </script>
-
 
 </body>
 </html>
