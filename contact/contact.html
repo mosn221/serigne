@@ -6,42 +6,52 @@
  <!-- SEO -->
 <title>Contact | PyCode - Données locales et projets</title>
 <meta name="description" content= "Contactez PyCode pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets." >
-<meta name="keywords" content="contribuer, PyCode Group, projet, soutien, collaboration, open data, tech Afrique, financement, idée, engagement, formulaire, participation">
 <meta name="author" content="PyCode Group" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="Contribuer à PyCode Group – Ensemble p"
-<meta property="og:description" content="Proposez une idée, un projet, un partenariat ou un soutien. PyCode Group est ouvert aux contributions citoyennes, techniques et institutionnelles.">
-<meta property="og:image" content="https://pycodegroup.com/assets/img/contact/contribuer.jpg">
-<meta property="og:url" content="https://pycodegroup.com/contact/contribuer.html">
+<meta property="og:title" content="Contact | PyCode">
+<meta property="og:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
+<meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://pycodegroup.com/contact/contact.html">
 <meta property="og:type" content="website">
 
-  <meta property="og:title" content="Contact | PyCode">
-<meta property="og:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
-<meta property="og:url" content="https://pycodegroup.com/contact/contact.html">
+
+
+
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contribuer à PyCode Group – Ensemble pour plus d’impact">
-<meta name="twitter:description" content="Participez à l’aventure PyCode Group : open source, innovation, data et projets utiles pour l’Afrique.">
+<meta name="twitter:title" content="Contact | PyCode">
+<meta name="twitter:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
 <meta name="twitter:image" content="https://pycodegroup.com/assets/img/contact/contribuer.jpg">
 
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
 
+  <!-- Favicons -->
+  <link href="../assets/img/Logo-Favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <meta name="twitter:title" content="Contact | PyCode">
-<meta name="twitter:description" content="Un point d’entrée pour échanger autour d’une idée, d’un projet ou d’une collaboration liée aux données et aux projets.">
-  <!-- Content Security Policy (CSP) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src * data:; connect-src 'self'; object-src 'none';" />
+  <!-- Fonts : preload + chargement -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">  
 
-  <!-- Preload Google Fonts CSS -->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
-
-  
-  
-<!-- Chargement réel des polices -->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"> 
   
    
  
@@ -61,19 +71,21 @@
  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group">
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode Group" width="160" height="48">
       </a>
       <nav id="navmenu" class="navmenu">
   <ul>
       <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../services/data.html">Données</a></li>
+    <li><a href="../services/data.html" >Données</a></li>
     <li><a href="../projets/projets.html">Projets</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
   </ul>
 
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>  
+   <button class="mobile-nav-toggle d-xl-none bi bi-list"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="navmenu"></button>   
 </nav>
  </div>
   </header>
@@ -126,6 +138,21 @@
  
    <section class="contact-form-section" aria-label="Formulaire de Contact">
     <div class="container">
+
+       <!-- Intro -->
+    <div class="contact-intro__wrap">
+      
+
+      <p class="contact-intro__lead">
+        Cette page permet de nous écrire à propos d’une idée, d’un projet ou d’un échange
+        lié à la donnée et aux initiatives portées par PyCode.
+      </p>
+
+      <p class="contact-intro__note">
+        <strong>Principe :</strong> permettre un premier échange autour d'une idée ou d'un projet dans un cadre simple et ouvert.
+      </p>
+    </div>
+      
     <div class="contact-shell">
       <!-- Intro -->
   
@@ -221,10 +248,10 @@
         <!-- Identité -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="../index.html" class="logo d-flex align-items-center mb-3">
-            <img src="../assets/img/logo-footer.svg" alt="">
+            <img src="../assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
           </a>
           <p class="text-white-50 small">
-            Data, innovation & projets pour l’Afrique.
+            Données locales et projets.
           </p>
         </div>
 
@@ -235,7 +262,7 @@
             
             <li><a href="../index.html">Accueil</a></li>
             <li><a href="../services/data.html">Données</a></li>
-            <li><a href="../projets/projets_old.html">Projets</a></li>
+            <li><a href="../projets/projets.html">Projets</a></li>
           </ul>
         </div>
 
@@ -244,8 +271,8 @@
           <h4>Projets</h4>
           <ul>
             <li><a href="../projets/projet-lekkantu.html">Lekkantu</a></li>
-            <li><a href="../projets/projets.html">Sunugoal</a>
-            <li><a href="../projets/projets.html">Kurel Facts</a></li>
+            <li><a href="../projets/projets.html#sunugoal">SunuGoal</a></li>
+            <li><a href="../projets/projets.html#kurel-facts">Kurel Facts</a>   </li>
           </ul>
         </div> 
 
@@ -255,11 +282,9 @@
           <ul>
             <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
             <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
-            
             <li><a href="../legales/conditions.html">Conditions</a></li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
@@ -279,25 +304,24 @@
   </div>
       </div>
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="https://x.com/pycodegroup"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/pycodegroup"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/company/pycodegroup"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </div>
-
   </footer>
-
+    
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS -->
+  <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <!-- Main JS -->
+
+  <!-- Main JS File -->
   <script src="../assets/js/main-clean.js" defer></script>
+  
+  <!-- Dynamic Year -->
   <script>
   (function () {
     var yearEl = document.getElementById('copyright-year');
