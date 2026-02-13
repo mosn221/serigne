@@ -3,9 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentions légales | PyCode Group</title>
+  <title>Mentions légales | PyCode</title>
   <meta name="description" content="Mentions légales du site PyCode Group : éditeur, hébergement, propriété intellectuelle, responsabilité et contact." />
 
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
+  
    <!-- Favicons -->
   <link href="../assets/img/Logo-Favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -176,7 +191,7 @@
 
       <div class="d-flex flex-column align-items-center align-items-lg-start footer-copyright">
   <div>
-    © <strong><span class="footer-brand">PyCode Group</span></strong>
+    © <strong><span class="footer-brand">PyCode</span></strong>
     <span id="copyright-year" class="footer-year"></span>
   </div>
   <div class="credits small">
