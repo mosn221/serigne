@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Merci – Message envoyé | PyCode Group</title>
+  <title>Merci – Message envoyé | PyCode</title>
   <meta name="description" content="Votre message a bien été envoyé à PyCode Group.">
   <meta name="robots" content="noindex">
 
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
+  
     <!-- Open Graph -->
 
 <meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
@@ -204,7 +219,7 @@
 
       <div class="d-flex flex-column align-items-center align-items-lg-start footer-copyright">
   <div>
-    © <strong><span class="footer-brand">PyCode Group</span></strong>
+    © <strong><span class="footer-brand">PyCode</span></strong>
     <span id="copyright-year" class="footer-year"></span>
   </div>
   <div class="credits small">
