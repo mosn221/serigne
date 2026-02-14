@@ -145,3 +145,9 @@
 .merci-links a{
   color: #007C91;
 }
+
+.merci-icon i{ font-size: 1.4rem; }
+
+.merci-links{ font-size: 0.95rem; }
+
+.merci-links a{ color: #007C91; } /* ou #007C91 si tu préfères */
