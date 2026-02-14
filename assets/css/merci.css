@@ -101,3 +101,47 @@
     font-size: 1.55rem;
   }
 }
+
+/* ==========================================================
+   PAGE MERCI
+   ========================================================== */
+
+/* Carte principale */
+.merci-card{
+  background: #ffffff;
+  border: 1px solid rgba(26,26,46,0.06);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Icône cercle */
+.merci-icon{
+  width: 44px;
+  height: 44px;
+  background: rgba(0,124,145,0.10);
+  color: #007C91;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.merci-icon i{
+  font-size: 1.4rem;
+}
+
+/* Titre */
+.merci-title{
+  color: #1A1A2E;
+}
+
+/* Texte principal */
+.merci-text{
+  color: rgba(26,26,46,0.78);
+  line-height: 1.65;
+}
+
+/* Liens continuité */
+.merci-links a{
+  color: #007C91;
+}
