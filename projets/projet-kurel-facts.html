@@ -2,155 +2,421 @@
 <html lang="fr">
 
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Kurel Facts - Données culturelles | PyCode</title>
+ <title> Lekkantu - Données nutritionnelles | PyCode - Données locales - Projets</title>
+  <meta name="description"
+content="Lekkantu est un projet de PyCode dédié aux données nutritionnelles sur les produits consommés au Sénégal et sa sous-région. Objectif : rendre l'information plus lisible, comparable et exploitable.">
 
-<meta name="description"
-content="Kurel Facts est un projet PyCode dédié à la structuration et l’analyse de données culturelles liées aux prestations, rythmes et dynamiques saisonnières.">
+  
+  <meta name="author" content="PyCode Group">
 
-<meta name="author" content="PyCode">
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://pycodegroup.com/projets/projet-lekkantu.html">
+  <link rel="alternate" href="https://pycodegroup.com/projets/projet-lekkantu.html" hreflang="fr-FR">
+  <link rel="alternate" href="https://pycodegroup.com/projets/projet-lekkantu.html" hreflang="x-default">
 
-<link rel="canonical" href="https://pycodegroup.com/projets/projet-kurel-facts.html">
+    <!-- Open Graph -->
+  <meta property="og:title" content="Lekkantu – Données nutritionnelles & transparence alimentaire">
+  <meta property="og:description" content="Projet PyCode fondé sur des données locales : structurer les informations des produits alimentaires pour les rendre comparables et réutilisables.">
+  <meta property="og:image" content="https://pycodegroup.com/assets/img/projets/lekkantu.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:url" content="https://pycodegroup.com/projets/projet-lekkantu.html">
+  <meta property="og:type" content="website">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Kurel Facts – Données culturelles structurées">
-<meta property="og:description" content="Structurer, mesurer et analyser les données culturelles liées aux prestations et dynamiques saisonnières.">
-<meta property="og:image" content="https://pycodegroup.com/assets/img/projets/kurel-hero.jpg">
-<meta property="og:type" content="website">
+    <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pycodegroup">
+  <meta name="twitter:title" content="Lekkantu | projet PyCode fondé sur des données locales">
+  <meta name="twitter:description" content="Projet PyCode fondé sur des données locales : structurer les informations des produits alimentaires pour les rendre comparables et réutilisables.">
+  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/projets/lekkantu.jpg">
+  
+  <!-- Bloc CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        form-action 'self';
+        object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests;
+      ">
 
-<!-- Fonts + Vendor -->
-<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- Bloc schema.org -->
+  <script type="application/ld+json">
+  {
+ "@context": "https://schema.org",
+ "@type": "Project",
+ "name": "Lekkantu",
+ "description": "...",
+ "url": "https://pycodegroup.com/projets/projet-lekkantu.html",
+ "creator": {
+   "@type": "Organization",
+   "name": "PyCode"
+ }
+}
+  </script>
 
-<link href="../assets/css/main-clean.css" rel="stylesheet">
+   <!-- Favicons -->
+  <link href="../assets/img/Logo-Favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts : preload + chargement -->
+   <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap"> 
+
+  <!-- Vendor CSS -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="../assets/css/main-clean.css" rel="stylesheet">
 <link href="../assets/css/kurel-facts.css" rel="stylesheet">
+
+  
+
 </head>
 
-<body class="project-page" data-project="kurel">
+<body class="service-details-page">
+ <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="../assets/img/logo-header.svg" alt="Logo PyCode" width="160" height="48">
+      </a>
+      <nav id="navmenu" class="navmenu">
+  <ul>
+      <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../services/data.html" >Données</a></li>
+    <li><a href="projets.html" class="active" aria-current="page">Projets</a></li>
+    <li><a href="../contact/contact.html">Contact</a></li>
+  </ul>
 
-<header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
-    <a href="../index.html" class="logo d-flex align-items-center">
-      <img src="../assets/img/logo-header.svg" alt="Logo PyCode" width="160" height="48">
-    </a>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="../index.html">Accueil</a></li>
-        <li><a href="../services/data.html">Données</a></li>
-        <li><a href="projets.html" class="active">Projets</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+   <button class="mobile-nav-toggle d-xl-none bi bi-list"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="navmenu"></button>   
+</nav>
+ </div>
+  </header>
+  <!-- /Header -->
+  
 <main class="main">
 
-<!-- HERO -->
-<section class="project-hero project-hero-bg-kurel">
-<div class="container">
+  <!-- Hero projet -->
+ <section class="project-hero project-hero-bg-lekkantu">
+  <div class="container">
 
-<nav aria-label="breadcrumb" class="project-breadcrumb mb-3">
-  <ol class="breadcrumb mb-1">
-    <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-    <li class="breadcrumb-item"><a href="projets.html">Projets</a></li>
-    <li class="breadcrumb-item active">Kurel Facts</li>
-  </ol>
-</nav>
+   <nav aria-label="breadcrumb" class="project-breadcrumb mb-3">
+      <ol class="breadcrumb mb-1">
+        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+        <li class="breadcrumb-item"><a href="projets.html">Projets</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lekkantu</li>
+      </ol>
+    </nav> 
 
-<div class="row align-items-center gy-4">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7">
 
-<div class="col-lg-7">
+        <span class="project-tag">
+          <span class="project-tag-dot"></span>
+          Nutrition &amp; Transparence 
+        </span>
 
-<span class="project-tag">
-<span class="project-tag-dot"></span>
-Culture & Données
-</span>
+        <h1 class="project-title mt-3">
+          Lekkantu - Données nutritionnelles et transparence alimentaire</h1>
 
-<h1 class="project-title mt-3">
-Kurel Facts – Structuration de données culturelles
-</h1>
+        <p class="project-subtitle">
+          Projet PyCode dédié à la collecte et l'organisation de données sur les produits alimentaires consommés au Sénégal et la sous-région pour rendre l'information nutritionnelle plus lisible et comparable.
+        </p>
 
-<p class="project-subtitle">
-Projet PyCode dédié à la collecte, l’organisation et l’analyse de données culturelles afin de mieux comprendre les dynamiques saisonnières, les rythmes et les évolutions.
-</p>
+      </div>
 
-</div>
+      <div class="col-lg-5 text-lg-end">
+        <img src="../assets/img/projets/lekkantu.jpg"
+             class="img-fluid rounded-4 shadow-lg project-hero-side-img"
+              alt="Lekkantu – données sur les produits alimentaires"
+             width="1024" height="768" decoding="async"
+     fetchpriority="high">
+      </div>
+    </div>
 
-<div class="col-lg-5 text-lg-end">
-<img src="../assets/img/projets/kurel-logo-transparent.png"
-class="img-fluid project-hero-side-img"
-alt="Logo Kurel Facts"
-width="600" height="600">
-</div>
-
-</div>
-</div>
+  </div>
 </section>
 
-<!-- 4 POINTS -->
 <section class="project-summary">
-<div class="container">
+  <div class="container">
 
-<div class="project-summary-header">
-<h2>Le projet en 4 points</h2>
-<p class="project-summary-sub">
-Un cadre structuré pour analyser les dynamiques culturelles.
-</p>
-</div>
-
-<div class="row gy-4">
-
-<div class="col-md-6 col-lg-3">
-<div class="qcard">
-<div class="qcard-head">
-<span class="qbadge">Objet</span>
-</div>
-<h3>Données culturelles</h3>
-<p>Structuration des prestations, rythmes et occurrences.</p>
-</div>
+   <div class="project-summary-header">
+  <h2>Le projet en 4 points</h2>
+  <p class="project-summary-sub">
+    Le projet repose sur quatre principes clés.
+  </p>
+     
 </div>
 
-<div class="col-md-6 col-lg-3">
-<div class="qcard">
-<div class="qcard-head">
-<span class="qbadge">Mission</span>
-</div>
-<h3>Mesurer & comprendre</h3>
-<p>Transformer des observations qualitatives en données exploitables.</p>
-</div>
-</div>
+    <div class="row gy-4">
 
-<div class="col-md-6 col-lg-3">
-<div class="qcard">
-<div class="qcard-head">
-<span class="qbadge">Cible</span>
-</div>
-<h3>Acteurs & chercheurs</h3>
-<p>Institutions, chercheurs, médias et grand public.</p>
-</div>
-</div>
+      <div class="col-md-6 col-lg-3">
+        <div class="qcard">
+          <div class="qcard-head">
+            <span class="qbadge">Le projet</span>
+          </div>
+          <h3>Lekkantu</h3>
+          <p>
+            Une base de données sur les produits alimentaires consommés au Sénégal et la sous-région.
+          </p>
+          <small class="qcard-hint">
+  Un outil pour comprendre et comparer.
+</small>
+        </div>
+      </div>
 
-<div class="col-md-6 col-lg-3">
-<div class="qcard">
-<div class="qcard-head">
-<span class="qbadge">Approche</span>
-</div>
-<h3>Collecte & structuration</h3>
-<p>Observation terrain et structuration progressive.</p>
-</div>
-</div>
+      <div class="col-md-6 col-lg-3">
+        <div class="qcard">
+          <div class="qcard-head">
+            <span class="qbadge">Mission</span>
+          </div>
+          <h3>Transparence</h3>
+          <p>
+            Rendre lisibles et comparables les informations nutritionnelles des produits.
+          </p>
+          <small class="qcard-hint">
+ Favoriser des choix plus éclairés.
+</small>
+        </div>
+      </div>
 
+      <div class="col-md-6 col-lg-3">
+        <div class="qcard">
+          <div class="qcard-head">
+            <span class="qbadge">Cible</span>
+          </div>
+          <h3>Grand public & acteurs</h3>
+          <p>
+            Consommateurs, professionnels de santé, chercheurs, institutions, médias.
+          </p>
+           <small class="qcard-hint">
+ Du citoyen aux acteurs publics.
+</small>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="qcard">
+          <div class="qcard-head">
+            <span class="qbadge">Démarche</span>
+          </div>
+          <h3>Collecte, structuration et valorisation</h3>
+          <p>
+            Collecte terrain, données d’étiquetage structurées et exploitation responsable.
+          </p>
+                   <small class="qcard-hint">
+ Une approche progressive et maîtrisée.
+</small>
+        </div>
+      </div>
+
+    </div>
+
+  <div class="section-divider"></div>
+
+
+<div class="project-content project-block">
+  
+  <p>
+        L’information nutritionnelle est largement présente sur les produits alimentaires.
+        Pourtant, elle reste souvent difficile à lire, à comparer et à exploiter.
+      </p>
+
+      <p>
+        Entre la diversité des formats et la complexité des étiquettes,
+        l’accès à une information réellement utilisable demeure limité.
+      </p>
+
+      <p class="project-pivot">
+        Mieux comprendre ce que l'on consomme 
+      </p>
+
+      <p>
+        Lekkantu agit sur la structuration de données issues de produits alimentaires afin de produire des informations
+        plus lisibles et compréhensibles pour le consommateur.
+      </p>
+
+      <ul class="project-list">
+        <li>Identification des produits (marque, catégorie, format)</li>
+        <li>Composition et ingrédients</li>
+        <li>Informations nutritionnelles disponibles</li>
+      </ul>
+
+  <p>
+        La collecte des données s'opère prioritairement sur le terrain, les premiers jeux de données sont en constitution. L’état d’avancement et les indicateurs du projet sont consultables sur le <a href="https://lekkantu.com">site dédié</a>.
+      </p>
+   
 </div>
 </div>
+  
 </section>
 
-</main>
+     
+  
+  <section class="project-cta-section">
+  <div class="container">
 
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-<script src="../assets/js/main-clean.js" defer></script>
+    <div class="project-cta-card">
+      <div class="row align-items-center gy-3">
 
+        <div class="col-lg-8">
+          <p class="project-cta-eyebrow mb-2">Aller plus loin</p>
+          <h2 class="project-cta-title mb-2">Découvrir Lekkantu</h2>
+          <p class="project-cta-text mb-0">
+            Accédez au site dédié pour en savoir plus. L'actualité de Lekkantu est également présente sur LinkedIn.
+          </p>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="project-cta-actions">
+            <a href="https://lekkantu.com"
+               class="btn project-btn-primary project-cta-btn"
+               target="_blank" rel="noopener" aria-label="Ouvrir le site Lekkantu">
+              Accéder à lekkantu.com
+            </a>
+
+           
+
+            
+
+             <a href="https://linkedin.com/company/lekkantu"
+               class="btn project-btn-secondary project-cta-btn"
+               target="_blank" rel="noopener" aria-label="Suivre Lekkantu sur LinkedIn">
+              <i class="bi bi-linkedin me-1"></i> Suivre sur LinkedIn
+            </a>
+          </div>
+          
+          
+        </div>
+
+      </div>
+
+      <p class="project-cta-contact">
+  Une question sur le projet ?
+  <a href="../contact/contact.html" aria-label="Nous contacter">Nous contacter</a>
+      </p>
+      
+    </div>
+
+  </div>
+</section>
+
+<nav class="page-backlinks container" aria-label="Navigation secondaire">
+  <p class="text-muted mb-0">
+    ← <a href="projets.html" aria-label="Découvrir les autres projets">Voir les autres projets</a>
+  </p>
+</nav>
+</main>  
+  
+  
+ <!-- Footer (identique à l’index) -->
+   <footer id="footer" class="footer dark-background">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Identité -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="../index.html" class="logo d-flex align-items-center mb-3">
+            <img src="../assets/img/logo-footer.svg" alt="PyCode Group" width="120" height="30" loading="lazy">
+          </a>
+          <p class="text-white-50 small">
+            Données locales et projets.
+          </p>
+        </div>
+
+        <!-- Liens utiles -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../services/data.html">Données</a></li>
+            <li><a href="projets.html">Projets</a></li>
+          </ul>
+        </div>
+
+        <!-- Activités -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Projets</h4>
+          <ul>
+            <li><a href="projet-lekkantu.html">Lekkantu</a></li>
+            <li><a href="projets.html#sunugoal">SunuGoal</a></li>
+            <li><a href="projets.html#kurel-facts">Kurel Facts</a>   </li>
+          </ul>
+        </div> 
+
+        <!-- Légal -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Infos légales</h4>
+          <ul>
+            <li><a href="../legales/mentions-legales.html">Mentions légales</a></li>
+            <li><a href="../legales/confidentialite.html">Confidentialité</a></li>
+            <li><a href="../legales/conditions.html">Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bas du footer -->
+  <div class="copyright text-center">
+    <div class="container d-flex flex-column flex-lg-row
+         justify-content-center justify-content-lg-between align-items-center">
+
+      <div class="d-flex flex-column align-items-center align-items-lg-start footer-copyright">
+  <div>
+    © <strong><span class="footer-brand">PyCode</span></strong>
+    <span id="copyright-year" class="footer-year"></span>
+  </div>
+  <div class="credits small">
+    Tous droits réservés
+  </div>
+      </div>
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+        <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  </footer>
+    
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main-clean.js" defer></script>
+  
+  <!-- Dynamic Year -->
+  <script>
+  (function () {
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  })();
+  </script>
+      
 </body>
-  </html>
+
+</html>
