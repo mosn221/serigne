@@ -1,0 +1,37 @@
+/* ==========================================================
+   KUREL FACTS – CSS dédié
+   ========================================================== */
+
+:root{
+  --kurel-blue: #1F2A44;
+  --kurel-gold: #E3B23C;
+  --kurel-teal: #2FA8A3;
+}
+
+/* HERO clair élégant */
+.project-hero-bg-kurel{
+  background:
+    radial-gradient(70% 60% at 12% 18%, rgba(47,168,163,0.12), transparent 60%),
+    radial-gradient(60% 60% at 90% 10%, rgba(227,178,60,0.18), transparent 60%),
+    linear-gradient(135deg, #F5F7FA 0%, #EEF1F5 50%, #FFFFFF 100%);
+}
+
+/* Texte bleu pétrole */
+.project-hero-bg-kurel .project-title{
+  color: var(--accent-color);
+}
+
+.project-hero-bg-kurel .project-subtitle{
+  color: #2E4057;
+}
+
+.project-hero-bg-kurel .project-tag-dot{
+  background-color: var(--kurel-gold);
+}
+
+/* Ajustement logo */
+.project-hero-bg-kurel .project-hero-side-img{
+  max-width: 260px;
+  box-shadow: none;
+  border: none;
+}
