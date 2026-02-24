@@ -482,6 +482,16 @@
   color: #F4F6F9;
 }
 
+.project-hero-bg-kurel{
+  background: linear-gradient(
+    135deg,
+    #1B2740 0%,
+    #243657 40%,
+    #2F5D73 100%
+  );
+  color: #F4F6F9;
+}
+
 .project-hero-bg-kurel .project-title{
   color: #F4F6F9;
 }
