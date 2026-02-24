@@ -466,3 +466,22 @@
   border-radius: 999px;
   background: var(--pc-sun);
    }
+
+.project-hero-bg-kurel{
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.88),
+      rgba(255,255,255,0.92)
+    ),
+    url("../img/projets/kurel-hero.jpg") center/cover no-repeat;
+}
+
+/* On garde le texte bleu pétrole */
+.project-hero-bg-kurel .project-title{
+  color: var(--accent-color);
+}
+
+.project-hero-bg-kurel .project-subtitle{
+  color: #2E4057;
+}
