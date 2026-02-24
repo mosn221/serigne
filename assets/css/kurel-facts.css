@@ -540,3 +540,12 @@
 .project-hero-bg-kurel .project-breadcrumb .breadcrumb-item + .breadcrumb-item::before{
   color: rgba(255,255,255,0.45);
 }
+
+
+.project-hero-bg-kurel .project-title{
+  color: #F4F1EA;
+}
+
+.project-hero-bg-kurel .project-subtitle{
+  color: rgba(244,241,234,0.88);
+}
