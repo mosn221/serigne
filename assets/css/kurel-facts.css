@@ -573,3 +573,42 @@
 .project-summary{
   padding-top: 34px; /* au lieu de 20px */
 }
+
+/* ==================================================
+   QCARDS – KUREL FACTS
+   ================================================== */
+
+.project-page[data-project="kurel"] .qcard{
+  background: #FFFFFF;
+  border: 1px solid rgba(31,42,68,0.08);
+  box-shadow: 0 10px 30px rgba(31,42,68,0.06);
+  transition: all 0.25s ease;
+}
+
+/* Hover subtil */
+.project-page[data-project="kurel"] .qcard:hover{
+  transform: translateY(-4px);
+  border-color: rgba(47,168,163,0.35);
+  box-shadow: 0 14px 36px rgba(31,42,68,0.12);
+}
+
+
+.project-page[data-project="kurel"] .qcard h3::after{
+  content:"";
+  display:block;
+  width:38px;
+  height:2px;
+  margin-top:8px;
+  background: linear-gradient(
+    to right,
+    #2FA8A3,
+    #E3B23C
+  );
+  border-radius:2px;
+}
+
+.project-page[data-project="kurel"] .qbadge{
+  background: rgba(47,168,163,0.12);
+  color: #1F3A5F;
+  border: 1px solid rgba(47,168,163,0.25);
+}
