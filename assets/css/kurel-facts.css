@@ -508,3 +508,35 @@
   background-color: #E3B23C;
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
+
+
+/* Breadcrumb lisible sur fond sombre */
+.project-hero-bg-kurel .project-breadcrumb .breadcrumb{
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: .9rem;
+}
+
+.project-hero-bg-kurel .project-breadcrumb a{
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.project-hero-bg-kurel .project-breadcrumb a:hover{
+  color: rgba(255,255,255,0.95);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.project-hero-bg-kurel .project-breadcrumb .breadcrumb-item.active{
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+}
+
+/* Séparateur "/" */
+.project-hero-bg-kurel .project-breadcrumb .breadcrumb-item + .breadcrumb-item::before{
+  color: rgba(255,255,255,0.45);
+}
