@@ -471,8 +471,8 @@
   position: relative;
   background:
     linear-gradient(
-      rgba(255,255,255,0.65),
-      rgba(255,255,255,0.70)
+      rgba(255,255,255,0.70),
+      rgba(255,255,255,0.75)
     ),
     url("../img/projets/bg-kurel-facts-1.png") center/cover no-repeat;
 }
