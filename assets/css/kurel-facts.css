@@ -492,3 +492,19 @@
 .project-hero-bg-kurel .project-tag-dot{
   background-color: #E3B23C;
 }
+
+/* Tag (pill) – lisible sur hero dégradé */
+.project-hero-bg-kurel .project-tag{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+/* Point doré */
+.project-hero-bg-kurel .project-tag-dot{
+  background-color: #E3B23C;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
