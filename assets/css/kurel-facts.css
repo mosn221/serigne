@@ -471,23 +471,12 @@
 /* ==================================================
    HERO KUREL FACTS – Dégradé officiel
    ================================================== */
-
 .project-hero-bg-kurel{
   background: linear-gradient(
     135deg,
-    #1F2A44 0%,
-    #243657 45%,
-    #2FA8A3 100%
-  );
-  color: #F4F6F9;
-}
-
-.project-hero-bg-kurel{
-  background: linear-gradient(
-    135deg,
-    #1B2740 0%,
-    #243657 40%,
-    #2F5D73 100%
+    #2FA8A3 0%,
+    #1F3A5F 50%,
+    #1B2740 100%
   );
   color: #F4F6F9;
 }
