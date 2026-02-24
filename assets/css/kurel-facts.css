@@ -578,7 +578,7 @@
    QCARDS – KUREL FACTS
    ================================================== */
 
-.project-page[data-project="kurel"] .qcard{
+.qcard{
   background: #FFFFFF;
   border: 1px solid rgba(31,42,68,0.08);
   box-shadow: 0 10px 30px rgba(31,42,68,0.06);
@@ -586,14 +586,14 @@
 }
 
 /* Hover subtil */
-.project-page[data-project="kurel"] .qcard:hover{
+.qcard:hover{
   transform: translateY(-4px);
   border-color: rgba(47,168,163,0.35);
   box-shadow: 0 14px 36px rgba(31,42,68,0.12);
 }
 
 
-.project-page[data-project="kurel"] .qcard h3::after{
+.qcard h3::after{
   content:"";
   display:block;
   width:38px;
@@ -607,7 +607,7 @@
   border-radius:2px;
 }
 
-.project-page[data-project="kurel"] .qbadge{
+.qbadge{
   background: rgba(47,168,163,0.12);
   color: #1F3A5F;
   border: 1px solid rgba(47,168,163,0.25);
