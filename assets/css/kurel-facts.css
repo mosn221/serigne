@@ -549,3 +549,27 @@
 .project-hero-bg-kurel .project-subtitle{
   color: rgba(244,241,234,0.88);
 }
+
+
+/* Fondu bas du hero vers le fond global */
+.project-hero-bg-kurel{
+  position: relative;
+}
+
+.project-hero-bg-kurel::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 90px;
+  background: linear-gradient(
+    to bottom,
+    rgba(240,238,233,0) 0%,
+    rgba(240,238,233,1) 100%
+  );
+  pointer-events:none;
+}
+
+/* Un peu plus de respiration après le hero */
+.project-summary{
+  padding-top: 34px; /* au lieu de 20px */
+}
