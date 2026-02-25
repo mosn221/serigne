@@ -487,6 +487,15 @@
   );
   color: #F4F6F9;
 }
+.project-hero-bg-kurel{
+  background: linear-gradient(
+    150deg,
+    rgba(47,168,163,0.18) 0%,
+    rgba(31,58,95,0.15) 60%,
+    rgba(27,39,64,0.12) 100%
+  );
+  color: #1F2A44;
+}
 
 .project-hero-bg-kurel .project-title{
   color: #F4F6F9;
