@@ -594,7 +594,7 @@
   color: rgba(31,42,68,0.72);
 }
 
-.qcard{
+.project-summary .qcard{
   background: #FFFFFF;
   border: 1px solid rgba(31,42,68,0.08);
   box-shadow: 0 12px 32px rgba(31,42,68,0.08);
@@ -602,32 +602,32 @@
 }
 
 /* Trait supérieur plus fin et plus élégant */
-.qcard::before{
+.project-summary .qcard::before{
   height: 3px;
   background: linear-gradient(90deg, #2FA8A3, #E3B23C);
   opacity: 0.85;
 }
 
 /* Hover subtil */
-.qcard:hover{
+.project-summary .qcard:hover{
   transform: translateY(-4px);
   border-color: rgba(47,168,163,0.35);
   box-shadow: 0 18px 42px rgba(31,42,68,0.14);
 }
 
 
-.qbadge{
+.project-summary .qbadge{
   background: rgba(47,168,163,0.12);
   border: 1px solid rgba(47,168,163,0.25);
   color: rgba(31,42,68,0.95);
 }
 
-.qcard h3{
+.project-summary .qcard h3{
   color: rgba(31,42,68,0.95);
 }
 
 /* Petit trait fin sous le titre */
-.qcard h3::after{
+.project-summary .qcard h3::after{
   content:"";
   display:block;
   width: 34px;
@@ -637,15 +637,12 @@
   background: rgba(47,168,163,0.65);
 }
 
-.qcard p{
+.project-summary .qcard p{
   color: rgba(31,42,68,0.82);
 }
 
-.qcard-hint{
+.project-summary .qcard-hint{
   color: rgba(31,42,68,0.62);
 }
 
 
-.qcard{
-  border: 5px solid red !important;
-}
