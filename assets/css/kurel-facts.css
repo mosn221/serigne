@@ -705,3 +705,52 @@
 .project-hero-bg-kurel .project-subtitle{
   color: rgba(31,42,68,0.85);
 }
+
+/* ==================================================
+   HERO KUREL – Couleurs texte complètes
+   ================================================== */
+
+/* Couleur générale du hero */
+.project-hero-bg-kurel{
+  color: #F4F1EA;
+}
+
+/* Titre principal */
+.project-hero-bg-kurel .project-title{
+  color: #F4F1EA;
+}
+
+/* Sous-titre */
+.project-hero-bg-kurel .project-subtitle{
+  color: rgba(244,241,234,0.88);
+}
+
+/* Breadcrumb liens */
+.project-hero-bg-kurel .project-breadcrumb a{
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+}
+
+/* Breadcrumb actif */
+.project-hero-bg-kurel .project-breadcrumb .breadcrumb-item.active{
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+}
+
+/* Séparateur "/" */
+.project-hero-bg-kurel .project-breadcrumb 
+.breadcrumb-item + .breadcrumb-item::before{
+  color: rgba(255,255,255,0.45);
+}
+
+/* Tag (Culture & transmission) */
+.project-hero-bg-kurel .project-tag{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.92);
+}
+
+/* Point doré du tag */
+.project-hero-bg-kurel .project-tag-dot{
+  background-color: #E3B23C;
+}
