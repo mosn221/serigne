@@ -644,3 +644,8 @@
 .qcard-hint{
   color: rgba(31,42,68,0.62);
 }
+
+
+.qcard{
+  border: 5px solid red !important;
+}
