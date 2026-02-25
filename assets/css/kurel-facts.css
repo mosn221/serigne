@@ -754,3 +754,104 @@
 .project-hero-bg-kurel .project-tag-dot{
   background-color: #E3B23C;
 }
+
+
+/* ==================================================
+   HERO KUREL – Version plus foncée
+   ================================================== */
+
+.project-hero-bg-kurel{
+  background: linear-gradient(
+    155deg,
+    #2FA8A3 0%,
+    #1F3A5F 45%,
+    #162236 80%,
+    #0F1B2C 100%
+  );
+  color: #F4F1EA;
+}
+
+/* Titre principal */
+.project-hero-bg-kurel .project-title{
+  color: #F4F1EA;
+}
+
+/* Sous-titre */
+.project-hero-bg-kurel .project-subtitle{
+  color: rgba(244,241,234,0.90);
+}
+
+/* Breadcrumb */
+.project-hero-bg-kurel .project-breadcrumb a{
+  color: rgba(255,255,255,0.78);
+}
+
+.project-hero-bg-kurel .breadcrumb-item.active{
+  color: rgba(255,255,255,0.95);
+}
+
+.project-hero-bg-kurel 
+.breadcrumb-item + .breadcrumb-item::before{
+  color: rgba(255,255,255,0.40);
+}
+
+/* Tag */
+.project-hero-bg-kurel .project-tag{
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.20);
+  color: rgba(255,255,255,0.95);
+}
+
+/* Point doré */
+.project-hero-bg-kurel .project-tag-dot{
+  background-color: #E3B23C;
+   }
+
+/* ==================================================
+   HERO KUREL – Version culturelle
+   ================================================== */
+
+.project-hero-bg-kurel{
+  background: linear-gradient(
+    160deg,
+    #2A9C98 0%,      /* turquoise adouci */
+    #1E3A56 40%,     /* bleu culturel */
+    #132235 75%,     /* bleu nuit */
+    #0C1826 100%     /* profondeur */
+  );
+  color: #F4F1EA;
+}
+
+.project-hero-bg-kurel .project-title{
+  color: #F4F1EA; /* blanc cassé noble */
+}
+
+.project-hero-bg-kurel .project-subtitle{
+  color: rgba(244,241,234,0.88);
+}
+
+/* Breadcrumb */
+.project-hero-bg-kurel .project-breadcrumb a{
+  color: rgba(255,255,255,0.75);
+}
+
+.project-hero-bg-kurel .breadcrumb-item.active{
+  color: rgba(255,255,255,0.95);
+}
+
+.project-hero-bg-kurel 
+.breadcrumb-item + .breadcrumb-item::before{
+  color: rgba(255,255,255,0.35);
+}
+
+/* Tag */
+.project-hero-bg-kurel .project-tag{
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.95);
+}
+
+/* Dot doré culturel */
+.project-hero-bg-kurel .project-tag-dot{
+  background-color: #E3B23C;
+}
