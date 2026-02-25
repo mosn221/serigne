@@ -669,3 +669,11 @@
   box-shadow: 0 16px 42px rgba(31,42,68,0.10);
   padding: 22px 22px;
 }
+
+
+.project-btn-secondary.disabled{
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: default;
+  filter: grayscale(20%);
+}
