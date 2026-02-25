@@ -655,4 +655,17 @@
   color: rgba(31,42,68,0.62);
 }
 
-
+/* CTA card – Kurel (light gradient du hero) */
+.project-cta-card{
+  border-radius: 22px;
+  border: 1px solid rgba(31,42,68,0.10);
+  background:
+    linear-gradient(
+      150deg,
+      rgba(47,168,163,0.08) 0%,
+      rgba(31,58,95,0.06) 60%,
+      rgba(27,39,64,0.05) 100%
+    );
+  box-shadow: 0 16px 42px rgba(31,42,68,0.10);
+  padding: 22px 22px;
+}
