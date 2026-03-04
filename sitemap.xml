@@ -32,27 +32,15 @@
   </url>
 
   <url>
+    <loc>https://pycodegroup.com/projets/projet-sunugoal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://pycodegroup.com/contact/contact.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://pycodegroup.com/legales/mentions-legales.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://pycodegroup.com/legales/confidentialite.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://pycodegroup.com/legales/conditions.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
