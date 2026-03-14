@@ -1,311 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>PyCode — Data Platforms & Digital Tools</title>
+  <meta
+    name="description"
+    content="PyCode builds data platforms and digital tools for organizations and data-driven projects."
+  />
 
-  <meta name="description"
-      content="PyCode develops data platforms, backend systems and digital tools to help organizations collect, structure and use data." />
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="PyCode">
+  <meta property="og:title" content="PyCode — Data Platforms & Digital Tools" />
+  <meta
+    property="og:description"
+    content="PyCode builds data platforms and digital tools for organizations and data-driven projects."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pycode.tech/" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://pycodegroup.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Hreflang -->
-  <link rel="alternate" href="https://pycodegroup.com/" hreflang="en">
-  <link rel="alternate" href="https://pycodegroup.com/" hreflang="x-default">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #11182d;
+      --card: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f5f7fa;
+      --muted: #b9c2d0;
+      --primary: #007c91;
+      --accent: #ffc300;
+      --max-width: 1120px;
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    }
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="PyCode — Data Platforms & Digital Tools">
-  <meta property="og:description" content="We build platforms and digital systems to collect, structure and use data.">
-  <meta property="og:url" content="https://pycodegroup.com/">
-  <meta property="og:site_name" content="PyCode">
-  <meta property="og:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
+    * {
+      box-sizing: border-box;
+    }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://pycodegroup.com/assets/img/og-pycodegroup.png">
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <!-- CSP -->
-  <meta http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline';
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self';
-        form-action 'self';
-        object-src 'none';
-        base-uri 'self';
-        upgrade-insecure-requests;
-      ">
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 191, 166, 0.12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255, 195, 0, 0.12), transparent 30%),
+        linear-gradient(180deg, #0a0f1d 0%, #10182b 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/Logo-Favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap">
+    .container {
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin: 0 auto;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main-clean.css" rel="stylesheet">
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo-header.svg" width="800" height="200" alt="PyCode">
-      </a>
-
-      <!-- Navigation -->
-      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-          <li><a href="services/data.html">Services</a></li>
-          <li><a href="projets/projets.html">Projects</a></li>
-          <li><a href="contact/contact.html">Contact</a></li>
-        </ul>
-        <button class="mobile-nav-toggle d-xl-none bi bi-list"
-          type="button"
-          aria-label="Open menu"
-          aria-controls="navmenu"></button>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="container">
-        <h1>Data Platforms & Digital Tools</h1>
-        <p class="hero-subtitle">
-          PyCode builds platforms and systems to collect, structure and use data.
-        </p>
-      </div>
-    </section>
-
-    <!-- Intro Section -->
-    <section class="projects" aria-label="PyCode overview">
-      <div class="container">
-
-        <div class="projects-intro">
-          <p class="projects-intro__highlight">
-            PyCode is a digital studio focused on <strong>data platforms</strong>, backend systems and custom tools.
-          </p>
-
-          <p>
-            We help organizations design and build reliable systems to collect, organize and manage data across different workflows and sectors.
-          </p>
-
-          <p>
-            Our work combines platform development, backend engineering and data management to create tools that are clear, maintainable and useful over time.
-          </p>
-        </div>
-
-        <!-- Project Grid Section -->
-        <h2 class="section-title mt-4">Selected Projects</h2>
-        <div class="projects-grid">
-
-          <!-- Project 1 -->
-          <a href="projets/projet-lekkantu.html" class="project-link" aria-label="View Lekkantu project">
-            <article class="project-card">
-              <div class="project-media">
-                <img src="assets/img/projets/lekkantu.jpg"
-                     alt="Lekkantu – food product data platform"
-                     loading="lazy" width="1024" height="768">
-                <span class="project-badge">Data Platform</span>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Lekkantu</h3>
-                <p class="project-desc">
-                  Platform for structured food product data, nutrition information and consumer-facing data organization.
-                </p>
-                <span class="project-cta">View project <span aria-hidden="true">→</span></span>
-              </div>
-            </article>
-          </a>
-
-          <!-- Project 2 -->
-          <a href="projets/projets.html#sunugoal" class="project-link" aria-label="View SunuGoal project">
-            <article class="project-card">
-              <div class="project-media">
-                <img src="assets/img/projets/yalistats.jpg"
-                     alt="SunuGoal – football data platform"
-                     loading="lazy" width="1024" height="768">
-                <span class="project-badge">Sports Data</span>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">SunuGoal</h3>
-                <p class="project-desc">
-                  Platform concept for structured football data, competition tracking and performance analysis.
-                </p>
-                <span class="project-cta">View project <span aria-hidden="true">→</span></span>
-              </div>
-            </article>
-          </a>
-
-          <!-- Project 3 -->
-          <a href="projets/projet-kurel-facts.html" class="project-link" aria-label="View Kurel Facts project">
-            <article class="project-card">
-              <div class="project-media">
-                <img src="assets/img/projets/daaray-kurel.jpg"
-                     alt="Kurel Facts – cultural data and documentation platform"
-                     loading="lazy" width="1024" height="768">
-                <span class="project-badge">Cultural Data</span>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Kurel Facts</h3>
-                <p class="project-desc">
-                  Structured documentation project for cultural content, archives and long-term access to organized resources.
-                </p>
-                <span class="project-cta">View project <span aria-hidden="true">→</span></span>
-              </div>
-            </article>
-          </a>
-        </div>
-
-        <!-- Outro -->
-        <p class="projects-outro">
-          These projects illustrate PyCode’s approach to building digital systems around structured information, usable workflows and long-term data value.
-        </p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-5 py-lg-6 cta-exchange" aria-label="Work with PyCode" id="contact_us">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7">
-            <h2 class="h3 mb-3">Work with PyCode</h2>
-            <p class="mb-4 text-muted" style="max-width: 62ch;">
-              If you are building a data-driven project or need a reliable backend platform, we would be happy to hear from you.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <a href="contact/contact.html" class="btn btn-solar px-4 py-2">
-                Contact us<span class="ms-1" aria-hidden="true">→</span>
-              </a>
-
-              <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"
-                 class="btn btn-outline-solar px-4 py-2">
-                Follow us<span class="ms-1" aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-
-          <!-- Identity -->
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center mb-3">
-              <img src="assets/img/logo-footer.svg" alt="PyCode" width="120" height="30" loading="lazy">
-            </a>
-            <p class="text-white-50 small">
-              Data Platforms & Digital Tools
-            </p>
-          </div>
-
-          <!-- Navigation -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Navigation</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services/data.html">Services</a></li>
-              <li><a href="projets/projets.html">Projects</a></li>
-            </ul>
-          </div>
-
-          <!-- Projects -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Projects</h4>
-            <ul>
-              <li><a href="projets/projet-lekkantu.html">Lekkantu</a></li>
-              <li><a href="projets/projets.html#sunugoal">SunuGoal</a></li>
-              <li><a href="projets/projet-kurel-facts.html">Kurel Facts</a></li>
-            </ul>
-          </div>
-
-          <!-- Legal -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="legales/mentions-legales.html">Legal Notice</a></li>
-              <li><a href="legales/confidentialite.html">Privacy</a></li>
-              <li><a href="legales/conditions.html">Terms</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Footer -->
-    <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-        <div class="d-flex flex-column align-items-center align-items-lg-start footer-copyright">
-          <div>
-            © <strong><span class="footer-brand">PyCode®</span></strong>
-            <span id="copyright-year" class="footer-year"></span>
-          </div>
-          <div class="credits small">
-            All rights reserved
-          </div>
-        </div>
-
-        <!-- Social links -->
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://x.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://instagram.com/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-          <a href="https://linkedin.com/company/pycodegroup" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main-clean.js"></script>
-
-  <!-- Dynamic Year -->
-  <script>
-    (function () {
-      var yearEl = document.getElementById('copyright-year');
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
-
-</body>
-</html>
+    .site-header {
+      padding: 1
