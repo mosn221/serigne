@@ -73,6 +73,46 @@
       padding: 1.1rem 0;
     }
 
+    .header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 18px 0;
+  transition: all 0.4s ease;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+}
+
+@media (max-width: 576px) {
+  .header .logo img {
+    height: 36px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+.scrolled .header {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
     .nav {
       display: flex;
       align-items: center;
@@ -429,9 +469,10 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav">
-        <a href="/" class="brand">
-  <img src="assets/img/logo-header.svg" alt="PyCode" class="brand-logo">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="PyCode home">
+  <img src="assets/img/logo-header.svg" alt="PyCode" width="160" height="48">
         </a>
+        
         
 
         <div class="nav-links">
