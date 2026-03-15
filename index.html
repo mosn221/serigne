@@ -177,27 +177,50 @@
   }
 
   .navmenu {
-    position: absolute;
-    top: 100%;
-    left: 1rem;
-    right: 1rem;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    padding: 0.75rem 1rem;
-    display: none;
+
+    padding: 2rem 1.5rem;
+
+    box-shadow: 8px 0 30px rgba(0,0,0,0.08);
+
+    transition: left 0.3s ease;
+
+    z-index: 999;
   }
 
   .navmenu ul {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.9rem;
+    gap: 1.5rem;
   }
 
   .navmenu.is-open {
-    display: block;
-  }
+    left: 0;
+    }
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.4);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.25s ease;
+
+  z-index: 998;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 }
 
     .eyebrow {
@@ -261,7 +284,7 @@
     </button>
   </div>
   </header>
-  
+  <div id="menu-overlay" class="menu-overlay"></div>
 
   <main>
     <section class="hero">
@@ -419,7 +442,8 @@ PyCode est ouvert aux collaborations.
   </footer>
 
 
-  <script>
+ <!-- <script>
+    
   const toggleBtn = document.getElementById("mobile-nav-toggle");
   const navMenu = document.getElementById("navmenu");
 
@@ -429,6 +453,23 @@ PyCode est ouvert aux collaborations.
       toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   }
+  </script> -->
+
+
+  <script>
+const toggle = document.getElementById("mobile-nav-toggle");
+const menu = document.getElementById("navmenu");
+const overlay = document.getElementById("menu-overlay");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("is-open");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("is-open");
+  overlay.classList.remove("active");
+});
   </script>
 </body>
 </html>
