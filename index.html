@@ -73,6 +73,33 @@
         
 </head>
 <body>
+  <header id="header" class="header">
+  <div class="container header-container">
+    <a href="index.html" class="logo" aria-label="Accueil PyCode.tech">
+      <img src="assets/img/logo-header.svg" alt="PyCode" width="160" height="48">
+    </a>
+
+    <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#expertises">Expertises</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button
+      class="mobile-nav-toggle"
+      id="mobile-nav-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-controls="navmenu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </div>
+  </header>
   <header class="site-header">
     <div class="container">
       <nav class="nav">
@@ -246,6 +273,18 @@ PyCode est ouvert aux collaborations.
       </div>
     </div>
   </footer>
-  
+
+
+  <script>
+  const toggleBtn = document.getElementById("mobile-nav-toggle");
+  const navMenu = document.getElementById("navmenu");
+
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("is-open");
+      toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+  </script>
 </body>
 </html>
