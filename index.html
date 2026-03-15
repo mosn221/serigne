@@ -24,6 +24,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -51,12 +52,15 @@
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
+      font-family: 'Poppins', sans-serif;
+    
       background:
         radial-gradient(circle at top left, rgba(0, 191, 166, 0.12), transparent 35%),
         radial-gradient(circle at bottom right, rgba(255, 195, 0, 0.12), transparent 30%),
         linear-gradient(180deg, #0a0f1d 0%, #10182b 100%);
       color: var(--text);
       min-height: 100vh;
+      line-height: 1.6;
     }
 
     a {
@@ -215,7 +219,10 @@
   font-size: 0.95rem;
   transition: 0.2s ease;
       font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
+    
 
 .nav-links a:hover {
   color: #007c91;
@@ -254,14 +261,30 @@
       line-height: 0.96;
       letter-spacing: -0.04em;
       max-width: 12ch;
+      
+  letter-spacing: -0.02em;
+      
     }
 
+    h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+    }
     .hero p {
       margin: 1.3rem 0 0;
       max-width: 58ch;
       font-size: 1.06rem;
       line-height: 1.75;
       color: var(--muted);
+    }
+
+    .hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+    }
+
+    p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
     }
 
     .hero-actions {
