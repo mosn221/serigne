@@ -347,6 +347,10 @@
   color: #007C91;
 }
 
+.contact-link:active {
+  transform: translateY(0);
+}
+
     .site-footer {
     padding: 2rem 0 2.6rem;
     color: var(--muted);
