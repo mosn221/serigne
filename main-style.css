@@ -328,18 +328,24 @@
     margin-top: 1.15rem;
     }
 
-    .contact-link {
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    color: var(--text);
-    background: rgba(255, 255, 255, 0.03);
-    font-weight: 600;
-    }
+  
 
-    .contact-link:hover {
-    background: rgba(255, 255, 255, 0.07);
-    }
+.contact-link {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,124,145,0.35);
+  background: rgba(0,124,145,0.06);
+  color: #007C91;
+}
 
     .site-footer {
     padding: 2rem 0 2.6rem;
