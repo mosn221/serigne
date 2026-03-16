@@ -186,20 +186,36 @@
 
     background: #ffffff;
 
-    padding: 2rem 1.5rem;
+    
+    padding: 5rem 1rem 2rem;
 
     box-shadow: 8px 0 30px rgba(0,0,0,0.08);
 
     transition: left 0.3s ease;
 
     z-index: 999;
+    overflow-y: auto;
   }
+  navmenu a {
+  display: block;
+  width: 100%;
+  padding: 0.1rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1A1A2E;
 
   .navmenu ul {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: flex-start;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
   }
 
+  navmenu li {
+  width: 100%;
+  }
   .navmenu.is-open {
     left: 0;
     }
@@ -221,6 +237,23 @@
   opacity: 1;
   visibility: visible;
 }
+
+    .mobile-nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  color: #1A1A2E;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+    }
+
+    body.menu-open {
+  overflow: hidden;
+    }
 }
 
     .eyebrow {
@@ -264,6 +297,14 @@
     </a>
 
     <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+      <button
+  class="mobile-nav-close"
+  id="mobile-nav-close"
+  type="button"
+  aria-label="Fermer le menu"
+>
+  ×
+      </button>
       <ul>
         <li><a href="#focus">Focus</a></li>
         <li><a href="#technologies">Technos</a></li>
@@ -453,7 +494,7 @@ PyCode est ouvert aux collaborations.
       toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   }
-  </script> -->
+  </script> 
 
 
   <script>
@@ -470,6 +511,46 @@ overlay.addEventListener("click", () => {
   menu.classList.remove("is-open");
   overlay.classList.remove("active");
 });
+  </script> -->
+
+  <script>
+  const toggle = document.getElementById("mobile-nav-toggle");
+  const closeBtn = document.getElementById("mobile-nav-close");
+  const menu = document.getElementById("navmenu");
+  const overlay = document.getElementById("menu-overlay");
+  const menuLinks = document.querySelectorAll("#navmenu a");
+
+  function openMenu() {
+    menu.classList.add("is-open");
+    overlay.classList.add("active");
+    toggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("menu-open");
+  }
+
+  function closeMenu() {
+    menu.classList.remove("is-open");
+    overlay.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+  }
+
+  toggle.addEventListener("click", () => {
+    if (menu.classList.contains("is-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
+  overlay.addEventListener("click", closeMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
   </script>
 </body>
 </html>
