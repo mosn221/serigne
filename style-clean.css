@@ -503,16 +503,3 @@ p {
 }
 
 
-.footer-links{
-  margin-top:10px;
-}
-
-.footer-links a{
-  margin-right:15px;
-  text-decoration:none;
-  color: var(--text);
-}
-
-.footer-links a:hover{
-  color:#FFC300;
-}
