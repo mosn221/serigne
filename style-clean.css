@@ -340,16 +340,7 @@ p {
   font-weight: 600;
 }
 
-.project-tag{
-  display:inline-block;
-  background:#FFC300;
-  color:#1A1A2E;
-  font-size:12px;
-  font-weight:600;
-  padding:4px 10px;
-  border-radius:20px;
-  margin-bottom:10px;
-}
+
 
 .contact-grid {
   display: grid;
