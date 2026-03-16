@@ -510,7 +510,7 @@ p {
 .footer-links a{
   margin-right:15px;
   text-decoration:none;
-  color:#F0EEE9;
+  color: var(--text);
 }
 
 .footer-links a:hover{
