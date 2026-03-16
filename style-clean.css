@@ -569,3 +569,12 @@ border:0;
 }
 
 
+.contact-link{
+  background:#F5F7FA;
+  color:#1A1A2E;
+}
+
+.linkedin { color:#0A66C2; }
+.whatsapp { color:#25D366; }
+.github { color:#24292F; }
+.kaggle { color:#20BEFF; }
