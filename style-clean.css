@@ -376,6 +376,44 @@ p {
   transform: translateY(0);
 }
 
+.contact-link{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:500;
+  text-decoration:none;
+  color:white;
+  margin-right:10px;
+  margin-bottom:10px;
+  transition:opacity 0.2s ease;
+}
+
+.contact-link:hover{
+  opacity:0.9;
+}
+
+/* Couleurs plateformes */
+
+.linkedin{
+  background:#0A66C2;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.github{
+  background:#24292F;
+}
+
+.kaggle{
+  background:#20BEFF;
+}
+
+.email{
+  background:#007C91;
+}
+
 /* =========================
    FOOTER
 ========================= */
