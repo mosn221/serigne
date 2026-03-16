@@ -166,6 +166,10 @@
   cursor: pointer;
   padding: 0.25rem 0.4rem;
 }
+
+    .mobile-nav-close {
+  display: none;
+}
 @media (max-width: 980px) {
   .logo img {
     height: 38px;
@@ -228,6 +232,7 @@
   }
 
   .mobile-nav-close {
+    display: block;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -239,6 +244,10 @@
     cursor: pointer;
     padding: 0;
   }
+
+  .mobile-nav-close:hover {
+  opacity: 0.6;
+}
 
   .menu-overlay {
     position: fixed;
