@@ -578,3 +578,108 @@ border:0;
 .whatsapp { color:#25D366; }
 .github { color:#24292F; }
 .kaggle { color:#20BEFF; }
+
+
+/* =========================
+   SECTION TECHNOLOGIES
+========================= */
+
+.section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TITRES
+========================= */
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+/* Hover premium */
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* liste techno */
+.feature-card p:last-child {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* tablette */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
