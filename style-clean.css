@@ -683,3 +683,11 @@ border:0;
     font-size: 26px;
   }
 }
+
+.feature-card:hover h3 {
+  color: #007C91; /* bleu pétrole */
+}
+
+.feature-card {
+  backdrop-filter: blur(6px);
+}
