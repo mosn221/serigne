@@ -863,3 +863,29 @@ border:0;
     grid-column: auto;
   }
 }
+
+
+.feature-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--primary);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.feature-card a:hover {
+  transform: translateX(4px);
+  color: #005f6b;
+}
+
+.feature-card:nth-child(1) {
+  background: #f8fbff;
+}
+
+.feature-card:nth-child(2) {
+  background: #f9fff8;
+}
+
+.feature-card:nth-child(3) {
+  background: #fffdf6;
+}
