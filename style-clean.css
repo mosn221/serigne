@@ -433,6 +433,15 @@ p {
   border-top: 1px solid var(--border);
 }
 
+.footer-wrap a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-wrap a:hover {
+  color: var(--primary);
+}
 /* =========================
    MOBILE
 ========================= */
