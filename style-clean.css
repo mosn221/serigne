@@ -712,7 +712,7 @@ border:0;
 }
 
 .legal-hero-inner {
-  max-width: 760px;
+  width: 100%;
 }
 
 .legal-hero h1 {
