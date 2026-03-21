@@ -842,3 +842,24 @@ border:0;
     gap: 0.75rem 1rem;
   }
 }
+
+.legal-hero-inner {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.legal-hero-copy {
+  grid-column: 2;
+}
+
+@media (max-width: 980px) {
+  .legal-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-hero-copy {
+    grid-column: auto;
+  }
+}
