@@ -394,6 +394,14 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+if (window.scrollY > 300) {
+  scrollBtn.classList.add("show");
+} else {
+  scrollBtn.classList.remove("show");
+}
+    
   </script>
+
+  
 </body>
 </html>
