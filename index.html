@@ -380,13 +380,16 @@ window.addEventListener("scroll", () => {
   <script>
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
+function toggleScrollButton() {
   if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
+    scrollBtn.classList.add("show");
   } else {
-    scrollBtn.style.display = "none";
+    scrollBtn.classList.remove("show");
   }
-});
+}
+
+window.addEventListener("scroll", toggleScrollButton);
+window.addEventListener("load", toggleScrollButton);
 
 scrollBtn.addEventListener("click", () => {
   window.scrollTo({
@@ -394,12 +397,6 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
-if (window.scrollY > 300) {
-  scrollBtn.classList.add("show");
-} else {
-  scrollBtn.classList.remove("show");
-}
-    
   </script>
 
   
