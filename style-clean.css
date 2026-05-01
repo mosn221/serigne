@@ -591,7 +591,7 @@ border:0;
 
 /* =========================
    SECTION TECHNOLOGIES
-========================= */
+========================= 
 
 .section {
   padding: 80px 20px;
@@ -604,7 +604,7 @@ border:0;
 
 /* =========================
    TITRES
-========================= */
+========================= 
 
 .section-title {
   font-size: 32px;
@@ -621,8 +621,7 @@ border:0;
 
 /* =========================
    GRID
-========================= */
-
+========================= 
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -675,14 +674,14 @@ border:0;
    RESPONSIVE
 ========================= */
 
-/* tablette */
+/* tablette 
 @media (max-width: 1024px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* mobile */
+/* mobile 
 @media (max-width: 600px) {
   .grid-4 {
     grid-template-columns: 1fr;
@@ -692,7 +691,7 @@ border:0;
     font-size: 26px;
   }
 }
-
+*/
 .feature-card:hover h3 {
   color: #007C91; /* bleu pétrole */
 }
