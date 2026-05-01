@@ -1078,3 +1078,22 @@ border:0;
     justify-content: flex-start;
   }
 }
+
+.project-placeholder {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0,124,145,0.05),
+    rgba(0,191,166,0.05)
+  );
+
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+
+  font-size: 0.9rem;
+  color: var(--muted);
+}
