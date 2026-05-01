@@ -915,7 +915,7 @@ border:0;
   justify-content: center;
 
   border: none;
-  border-radius: 50%;
+  border-radius: 10%;
   background: linear-gradient(135deg, var(--primary), #00bfa6);
   color: #fff;
 
