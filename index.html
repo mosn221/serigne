@@ -350,7 +350,12 @@ Développement de plateformes data, applications web et outils numériques
     link.addEventListener("click", closeMenu);
   });
   </script>
-  <button id="scrollTopBtn" class="back-to-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+  <button id="scrollTopBtn" class="back-to-top" aria-label="Retour en haut" type="button">
+  <svg viewBox="0 0 24 24" width="28" height="28">
+    <path d="M12 5L6 11H10V19H14V11H18L12 5Z" fill="white"/>
+  </svg>
+  </button>
+ <!-- <button id="scrollTopBtn" class="back-to-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>-->
   <script>
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll("#navmenu a");
