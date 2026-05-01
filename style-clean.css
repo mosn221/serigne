@@ -898,90 +898,57 @@ border:0;
 
 
 
-#scrollTopBtn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--primary), #00bfa6);
-  color: white;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 124, 145, 0.25);
-  transition: all 0.25s ease;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(8px);
-}
-
-#scrollTopBtn.show {
-  opacity: 0.85;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-#scrollTopBtn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 14px 40px rgba(0, 124, 145, 0.35);
-  opacity: 1;
-}
+/* =========================
+   BACK TO TOP
+========================= */
 
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  
-  width: 60px;
-  height: 60px;
-  
-  background: #007C91; /* bleu pétrole */
-  color: #fff;
-  
-  border: none;
-  border-radius: 50%;
-  
-  font-size: 26px;
-  font-weight: bold;
-  
+
+  width: 64px;
+  height: 64px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #00bfa6);
+  color: #fff;
+
+  font-size: 30px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  
+  box-shadow: 0 12px 32px rgba(0, 124, 145, 0.32);
+
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  
+  pointer-events: none;
+  transform: translateY(18px);
+
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 1100;
 }
 
-/* état visible */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
-/* hover effet premium */
 .back-to-top:hover {
-  background: #00BFA6; /* vert data */
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 16px 42px rgba(0, 124, 145, 0.42);
 }
 
-/* petit effet click */
 .back-to-top:active {
   transform: scale(0.95);
 }
 
-.back-to-top {
-  color: red;
+.back-to-top i {
+  font-size: 34px;
+  line-height: 1;
 }
