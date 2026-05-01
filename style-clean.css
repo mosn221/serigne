@@ -1097,3 +1097,8 @@ border:0;
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+.project-placeholder img {
+  width: 100%;
+  border-radius: 12px;
+}
