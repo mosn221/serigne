@@ -959,3 +959,122 @@ border:0;
   font-size: 34px;
   line-height: 1;
 }
+
+
+
+.produits-list {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 760px;
+}
+
+.produit-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 0.5rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.produit-item span {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.produit-item strong {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.produit-item p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+.usage-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 760px;
+}
+
+.usage-item {
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--primary);
+  background: rgba(0, 124, 145, 0.03);
+  border-radius: 8px;
+}
+
+.usage-item strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.usage-item p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.projects-showcase {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-showcase-item {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1.5rem;
+  align-items: center;
+
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.project-showcase-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 124, 145, 0.22);
+}
+
+.project-showcase-item h3 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: 1.25rem;
+}
+
+.project-showcase-item p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.project-meta span {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(0, 124, 145, 0.06);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .project-showcase-item {
+    grid-template-columns: 1fr;
+  }
+
+  .project-meta {
+    justify-content: flex-start;
+  }
+}
