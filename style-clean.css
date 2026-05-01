@@ -1327,3 +1327,24 @@ border:0;
 #collaborer .contact-card {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
+
+#collaborer .contact-link.whatsapp {
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
+#collaborer .contact-link.email {
+  border-color: rgba(0, 124, 145, 0.4);
+}
+
+
+#collaborer .contact-link.whatsapp:hover {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+}
+
+#collaborer .contact-link.email:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
