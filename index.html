@@ -79,6 +79,7 @@
 
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <header id="header" class="header">
   <div class="container header-container">
     <a href="index.html" class="logo" aria-label="Accueil PyCode.tech">
@@ -601,6 +602,17 @@ revealElements.forEach(element => {
       tab.classList.add("active");
       document.getElementById(`tech-${target}`).classList.add("active");
     });
+  });
+  </script>
+  <script>
+  const scrollProgress = document.getElementById("scrollProgress");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+
+    scrollProgress.style.width = progress + "%";
   });
   </script>
 </body>
