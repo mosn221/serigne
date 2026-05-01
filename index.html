@@ -649,6 +649,21 @@ revealElements.forEach(element => {
 });
   </script>
 
-  
+  <script>
+  const techTabs = document.querySelectorAll(".tech-tab");
+  const techPanels = document.querySelectorAll(".tech-panel");
+
+  techTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tech;
+
+      techTabs.forEach(item => item.classList.remove("active"));
+      techPanels.forEach(panel => panel.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(`tech-${target}`).classList.add("active");
+    });
+  });
+  </script>
 </body>
 </html>
