@@ -1273,9 +1273,15 @@ border:0;
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 5px;
   width: 0%;
-  background: linear-gradient(90deg, var(--primary), #00BFA6, var(--accent));
+  background: linear-gradient(
+    90deg,
+    #00BFA6,   /* vert d’eau / bleu clair */
+    #007C91    /* bleu pétrole */
+  );
+  
   z-index: 1200;
   transition: width 0.1s ease;
+  box-shadow: 0 2px 10px rgba(0, 124, 145, 0.4);
 }
