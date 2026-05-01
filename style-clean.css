@@ -878,7 +878,7 @@ border:0;
   color: #005f6b;
 }
 
-.feature-card:nth-child(1) {
+/*.feature-card:nth-child(1) {
   background: #f8fbff;
 }
 
@@ -888,7 +888,7 @@ border:0;
 
 .feature-card:nth-child(3) {
   background: #fffdf6;
-}
+} */
 
 
 .navmenu a.active {
