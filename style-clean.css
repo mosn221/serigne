@@ -355,7 +355,7 @@ p {
   margin-top: 1.15rem;
 }
 
-.contact-link {
+/*.contact-link {
   padding: 0.8rem 1rem;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -391,8 +391,32 @@ p {
 .contact-link:hover{
   opacity:0.9;
 }
+*/
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #F5F7FA;
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
 
-/* Couleurs plateformes */
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 124, 145, 0.35);
+  background: rgba(0, 124, 145, 0.06);
+  color: var(--primary);
+}
+
+.contact-link:active {
+  transform: translateY(0);
+}
+
+/* Couleurs plateformes 
 
 .linkedin{
   background:#0A66C2;
@@ -412,8 +436,19 @@ p {
 
 .email{
   background:#007C91;
-}
+} */
 
+.linkedin { color:#0A66C2; }
+.whatsapp { color:#25D366; }
+.github { color:#24292F; }
+.kaggle { color:#20BEFF; }
+.email { color:#007C91; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(255, 195, 0, 0.8);
+  outline-offset: 4px;
+}
 /* =========================
    FOOTER
 ========================= */
