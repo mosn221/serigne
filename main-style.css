@@ -578,3 +578,53 @@
   font-size: 0.82rem;
   font-weight: 600;
     }
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  
+  width: 60px;
+  height: 60px;
+  
+  background: #007C91; /* bleu pétrole */
+  color: #fff;
+  
+  border: none;
+  border-radius: 50%;
+  
+  font-size: 26px;
+  font-weight: bold;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* état visible */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* hover effet premium */
+.back-to-top:hover {
+  background: #00BFA6; /* vert data */
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* petit effet click */
+.back-to-top:active {
+  transform: scale(0.95);
+}
