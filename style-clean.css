@@ -896,6 +896,13 @@ border:0;
   font-weight: 600;
 }
 
+.feature-card {
+  background: #fff;
+}
+
+.feature-card:hover {
+  background: rgba(0,124,145,0.05);
+}
 
 
 /* =========================
