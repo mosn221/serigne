@@ -307,8 +307,18 @@ p {
    SECTIONS / GRIDS
 ========================= */
 
-.section {
+/*.section {
   padding: 2.5rem 0;
+}
+*/
+.section {
+  padding: 72px 0;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 48px 0;
+  }
 }
 
 .section-title {
@@ -442,6 +452,8 @@ p {
 .github { color:#24292F; }
 .kaggle { color:#20BEFF; }
 .email { color:#007C91; }
+
+
 
 a:focus-visible,
 button:focus-visible {
@@ -612,15 +624,11 @@ border:0;
 }
 
 
-.contact-link{
+/*.contact-link{
   background:#F5F7FA;
   color:#1A1A2E;
 }
-
-.linkedin { color:#0A66C2; }
-.whatsapp { color:#25D366; }
-.github { color:#24292F; }
-.kaggle { color:#20BEFF; }
+*/
 
 
 /* =========================
@@ -725,14 +733,34 @@ border:0;
     font-size: 26px;
   }
 }
-*/
+
 .feature-card:hover h3 {
   color: #007C91; /* bleu pétrole */
-}
+
 
 /*.feature-card {
   backdrop-filter: blur(6px);
-} */
+} 
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  background: rgba(0,124,145,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0,124,145,0.18);
+}
+
+.feature-card:hover h3 {
+  color: var(--primary);
+}
+*/
 
 .feature-card {
   padding: 1.5rem;
@@ -947,14 +975,14 @@ border:0;
   font-weight: 600;
 }
 
-.feature-card {
+/*.feature-card {
   background: #fff;
 }
 
 .feature-card:hover {
   background: rgba(0,124,145,0.05);
 }
-
+*/
 
 /* =========================
    BACK TO TOP
