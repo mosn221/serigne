@@ -628,3 +628,7 @@
 .back-to-top:active {
   transform: scale(0.95);
 }
+
+.back-to-top {
+  color: red;
+}
