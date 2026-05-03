@@ -1348,3 +1348,150 @@ border:0;
   color: #fff;
   border-color: var(--primary);
 }
+
+/* =========================
+   PROJECT SHOWCASE GLOBAL
+========================= */
+
+.project-showcase-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* CARD */
+.project-showcase-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-showcase-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* TAG */
+.project-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #007C91; /* bleu pétrole */
+  background: rgba(0, 124, 145, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.project-showcase-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1A2E;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.project-showcase-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* IMAGE */
+.project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* ZOOM IMAGE */
+.project-showcase-item:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26, 26, 46, 0.85),
+    rgba(26, 26, 46, 0.2)
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-overlay span {
+  color: #FFC300; /* jaune solaire */
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* SHOW OVERLAY */
+.project-showcase-item:hover .project-overlay {
+  opacity: 1;
+}
+
+/* META TAGS */
+.project-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.project-meta span {
+  font-size: 12px;
+  background: #F0EEE9;
+  color: #1A1A2E;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* =========================
+   OPTIONAL: DARK MODE CARD
+========================= */
+
+.project-showcase-item.dark {
+  background: #1A1A2E;
+}
+
+.project-showcase-item.dark h3,
+.project-showcase-item.dark p,
+.project-showcase-item.dark .project-meta span {
+  color: #F0EEE9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .project-image img {
+    height: 180px;
+  }
+
+  .project-showcase-item {
+    padding: 15px;
+  }
+}
