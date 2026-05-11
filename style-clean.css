@@ -107,7 +107,7 @@ h3 {
 
 .logo img {
   display: block;
-  height: 72px;
+  height: 96px;
   width: auto;
   max-width: 220px;
 }
@@ -518,7 +518,7 @@ button:focus-visible {
   }
 
   .logo img {
-    height: 64px;
+    height: 86px;
   }
 
   .mobile-nav-toggle {
