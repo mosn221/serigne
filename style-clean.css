@@ -1869,3 +1869,165 @@ border:0;
     overflow: hidden;
   }
 }
+
+
+/* =========================
+   TECHNOLOGIES TABS
+========================= */
+
+.tech-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* bouton */
+
+.tech-tab {
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
+
+  color: rgba(245,247,250,0.82);
+
+  padding: 0.78rem 1.15rem;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.92rem;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* hover */
+
+.tech-tab:hover {
+  transform: translateY(-2px);
+
+  color: #FFFFFF;
+
+  border-color: rgba(29,233,255,0.22);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,136,204,0.18),
+      rgba(29,233,255,0.08)
+    );
+
+  box-shadow:
+    0 10px 24px rgba(0,136,204,0.18);
+}
+
+/* actif */
+
+.tech-tab.active {
+  color: #0B1020;
+
+  border-color: transparent;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0088CC,
+      #1DE9FF,
+      #FFC300
+    );
+
+  box-shadow:
+    0 14px 30px rgba(0,136,204,0.28);
+}
+
+/* petit glow */
+
+.tech-tab.active::before {
+  content: "";
+
+  position: absolute;
+  inset: -1px;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(29,233,255,0.5),
+      rgba(255,195,0,0.35)
+    );
+
+  z-index: -1;
+
+  filter: blur(10px);
+
+  opacity: 0.65;
+}
+
+.tech-panel {
+  display: none;
+
+  padding: 1.8rem;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,26,46,0.92),
+      rgba(11,16,32,0.96)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 18px 46px rgba(0,0,0,0.28);
+
+  backdrop-filter: blur(12px);
+}
+
+.tech-panel.active {
+  display: block;
+}
+
+.tech-panel h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}
+
+.tech-panel p {
+  color: #AEB6C2;
+}
+
+.tech-list span {
+  padding: 0.5rem 0.78rem;
+
+  border-radius: 999px;
+
+  background: rgba(29,233,255,0.08);
+
+  border: 1px solid rgba(29,233,255,0.14);
+
+  color: #1DE9FF;
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
