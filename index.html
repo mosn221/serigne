@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 <title>M221tech — Plateformes de données & outils numériques</title>
-<meta name="description" content="PyCode conçoit et développe des plateformes de données, des applications web et des outils numériques pour des projets data-driven.">
+
+
+<meta name="description" content="M221Tech conçoit des plateformes de données, des applications web et des outils numériques pour collecter, structurer et valoriser les données locales.">
 
 <link rel="canonical" href="https://m221.tech/">
 <link rel="alternate" href="https://m221.tech/" hreflang="fr">
 <link rel="alternate" href="https://m221.tech/" hreflang="x-default">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="m221tech — Plateformes de données & outils numériques">
-<meta property="og:description" content="M221 conçoit et développe des plateformes de données, des applications web et des outils numériques pour des projets data-driven.">
+
+
+<meta property="og:title" content="M221Tech — Plateformes de données & outils numériques">
+<meta property="og:description" content="M221Tech conçoit des plateformes de données, des applications web et des outils numériques pour des projets data-driven.">
 <meta property="og:image" content="https://m221.tech/assets/img/og-m221.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
 <meta property="og:url" content="https://m221.tech/">
 
+
+<meta name="twitter:title" content="M221Tech — Plateformes de données & outils numériques">
+<meta name="twitter:description" content="M221Tech conçoit des plateformes de données, des applications web et des outils numériques pour des projets data-driven.">
+<meta name="twitter:image" content="https://m221.tech/assets/img/og-m221.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="M221tech — Plateformes de données & outils numériques">
-<meta name="twitter:description" content="M221tech conçoit et développe des plateformes de données, des applications web et des outils numériques pour des projets data-driven.">
-<meta name="twitter:
-  image" content="https://m221.tech/assets/img/og-m221.png">
 
   <script type="application/ld+json">
 {
@@ -82,9 +86,10 @@
   <div class="scroll-progress" id="scrollProgress"></div>
   <header id="header" class="header">
   <div class="container header-container">
-    <a href="index.html" class="logo" aria-label="Accueil PyCode.tech">
-      <img src="assets/img/logo_m221tech.png" alt="PyCode">
+    <a href="index.html" class="logo" aria-label="Accueil M221Tech">
+  <img src="assets/img/logo_m221tech.png" alt="Logo M221Tech">
     </a>
+    
     <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
       <button
   class="mobile-nav-close"
@@ -239,25 +244,27 @@ Développement de plateformes data, applications web et outils numériques
       M221tech base ses travaux une stack simple, robuste et orientée données pour construire des outils exploitables.
     </p>
 
-    <div class="tech-tabs" role="tablist" aria-label="Technologies PyCode">
-      <button class="tech-tab active" type="button" data-tech="data">
-        Data Engineering
-      </button>
+    <div class="tech-tabs" role="tablist" aria-label="Technologies M221Tech">
+  <button class="tech-tab active" type="button" role="tab" aria-selected="true" aria-controls="tech-data" id="tab-data" data-tech="data">
+    Data Engineering
+  </button>
 
-      <button class="tech-tab" type="button" data-tech="storage">
-        Données
-      </button>
+  <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-storage" id="tab-storage" data-tech="storage">
+    Données
+  </button>
 
-      <button class="tech-tab" type="button" data-tech="web">
-        Applications web
-      </button>
+  <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-web" id="tab-web" data-tech="web">
+    Applications web
+  </button>
 
-      <button class="tech-tab" type="button" data-tech="viz">
-        Visualisation
-      </button>
+  <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-viz" id="tab-viz" data-tech="viz">
+    Visualisation
+  </button>
     </div>
 
-    <div class="tech-panel active" id="tech-data">
+
+    
+      <div class="tech-panel active" id="tech-data" role="tabpanel" aria-labelledby="tab-data">
       <h3>Data Engineering</h3>
       <p>
         Collecter, nettoyer, transformer et structurer des données brutes en bases exploitables.
@@ -272,7 +279,7 @@ Développement de plateformes data, applications web et outils numériques
       </div>
     </div>
 
-    <div class="tech-panel" id="tech-storage">
+    <div class="tech-panel" id="tech-storage" role="tabpanel" aria-labelledby="tab-storage">
       <h3>Données & stockage</h3>
       <p>
         Organiser les données dans des formats simples, réutilisables et adaptés au niveau du projet.
@@ -286,7 +293,7 @@ Développement de plateformes data, applications web et outils numériques
       </div>
     </div>
 
-    <div class="tech-panel" id="tech-web">
+  <div class="tech-panel" id="tech-web" role="tabpanel" aria-labelledby="tab-web">
       <h3>Applications web</h3>
       <p>
         Développer des interfaces légères pour collecter, consulter, contrôler et exploiter les données.
@@ -299,7 +306,7 @@ Développement de plateformes data, applications web et outils numériques
       </div>
     </div>
 
-    <div class="tech-panel" id="tech-viz">
+    <div class="tech-panel" id="tech-viz" role="tabpanel" aria-labelledby="tab-viz">
       <h3>Data visualisation</h3>
       <p>
         Créer des tableaux de bord et visualisations pour comprendre les données et communiquer les résultats.
@@ -408,7 +415,7 @@ Développement de plateformes data, applications web et outils numériques
   <div class="container">
     <h2 class="section-title">Ressources</h2>
     <p class="section-intro">
-      Accédez aux données, documentations et ressources publiques des projets PyCode.
+      Accédez aux données, documentations et ressources publiques des projets M221Tech.
     </p>
 
     <div class="grid-3">
@@ -441,8 +448,9 @@ Développement de plateformes data, applications web et outils numériques
           <h2 class="section-title" style="margin-top:0;">Collaborer</h2>
           <p>
             
-            Vous avez besoin de structurer des données, créer un outil interne, développer un dashboard ou transformer un fichier dispersé en plateforme exploitable ?
-PyCode peut vous accompagner sur des projets simples, utiles et orientés impact.
+            
+
+            M221Tech peut vous accompagner sur des projets simples, utiles et orientés impact.
           </p>
 
           <div class="contact-links">
@@ -641,6 +649,10 @@ revealElements.forEach(element => {
 
     scrollProgress.style.width = progress + "%";
   });
+
+
+
+    
   </script>
 </body>
 </html>
