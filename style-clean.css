@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --bg: #F4F8FA;
   --bg-soft: #EEF4F7;
   --card: #FFFFFF;
@@ -10,6 +10,32 @@
   --max-width: 1120px;
   --radius: 20px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+*/
+
+:root {
+  --bg: #0B1020;
+  --bg-soft: #11182B;
+  --card: #121A2E;
+  --card-light: #FFFFFF;
+
+  --border: rgba(255, 255, 255, 0.10);
+  --border-light: rgba(0, 0, 0, 0.08);
+
+  --text: #F5F7FA;
+  --text-dark: #1B2333;
+  --muted: #AEB6C2;
+
+  --primary: #0088CC;
+  --primary-dark: #006D8F;
+  --cyan: #1DE9FF;
+  --accent: #FFC300;
+
+  --max-width: 1120px;
+  --radius: 18px;
+
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  --shadow-soft: 0 14px 40px rgba(0, 136, 204, 0.18);
 }
 
 * {
