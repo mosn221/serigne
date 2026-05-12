@@ -121,7 +121,7 @@ h3 {
    HEADER
 ========================= */
 
-.header {
+/*.header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -129,7 +129,7 @@ h3 {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
-
+*/
 .header-container {
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ h3 {
   padding: 0;
 }
 
-.navmenu a {
+/*.navmenu a {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
@@ -172,8 +172,26 @@ h3 {
 
 .navmenu a:hover {
   color: var(--primary);
+}*/
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 16, 32, 0.86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
 }
 
+.navmenu a,
+.mobile-nav-toggle {
+  color: var(--text);
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+  color: var(--accent);
+}
 .mobile-nav-toggle {
   display: none;
   border: none;
