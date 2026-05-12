@@ -1567,3 +1567,62 @@ border:0;
 .usage-item p {
   color: var(--muted);
 }
+
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--cyan));
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(0, 136, 204, 0.32);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(29, 233, 255, 0.28);
+}
+
+.btn-secondary {
+  border-color: rgba(255, 195, 0, 0.55);
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 195, 0, 0.12);
+  color: var(--accent);
+}
+
+.eyebrow,
+.project-tag {
+  background: rgba(255, 195, 0, 0.12);
+  border: 1px solid rgba(255, 195, 0, 0.34);
+  color: var(--accent);
+}
+
+.project-meta span,
+.tech-list span {
+  background: rgba(29, 233, 255, 0.08);
+  color: var(--cyan);
+  border: 1px solid rgba(29, 233, 255, 0.16);
+}
+
+.scroll-progress {
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--cyan), var(--accent));
+  box-shadow: 0 2px 14px rgba(29, 233, 255, 0.45);
+}
+
+.back-to-top {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #0B1020;
+  box-shadow: 0 14px 36px rgba(0, 136, 204, 0.35);
+}
+
+.section-light {
+  background: #F5F7FA;
+  color: var(--text-dark);
+}
+
+.section-light .section-intro,
+.section-light p {
+  color: #5F6F81;
+}
