@@ -46,7 +46,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/*body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #F4F8FA;
@@ -54,6 +54,19 @@ body {
   min-height: 100vh;
   line-height: 1.7;
   font-size:16px;
+}*/
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0, 136, 204, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 195, 0, 0.12), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
 a {
