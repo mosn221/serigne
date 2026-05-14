@@ -1509,12 +1509,15 @@ border:0;
   background: #1A1A2E;
 }
 
-.project-showcase-item.dark h3,
+
 .project-showcase-item.dark p,
 .project-showcase-item.dark .project-meta span {
   color: #F0EEE9;
 }
 
+.project-showcase-item h3{
+color: #ffffff;
+}
 /* =========================
    RESPONSIVE
 ========================= */
