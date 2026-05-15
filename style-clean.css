@@ -2042,16 +2042,7 @@ color: #ffffff;
    PROJECT PAGES
 ========================= */
 
-.project-hero {
-  padding: 8rem 0 5rem;
-}
 
-.project-hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
-  align-items: center;
-}
 
 .project-breadcrumb {
   display: inline-block;
@@ -2073,16 +2064,9 @@ color: #ffffff;
   max-width: 680px;
 }
 
-.project-hero-card {
-  padding: 0;
-  overflow: hidden;
-}
 
-.project-hero-image {
-  width: 100%;
-  display: block;
-  border-radius: 1.5rem;
-}
+
+
 
 .project-summary-grid {
   display: grid;
@@ -2108,9 +2092,7 @@ color: #ffffff;
 
 @media (max-width: 980px) {
 
-  .project-hero-grid {
-    grid-template-columns: 1fr;
-  }
+  
 
   .project-summary-grid {
     grid-template-columns: 1fr 1fr;
@@ -2133,9 +2115,7 @@ color: #ffffff;
   font-size: 1rem;
 }
 
-.project-hero-footer {
-  margin-top: 2rem;
-}
+
 
 .project-breadcrumb {
   color: #94A3B8;
@@ -2161,6 +2141,3 @@ color: #ffffff;
   backdrop-filter: blur(8px);
 }
 
-.project-hero-card {
-  position: relative;
-}
