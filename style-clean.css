@@ -2141,3 +2141,212 @@ color: #ffffff;
   backdrop-filter: blur(8px);
 }
 
+
+
+/* =========================
+   SUNUGOAL HERO — DATA SPORT
+========================= */
+
+.project-hero-sunugoal {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0 5.5rem;
+}
+
+.project-hero-sunugoal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(29,233,255,.16), transparent 32%),
+    radial-gradient(circle at 85% 30%, rgba(255,195,0,.11), transparent 28%),
+    linear-gradient(180deg, rgba(11,16,32,0), rgba(11,16,32,.45));
+  pointer-events: none;
+}
+
+.project-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.project-hero-copy h1 {
+  font-size: clamp(3.4rem, 8vw, 6.6rem);
+  line-height: .9;
+  max-width: 9ch;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, #fff, #dffaff 55%, #ffc300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-subtitle {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #cbd5e1;
+}
+
+.project-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin: 1.8rem 0 0;
+}
+
+.project-hero-tags span {
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  background: rgba(29,233,255,.08);
+  border: 1px solid rgba(29,233,255,.16);
+  color: var(--cyan);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.project-dashboard-card {
+  position: relative;
+  padding: 1.4rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(18,26,46,.96), rgba(11,16,32,.98));
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 30px 90px rgba(0,0,0,.42);
+  backdrop-filter: blur(12px);
+}
+
+.project-dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(29,233,255,.22), transparent 65%);
+  filter: blur(45px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.dashboard-header span {
+  font-weight: 700;
+  color: #fff;
+}
+
+.dashboard-header small {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dashboard-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-label {
+  display: block;
+  color: #94a3b8;
+  font-size: .85rem;
+  margin-bottom: .25rem;
+}
+
+.dashboard-score strong {
+  font-size: 1.35rem;
+  color: #fff;
+}
+
+.score-badge {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--primary), var(--cyan), var(--accent));
+  color: #0b1020;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.dashboard-bars {
+  display: grid;
+  gap: .95rem;
+  margin: 1.4rem 0;
+}
+
+.dashboard-bars div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: .8rem;
+  color: #cbd5e1;
+  font-size: .9rem;
+}
+
+.dashboard-bars i {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--cyan), var(--accent));
+  box-shadow: 0 0 18px rgba(29,233,255,.28);
+}
+
+.dashboard-grid-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-top: 1.5rem;
+}
+
+.dashboard-grid-mini div {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.dashboard-grid-mini strong {
+  display: block;
+  color: #fff;
+  margin-bottom: .25rem;
+}
+
+.dashboard-grid-mini span {
+  color: #aeb6c2;
+  font-size: .82rem;
+}
+
+@media (max-width: 980px) {
+  .project-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .project-hero-copy h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-hero-sunugoal {
+    padding: 5rem 0 3.5rem;
+  }
+
+  .dashboard-grid-mini {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bars div {
+    grid-template-columns: 75px 1fr;
+  }
+}
