@@ -2186,26 +2186,26 @@ color: #ffffff;
 
 /* LEFT */
 
-/* .project-hero-copy h1 {
+ .project-hero-copy h1 {
   font-size: clamp(3.5rem, 8vw, 6.5rem);
 
   line-height: .9;
 
   margin-bottom: 1.2rem;
 
-  background:
+ /* background:
     linear-gradient(
       135deg,
       #ffffff,
       #dffaff 55%,
       #ffc300
-    );
+    );*/
   color:#ffffff;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-*/
+
 .project-subtitle {
   max-width: 54ch;
 
