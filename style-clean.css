@@ -2571,3 +2571,249 @@ color: #ffffff;
     padding: 1rem;
   }
   }
+
+
+/* =========================
+   KUREL FACTS — DISTINCT PAGE
+========================= */
+
+.kurel-hero-full {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.kurel-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.kurel-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.85) brightness(.58);
+}
+
+.kurel-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11,16,32,.96), rgba(11,16,32,.72), rgba(11,16,32,.28)),
+    radial-gradient(circle at 18% 25%, rgba(255,195,0,.18), transparent 34%);
+}
+
+.kurel-hero-layer {
+  position: relative;
+  z-index: 2;
+}
+
+.kurel-hero-panel {
+  max-width: 760px;
+  padding: 2rem;
+  border-radius: 34px;
+  background: rgba(11,16,32,.48);
+  border: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.kurel-hero-panel h1 {
+  max-width: 13ch;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  line-height: .95;
+  background: linear-gradient(135deg, #fff, #f6df9a 55%, #1de9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kurel-hero-panel p {
+  max-width: 62ch;
+  color: #d6dde7;
+  font-size: 1.08rem;
+}
+
+.kurel-editorial {
+  max-width: 880px;
+}
+
+.kurel-editorial h2 {
+  max-width: 13ch;
+  margin-bottom: 1.3rem;
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+.kurel-editorial p {
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.kurel-editorial p + p {
+  margin-top: 1.2rem;
+}
+
+.kurel-intentions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.kurel-intentions article {
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(18,26,46,.9), rgba(11,16,32,.96));
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: var(--shadow);
+}
+
+.kurel-intentions span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.kurel-intentions h3 {
+  margin: .8rem 0 .5rem;
+}
+
+.kurel-intentions p {
+  color: var(--muted);
+}
+
+.kurel-document-block {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.kurel-document-image {
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: var(--shadow);
+}
+
+.kurel-document-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.9) brightness(.88);
+}
+
+.kurel-document-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.kurel-document-list div {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.kurel-document-list strong {
+  display: block;
+  margin-bottom: .3rem;
+  color: #fff;
+}
+
+.kurel-document-list span {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.kurel-usage-section {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.kurel-usage-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.kurel-usage-list div {
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-right: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.kurel-usage-list strong {
+  display: block;
+  margin-bottom: .35rem;
+  color: #fff;
+}
+
+.kurel-usage-list p {
+  color: var(--muted);
+}
+
+.kurel-approach-card {
+  max-width: 880px;
+  padding: 2rem;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,195,0,.08), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: var(--shadow);
+}
+
+.kurel-approach-card h2 {
+  max-width: 16ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.kurel-approach-card p {
+  max-width: 72ch;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .kurel-intentions,
+  .kurel-document-block,
+  .kurel-usage-section {
+    grid-template-columns: 1fr;
+  }
+
+  .kurel-document-image img {
+    height: 380px;
+  }
+
+  .kurel-hero-full {
+    min-height: 660px;
+  }
+}
+
+@media (max-width: 720px) {
+  .kurel-hero-full {
+    min-height: auto;
+    padding: 6rem 0 4rem;
+  }
+
+  .kurel-hero-panel {
+    padding: 1.4rem;
+  }
+
+  .kurel-hero-panel h1 {
+    max-width: 100%;
+  }
+
+  .kurel-document-image img {
+    height: 300px;
+  }
+  }
