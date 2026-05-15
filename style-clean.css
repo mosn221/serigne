@@ -2125,3 +2125,42 @@ color: #ffffff;
   }
 
 }
+
+.project-kicker {
+  margin: 1rem 0 0;
+  color: #00BFA6;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.project-hero-footer {
+  margin-top: 2rem;
+}
+
+.project-breadcrumb {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.project-breadcrumb:hover {
+  color: #00BFA6;
+}
+
+.project-visual-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.78);
+  color: #F8FAFC;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.project-hero-card {
+  position: relative;
+}
