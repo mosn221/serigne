@@ -2142,3 +2142,165 @@ color: #ffffff;
 }
 
     
+/* =========================
+   SUNUGOAL HERO SIMPLE
+========================= */
+
+.project-hero-sunugoal {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0 5rem;
+}
+
+.project-hero-sunugoal::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(29,233,255,.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255,195,0,.10),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+.project-hero-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+
+  gap: 4rem;
+  align-items: center;
+}
+
+/* LEFT */
+
+.project-hero-copy h1 {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+
+  line-height: .9;
+
+  margin-bottom: 1.2rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #dffaff 55%,
+      #ffc300
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-subtitle {
+  max-width: 60ch;
+
+  font-size: 1.08rem;
+  line-height: 1.9;
+
+  color: #CBD5E1;
+}
+
+.project-kicker {
+  margin-top: 1.2rem;
+
+  color: #1DE9FF;
+
+  font-weight: 600;
+}
+
+.project-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: .7rem;
+
+  margin: 1.8rem 0 0;
+}
+
+.project-hero-tags span {
+  padding: .5rem .85rem;
+
+  border-radius: 999px;
+
+  background: rgba(29,233,255,.08);
+
+  border: 1px solid rgba(29,233,255,.16);
+
+  color: var(--cyan);
+
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+/* RIGHT */
+
+.project-hero-visual {
+  position: relative;
+}
+
+.project-hero-visual::before {
+  content: "";
+
+  position: absolute;
+  inset: -25px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(29,233,255,.22),
+      transparent 70%
+    );
+
+  filter: blur(40px);
+
+  z-index: 0;
+}
+
+.project-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.42);
+
+  display: block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+
+  .project-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+}
+
+@media (max-width: 720px) {
+
+  .project-hero-sunugoal {
+    padding: 5rem 0 3.5rem;
+  }
+
+}
