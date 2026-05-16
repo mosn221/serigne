@@ -2914,3 +2914,9 @@ color: #ffffff;
   }
 
 }
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
