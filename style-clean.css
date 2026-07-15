@@ -79,8 +79,11 @@ p {
    HERO
 ========================= */
 
-.hero {
-  padding: 4.5rem 0 2.5rem;
+.hero{
+    padding:
+        5.5rem
+        0
+        3rem;
 }
 
 .hero-grid {
@@ -126,6 +129,19 @@ p {
   margin-top: 2rem;
 }
 
+.mini-card{
+    transition:
+        transform .25s,
+        border-color .25s,
+        box-shadow .25s;
+}
+
+.mini-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(29,233,255,.18);
+    box-shadow:0 16px 32px rgba(0,0,0,.22);
+}
+
 /* =========================
    BUTTONS
 ========================= */
@@ -141,6 +157,7 @@ p {
   font-weight: 600;
   transition: all 0.25s ease;
   border: 1px solid transparent;
+  min-width:180px;
 }
 
 .btn-primary {
@@ -376,7 +393,9 @@ button:focus-visible {
    FOOTER
 ========================= */
 .site-footer {
-  padding: 2rem 0 2.6rem;
+  padding:
+    3rem
+    0;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -402,6 +421,9 @@ button:focus-visible {
 /* =========================
    MOBILE
 ========================= */
+.mobile-nav-close {
+  display: none;
+}
 
 @media (max-width: 980px) {
   .hero-grid,
@@ -878,7 +900,7 @@ button:focus-visible {
 
 .project-image img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -963,7 +985,7 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 84px;
+  min-height: 80px;
 }
 
 /* =========================
@@ -979,7 +1001,7 @@ button:focus-visible {
 .logo img {
   display: block;
   width: auto;
-  height: 44px;
+  height: 48px;
   max-width: 220px;
   transition: transform 0.25s ease;
 }
@@ -991,6 +1013,12 @@ button:focus-visible {
 /* =========================
    MENU DESKTOP
 ========================= */
+.navmenu a:hover{
+    transform:translateY(-1px);
+  transition:
+    color .25s,
+    transform .25s;
+}
 
 .navmenu ul {
   display: flex;
@@ -1081,10 +1109,13 @@ button:focus-visible {
   left: -100%;
   z-index: 999;
 
-  width: 78%;
-  max-width: 320px;
+  width: 68%;
+  max-width: 280px;
   height: 100vh;
-  padding: 5rem 1.5rem 2rem;
+  padding:
+        4.5rem
+        1.25rem
+        2rem;
   overflow-y: auto;
 
   background: linear-gradient(
