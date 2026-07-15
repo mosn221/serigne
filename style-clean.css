@@ -2920,3 +2920,7 @@ color: #ffffff;
   align-items: center;
   gap: .4rem;
 }
+
+.contact-title {
+  margin-top: 0;
+}
