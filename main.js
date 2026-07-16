@@ -1,4 +1,5 @@
 "use strict";
+document.documentElement.classList.remove("no-js");
 
 /* =========================================================
    CONFIGURATION
@@ -237,9 +238,33 @@ function isHomeLink(linkTarget) {
 }
 
 function updateActiveNavigation() {
+
+   const isHomePage =
+  window.location.pathname.endsWith("/") ||
+  window.location.pathname.endsWith("/index.html");
+   
   if (!navigationLinks.length) {
     return;
   }
+
+   if (!isHomePage) {
+  navigationLinks.forEach((link) => {
+    const linkTarget = link.getAttribute("href") || "";
+    const isProjectsLink =
+      linkTarget.endsWith("#projects");
+
+    link.classList.toggle("active", isProjectsLink);
+
+    if (isProjectsLink) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  return;
+}
+   
 
   let currentSectionId = "";
 
