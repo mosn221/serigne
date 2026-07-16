@@ -16,7 +16,13 @@ const desktopMediaQuery = window.matchMedia(
   `(min-width: ${MOBILE_BREAKPOINT + 1}px)`
 );
 
-
+const navigationSectionMap = {
+  expertises: "expertises",
+  "cas-usage": "expertises",
+  technologies: "technologies",
+  projects: "projects",
+  collaborer: "collaborer"
+};
 /* =========================================================
    ÉLÉMENTS DU DOM
 ========================================================= */
@@ -104,7 +110,7 @@ function closeMenu({ restoreFocus = false } = {}) {
 
   menuToggle.setAttribute("aria-expanded", "false");
 
-  updateNavigationAccessibility();
+  NavigationAccessibility();
 
   if (restoreFocus && isMobileViewport()) {
     menuToggle.focus();
@@ -176,7 +182,7 @@ function handleDesktopChange(event) {
     closeMenu();
   }
 
-  updateNavigationAccessibility();
+  NavigationAccessibility();
 }
 
 function initializeMobileMenu() {
@@ -213,7 +219,7 @@ function initializeMobileMenu() {
     desktopMediaQuery.addListener(handleDesktopChange);
   }
 
-  updateNavigationAccessibility();
+  NavigationAccessibility();
 }
 
 
@@ -252,14 +258,18 @@ function updateActiveNavigation() {
   navigationLinks.forEach((link) => {
     const linkTarget = link.getAttribute("href") || "";
 
-    const isActive = currentSectionId
-      ? linkTarget === `#${currentSectionId}`
-      : isHomeLink(linkTarget);
+   const activeNavigationTarget =
+     navigationSectionMap[currentSectionId] ||
+     currentSectionId;
+   
+   const isActive = currentSectionId
+     ? linkTarget === `#${activeNavigationTarget}`
+     : isHomeLink(linkTarget);
 
     link.classList.toggle("active", isActive);
 
     if (isActive) {
-      link.setAttribute("aria-current", "page");
+      link.setAttribute("aria-current", "location");
     } else {
       link.removeAttribute("aria-current");
     }
