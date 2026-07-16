@@ -234,6 +234,65 @@ content="
     </div>
   </div>
   </section>
+
+    <section class="section reveal" id="chiffres">
+  <div class="container">
+    <h2 class="section-title">M221Tech en chiffres</h2>
+
+    <p class="section-intro">
+      Des projets construits progressivement autour de données locales,
+      structurées et réutilisables.
+    </p>
+
+    <div class="stats-grid">
+      <article class="stat-card">
+        <strong
+          class="stat-number"
+          data-target="337"
+          data-suffix="+"
+        >
+          0
+        </strong>
+
+        <span>produits alimentaires documentés</span>
+      </article>
+
+      <article class="stat-card">
+        <strong
+          class="stat-number"
+          data-target="30"
+        >
+          0
+        </strong>
+
+        <span>journées de championnat couvertes</span>
+      </article>
+
+      <article class="stat-card">
+        <strong
+          class="stat-number"
+          data-target="3"
+        >
+          0
+        </strong>
+
+        <span>plateformes de données</span>
+      </article>
+
+      <article class="stat-card">
+        <strong
+          class="stat-number"
+          data-target="1000"
+          data-suffix="+"
+        >
+          0
+        </strong>
+
+        <span>données structurées</span>
+      </article>
+    </div>
+  </div>
+</section>
       
   <section class="section reveal" id="technologies">
   <div class="container">
@@ -313,6 +372,59 @@ content="
     </div>
   </div>
   </section>
+
+    <section class="section reveal" id="demonstrateur">
+  <div class="container">
+    <h2 class="section-title">
+      Tester une transformation de données
+    </h2>
+
+    <p class="section-intro">
+      Collez un petit tableau CSV pour obtenir un aperçu
+      structuré et une représentation JSON.
+    </p>
+
+    <div class="data-demo">
+      <div class="data-demo-input">
+        <label for="data-input">
+          Données CSV
+        </label>
+
+        <textarea
+          id="data-input"
+          rows="8"
+          spellcheck="false"
+          placeholder="Produit,Calories,Protéines&#10;Thiéré,350,11&#10;Bissap,90,0"
+        ></textarea>
+
+        <div class="data-demo-actions">
+          <button
+            id="analyze-data"
+            class="btn btn-primary"
+            type="button"
+          >
+            Analyser
+          </button>
+
+          <button
+            id="reset-data"
+            class="btn btn-secondary"
+            type="button"
+          >
+            Effacer
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="data-results"
+        class="data-results"
+        aria-live="polite"
+        hidden
+      ></div>
+    </div>
+  </div>
+</section>
     
   <section class="section reveal" id="projects">
   <div class="container">
