@@ -2119,3 +2119,8 @@ button:focus-visible {
 .contact-title {
   margin-top: 0;
 }
+
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
