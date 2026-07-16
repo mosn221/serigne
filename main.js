@@ -248,7 +248,7 @@ function updateActiveNavigation() {
     return;
   }
 
-   if (!isHomePage) {
+/*   if (!isHomePage) {
   navigationLinks.forEach((link) => {
     const linkTarget = link.getAttribute("href") || "";
     const isProjectsLink =
@@ -264,8 +264,39 @@ function updateActiveNavigation() {
   });
 
   return;
+} */
+
+   const isProjectPage =
+  window.location.pathname.includes("/projets/");
+
+if (!isHomePage) {
+  navigationLinks.forEach((link) => {
+    const linkTarget =
+      link.getAttribute("href") || "";
+
+    const isActive =
+      isProjectPage &&
+      linkTarget.endsWith("#projects");
+
+    link.classList.toggle(
+      "active",
+      isActive
+    );
+
+    if (isActive) {
+      link.setAttribute(
+        "aria-current",
+        "page"
+      );
+    } else {
+      link.removeAttribute(
+        "aria-current"
+      );
+    }
+  });
+
+  return;
 }
-   
 
   let currentSectionId = "";
 
