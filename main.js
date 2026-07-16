@@ -110,7 +110,7 @@ function closeMenu({ restoreFocus = false } = {}) {
 
   menuToggle.setAttribute("aria-expanded", "false");
 
-  NavigationAccessibility();
+  UpdateNavigationAccessibility();
 
   if (restoreFocus && isMobileViewport()) {
     menuToggle.focus();
@@ -182,7 +182,7 @@ function handleDesktopChange(event) {
     closeMenu();
   }
 
-  NavigationAccessibility();
+  UpdateNavigationAccessibility();
 }
 
 function initializeMobileMenu() {
@@ -219,7 +219,7 @@ function initializeMobileMenu() {
     desktopMediaQuery.addListener(handleDesktopChange);
   }
 
-  NavigationAccessibility();
+  UpdateNavigationAccessibility();
 }
 
 
