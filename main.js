@@ -20,6 +20,7 @@ const desktopMediaQuery = window.matchMedia(
 const navigationSectionMap = {
   expertises: "expertises",
   "cas-usage": "expertises",
+  chiffres: "expertises",
   technologies: "technologies",
   projects: "projects",
   collaborer: "collaborer"
