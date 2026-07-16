@@ -520,6 +520,237 @@ function initializeTechnologyTabs() {
   activateTechnologyTab(activeTab);
 }
 
+/* =========================================================
+   COMPTEURS ANIMÉS
+========================================================= */
+
+function setCounterFinalValue(counter) {
+  const target = Number(counter.dataset.target);
+  const suffix = counter.dataset.suffix || "";
+
+  if (!Number.isFinite(target)) {
+    return;
+  }
+
+  counter.textContent =
+    `${target.toLocaleString("fr-FR")}${suffix}`;
+}
+
+function animateCounter(counter) {
+  const target = Number(counter.dataset.target);
+  const suffix = counter.dataset.suffix || "";
+
+  if (!Number.isFinite(target)) {
+    return;
+  }
+
+  const duration = 1200;
+  const startTime = performance.now();
+
+  function updateCounter(currentTime) {
+    const progress = Math.min(
+      (currentTime - startTime) / duration,
+      1
+    );
+
+    const easedProgress =
+      1 - Math.pow(1 - progress, 3);
+
+    const currentValue = Math.round(
+      target * easedProgress
+    );
+
+    counter.textContent =
+      `${currentValue.toLocaleString("fr-FR")}${suffix}`;
+
+    if (progress < 1) {
+      window.requestAnimationFrame(updateCounter);
+    }
+  }
+
+  window.requestAnimationFrame(updateCounter);
+}
+
+function initializeCounters() {
+  const counters =
+    document.querySelectorAll(".stat-number");
+
+  if (!counters.length) {
+    return;
+  }
+
+  if (
+    prefersReducedMotion.matches ||
+    !("IntersectionObserver" in window)
+  ) {
+    counters.forEach(setCounterFinalValue);
+    return;
+  }
+
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.45
+    }
+  );
+
+  counters.forEach((counter) => {
+    counterObserver.observe(counter);
+  });
+}
+
+/* =========================================================
+   MINI-DÉMONSTRATEUR DATA
+========================================================= */
+
+function detectCsvDelimiter(firstLine) {
+  const candidates = [",", ";", "\t"];
+
+  return candidates.reduce(
+    (bestDelimiter, delimiter) => {
+      const currentCount =
+        firstLine.split(delimiter).length;
+
+      const bestCount =
+        firstLine.split(bestDelimiter).length;
+
+      return currentCount > bestCount
+        ? delimiter
+        : bestDelimiter;
+    },
+    ","
+  );
+}
+
+function parseCsvLine(line, delimiter) {
+  return line
+    .split(delimiter)
+    .map((value) => value.trim());
+}
+
+function createResultMetric(value, label) {
+  const element = document.createElement("div");
+  element.className = "data-metric";
+
+  const strong = document.createElement("strong");
+  strong.textContent = String(value);
+
+  const span = document.createElement("span");
+  span.textContent = label;
+
+  element.append(strong, span);
+
+  return element;
+}
+
+function initializeDataDemo() {
+  const input = document.getElementById("data-input");
+  const analyzeButton =
+    document.getElementById("analyze-data");
+  const resetButton =
+    document.getElementById("reset-data");
+  const results =
+    document.getElementById("data-results");
+
+  if (
+    !input ||
+    !analyzeButton ||
+    !resetButton ||
+    !results
+  ) {
+    return;
+  }
+
+  function showMessage(message) {
+    results.replaceChildren();
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = message;
+
+    results.append(paragraph);
+    results.hidden = false;
+  }
+
+  analyzeButton.addEventListener("click", () => {
+    const lines = input.value
+      .trim()
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (lines.length < 2) {
+      showMessage(
+        "Ajoutez une ligne d’en-tête et au moins une ligne de données."
+      );
+      return;
+    }
+
+    const delimiter = detectCsvDelimiter(lines[0]);
+    const headers = parseCsvLine(
+      lines[0],
+      delimiter
+    );
+
+    if (headers.some((header) => !header)) {
+      showMessage(
+        "Toutes les colonnes doivent posséder un nom."
+      );
+      return;
+    }
+
+    const rows = lines.slice(1).map((line) => {
+      const values = parseCsvLine(
+        line,
+        delimiter
+      );
+
+      return Object.fromEntries(
+        headers.map((header, index) => [
+          header,
+          values[index] ?? ""
+        ])
+      );
+    });
+
+    const metrics =
+      document.createElement("div");
+    metrics.className = "data-metrics";
+
+    metrics.append(
+      createResultMetric(rows.length, "lignes"),
+      createResultMetric(headers.length, "colonnes")
+    );
+
+    const title = document.createElement("h3");
+    title.textContent = "Résultat JSON";
+
+    const pre = document.createElement("pre");
+    pre.textContent = JSON.stringify(
+      rows,
+      null,
+      2
+    );
+
+    results.replaceChildren(metrics, title, pre);
+    results.hidden = false;
+  });
+
+  resetButton.addEventListener("click", () => {
+    input.value = "";
+    results.replaceChildren();
+    results.hidden = true;
+    input.focus();
+  });
+}
 
 /* =========================================================
    INITIALISATION
@@ -531,6 +762,8 @@ function initializeSite() {
   initializeScrollFeatures();
   initializeRevealAnimations();
   initializeTechnologyTabs();
+   initializeCounters();
+   initializeDataDemo();
 }
 
 if (document.readyState === "loading") {
