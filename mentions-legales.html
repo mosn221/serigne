@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,31 +12,108 @@
 
   <link rel="canonical" href="https://m221.tech/mentions-legales.html">
 
-  <link href="assets/img/icone_favicon_512.png" rel="icon">
-  <link href="assets/img/icone_favicon_512.png" rel="apple-touch-icon">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/icone_favicon_512.png">
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/img/icone_favicon_512.png"
+  >
+  
+  <link
+    rel="apple-touch-icon"
+    href="assets/img/icone_favicon_512.png"
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
   <link href="style-clean.css" rel="stylesheet">
 </head>
 <body>
-  <header id="header" class="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="Accueil m221.tech">
-        <img src="assets/img/logositeweb.svg" alt="M221Tech" width="160" height="48">
-      </a>
+  <div
+  class="scroll-progress"
+  id="scrollProgress"
+></div>
+<header id="header" class="header">
+  <div class="container header-container">
 
-      <nav aria-label="Navigation secondaire">
-        <a href="index.html" class="btn btn-secondary">Retour</a>
-      </nav>
-    </div>
-  </header>
+    <a
+      href="index.html"
+      class="logo"
+      aria-label="Accueil M221Tech"
+    >
+      <img
+        src="assets/img/logositeweb.svg"
+        alt="Logo M221Tech"
+      >
+    </a>
+
+    <nav
+      id="navmenu"
+      class="navmenu"
+      aria-label="Navigation principale"
+    >
+      <button
+        class="mobile-nav-close"
+        id="mobile-nav-close"
+        type="button"
+        aria-label="Fermer le menu"
+      >
+        ×
+      </button>
+
+      <ul>
+        <li>
+          <a href="index.html">Accueil</a>
+        </li>
+
+        <li>
+          <a href="index.html#expertises">
+            Expertises
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#technologies">
+            Technologies
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#projects">
+            Projets
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#collaborer">
+            Collaborer
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="mobile-nav-toggle"
+      id="mobile-nav-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-controls="navmenu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+</header>
+
+<div
+  id="menu-overlay"
+  class="menu-overlay"
+></div>
 
   <main>
 
@@ -59,7 +136,7 @@
     <section class="section legal-section">
       <div class="container legal-layout">
 
-        <aside class="legal-toc feature-card">
+        <aside class="legal-toc ">
           <strong class="legal-toc-title">Sommaire</strong>
           <nav aria-label="Sommaire des mentions légales">
             <a href="#editeur">Éditeur du site</a>
@@ -74,7 +151,7 @@
 
         <div class="legal-content">
 
-          <article id="editeur" class="legal-card feature-card">
+          <article id="editeur" class="legal-card ">
             <h2>Éditeur du site</h2>
             <p>
               Le site <strong>m221.tech</strong> est édité par <strong>M221Tech</strong>,
@@ -92,23 +169,20 @@
             </p>
           </article>
 
-          <article id="hebergement" class="legal-card feature-card">
+          <article id="hebergement" class="legal-card ">
             <h2>Hébergement</h2>
             <p>
               Le site est hébergé par :
             </p>
             <p>
               <strong>Netlify, Inc.</strong><br>
-              44 Montgomery Street, Suite 300<br>
-              San Francisco, California 94104<br>
-              États-Unis
             </p>
             <p>
               Site de l’hébergeur : <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">www.netlify.com</a>
             </p>
           </article>
 
-          <article id="propriete" class="legal-card feature-card">
+          <article id="propriete" class="legal-card ">
             <h2>Propriété intellectuelle</h2>
             <p>
               L’ensemble des contenus présents sur ce site, notamment les textes, éléments
@@ -126,7 +200,7 @@
             </p>
           </article>
 
-          <article id="donnees" class="legal-card feature-card">
+          <article id="donnees" class="legal-card ">
             <h2>Données personnelles</h2>
             <p>
               M221Tech peut être amené à recevoir certaines données personnelles lorsque vous prenez
@@ -152,7 +226,7 @@
             </p>
           </article>
 
-          <article id="cookies" class="legal-card feature-card">
+          <article id="cookies" class="legal-card ">
             <h2>Cookies</h2>
             <p>
               Le site peut utiliser des cookies ou technologies similaires strictement nécessaires au
@@ -160,12 +234,13 @@
               d’audience si de tels outils sont activés ultérieurement.
             </p>
             <p>
-              À ce jour, aucun usage de cookies publicitaires ou de profilage n’est revendiqué sur cette page.
-              En cas d’évolution des outils utilisés sur le site, cette section pourra être mise à jour.
+              À ce jour, le site n’utilise pas de cookies publicitaires
+              ni de technologies de profilage. En cas d’évolution des
+              outils utilisés, cette section sera mise à jour.
             </p>
           </article>
 
-          <article id="responsabilite" class="legal-card feature-card">
+          <article id="responsabilite" class="legal-card ">
             <h2>Responsabilité</h2>
             <p>
               M221Tech s’efforce de fournir sur ce site des informations claires, cohérentes et régulièrement
@@ -179,7 +254,7 @@
             </p>
           </article>
 
-          <article id="contact" class="legal-card feature-card">
+          <article id="contact" class="legal-card ">
             <h2>Contact</h2>
             <p>
               Pour toute question relative au site, à son contenu ou au traitement des données,
@@ -218,41 +293,33 @@
   </div>
 
       </div>
-      <!--
-      <div class="footer-wrap">
-        <span>© 2026 PyCode.tech. Tous droits réservés.</span>
-          <span>
-    <a href="mentions-legales.html">Mentions légales</a>
-          </span>
-        <span>Dev • Data • Digital</span>
-      </div>
-
-    </div> -->
+    
 </footer>
-  
+  <button
+  id="scrollTopBtn"
+  class="back-to-top"
+  aria-label="Retour en haut"
+  type="button"
+>
+  <svg
+    viewBox="0 0 24 24"
+    width="18"
+    height="18"
+    aria-hidden="true"
+  >
+    <path
+      d="M12 19V7M6 13l6-6 6 6"
+      stroke="white"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </svg>
+</button>
 
 
-  <script>
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-function toggleScrollButton() {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
-}
-
-window.addEventListener("scroll", toggleScrollButton);
-window.addEventListener("load", toggleScrollButton);
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-  </script>
+  <script src="main.js"></script>
   
 </body>
 </html>
