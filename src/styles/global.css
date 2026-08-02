@@ -19,4 +19,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./legacy.css";
+@import "legacy.css";
