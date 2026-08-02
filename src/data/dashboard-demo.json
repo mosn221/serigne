@@ -1,0 +1,10 @@
+{
+  "source": "Démo inspirée du dataset Lekkantu — à remplacer par un export réel (CSV/JSON) du projet",
+  "categories": [
+    { "label": "Céréales & féculents", "count": 84 },
+    { "label": "Légumineuses", "count": 52 },
+    { "label": "Produits laitiers", "count": 41 },
+    { "label": "Poissons & viandes", "count": 63 },
+    { "label": "Fruits & légumes", "count": 97 }
+  ]
+}
