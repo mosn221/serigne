@@ -1,0 +1,143 @@
+---
+// Layout.astro
+// -----------------------------------------------------------------------
+// C'est le "moule" HTML commun à TOUTES les pages du site (accueil,
+// pages projets, mentions légales...). Chaque page l'utilise ainsi :
+//
+//   <Layout title="..." description="...">
+//     <p>Contenu propre à cette page</p>
+//   </Layout>
+//
+// Tout ce qui est identique partout (head, header, footer, bouton
+// "retour en haut") vit ici une seule fois, au lieu d'être copié-collé
+// dans chaque fichier HTML comme avant.
+// -----------------------------------------------------------------------
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+// Props que chaque page DOIT fournir pour personnaliser son <head>
+// (titre d'onglet, meta description, image de partage sur les réseaux).
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string; // optionnelle : valeur par défaut ci-dessous si absente
+}
+
+const {
+  title,
+  description,
+  ogImage = 'https://m221.tech/assets/img/logo_carre_transp.png'
+} = Astro.props;
+
+// Astro.url.pathname = le chemin de la page actuelle (ex: "/projets/lekkantu").
+// On le combine avec Astro.site (défini dans astro.config.mjs) pour obtenir
+// l'URL absolue et complète de la page — nécessaire pour le SEO
+// (balise canonical) et les partages sur réseaux sociaux (Open Graph).
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Titre affiché dans l'onglet du navigateur, spécifique à chaque page -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <!-- URL canonique : indique aux moteurs de recherche quelle est
+       LA version officielle de cette page (évite les problèmes de
+       contenu dupliqué si la page est accessible par plusieurs URLs) -->
+  <link rel="canonical" href={canonicalURL} />
+  <link rel="alternate" href={canonicalURL} hreflang="fr" />
+  <link rel="alternate" href={canonicalURL} hreflang="x-default" />
+
+  <!-- Open Graph : ce que Facebook/LinkedIn/WhatsApp affichent quand
+       quelqu'un partage le lien de cette page -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content={canonicalURL} />
+
+  <!-- Twitter Card : équivalent Open Graph pour X/Twitter -->
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Données structurées Schema.org : aide Google à comprendre qu'il
+       s'agit d'une "Organization" et à afficher un rich snippet
+       (logo, réseaux sociaux) dans les résultats de recherche -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "M221Tech",
+    "url": "https://m221.tech",
+    "logo": "https://m221.tech/assets/img/logo_carre_transp.png",
+    "description": "M221Tech conçoit et développe des plateformes de données, des applications web et des outils numériques pour des projets data-driven.",
+    "sameAs": [
+      "https://www.linkedin.com/company/m221tech",
+      "https://github.com/m221tech",
+      "https://www.kaggle.com/m221tech"
+    ]
+  })} />
+
+  <!-- Favicons : icône affichée dans l'onglet et en icône d'app mobile -->
+  <link rel="icon" type="image/png" href="/assets/img/icone_favicon_512.png" />
+  <link rel="apple-touch-icon" href="/assets/img/icone_favicon_512.png" />
+
+  <!-- Préconnexion aux serveurs Google Fonts : démarre la connexion
+       réseau AVANT que le CSS ne demande la police, ce qui accélère
+       légèrement le chargement des polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Barre de progression de scroll en haut de l'écran, remplie par le
+       JS dans src/scripts/site.js -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <Header />
+
+  <!-- Fond semi-transparent affiché derrière le menu mobile ouvert -->
+  <div id="menu-overlay" class="menu-overlay"></div>
+
+  <main>
+    <!-- <slot /> = c'est ICI que le contenu spécifique de chaque page
+         (fourni entre <Layout> et </Layout>) vient s'insérer -->
+    <slot />
+  </main>
+
+  <Footer />
+
+  <!-- Bouton flottant "retour en haut", affiché après un certain scroll
+       (logique dans site.js) -->
+  <button id="scrollTopBtn" class="back-to-top" aria-label="Retour en haut" type="button">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path
+        d="M12 19V7M6 13l6-6 6 6"
+        stroke="white"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+      />
+    </svg>
+  </button>
+
+  <!-- Script JS unique du site : menu mobile, onglets technologies,
+       animations au scroll, compteurs, navigation active... -->
+  <script src="../scripts/site.js"></script>
+</body>
+</html>
