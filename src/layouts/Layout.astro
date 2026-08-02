@@ -140,6 +140,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <!-- Script JS unique du site : menu mobile, onglets technologies,
        animations au scroll, compteurs, navigation active... -->
-  <script src="../scripts/site.js"></script>
+
+<script>
+  import '../scripts/site.js';
+</script>
+
 </body>
 </html>
