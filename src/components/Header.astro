@@ -1,0 +1,52 @@
+---
+// Header.astro
+// -----------------------------------------------------------------------
+// Barre de navigation en haut du site. Utilisée sur TOUTES les pages via
+// Layout.astro — donc si vous ajoutez un lien ici, il apparaît partout
+// automatiquement, sans avoir à modifier chaque page une par une.
+//
+// Les liens vers les sections de la homepage (ex: "/#projects") incluent
+// le "/" au début : c'est nécessaire pour que le lien fonctionne aussi
+// depuis une page projet (ex: /projets/lekkantu) et pas seulement depuis
+// l'accueil. Sans le "/", le navigateur chercherait une ancre "#projects"
+// sur la page projet elle-même, qui n'existe pas.
+// -----------------------------------------------------------------------
+---
+
+<header id="header" class="header">
+  <div class="container header-container">
+    <!-- Logo cliquable, ramène toujours à l'accueil -->
+    <a href="/" class="logo" aria-label="Accueil M221Tech">
+      <img src="/assets/img/logositeweb.svg" alt="Logo M221Tech" />
+    </a>
+
+    <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+      <!-- Bouton visible uniquement sur mobile, pour fermer le menu
+           déroulant une fois ouvert -->
+      <button class="mobile-nav-close" id="mobile-nav-close" type="button" aria-label="Fermer le menu">
+        ×
+      </button>
+
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/#projects">Projets</a></li>
+        <li><a href="/#expertises">Expertises</a></li>
+        <li><a href="/#technologies">Technologies</a></li>
+        <li><a href="/#collaborer">Collaborer</a></li>
+      </ul>
+    </nav>
+
+    <!-- Bouton "hamburger", visible uniquement sur mobile, pour ouvrir
+         le menu. Le JS (site.js) gère l'ouverture/fermeture. -->
+    <button
+      class="mobile-nav-toggle"
+      id="mobile-nav-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-controls="navmenu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </div>
+</header>

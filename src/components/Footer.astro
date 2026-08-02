@@ -1,0 +1,29 @@
+---
+// Footer.astro
+// -----------------------------------------------------------------------
+// Pied de page commun à toutes les pages. Le "new Date().getFullYear()"
+// calcule l'année en cours automatiquement à chaque build du site — vous
+// n'aurez donc plus jamais à changer le "© 2026" manuellement chaque
+// année : il se met à jour tout seul au prochain déploiement.
+// -----------------------------------------------------------------------
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-wrap">
+      <div>
+        © {new Date().getFullYear()} <strong>M221Tech</strong><br />
+        Plateformes de données & outils numériques
+      </div>
+
+      <div>
+        <a href="/mentions-legales">Mentions légales</a><br />
+        <a href="mailto:m221tech@gmail.com">Contact</a>
+      </div>
+
+      <div>Dev • Data • Digital</div>
+
+      <p>Focus sur des process data-driven.</p>
+    </div>
+  </div>
+</footer>
