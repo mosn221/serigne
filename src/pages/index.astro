@@ -1,0 +1,366 @@
+---
+// index.astro
+// -----------------------------------------------------------------------
+// Page d'accueil du site. Dans Astro, tout fichier placé dans
+// src/pages/ devient automatiquement une URL : ce fichier "index.astro"
+// correspond à la racine du site → https://m221.tech/
+//
+// Structure de la page (ordre volontairement retravaillé par rapport à
+// la version précédente) :
+//   1. Hero (accroche)
+//   2. Projets (remontés en haut : c'est la meilleure preuve concrète)
+//   3. Dashboard interactif (démonstration live de compétence data)
+//   4. Expertises (fusionné avec l'ancienne section "Solutions
+//      développées", qui était redondante)
+//   5. Chiffres clés
+//   6. Technologies utilisées
+//   7. Ressources (GitHub, Kaggle, LinkedIn)
+//   8. Contact / Collaborer
+// -----------------------------------------------------------------------
+
+import Layout from '../layouts/Layout.astro';
+import DataDashboard from '../components/DataDashboard.astro';
+---
+
+<Layout
+  title="M221Tech | Data Engineering, applications web et plateformes de données"
+  description="M221Tech conçoit des plateformes de données, des applications web et des outils numériques pour collecter, structurer et valoriser les données locales."
+>
+
+  <!-- ============================================================
+       1. HERO — première chose vue par le visiteur
+  ============================================================= -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Dev • Data • Digital</span>
+
+        <h1>Plateformes de données & outils numériques</h1>
+        <p>
+          M221Tech collecte, structure et valorise des données locales à travers des
+          applications web, des bases propres, des tableaux de bord et des outils
+          numériques sur mesure.
+        </p>
+
+        <!-- Titre caché visuellement mais lu par les lecteurs d'écran
+             et utile au SEO : donne un second niveau de contexte sans
+             surcharger visuellement le hero -->
+        <h2 class="visually-hidden">
+          Développement de plateformes data, applications web et outils numériques
+        </h2>
+
+        <div class="hero-actions">
+          <a href="#collaborer" class="btn btn-primary">Discutons de votre projet</a>
+        </div>
+      </div>
+
+      <!-- Carte latérale résumant les 3 grands pôles d'activité -->
+      <aside class="hero-card">
+        <div class="mini-grid">
+          <div class="mini-card">
+            <strong>Développement backend</strong>
+            <p>Systèmes backend robustes pour applications web, plateformes numériques et outils métiers.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Plateformes de données</strong>
+            <p>Conception de plateformes dédiées à la collecte, la gestion et l'exploitation de données.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Outils numériques</strong>
+            <p>Applications et outils sur mesure pour soutenir des projets data-driven.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. PROJETS — remontés juste après le hero : ce sont vos
+       meilleures preuves concrètes, elles doivent être vues tôt
+  ============================================================= -->
+  <section class="section reveal" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projets de plateformes de données</h2>
+      <p class="section-intro">Des initiatives que nous développons et faisons évoluer.</p>
+
+      <div class="projects-showcase">
+        <!-- Chaque <a> pointe vers une page dédiée (src/pages/projets/*.astro),
+             à créer dans une prochaine étape -->
+        <a href="/projets/lekkantu" class="project-showcase-link">
+          <article class="project-showcase-item">
+            <div>
+              <span class="project-tag">Nutrition</span>
+              <h3>Lekkantu</h3>
+              <p>
+                Une base de données nutritionnelle dédiée aux produits alimentaires consommés
+                localement : ingrédients, valeurs nutritionnelles, marques, catégories et
+                informations produits.
+              </p>
+            </div>
+            <div class="project-image">
+              <img src="/assets/img/projets/lekkantu.jpg" alt="Aperçu du projet Lekkantu" loading="lazy" />
+            </div>
+            <div class="project-meta">
+              <span>Données produits</span>
+              <span>Nutrition</span>
+              <span>Collecte terrain</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="/projets/sunugoal" class="project-showcase-link">
+          <article class="project-showcase-item">
+            <div>
+              <span class="project-tag">Sports</span>
+              <h3>SunuGoal</h3>
+              <p>
+                Un projet de structuration de données sportives autour du sport à travers
+                plusieurs catégories de compétitions.
+              </p>
+            </div>
+            <div class="project-image">
+              <img src="/assets/img/projets/logo-sunugoal.png" alt="Logo du projet SunuGoal" loading="lazy" />
+            </div>
+            <div class="project-meta">
+              <span>Sportech</span>
+              <span>Statistiques</span>
+              <span>Data sport</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="/projets/kurel" class="project-showcase-link">
+          <article class="project-showcase-item">
+            <div>
+              <span class="project-tag">Culture & Data</span>
+              <h3>Kurel Facts</h3>
+              <p>
+                Un dashboard interactif pour analyser les prestations, les kurels, les maîtres
+                de chœur et les mélodies.
+              </p>
+            </div>
+            <div class="project-image">
+              <img src="/assets/img/projets/daaray-kurel.jpg" alt="Aperçu du projet Kurel Facts" loading="lazy" />
+            </div>
+            <div class="project-meta">
+              <span>Patrimoine culturel</span>
+              <span>Qasidas</span>
+              <span>Data culturelle</span>
+            </div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. DASHBOARD — composant importé en haut du fichier, appelé
+       ici comme une simple balise. Voir DataDashboard.astro pour
+       le détail de son fonctionnement.
+  ============================================================= -->
+  <DataDashboard />
+
+  <!-- ============================================================
+       4. EXPERTISES — fusion de l'ancienne section "Expertises" et
+       de l'ancienne section "Solutions développées", qui répétaient
+       en grande partie les mêmes idées
+  ============================================================= -->
+  <section class="section reveal" id="expertises">
+    <div class="container">
+      <h2 class="section-title">Nos expertises en ingénierie des données</h2>
+      <p class="section-intro">
+        Des outils simples et robustes pour transformer des données brutes en solutions exploitables.
+      </p>
+
+      <div class="produits-list">
+        <div class="produit-item">
+          <span>01</span>
+          <div>
+            <strong>Bases de données propres</strong>
+            <p>Structuration de données issues de fichiers, images ou formulaires en datasets fiables (Sheets, SQL, CSV, JSON).</p>
+          </div>
+        </div>
+
+        <div class="produit-item">
+          <span>02</span>
+          <div>
+            <strong>Tableaux de bord</strong>
+            <p>Visualisation des données pour suivre des indicateurs, analyser et faciliter la prise de décision.</p>
+          </div>
+        </div>
+
+        <div class="produit-item">
+          <span>03</span>
+          <div>
+            <strong>Outils internes</strong>
+            <p>Applications web légères pour collecter, contrôler et exploiter les données au quotidien.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. CHIFFRES CLÉS
+       Note : les valeurs sont écrites EN DUR ici (337, 3, 1000, 7),
+       pas "0". Le JS (site.js) les anime au scroll pour l'effet
+       visuel, mais même sans JS ou pour un moteur de recherche qui
+       ne l'exécute pas, les vrais chiffres sont déjà visibles.
+  ============================================================= -->
+  <section class="section reveal" id="chiffres">
+    <div class="container">
+      <h2 class="section-title">M221Tech en chiffres</h2>
+      <p class="section-intro">
+        Des projets construits progressivement autour de données locales, structurées et réutilisables.
+      </p>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <strong class="stat-number" data-target="337" data-suffix="+">337+</strong>
+          <span>produits alimentaires documentés</span>
+        </article>
+
+        <article class="stat-card">
+          <strong class="stat-number" data-target="3">3</strong>
+          <span>plateformes de données</span>
+        </article>
+
+        <article class="stat-card">
+          <strong class="stat-number" data-target="1000" data-suffix="+">1 000+</strong>
+          <span>données structurées</span>
+        </article>
+
+        <article class="stat-card">
+          <strong class="stat-number" data-target="7">7</strong>
+          <span>jeux de données</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. TECHNOLOGIES — système d'onglets, géré par site.js
+       (activateTechnologyTab). Un seul panneau visible à la fois.
+  ============================================================= -->
+  <section class="section reveal" id="technologies">
+    <div class="container">
+      <h2 class="section-title">Technologies utilisées</h2>
+      <p class="section-intro">
+        M221Tech base ses travaux sur une stack simple, robuste et orientée données pour construire des outils exploitables.
+      </p>
+
+      <div class="tech-tabs" role="tablist" aria-label="Technologies M221Tech">
+        <button class="tech-tab active" type="button" role="tab" aria-selected="true" aria-controls="tech-data" id="tab-data" data-tech="data">
+          Data Engineering
+        </button>
+        <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-storage" id="tab-storage" data-tech="storage">
+          Données
+        </button>
+        <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-web" id="tab-web" data-tech="web">
+          Applications web
+        </button>
+        <button class="tech-tab" type="button" role="tab" aria-selected="false" aria-controls="tech-viz" id="tab-viz" data-tech="viz">
+          Visualisation
+        </button>
+      </div>
+
+      <div class="tech-panel active" id="tech-data" role="tabpanel" aria-labelledby="tab-data">
+        <h3>Data Engineering</h3>
+        <p>Collecter, nettoyer, transformer et structurer des données brutes en bases exploitables.</p>
+        <div class="tech-list">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>PostgreSQL</span>
+          <span>Pandas</span>
+          <span>APIs</span>
+          <span>Web Scraping</span>
+        </div>
+      </div>
+
+      <div class="tech-panel" hidden id="tech-storage" role="tabpanel" aria-labelledby="tab-storage">
+        <h3>Données & stockage</h3>
+        <p>Organiser les données dans des formats simples, réutilisables et adaptés au niveau du projet.</p>
+        <div class="tech-list">
+          <span>Google Sheets</span>
+          <span>PostgreSQL</span>
+          <span>CSV</span>
+          <span>JSON</span>
+          <span>Kaggle</span>
+        </div>
+      </div>
+
+      <div class="tech-panel" hidden id="tech-web" role="tabpanel" aria-labelledby="tab-web">
+        <h3>Applications web</h3>
+        <p>Développer des interfaces légères pour collecter, consulter, contrôler et exploiter les données.</p>
+        <div class="tech-list">
+          <span>Astro</span>
+          <span>Django</span>
+          <span>HTMX</span>
+          <span>Alpine.js</span>
+          <span>Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="tech-panel" hidden id="tech-viz" role="tabpanel" aria-labelledby="tab-viz">
+        <h3>Data visualisation</h3>
+        <p>Créer des tableaux de bord et visualisations pour comprendre les données et communiquer les résultats.</p>
+        <div class="tech-list">
+          <span>Chart.js</span>
+          <span>Plotly</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. RESSOURCES — liens externes (GitHub, Kaggle, LinkedIn)
+  ============================================================= -->
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Ressources</h2>
+      <p class="section-intro">Accédez aux données, documentations et ressources publiques des projets M221Tech.</p>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <h3>📘 Documentation</h3>
+          <p>Architecture, APIs et projets.</p>
+          <a href="https://github.com/m221tech">Accéder à la documentation →</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>📊 Datasets</h3>
+          <p>Données structurées et exploitables.</p>
+          <a href="https://www.kaggle.com/m221tech" target="_blank" rel="noopener noreferrer">Accéder aux datasets →</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>🌐 Communauté</h3>
+          <p>Suivre les projets et actualités.</p>
+          <a href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">Suivre notre actualité →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. CONTACT — dernière section, appel à l'action final
+  ============================================================= -->
+  <section class="section reveal" id="collaborer">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2 class="section-title contact-title">Collaborer</h2>
+        <p>M221Tech peut vous accompagner sur des projets data-driven, utiles et orientés impact.</p>
+
+        <div class="contact-links">
+          <a class="contact-link email" href="mailto:m221tech@gmail.com">Courriel</a>
+          <a class="contact-link whatsapp" href="https://wa.me/221756310591" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
