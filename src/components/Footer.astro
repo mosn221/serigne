@@ -3,31 +3,39 @@ const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
-const whyHref = `${homeHref}#why`;
 const labHref = `${homeHref}#lab`;
 const openHref = `${homeHref}#open`;
-const contactHref = `${homeHref}#contact`;
 
 const labels = isFrench
-  ? { projects: 'Projets', why: 'Pourquoi', lab: 'Lab', open: 'Open', contact: 'Contact' }
-  : { projects: 'Projects', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' };
+  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open' }
+  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open' };
 ---
 
 <footer class="m221-footer">
-  <div class="m221-container m221-footer-inner">
-    <div>
-      <strong>M221Tech</strong>
-      <div>{isFrench ? 'Données locales. Produits utiles.' : 'Local data. Useful products.'}</div>
-      <small>© {new Date().getFullYear()} M221Tech</small>
+  <div class="m221-container m221-footer-shell">
+    <div class="m221-footer-main">
+      <div class="m221-footer-brand-block">
+        <a class="m221-footer-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
+          <img src="/assets/img/logositeweb.svg" alt="M221Tech" />
+        </a>
+        <div class="m221-footer-signature">
+          <span>M221TECH / DATA HOUSE</span>
+          <p>{isFrench ? 'Données, produits et expérimentations.' : 'Data, products and experiments.'}</p>
+        </div>
+      </div>
+
+      <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
+        <a href={homeHref}>{labels.home}</a>
+        <a href={projectsHref}>{labels.projects}</a>
+        <a href={labHref}>{labels.lab}</a>
+        <a href={openHref}>{labels.open}</a>
+        <a class="m221-footer-linkedin" href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
 
-    <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
-      <a href={projectsHref}>{labels.projects}</a>
-      <a href={whyHref}>{labels.why}</a>
-      <a href={labHref}>{labels.lab}</a>
-      <a href={openHref}>{labels.open}</a>
-      <a href={contactHref}>{labels.contact}</a>
-      <a href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </nav>
+    <div class="m221-footer-meta">
+      <span>© {new Date().getFullYear()} M221Tech</span>
+      <span>Sports · Nutrition · Open data · Lab</span>
+    </div>
   </div>
 </footer>
