@@ -3,13 +3,14 @@ const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
+const whyHref = `${homeHref}#why`;
 const labHref = `${homeHref}#lab`;
 const openHref = `${homeHref}#open`;
 const contactHref = `${homeHref}#contact`;
 
 const labels = isFrench
-  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open', contact: 'Contact' }
-  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open', contact: 'Contact' };
+  ? { projects: 'Projets', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' }
+  : { projects: 'Projects', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' };
 ---
 
 <footer class="m221-footer">
@@ -21,8 +22,8 @@ const labels = isFrench
     </div>
 
     <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
-      <a href={homeHref}>{labels.home}</a>
       <a href={projectsHref}>{labels.projects}</a>
+      <a href={whyHref}>{labels.why}</a>
       <a href={labHref}>{labels.lab}</a>
       <a href={openHref}>{labels.open}</a>
       <a href={contactHref}>{labels.contact}</a>
