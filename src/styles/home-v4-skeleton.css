@@ -1,7 +1,13 @@
 @import './mobile-spine.css';
 
+.m221-v4-hero-grid{grid-template-columns:minmax(0,1fr)!important}
+.m221-v4-hero-grid>div:first-child{max-width:980px}
+.m221-v4-lead{max-width:680px}
 .m221-v4-spine{grid-template-columns:repeat(5,minmax(0,1fr))}
 .m221-v4-spine a{font-size:.72rem;padding-inline:10px}
+.m221-v4-chapter-head{grid-template-columns:110px minmax(0,1fr) minmax(240px,.58fr)}
+.m221-v4-chapter-head .m221-v4-index strong,.m221-v4-contact-inner>.m221-v4-index strong{display:none}
+.m221-v4-contact-inner{grid-template-columns:110px minmax(0,1fr) auto}
 
 .m221-v4-overview{background:linear-gradient(180deg,rgba(0,136,204,.035),transparent 72%)}
 .m221-v4-build-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
@@ -28,14 +34,18 @@
 .m221-v4-why-item>p{max-width:300px;margin:10px 0 0;color:#8793A5;font-size:.84rem;line-height:1.5}
 
 @media(max-width:980px){
+  .m221-v4-chapter-head{grid-template-columns:90px 1fr}
   .m221-v4-build-grid,.m221-v4-why-grid{grid-template-columns:1fr 1fr 1fr}
+  .m221-v4-contact-inner{grid-template-columns:90px 1fr}
 }
 
 @media(max-width:760px){
+  .m221-v4-chapter-head{display:block}
   .m221-v4-build-grid,.m221-v4-why-grid{grid-template-columns:1fr}
   .m221-v4-build-card{min-height:160px}
   .m221-v4-why-grid{border-radius:16px}
   .m221-v4-why-item{min-height:170px}
   .m221-v4-why-item+.m221-v4-why-item{border-left:0;border-top:1px solid var(--m221-border)}
   .m221-v4-why-item>strong{margin-top:30px}
+  .m221-v4-contact-inner{display:block}
 }
