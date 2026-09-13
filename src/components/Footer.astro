@@ -1,10 +1,15 @@
 ---
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
-const sportsHref = isFrench ? '/fr/sports/' : '/sports/';
-const nutritionHref = isFrench ? '/fr/nutrition/' : '/nutrition/';
-const openHref = isFrench ? '/fr/open/' : '/open/';
-const labHref = isFrench ? '/fr/#lab' : '/#lab';
+const homeHref = isFrench ? '/fr/' : '/';
+const projectsHref = `${homeHref}#projects`;
+const labHref = `${homeHref}#lab`;
+const openHref = `${homeHref}#open`;
+const contactHref = `${homeHref}#contact`;
+
+const labels = isFrench
+  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open', contact: 'Contact' }
+  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open', contact: 'Contact' };
 ---
 
 <footer class="m221-footer">
@@ -16,10 +21,11 @@ const labHref = isFrench ? '/fr/#lab' : '/#lab';
     </div>
 
     <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
-      <a href={sportsHref}>Sports</a>
-      <a href={nutritionHref}>Nutrition</a>
-      <a href={openHref}>Open</a>
-      <a href={labHref}>Lab</a>
+      <a href={homeHref}>{labels.home}</a>
+      <a href={projectsHref}>{labels.projects}</a>
+      <a href={labHref}>{labels.lab}</a>
+      <a href={openHref}>{labels.open}</a>
+      <a href={contactHref}>{labels.contact}</a>
       <a href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </nav>
   </div>
