@@ -8,14 +8,14 @@ import '../../styles/home-v4.css';
   description="M221Tech construit des produits data ciblés autour du sport, de la nutrition, de l'open data et du savoir local."
 >
   <div class="m221-home-v4">
-    <section class="m221-v4-hero">
+    <section class="m221-v4-hero" id="home" data-home-section data-nav-section="home">
       <div class="m221-container m221-v4-hero-grid">
         <div>
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Des données locales, construites en produits.</h1>
           <p class="m221-v4-lead">Football. Nutrition. Datasets ouverts. Quelques expérimentations. Pensés pour être explorés, pas seulement présentés.</p>
           <div class="m221-v4-hero-actions">
-            <a class="m221-btn m221-btn-primary" href="#build">Ce qu'on construit</a>
+            <a class="m221-btn m221-btn-primary" href="#projects">Voir les projets</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
           </div>
         </div>
@@ -34,51 +34,49 @@ import '../../styles/home-v4.css';
 
     <div class="m221-v4-spine-wrap">
       <nav class="m221-container m221-v4-spine" aria-label="Sections de la home M221Tech" data-home-spine>
-        <a href="#build" data-section-link="build"><span>01</span><span>Ce qu'on construit</span></a>
-        <a href="#why" data-section-link="why"><span>02</span><span>Pourquoi M221Tech</span></a>
-        <a href="#sports" data-section-link="sports"><span>03</span><span>Sports</span></a>
-        <a href="#nutrition" data-section-link="nutrition"><span>04</span><span>Nutrition</span></a>
-        <a href="#open" data-section-link="open"><span>05</span><span>Open</span></a>
-        <a href="#lab" data-section-link="lab"><span>06</span><span>Lab</span></a>
-        <a href="#contact" data-section-link="contact"><span>07</span><span>Contact</span></a>
+        <a href="#home" data-section-link="home"><span>00</span><span>Accueil</span></a>
+        <a href="#projects" data-section-link="projects"><span>01</span><span>Projets</span></a>
+        <a href="#lab" data-section-link="lab"><span>02</span><span>Lab</span></a>
+        <a href="#open" data-section-link="open"><span>03</span><span>Open</span></a>
+        <a href="#contact" data-section-link="contact"><span>04</span><span>Contact</span></a>
       </nav>
     </div>
 
-    <section class="m221-v4-chapter m221-v4-overview" id="build" data-home-section>
+    <section class="m221-v4-chapter m221-v4-overview" id="projects" data-home-section data-nav-section="projects">
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">01 / VUE D'ENSEMBLE<strong>Ce qu'on construit</strong></div>
+          <div class="m221-v4-index">01 / PROJETS<strong>Ce qu'on construit</strong></div>
           <h2>Des produits ciblés. Des données claires.</h2>
-          <p>Trois espaces. Chacun a un rôle.</p>
+          <p>Trois produits. Deux univers. Pensés pour être utilisés.</p>
         </header>
 
         <div class="m221-v4-build-grid">
           <a class="m221-v4-build-card" data-tone="sports" href="#sports">
-            <span class="m221-v4-domain">BUILD / SPORTS</span>
-            <strong>Sports</strong>
-            <p>M221Foot · WC2026</p>
+            <span class="m221-v4-domain">SPORTS / PLATEFORME</span>
+            <strong>M221Foot</strong>
+            <p>Compétition · Club · Match</p>
+            <span class="m221-v4-build-arrow">↓</span>
+          </a>
+          <a class="m221-v4-build-card" data-tone="sports" href="#sports">
+            <span class="m221-v4-domain">SPORTS / ÉVÉNEMENT</span>
+            <strong>WC2026</strong>
+            <p>Équipes · Matchs · Histoires</p>
             <span class="m221-v4-build-arrow">↓</span>
           </a>
           <a class="m221-v4-build-card" data-tone="food" href="#nutrition">
-            <span class="m221-v4-domain">BUILD / NUTRITION</span>
-            <strong>Nutrition</strong>
-            <p>Lekkantu</p>
-            <span class="m221-v4-build-arrow">↓</span>
-          </a>
-          <a class="m221-v4-build-card" data-tone="open" href="#open">
-            <span class="m221-v4-domain">SHARE + ANALYSE</span>
-            <strong>Open</strong>
-            <p>Datasets · Rapports</p>
+            <span class="m221-v4-domain">NUTRITION / BASE</span>
+            <strong>Lekkantu</strong>
+            <p>Produits · Ingrédients · Nutrition</p>
             <span class="m221-v4-build-arrow">↓</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="m221-v4-chapter m221-v4-why" id="why" data-home-section>
+    <section class="m221-v4-chapter m221-v4-why" id="why" data-home-section data-nav-section="projects">
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">02 / POSITION<strong>Pourquoi M221Tech</strong></div>
+          <div class="m221-v4-index">01.1 / WHY<strong>Pourquoi M221Tech</strong></div>
           <h2>Les données locales existent souvent. La couche produit, beaucoup moins.</h2>
           <p>C'est là qu'on intervient.</p>
         </header>
@@ -91,10 +89,10 @@ import '../../styles/home-v4.css';
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="sports" data-home-section>
+    <section class="m221-v4-chapter" id="sports" data-home-section data-nav-section="projects">
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">03 / BUILD<strong>Sports</strong></div>
+          <div class="m221-v4-index">01.2 / SPORTS<strong>Sports</strong></div>
           <h2>Au plus près du jeu.</h2>
           <p>M221Foot pour le long terme. WC2026 pour le tournoi.</p>
         </header>
@@ -150,10 +148,10 @@ import '../../styles/home-v4.css';
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="nutrition" data-home-section>
+    <section class="m221-v4-chapter" id="nutrition" data-home-section data-nav-section="projects">
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">04 / BUILD<strong>Nutrition</strong></div>
+          <div class="m221-v4-index">01.3 / NUTRITION<strong>Nutrition</strong></div>
           <h2>Au plus près de ce qu'on mange.</h2>
           <p>Lekkantu part des produits réellement présents dans les rayons.</p>
         </header>
@@ -179,10 +177,21 @@ import '../../styles/home-v4.css';
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="open" data-home-section>
+    <section class="m221-v4-chapter" id="lab" data-home-section data-nav-section="lab">
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">05 / SHARE + ANALYSE<strong>Open</strong></div>
+          <div class="m221-v4-index">02 / LAB<strong>From the lab</strong></div>
+          <h2>Des idées qui méritent un peu d'espace.</h2>
+          <p>Une petite expérimentation peut rester petite et quand même être utile.</p>
+        </header>
+        <article class="m221-v4-lab-card"><div class="m221-v4-index">LAB / 01</div><div><h3>Kurel Facts</h3><p>Culture et savoir local, explorés par la donnée.</p></div><a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Ouvrir Kurel Facts ↗</a></article>
+      </div>
+    </section>
+
+    <section class="m221-v4-chapter" id="open" data-home-section data-nav-section="open">
+      <div class="m221-container">
+        <header class="m221-v4-chapter-head">
+          <div class="m221-v4-index">03 / OPEN<strong>Open</strong></div>
           <h2>Utiliser les données. Demander l'analyse.</h2>
           <p>Certains jeux de données sortent. Les méthodes restent internes.</p>
         </header>
@@ -193,20 +202,9 @@ import '../../styles/home-v4.css';
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="lab" data-home-section>
-      <div class="m221-container">
-        <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">06 / EXPLORE<strong>From the lab</strong></div>
-          <h2>Des idées qui méritent un peu d'espace.</h2>
-          <p>Une petite expérimentation peut rester petite et quand même être utile.</p>
-        </header>
-        <article class="m221-v4-lab-card"><div class="m221-v4-index">LAB / 01</div><div><h3>Kurel Facts</h3><p>Culture et savoir local, explorés par la donnée.</p></div><a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Ouvrir Kurel Facts ↗</a></article>
-      </div>
-    </section>
-
-    <section class="m221-v4-contact" id="contact" data-home-section>
+    <section class="m221-v4-contact" id="contact" data-home-section data-nav-section="contact">
       <div class="m221-container m221-v4-contact-inner">
-        <div class="m221-v4-index">07 / CONNECT<strong>Contact</strong></div>
+        <div class="m221-v4-index">04 / CONNECT<strong>Contact</strong></div>
         <div><h2>Un dataset, une question ou une idée ?</h2><p>Parlons données, rapport ou collaboration.</p></div>
         <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">m221tech@gmail.com →</a>
       </div>
@@ -240,7 +238,8 @@ import '../../styles/home-v4.css';
       const observer = new IntersectionObserver((entries) => {
         const visible = entries.filter((entry) => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (!visible) return;
-        spineLinks.forEach((link) => link.setAttribute('aria-current', link.dataset.sectionLink === visible.target.id ? 'true' : 'false'));
+        const navSection = visible.target.dataset.navSection || visible.target.id;
+        spineLinks.forEach((link) => link.setAttribute('aria-current', link.dataset.sectionLink === navSection ? 'true' : 'false'));
       }, { rootMargin: '-22% 0px -58% 0px', threshold: [0,.1,.25,.5] });
       sections.forEach((section) => observer.observe(section));
     }
