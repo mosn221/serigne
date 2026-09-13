@@ -1,29 +1,24 @@
 ---
-// Footer.astro
-// -----------------------------------------------------------------------
-// Pied de page commun à toutes les pages. Le "new Date().getFullYear()"
-// calcule l'année en cours automatiquement à chaque build du site — vous
-// n'aurez donc plus jamais à changer le "© 2026" manuellement chaque
-// année : il se met à jour tout seul au prochain déploiement.
-// -----------------------------------------------------------------------
+const pathname = Astro.url.pathname;
+const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+const sportsHref = isFrench ? '/fr/sports/' : '/sports/';
+const nutritionHref = isFrench ? '/fr/nutrition/' : '/nutrition/';
+const openHref = isFrench ? '/fr/open/' : '/open/';
 ---
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-wrap">
-      <div>
-        © {new Date().getFullYear()} <strong>M221Tech</strong><br />
-        Plateformes de données & outils numériques
-      </div>
-
-      <div>
-        <a href="/mentions-legales">Mentions légales</a><br />
-        <a href="mailto:m221tech@gmail.com">Contact</a>
-      </div>
-
-      <div>Dev • Data • Digital</div>
-
-      <p>Focus sur des process data-driven.</p>
+<footer class="m221-footer">
+  <div class="m221-container m221-footer-inner">
+    <div>
+      <strong>M221Tech</strong>
+      <div>{isFrench ? 'Des produits construits à partir de données locales.' : 'Products built from local data.'}</div>
+      <small>© {new Date().getFullYear()} M221Tech</small>
     </div>
+
+    <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
+      <a href={sportsHref}>Sports</a>
+      <a href={nutritionHref}>Nutrition</a>
+      <a href={openHref}>Open</a>
+      <a href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
   </div>
 </footer>

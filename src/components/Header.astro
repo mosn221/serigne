@@ -1,52 +1,49 @@
 ---
-// Header.astro
-// -----------------------------------------------------------------------
-// Barre de navigation en haut du site. Utilisée sur TOUTES les pages via
-// Layout.astro — donc si vous ajoutez un lien ici, il apparaît partout
-// automatiquement, sans avoir à modifier chaque page une par une.
-//
-// Les liens vers les sections de la homepage (ex: "/#projects") incluent
-// le "/" au début : c'est nécessaire pour que le lien fonctionne aussi
-// depuis une page projet (ex: /projets/lekkantu) et pas seulement depuis
-// l'accueil. Sans le "/", le navigateur chercherait une ancre "#projects"
-// sur la page projet elle-même, qui n'existe pas.
-// -----------------------------------------------------------------------
+const pathname = Astro.url.pathname;
+const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+
+const homeHref = isFrench ? '/fr/' : '/';
+const sportsHref = isFrench ? '/fr/sports/' : '/sports/';
+const nutritionHref = isFrench ? '/fr/nutrition/' : '/nutrition/';
+const openHref = isFrench ? '/fr/open/' : '/open/';
+const contactHref = isFrench ? '/fr/#contact' : '/#contact';
+
+const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
+const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
 ---
 
-<header id="header" class="header">
-  <div class="container header-container">
-    <!-- Logo cliquable, ramène toujours à l'accueil -->
-    <a href="/" class="logo" aria-label="Accueil M221Tech">
-      <img src="/assets/img/logositeweb.svg" alt="Logo M221Tech" />
+<header class="m221-header">
+  <div class="m221-container m221-header-inner">
+    <a class="m221-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
+      M221Tech
     </a>
 
-    <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
-      <!-- Bouton visible uniquement sur mobile, pour fermer le menu
-           déroulant une fois ouvert -->
-      <button class="mobile-nav-close" id="mobile-nav-close" type="button" aria-label="Fermer le menu">
-        ×
-      </button>
-
-      <ul>
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/#projects">Projets</a></li>
-        <li><a href="/#expertises">Expertises</a></li>
-        <li><a href="/#technologies">Technologies</a></li>
-        <li><a href="/#collaborer">Collaborer</a></li>
-      </ul>
+    <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
+      <a href={sportsHref} aria-current={pathname.includes('/sports') ? 'page' : undefined}>Sports</a>
+      <a href={nutritionHref} aria-current={pathname.includes('/nutrition') ? 'page' : undefined}>Nutrition</a>
+      <a href={openHref} aria-current={pathname.includes('/open') ? 'page' : undefined}>Open</a>
+      <a href={contactHref}>{isFrench ? 'Contact' : 'Contact'}</a>
     </nav>
 
-    <!-- Bouton "hamburger", visible uniquement sur mobile, pour ouvrir
-         le menu. Le JS (site.js) gère l'ouverture/fermeture. -->
-    <button
-      class="mobile-nav-toggle"
-      id="mobile-nav-toggle"
-      type="button"
-      aria-label="Ouvrir le menu"
-      aria-controls="navmenu"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
+    <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
+      <a href={englishPath} aria-current={!isFrench ? 'true' : undefined}>EN</a>
+      <span aria-hidden="true">/</span>
+      <a href={frenchPath} aria-current={isFrench ? 'true' : undefined}>FR</a>
+    </div>
+
+    <details class="m221-mobile-nav">
+      <summary>{isFrench ? 'Menu' : 'Menu'}</summary>
+      <div class="m221-mobile-panel">
+        <a href={sportsHref}>Sports</a>
+        <a href={nutritionHref}>Nutrition</a>
+        <a href={openHref}>Open</a>
+        <a href={contactHref}>Contact</a>
+        <div class="m221-lang">
+          <a href={englishPath} aria-current={!isFrench ? 'true' : undefined}>EN</a>
+          <span aria-hidden="true">/</span>
+          <a href={frenchPath} aria-current={isFrench ? 'true' : undefined}>FR</a>
+        </div>
+      </div>
+    </details>
   </div>
 </header>
