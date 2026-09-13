@@ -118,15 +118,97 @@ import '../styles/home-v4.css';
   </div>
 
   <script>
+    const spine = document.querySelector('.m221-v4-spine-wrap');
+    const header = document.querySelector('.m221-header');
     const spineLinks = Array.from(document.querySelectorAll('[data-section-link]'));
-    const sections = Array.from(document.querySelectorAll('[data-home-section]'));
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
-        spineLinks.forEach((link) => link.setAttribute('aria-current', link.dataset.sectionLink === visible.target.id ? 'true' : 'false'));
-      }, { rootMargin: '-22% 0px -58% 0px', threshold: [0,.1,.25,.5] });
-      sections.forEach((section) => observer.observe(section));
-    }
+    const sections = spineLinks
+      .map((link) => document.getElementById(link.dataset.sectionLink || ''))
+      .filter(Boolean);
+
+    let activeId = '';
+    let navigationTarget = null;
+    let ticking = false;
+
+    const navOffset = () => (header?.offsetHeight || 0) + (spine?.offsetHeight || 0) + 1;
+
+    const setActive = (id) => {
+      if (!id || activeId === id) return;
+      activeId = id;
+      spineLinks.forEach((link) => {
+        if (link.dataset.sectionLink === id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+
+    const getCurrentSection = () => {
+      const marker = navOffset() + 8;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= marker) current = section;
+        else break;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 3;
+      return atBottom ? sections[sections.length - 1] : current;
+    };
+
+    const syncActive = () => {
+      ticking = false;
+      if (!sections.length) return;
+
+      if (navigationTarget) {
+        const target = document.getElementById(navigationTarget);
+        if (target) {
+          setActive(navigationTarget);
+          if (Math.abs(target.getBoundingClientRect().top - navOffset()) > 3) return;
+        }
+        navigationTarget = null;
+      }
+
+      setActive(getCurrentSection()?.id);
+    };
+
+    const scheduleSync = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(syncActive);
+    };
+
+    const releaseNavigationLock = () => {
+      navigationTarget = null;
+      scheduleSync();
+    };
+
+    spineLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const id = link.dataset.sectionLink;
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        event.preventDefault();
+        navigationTarget = id;
+        setActive(id);
+
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - navOffset());
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+
+    window.addEventListener('scroll', scheduleSync, { passive: true });
+    window.addEventListener('resize', scheduleSync, { passive: true });
+    window.addEventListener('touchstart', releaseNavigationLock, { passive: true });
+    window.addEventListener('wheel', releaseNavigationLock, { passive: true });
+
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const id = location.hash.slice(1);
+        const target = document.getElementById(id);
+        if (target && spineLinks.some((link) => link.dataset.sectionLink === id)) {
+          window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - navOffset()), behavior: 'auto' });
+        }
+      }
+      syncActive();
+    });
   </script>
 </Layout>
