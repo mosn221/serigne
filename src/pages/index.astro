@@ -1,46 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/home.css';
 ---
 
 <Layout
   title="M221Tech | Useful products from local data"
   description="M221Tech builds simple, useful products from local data across sports and nutrition, and shares selected datasets."
 >
-  <section class="m221-hero">
-    <div class="m221-container">
+  <section class="m221-hero m221-home-hero">
+    <div class="m221-container m221-home-hero-inner">
       <span class="m221-kicker">Local data, made useful.</span>
       <h1>We build useful products from local data.</h1>
-      <p>Sports, nutrition, culture — and a few ideas in between. We collect, structure and shape overlooked data into things people can actually use.</p>
+      <p class="m221-home-hero-copy">Sports, nutrition, culture — and a few ideas in between. We collect, structure and shape overlooked data into things people can actually use.</p>
       <div class="m221-actions">
         <a class="m221-btn m221-btn-primary" href="#products">See what we're building</a>
         <a class="m221-btn m221-btn-secondary" href="#contact">Say hello</a>
       </div>
+      <div class="m221-home-hero-foot" aria-hidden="true">
+        <span>Sports</span><span>Nutrition</span><span>Open data</span><span>From the lab</span>
+      </div>
     </div>
   </section>
 
-  <section class="m221-section" id="products">
+  <section class="m221-section m221-build" id="products">
     <div class="m221-container">
-      <div class="m221-section-head">
+      <div class="m221-section-head m221-build-head">
         <h2>What we build</h2>
         <p class="m221-section-intro">Two areas for now. We go deep, keep things useful, and let the products speak.</p>
       </div>
 
-      <div class="m221-grid-2">
-        <article class="m221-card">
-          <span class="m221-pill">Sports</span>
-          <h3>Closer to the game.</h3>
-          <p><strong>M221Foot · WC2026</strong></p>
-          <p>Football data with more context, more detail and less noise.</p>
-          <a class="m221-card-link" href="/sports/">Explore Sports →</a>
-        </article>
+      <div class="m221-vertical-grid">
+        <a class="m221-vertical m221-vertical-sports" href="/sports/">
+          <div class="m221-vertical-top">
+            <span class="m221-pill">Sports</span>
+            <span class="m221-vertical-index">01</span>
+          </div>
+          <div class="m221-vertical-body">
+            <h3>Closer to the game.</h3>
+            <p class="m221-project-signature">M221Foot <span>·</span> WC2026</p>
+            <p class="m221-vertical-copy">Football data with more context, more detail and less noise.</p>
+          </div>
+          <span class="m221-vertical-link">Explore Sports <span aria-hidden="true">↗</span></span>
+        </a>
 
-        <article class="m221-card">
-          <span class="m221-pill">Nutrition</span>
-          <h3>What really ends up on the plate.</h3>
-          <p><strong>Lekkantu</strong></p>
-          <p>Nutrition data grounded in the products people actually buy and eat.</p>
-          <a class="m221-card-link" href="/nutrition/">Explore Nutrition →</a>
-        </article>
+        <a class="m221-vertical m221-vertical-nutrition" href="/nutrition/">
+          <div class="m221-vertical-top">
+            <span class="m221-pill">Nutrition</span>
+            <span class="m221-vertical-index">02</span>
+          </div>
+          <div class="m221-vertical-body">
+            <h3>What really ends up on the plate.</h3>
+            <p class="m221-project-signature">Lekkantu</p>
+            <p class="m221-vertical-copy">Nutrition data grounded in the products people actually buy and eat.</p>
+          </div>
+          <span class="m221-vertical-link">Explore Nutrition <span aria-hidden="true">↗</span></span>
+        </a>
       </div>
     </div>
   </section>

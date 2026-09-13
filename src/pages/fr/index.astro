@@ -1,46 +1,60 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import '../../styles/home.css';
 ---
 
 <Layout
   title="M221Tech | Des produits utiles à partir de données locales"
   description="M221Tech construit des produits simples et utiles à partir de données locales dans le sport et la nutrition, et partage certains jeux de données."
 >
-  <section class="m221-hero">
-    <div class="m221-container">
+  <section class="m221-hero m221-home-hero">
+    <div class="m221-container m221-home-hero-inner">
       <span class="m221-kicker">Des données locales, rendues utiles.</span>
       <h1>On construit des produits utiles à partir de données locales.</h1>
-      <p>Sport, nutrition, culture — et quelques idées entre les deux. On collecte, structure et transforme des données souvent négligées en choses simples à utiliser.</p>
+      <p class="m221-home-hero-copy">Sport, nutrition, culture — et quelques idées entre les deux. On collecte, structure et transforme des données souvent négligées en choses simples à utiliser.</p>
       <div class="m221-actions">
         <a class="m221-btn m221-btn-primary" href="#products">Voir ce qu'on construit</a>
         <a class="m221-btn m221-btn-secondary" href="#contact">Nous écrire</a>
       </div>
+      <div class="m221-home-hero-foot" aria-hidden="true">
+        <span>Sports</span><span>Nutrition</span><span>Open data</span><span>From the lab</span>
+      </div>
     </div>
   </section>
 
-  <section class="m221-section" id="products">
+  <section class="m221-section m221-build" id="products">
     <div class="m221-container">
-      <div class="m221-section-head">
+      <div class="m221-section-head m221-build-head">
         <h2>Ce qu'on construit</h2>
         <p class="m221-section-intro">Pour l'instant, deux terrains de jeu. On va au fond des sujets, on garde les choses simples, et on laisse les produits parler.</p>
       </div>
 
-      <div class="m221-grid-2">
-        <article class="m221-card">
-          <span class="m221-pill">Sports</span>
-          <h3>Au plus près du jeu.</h3>
-          <p><strong>M221Foot · WC2026</strong></p>
-          <p>Des données football avec plus de contexte, plus de détail et moins de bruit.</p>
-          <a class="m221-card-link" href="/fr/sports/">Découvrir Sports →</a>
-        </article>
+      <div class="m221-vertical-grid">
+        <a class="m221-vertical m221-vertical-sports" href="/fr/sports/">
+          <div class="m221-vertical-top">
+            <span class="m221-pill">Sports</span>
+            <span class="m221-vertical-index">01</span>
+          </div>
+          <div class="m221-vertical-body">
+            <h3>Au plus près du jeu.</h3>
+            <p class="m221-project-signature">M221Foot <span>·</span> WC2026</p>
+            <p class="m221-vertical-copy">Des données football avec plus de contexte, plus de détail et moins de bruit.</p>
+          </div>
+          <span class="m221-vertical-link">Découvrir Sports <span aria-hidden="true">↗</span></span>
+        </a>
 
-        <article class="m221-card">
-          <span class="m221-pill">Nutrition</span>
-          <h3>Ce qu'on met vraiment dans l'assiette.</h3>
-          <p><strong>Lekkantu</strong></p>
-          <p>Des données nutritionnelles ancrées dans les produits que les gens achètent et mangent réellement.</p>
-          <a class="m221-card-link" href="/fr/nutrition/">Découvrir Nutrition →</a>
-        </article>
+        <a class="m221-vertical m221-vertical-nutrition" href="/fr/nutrition/">
+          <div class="m221-vertical-top">
+            <span class="m221-pill">Nutrition</span>
+            <span class="m221-vertical-index">02</span>
+          </div>
+          <div class="m221-vertical-body">
+            <h3>Ce qu'on met vraiment dans l'assiette.</h3>
+            <p class="m221-project-signature">Lekkantu</p>
+            <p class="m221-vertical-copy">Des données nutritionnelles ancrées dans les produits que les gens achètent et mangent réellement.</p>
+          </div>
+          <span class="m221-vertical-link">Découvrir Nutrition <span aria-hidden="true">↗</span></span>
+        </a>
       </div>
     </div>
   </section>
