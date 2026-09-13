@@ -8,6 +8,7 @@ import '../styles/brand.css';
 import '../styles/home-v4-skeleton.css';
 import '../styles/responsive.css';
 import '../styles/mobile-spine.css';
+import '../styles/footer-v2.css';
 
 interface Props {
   title: string;
@@ -34,8 +35,8 @@ const isProduction = process.env.CONTEXT === 'production';
 const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
 
 const organizationDescription = isFrench
-  ? 'M221Tech crée des produits numériques utiles à partir de données locales.'
-  : 'M221Tech builds useful digital products from local data.';
+  ? 'M221Tech transforme des données en produits numériques utiles.'
+  : 'M221Tech turns data into useful digital products.';
 ---
 
 <!DOCTYPE html>
