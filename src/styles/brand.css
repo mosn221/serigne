@@ -9,9 +9,36 @@
   --m221-blue-bright: #0088CC;
   --m221-accent: #FFC300;
   --m221-accent-soft: rgba(255,195,0,.12);
+  --m221-font-house: 'Space Grotesk', system-ui, sans-serif;
+  --m221-font-data: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-body { background: var(--m221-bg); }
+body {
+  background: var(--m221-bg);
+  font-family: var(--m221-font-house);
+}
+
+h1,h2,h3,h4,h5,h6,
+.m221-brand,
+.m221-card h3,
+.m221-product h2,
+.m221-product h3,
+.m221-metric strong,
+.m221-lab h3,
+.m221-hero h1,
+.m221-page-hero h1,
+.m221-section h2 {
+  font-family: var(--m221-font-house);
+}
+
+.m221-kicker,
+.m221-pill,
+.m221-product-meta,
+.m221-lang,
+.m221-nav a {
+  font-family: var(--m221-font-data);
+  font-variant-numeric: tabular-nums;
+}
 
 .m221-header {
   border-bottom: 1px solid rgba(255,255,255,.07);
@@ -42,8 +69,11 @@ body { background: var(--m221-bg); }
 }
 
 .m221-nav a {
-  padding: 8px 12px;
+  padding: 8px 11px;
   border-radius: 999px;
+  font-size: .73rem;
+  font-weight: 500;
+  letter-spacing: .015em;
   transition: color .18s ease, background .18s ease, transform .18s ease;
 }
 
@@ -69,6 +99,11 @@ body { background: var(--m221-bg); }
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,.07);
   background: rgba(255,255,255,.02);
+}
+
+.m221-lang a {
+  font-size: .7rem;
+  font-weight: 500;
 }
 
 .m221-lang a[aria-current="true"] { color: var(--m221-text); }
