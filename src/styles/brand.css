@@ -11,17 +11,20 @@
   --m221-accent-soft: rgba(255,195,0,.12);
 }
 
-body {
-  background: var(--m221-bg);
-}
+body { background: var(--m221-bg); }
 
 .m221-header {
-  background: rgba(11,16,32,.92);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: rgba(11,16,32,.78);
+  backdrop-filter: blur(22px) saturate(135%);
 }
+
+.m221-header-inner { min-height: 76px; }
 
 .m221-brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .m221-brand img {
@@ -30,8 +33,50 @@ body {
   height: 34px;
 }
 
+.m221-nav {
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  background: rgba(255,255,255,.025);
+}
+
+.m221-nav a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.m221-nav a:hover {
+  color: var(--m221-text);
+  background: rgba(255,255,255,.05);
+}
+
+.m221-nav a[aria-current="page"] {
+  color: var(--m221-text);
+  background: rgba(0,136,204,.13);
+}
+
+.m221-nav a:last-child {
+  color: #FFE16A;
+  background: rgba(255,195,0,.07);
+}
+
+.m221-nav a:last-child:hover { background: rgba(255,195,0,.12); }
+
+.m221-lang {
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.07);
+  background: rgba(255,255,255,.02);
+}
+
+.m221-lang a[aria-current="true"] { color: var(--m221-text); }
+
 .m221-mobile-panel {
-  background: var(--m221-surface);
+  background: rgba(18,26,46,.98);
+  border-color: rgba(255,255,255,.1);
+  box-shadow: 0 26px 70px rgba(0,0,0,.38);
 }
 
 .m221-btn-primary {
@@ -47,14 +92,20 @@ body {
 }
 
 .m221-btn-secondary:hover,
-.m221-card:hover {
-  border-color: rgba(255,195,0,.38);
-}
+.m221-card:hover { border-color: rgba(255,195,0,.38); }
 
 .m221-lab {
   border-color: rgba(255,195,0,.30);
   background: linear-gradient(135deg, rgba(255,195,0,.08), rgba(0,124,145,.05));
 }
+
+.m221-footer {
+  border-top: 1px solid rgba(255,255,255,.07);
+  background: #080D1A;
+}
+
+.m221-footer a { transition: color .18s ease; }
+.m221-footer a:hover { color: #7EE8F7; }
 
 body .m221-home-hero {
   background:
@@ -70,46 +121,30 @@ body .m221-home-hero::after {
     0 0 0 112px rgba(255,195,0,.018);
 }
 
-body .m221-home-hero-foot span:not(:last-child)::after {
-  color: rgba(255,195,0,.68);
-}
-
-body .m221-vertical {
-  background: var(--m221-surface);
-}
-
-body .m221-vertical-sports {
-  background:
-    linear-gradient(155deg, rgba(0,124,145,.18), transparent 48%),
-    var(--m221-surface);
-}
-
+body .m221-home-hero-foot span:not(:last-child)::after { color: rgba(255,195,0,.68); }
+body .m221-vertical { background: var(--m221-surface); }
+body .m221-vertical-sports { background: linear-gradient(155deg, rgba(0,124,145,.18), transparent 48%), var(--m221-surface); }
 body .m221-vertical-sports:hover,
-body .m221-vertical-sports:focus-visible {
-  border-color: rgba(0,136,204,.48);
-}
-
-body .m221-vertical-nutrition {
-  background:
-    linear-gradient(155deg, rgba(255,195,0,.11), transparent 48%),
-    var(--m221-surface);
-}
-
+body .m221-vertical-sports:focus-visible { border-color: rgba(0,136,204,.48); }
+body .m221-vertical-nutrition { background: linear-gradient(155deg, rgba(255,195,0,.11), transparent 48%), var(--m221-surface); }
 body .m221-vertical-nutrition:hover,
-body .m221-vertical-nutrition:focus-visible {
-  border-color: rgba(255,195,0,.45);
-}
-
-body .m221-vertical-sports .m221-project-signature {
-  color: #1DE9FF;
-}
-
-body .m221-vertical-nutrition .m221-project-signature {
-  color: var(--m221-accent);
-}
+body .m221-vertical-nutrition:focus-visible { border-color: rgba(255,195,0,.45); }
+body .m221-vertical-sports .m221-project-signature { color: #1DE9FF; }
+body .m221-vertical-nutrition .m221-project-signature { color: var(--m221-accent); }
 
 @media (max-width: 760px) {
-  .m221-brand img {
-    height: 30px;
+  .m221-header-inner { min-height: 66px; }
+  .m221-brand img { height: 30px; }
+  .m221-mobile-nav summary {
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 999px;
+    background: rgba(255,255,255,.03);
+  }
+  .m221-mobile-panel .m221-lang {
+    border: 0;
+    border-top: 1px solid var(--m221-border);
+    border-radius: 0;
+    background: transparent;
   }
 }
