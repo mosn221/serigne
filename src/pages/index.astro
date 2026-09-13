@@ -1,136 +1,224 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/home.css';
+import '../styles/home-v2.css';
 ---
 
 <Layout
   title="M221Tech | Useful products from local data"
-  description="M221Tech builds simple, useful products from local data across sports and nutrition, and shares selected datasets."
+  description="M221Tech turns overlooked local data into useful digital products across sports, nutrition and selected open data."
 >
-  <section class="m221-hero m221-home-hero">
-    <div class="m221-container m221-home-hero-inner">
-      <span class="m221-kicker">Local data, made useful.</span>
-      <h1>We build useful products from local data.</h1>
-      <p class="m221-home-hero-copy">Sports, nutrition, culture — and a few ideas in between. We collect, structure and shape overlooked data into things people can actually use.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="#products">See what we're building</a>
-        <a class="m221-btn m221-btn-secondary" href="#contact">Say hello</a>
-      </div>
-      <div class="m221-home-hero-foot" aria-hidden="true">
-        <span>Sports</span><span>Nutrition</span><span>Open data</span><span>From the lab</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="m221-section m221-build" id="products">
-    <div class="m221-container">
-      <div class="m221-section-head m221-build-head">
-        <h2>What we build</h2>
-        <p class="m221-section-intro">Two areas for now. We go deep, keep things useful, and let the products speak.</p>
-      </div>
-
-      <div class="m221-vertical-grid">
-        <a class="m221-vertical m221-vertical-sports" href="/sports/">
-          <div class="m221-vertical-top">
-            <span class="m221-pill">Sports</span>
-            <span class="m221-vertical-index">01</span>
+  <div class="m221-home-v2">
+    <section class="m221-product-hero">
+      <div class="m221-container m221-product-hero-grid">
+        <div class="m221-product-hero-copy">
+          <span class="m221-kicker">Local data. Useful products.</span>
+          <h1>Useful products, built from the data around us.</h1>
+          <p class="m221-product-hero-lead">We turn overlooked local data into things people can actually use — starting with football and nutrition.</p>
+          <div class="m221-actions">
+            <a class="m221-btn m221-btn-primary" href="#products">Explore the products</a>
+            <a class="m221-btn m221-btn-secondary" href="#contact">Say hello</a>
           </div>
-          <div class="m221-vertical-body">
-            <h3>Closer to the game.</h3>
-            <p class="m221-project-signature">M221Foot <span>·</span> WC2026</p>
-            <p class="m221-vertical-copy">Football data with more context, more detail and less noise.</p>
+          <div class="m221-hero-note">
+            <span class="m221-hero-note-dot" aria-hidden="true"></span>
+            <span>Small studio. Focused products. Patient work.</span>
           </div>
-          <span class="m221-vertical-link">Explore Sports <span aria-hidden="true">↗</span></span>
-        </a>
+        </div>
 
-        <a class="m221-vertical m221-vertical-nutrition" href="/nutrition/">
-          <div class="m221-vertical-top">
-            <span class="m221-pill">Nutrition</span>
-            <span class="m221-vertical-index">02</span>
+        <aside class="m221-studio-board" aria-label="M221Tech products">
+          <div class="m221-board-top">
+            <span>Inside M221Tech</span>
+            <span class="m221-board-dots" aria-hidden="true"><i></i><i></i><i></i></span>
           </div>
-          <div class="m221-vertical-body">
-            <h3>What really ends up on the plate.</h3>
-            <p class="m221-project-signature">Lekkantu</p>
-            <p class="m221-vertical-copy">Nutrition data grounded in the products people actually buy and eat.</p>
+          <div class="m221-board-products">
+            <a class="m221-board-product m221-board-product-sports" href="/sports/">
+              <span class="m221-board-arrow" aria-hidden="true">↗</span>
+              <small>Sports</small>
+              <strong>M221Foot</strong>
+              <span>Football data, closer to the game.</span>
+            </a>
+            <a class="m221-board-product m221-board-product-nutrition" href="/nutrition/">
+              <span class="m221-board-arrow" aria-hidden="true">↗</span>
+              <small>Nutrition</small>
+              <strong>Lekkantu</strong>
+              <span>Closer to what people actually eat.</span>
+            </a>
+            <div class="m221-board-row">
+              <a class="m221-board-mini" href="/sports/">
+                <small>Event product</small>
+                <strong>WC2026</strong>
+                <span>World Cup, our way.</span>
+              </a>
+              <a class="m221-board-mini m221-board-mini-lab" href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">
+                <small>From the lab</small>
+                <strong>Kurel Facts</strong>
+                <span>Culture, observed through data.</span>
+              </a>
+            </div>
           </div>
-          <span class="m221-vertical-link">Explore Nutrition <span aria-hidden="true">↗</span></span>
-        </a>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-section">
-    <div class="m221-container m221-statement">
-      <span class="m221-kicker">Why M221Tech</span>
-      <h2>Local data deserves better products.</h2>
-      <p>Useful information is often scattered, incomplete or hard to find. We do the patient work behind the scenes, then keep the result simple.</p>
-    </div>
-  </section>
+    <section class="m221-section m221-showcase" id="products">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">Products</span>
+            <h2>Three products. Two worlds.</h2>
+          </div>
+          <p class="m221-section-intro">Not a catalogue. We pick a space, learn it properly, and build something worth coming back to.</p>
+        </div>
 
-  <section class="m221-section" id="open">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Some things are better shared.</h2>
-        <p class="m221-section-intro">We keep our methods in-house, but selected datasets are open and reports can be requested.</p>
+        <div class="m221-product-showcase-grid">
+          <article class="m221-showcase-card m221-showcase-card-sports">
+            <div class="m221-showcase-head">
+              <span class="m221-pill">Sports</span>
+              <span class="m221-vertical-index">01</span>
+            </div>
+            <div class="m221-showcase-title">
+              <h3>Closer to the game.</h3>
+              <p>Football data with context, detail and a point of view — built around the competitions and teams we actually follow.</p>
+              <div class="m221-product-names">
+                <span class="m221-product-name"><i></i>M221Foot</span>
+                <span class="m221-product-name"><i></i>WC2026</span>
+              </div>
+              <a class="m221-showcase-cta" href="/sports/">Explore Sports <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="m221-product-ui" aria-hidden="true">
+              <div class="m221-ui-top"><span class="m221-ui-brand">M221Foot</span><span>sports.m221.tech</span></div>
+              <div class="m221-ui-tabs"><span class="m221-ui-tab m221-ui-tab-active">Competition</span><span class="m221-ui-tab">Club</span><span class="m221-ui-tab">Match</span></div>
+              <div class="m221-ui-body">
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Senegal Ligue 1</strong><small>Competition layer</small></span><span class="m221-ui-tag">Data</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Club pages</strong><small>Squads, matches, context</small></span><span class="m221-ui-tag">Explore</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Match pages</strong><small>Lineups, events, insights</small></span><span class="m221-ui-tag">Detail</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="m221-showcase-card m221-showcase-card-nutrition">
+            <div class="m221-showcase-head">
+              <span class="m221-pill">Nutrition</span>
+              <span class="m221-vertical-index">02</span>
+            </div>
+            <div class="m221-showcase-title">
+              <h3>Closer to what people eat.</h3>
+              <p>Simple nutrition data grounded in the products people actually find, buy and put on the table.</p>
+              <div class="m221-product-names">
+                <span class="m221-product-name"><i></i>Lekkantu</span>
+              </div>
+              <a class="m221-showcase-cta" href="/nutrition/">Explore Nutrition <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="m221-product-ui" aria-hidden="true">
+              <div class="m221-ui-top"><span class="m221-ui-brand">Lekkantu</span><span>lekkantu.com</span></div>
+              <div class="m221-ui-tabs"><span class="m221-ui-tab m221-ui-tab-active">Products</span><span class="m221-ui-tab">Ingredients</span><span class="m221-ui-tab">Nutrition</span></div>
+              <div class="m221-ui-body">
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Product profile</strong><small>Label, ingredients, nutrition</small></span><span class="m221-ui-tag">Read</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Local shelf</strong><small>Products people actually buy</small></span><span class="m221-ui-tag">Local</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Clearer choices</strong><small>Less label noise, more context</small></span><span class="m221-ui-tag">Useful</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="m221-grid-2">
-        <article class="m221-card">
-          <span class="m221-pill">Open Data</span>
-          <h3>Datasets you can explore and reuse</h3>
-          <p>Selected public releases across sports, nutrition and other local-data themes, including publications on Kaggle.</p>
-          <a class="m221-card-link" href="/open/#data">Browse the datasets →</a>
+    <section class="m221-section">
+      <div class="m221-container m221-principle">
+        <div class="m221-principle-copy">
+          <span class="m221-section-eyebrow">Why M221Tech</span>
+          <h2>We do the messy part. You get the useful part.</h2>
+          <p>Local information is often scattered, incomplete or buried in places that were never designed for people to use. We take care of the patient work behind the scenes, then keep the product simple.</p>
+        </div>
+        <div class="m221-principle-flow" aria-label="From scattered data to useful products">
+          <div class="m221-flow-row"><span class="m221-flow-index">01</span><span><strong>Scattered</strong><small>Hard to find, hard to compare</small></span><span class="m221-flow-arrow">↓</span></div>
+          <div class="m221-flow-row"><span class="m221-flow-index">02</span><span><strong>Structured</strong><small>Clean enough to make sense</small></span><span class="m221-flow-arrow">↓</span></div>
+          <div class="m221-flow-row"><span class="m221-flow-index">03</span><span><strong>Useful</strong><small>A product people can come back to</small></span><span class="m221-flow-arrow">✓</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section" id="open">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">Open</span>
+            <h2>Some of the value should travel further.</h2>
+          </div>
+          <p class="m221-section-intro">Selected datasets are shared openly. Deeper analyses and reports are available when there is a real question to answer.</p>
+        </div>
+
+        <div class="m221-open-grid">
+          <article class="m221-open-card">
+            <span class="m221-pill">Open Data</span>
+            <h3>Useful datasets, without the ceremony.</h3>
+            <p>Selected public releases around sports, nutrition and other local-data themes.</p>
+            <div class="m221-data-preview" aria-hidden="true">
+              <div class="m221-data-line"><strong>Sports</strong><span class="m221-data-bar"><i style="width:82%"></i></span><span>structured</span></div>
+              <div class="m221-data-line"><strong>Nutrition</strong><span class="m221-data-bar"><i style="width:66%"></i></span><span>selected</span></div>
+              <div class="m221-data-line"><strong>Local data</strong><span class="m221-data-bar"><i style="width:48%"></i></span><span>growing</span></div>
+            </div>
+            <a class="m221-card-link" href="/open/#data">Browse Open Data →</a>
+          </article>
+
+          <article class="m221-open-card">
+            <span class="m221-pill">Reports</span>
+            <h3>A focused answer when the data deserves a closer look.</h3>
+            <p>Reports are prepared and shared on request around a question, dataset or theme.</p>
+            <div class="m221-report-sheet" aria-hidden="true">
+              <small>M221Tech · Report</small>
+              <strong>One question.<br />A clear read.</strong>
+              <div class="m221-report-lines"><i></i><i></i><i></i></div>
+            </div>
+            <a class="m221-card-link" href="mailto:m221tech@gmail.com?subject=M221Tech%20report%20request">Request a report →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">In motion</span>
+            <h2>A small studio with a few things cooking.</h2>
+          </div>
+          <p class="m221-section-intro">Each product has its own rhythm. The common thread is simple: local data, made easier to use.</p>
+        </div>
+        <div class="m221-motion-strip">
+          <div class="m221-motion-item"><small>Sports</small><strong>M221Foot</strong><span>Football intelligence</span></div>
+          <div class="m221-motion-item"><small>Sports</small><strong>WC2026</strong><span>Event product</span></div>
+          <div class="m221-motion-item"><small>Nutrition</small><strong>Lekkantu</strong><span>Food data</span></div>
+          <div class="m221-motion-item m221-motion-item-lab"><small>From the lab</small><strong>Kurel Facts</strong><span>Culture & local knowledge</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section" id="lab">
+      <div class="m221-container">
+        <article class="m221-lab-v2">
+          <div>
+            <span class="m221-pill">From the lab</span>
+            <h3>Kurel Facts</h3>
+            <p>Not everything needs to become a full product. The lab is where we keep smaller ideas, observations and experiments worth exploring.</p>
+          </div>
+          <a class="m221-btn m221-btn-secondary" href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Open Kurel Facts ↗</a>
         </article>
-
-        <article class="m221-card">
-          <span class="m221-pill">Reports</span>
-          <h3>Focused reports, on request</h3>
-          <p>Have a question worth digging into? We can prepare a focused analysis from the data we cover.</p>
-          <a class="m221-card-link" href="mailto:m221tech@gmail.com?subject=M221Tech%20report%20request">Request a report →</a>
-        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-section">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>A small studio, already in motion.</h2>
-        <p class="m221-section-intro">A simple snapshot for now. We will add deeper product metrics only when they are useful and verified.</p>
+    <section class="m221-contact-v2" id="contact">
+      <div class="m221-container m221-contact-v2-inner">
+        <div>
+          <span class="m221-section-eyebrow">Contact</span>
+          <h2>Got something local worth making useful?</h2>
+          <p>A dataset, a report, a collaboration or just an idea worth talking through. We like good questions.</p>
+        </div>
+        <div class="m221-actions">
+          <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">Say hello</a>
+        </div>
       </div>
-
-      <div class="m221-metrics">
-        <div class="m221-metric"><strong>3</strong><span>active products</span></div>
-        <div class="m221-metric"><strong>2</strong><span>product verticals</span></div>
-        <div class="m221-metric"><strong>1</strong><span>lab project</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="m221-section" id="lab">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>From the lab</h2>
-        <p class="m221-section-intro">Side ideas, experiments and questions worth exploring.</p>
-      </div>
-
-      <article class="m221-lab">
-        <span class="m221-pill">Culture & local knowledge</span>
-        <h3>Kurel Facts</h3>
-        <p>A small data experiment around cultural observations, structure and visual exploration.</p>
-        <a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Explore Kurel Facts →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="m221-contact" id="contact">
-    <div class="m221-container">
-      <span class="m221-kicker">Contact</span>
-      <h2>Got something in mind?</h2>
-      <p>A dataset, a report, a collaboration, or simply an idea worth discussing — say hello.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">Say hello</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Layout>
