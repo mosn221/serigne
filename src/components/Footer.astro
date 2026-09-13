@@ -4,13 +4,14 @@ const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const sportsHref = isFrench ? '/fr/sports/' : '/sports/';
 const nutritionHref = isFrench ? '/fr/nutrition/' : '/nutrition/';
 const openHref = isFrench ? '/fr/open/' : '/open/';
+const labHref = isFrench ? '/fr/#lab' : '/#lab';
 ---
 
 <footer class="m221-footer">
   <div class="m221-container m221-footer-inner">
     <div>
       <strong>M221Tech</strong>
-      <div>{isFrench ? 'Des produits construits à partir de données locales.' : 'Products built from local data.'}</div>
+      <div>{isFrench ? 'Données locales. Produits utiles.' : 'Local data. Useful products.'}</div>
       <small>© {new Date().getFullYear()} M221Tech</small>
     </div>
 
@@ -18,6 +19,7 @@ const openHref = isFrench ? '/fr/open/' : '/open/';
       <a href={sportsHref}>Sports</a>
       <a href={nutritionHref}>Nutrition</a>
       <a href={openHref}>Open</a>
+      <a href={labHref}>Lab</a>
       <a href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </nav>
   </div>
