@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.css';
 import '../styles/refactor.css';
+import '../styles/brand.css';
 
 interface Props {
   title: string;
@@ -11,7 +12,11 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage } = Astro.props;
+const {
+  title,
+  description,
+  ogImage = 'https://m221.tech/assets/img/logo_carre_transp.png'
+} = Astro.props;
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const lang = isFrench ? 'fr' : 'en';
@@ -35,7 +40,7 @@ const organizationDescription = isFrench
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0d10" />
+  <meta name="theme-color" content="#0B1020" />
 
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -53,24 +58,28 @@ const organizationDescription = isFrench
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:locale" content={isFrench ? 'fr_FR' : 'en_US'} />
-  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta property="og:image" content={ogImage} />
 
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
-  {ogImage && <meta name="twitter:image" content={ogImage} />}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImage} />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'M221Tech',
     url: 'https://m221.tech',
+    logo: 'https://m221.tech/assets/img/logo_carre_transp.png',
     description: organizationDescription,
     sameAs: [
       'https://www.linkedin.com/company/m221tech',
       'https://www.kaggle.com/m221tech'
     ]
   })} />
+
+  <link rel="icon" type="image/png" href="/assets/img/icone_favicon_512.png" />
+  <link rel="apple-touch-icon" href="/assets/img/icone_favicon_512.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
