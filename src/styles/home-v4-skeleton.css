@@ -1,6 +1,6 @@
 @import './mobile-spine.css';
 
-.m221-v4-spine{grid-template-columns:repeat(7,minmax(0,1fr))}
+.m221-v4-spine{grid-template-columns:repeat(5,minmax(0,1fr))}
 .m221-v4-spine a{font-size:.72rem;padding-inline:10px}
 
 .m221-v4-overview{background:linear-gradient(180deg,rgba(0,136,204,.035),transparent 72%)}
@@ -28,8 +28,6 @@
 .m221-v4-why-item>p{max-width:300px;margin:10px 0 0;color:#8793A5;font-size:.84rem;line-height:1.5}
 
 @media(max-width:980px){
-  .m221-v4-spine{width:max-content;min-width:100%;grid-template-columns:repeat(7,auto)}
-  .m221-v4-spine a{min-width:126px}
   .m221-v4-build-grid,.m221-v4-why-grid{grid-template-columns:1fr 1fr 1fr}
 }
 
