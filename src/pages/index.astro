@@ -8,25 +8,25 @@ import '../styles/home-v4.css';
   description="M221Tech builds focused data products across sports, nutrition, open data and local knowledge."
 >
   <div class="m221-home-v4">
-    <section class="m221-v4-hero" id="home" data-home-section data-nav-section="home">
+    <section class="m221-v4-hero">
       <div class="m221-container m221-v4-hero-grid">
         <div>
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Local data, built into products.</h1>
-          <p class="m221-v4-lead">Football. Nutrition. Open datasets. A few experiments. Built to be explored, not just presented.</p>
+          <p class="m221-v4-lead">Sports, nutrition, open data and a few experiments. Built to be used.</p>
           <div class="m221-v4-hero-actions">
             <a class="m221-btn m221-btn-primary" href="#projects">Explore projects</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
           </div>
         </div>
 
-        <aside class="m221-v4-console" aria-label="M221Tech product access">
-          <div class="m221-v4-console-top"><span>Products / direct access</span><i aria-hidden="true"></i></div>
+        <aside class="m221-v4-console" aria-label="M221Tech index">
+          <div class="m221-v4-console-top"><span>M221Tech / index</span><i aria-hidden="true"></i></div>
           <div class="m221-v4-console-list">
-            <a class="m221-v4-console-row" data-tone="sports" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer"><span><strong>M221Foot</strong><small>SPORTS / COMPETITION · CLUB · MATCH</small></span><span>↗</span></a>
-            <a class="m221-v4-console-row" data-tone="sports" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer"><span><strong>WC2026</strong><small>SPORTS / EVENT PRODUCT</small></span><span>↗</span></a>
-            <a class="m221-v4-console-row" data-tone="food" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer"><span><strong>Lekkantu</strong><small>NUTRITION / PRODUCTS · INGREDIENTS</small></span><span>↗</span></a>
-            <a class="m221-v4-console-row" href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer"><span><strong>Kurel Facts</strong><small>LAB / CULTURE · LOCAL KNOWLEDGE</small></span><span>↗</span></a>
+            <a class="m221-v4-console-row" data-tone="sports" href="#projects"><span><strong>Projects</strong><small>SPORTS · NUTRITION</small></span><span>↓</span></a>
+            <a class="m221-v4-console-row" href="#why"><span><strong>Why</strong><small>LOCAL · STRUCTURE · PRODUCT</small></span><span>↓</span></a>
+            <a class="m221-v4-console-row" href="#lab"><span><strong>Lab</strong><small>EXPERIMENTS · LOCAL KNOWLEDGE</small></span><span>↓</span></a>
+            <a class="m221-v4-console-row" href="#open"><span><strong>Open</strong><small>DATASETS · REPORTS</small></span><span>↓</span></a>
           </div>
         </aside>
       </div>
@@ -34,212 +34,107 @@ import '../styles/home-v4.css';
 
     <div class="m221-v4-spine-wrap">
       <nav class="m221-container m221-v4-spine" aria-label="M221Tech home sections" data-home-spine>
-        <a href="#home" data-section-link="home"><span>00</span><span>Home</span></a>
         <a href="#projects" data-section-link="projects"><span>01</span><span>Projects</span></a>
-        <a href="#lab" data-section-link="lab"><span>02</span><span>Lab</span></a>
-        <a href="#open" data-section-link="open"><span>03</span><span>Open</span></a>
-        <a href="#contact" data-section-link="contact"><span>04</span><span>Contact</span></a>
+        <a href="#why" data-section-link="why"><span>02</span><span>Why</span></a>
+        <a href="#lab" data-section-link="lab"><span>03</span><span>Lab</span></a>
+        <a href="#open" data-section-link="open"><span>04</span><span>Open</span></a>
+        <a href="#contact" data-section-link="contact"><span>05</span><span>Contact</span></a>
       </nav>
     </div>
 
-    <section class="m221-v4-chapter m221-v4-overview" id="projects" data-home-section data-nav-section="projects">
+    <section class="m221-v4-chapter m221-v4-overview" id="projects" data-home-section>
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
           <div class="m221-v4-index">01 / PROJECTS<strong>What we build</strong></div>
-          <h2>Focused products. Clear data.</h2>
-          <p>Three products. Two fields. Built to be used.</p>
+          <h2>Three products. Clear jobs.</h2>
+          <p>Open one and explore.</p>
         </header>
 
         <div class="m221-v4-build-grid">
-          <a class="m221-v4-build-card" data-tone="sports" href="#sports">
+          <a class="m221-v4-build-card" data-tone="sports" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">
             <span class="m221-v4-domain">SPORTS / PLATFORM</span>
             <strong>M221Foot</strong>
-            <p>Competition · Club · Match</p>
-            <span class="m221-v4-build-arrow">↓</span>
+            <p>sports.m221.tech</p>
+            <span class="m221-v4-build-arrow">↗</span>
           </a>
-          <a class="m221-v4-build-card" data-tone="sports" href="#sports">
+          <a class="m221-v4-build-card" data-tone="sports" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">
             <span class="m221-v4-domain">SPORTS / EVENT</span>
             <strong>WC2026</strong>
-            <p>Teams · Matches · Stories</p>
-            <span class="m221-v4-build-arrow">↓</span>
+            <p>wc2026.m221.tech</p>
+            <span class="m221-v4-build-arrow">↗</span>
           </a>
-          <a class="m221-v4-build-card" data-tone="food" href="#nutrition">
+          <a class="m221-v4-build-card" data-tone="food" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">
             <span class="m221-v4-domain">NUTRITION / DATABASE</span>
             <strong>Lekkantu</strong>
-            <p>Products · Ingredients · Nutrition</p>
-            <span class="m221-v4-build-arrow">↓</span>
+            <p>lekkantu.com</p>
+            <span class="m221-v4-build-arrow">↗</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="m221-v4-chapter m221-v4-why" id="why" data-home-section data-nav-section="projects">
+    <section class="m221-v4-chapter m221-v4-why" id="why" data-home-section>
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">01.1 / WHY<strong>Why M221Tech</strong></div>
-          <h2>Local data is often there. The product layer isn't.</h2>
-          <p>That gap is where we work.</p>
+          <div class="m221-v4-index">02 / WHY<strong>Why M221Tech</strong></div>
+          <h2>Local data needs a product layer.</h2>
+          <p>That is the work.</p>
         </header>
 
         <div class="m221-v4-why-grid">
-          <div class="m221-v4-why-item"><span class="m221-v4-domain">01 / LOCAL</span><strong>Keep the context.</strong><p>Start from the places, products and competitions people actually know.</p></div>
-          <div class="m221-v4-why-item"><span class="m221-v4-domain">02 / STRUCTURE</span><strong>Make the data usable.</strong><p>Turn scattered information into something consistent and navigable.</p></div>
-          <div class="m221-v4-why-item"><span class="m221-v4-domain">03 / PRODUCT</span><strong>Build for use.</strong><p>Interfaces first. Less presentation, more exploration and action.</p></div>
+          <div class="m221-v4-why-item"><span class="m221-v4-domain">01 / LOCAL</span><strong>Keep the context.</strong><p>Start from real places, products and competitions.</p></div>
+          <div class="m221-v4-why-item"><span class="m221-v4-domain">02 / STRUCTURE</span><strong>Make data usable.</strong><p>Turn scattered information into something navigable.</p></div>
+          <div class="m221-v4-why-item"><span class="m221-v4-domain">03 / PRODUCT</span><strong>Build for use.</strong><p>Interfaces first. Action over presentation.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="sports" data-home-section data-nav-section="projects">
+    <section class="m221-v4-chapter" id="lab" data-home-section>
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">01.2 / SPORTS<strong>Sports</strong></div>
-          <h2>Closer to the game.</h2>
-          <p>M221Foot for the long run. WC2026 for the tournament.</p>
+          <div class="m221-v4-index">03 / LAB<strong>From the lab</strong></div>
+          <h2>Ideas worth testing.</h2>
+          <p>Small experiments, kept useful.</p>
         </header>
-
-        <div class="m221-v4-product-shell" data-product-switcher>
-          <div class="m221-v4-product-tabs" role="tablist" aria-label="Sports products">
-            <button class="m221-v4-product-tab" type="button" role="tab" aria-selected="true" aria-controls="sports-panel-m221foot" id="sports-tab-m221foot"><span class="m221-v4-domain">PLATFORM</span><strong>M221Foot</strong><span>→</span></button>
-            <button class="m221-v4-product-tab" type="button" role="tab" aria-selected="false" aria-controls="sports-panel-wc2026" id="sports-tab-wc2026"><span class="m221-v4-domain">EVENT</span><strong>WC2026</strong><span>→</span></button>
-          </div>
-
-          <section class="m221-v4-panel" id="sports-panel-m221foot" role="tabpanel" aria-labelledby="sports-tab-m221foot">
-            <div class="m221-v4-panel-grid">
-              <div class="m221-v4-product-copy">
-                <span class="m221-v4-eyebrow">M221FOOT / SPORTS.M221.TECH</span>
-                <h3>Football intelligence, local context.</h3>
-                <p>Competition, club and match data in one football product.</p>
-                <div class="m221-v4-data-keys"><span class="m221-v4-data-key">competitions</span><span class="m221-v4-data-key">clubs</span><span class="m221-v4-data-key">players</span><span class="m221-v4-data-key">lineups</span><span class="m221-v4-data-key">events</span></div>
-                <div class="m221-v4-product-actions"><a class="m221-v4-product-link m221-v4-product-link-primary" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Open M221Foot ↗</a><a class="m221-v4-product-link" href="/sports/">Sports page →</a></div>
-              </div>
-              <div class="m221-v4-preview" aria-hidden="true">
-                <div class="m221-v4-preview-top"><strong>M221Foot</strong><span>sports.m221.tech</span></div>
-                <div class="m221-v4-preview-tabs"><span>competition</span><span>club</span><span>match</span></div>
-                <div class="m221-v4-preview-body">
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Senegal Ligue 1</strong><small>Competition layer</small></span><span>EXPLORE</span></div>
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Club layer</strong><small>Squads · fixtures · context</small></span><span>OPEN</span></div>
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Match layer</strong><small>Lineups · events · insights</small></span><span>READ</span></div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="m221-v4-panel" id="sports-panel-wc2026" role="tabpanel" aria-labelledby="sports-tab-wc2026" hidden>
-            <div class="m221-v4-panel-grid">
-              <div class="m221-v4-product-copy">
-                <span class="m221-v4-eyebrow">WC2026 / WC2026.M221.TECH</span>
-                <h3>World Cup, our way.</h3>
-                <p>A tournament product with a Senegalese and African point of view.</p>
-                <div class="m221-v4-data-keys"><span class="m221-v4-data-key">teams</span><span class="m221-v4-data-key">matches</span><span class="m221-v4-data-key">players</span><span class="m221-v4-data-key">stories</span></div>
-                <div class="m221-v4-product-actions"><a class="m221-v4-product-link m221-v4-product-link-primary" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">Open WC2026 ↗</a><a class="m221-v4-product-link" href="/sports/">Sports page →</a></div>
-              </div>
-              <div class="m221-v4-preview" aria-hidden="true">
-                <div class="m221-v4-preview-top"><strong>WC2026</strong><span>wc2026.m221.tech</span></div>
-                <div class="m221-v4-preview-tabs"><span>matches</span><span>teams</span><span>players</span></div>
-                <div class="m221-v4-preview-body">
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Tournament layer</strong><small>Fixtures · results · progression</small></span><span>FOLLOW</span></div>
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Senegal focus</strong><small>Context that matters</small></span><span>FOCUS</span></div>
-                  <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>African lens</strong><small>Teams · players · stories</small></span><span>READ</span></div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="m221-v4-chapter" id="nutrition" data-home-section data-nav-section="projects">
-      <div class="m221-container">
-        <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">01.3 / NUTRITION<strong>Nutrition</strong></div>
-          <h2>Closer to what people eat.</h2>
-          <p>Lekkantu starts with the products people actually find on local shelves.</p>
-        </header>
-
-        <article class="m221-v4-nutrition">
-          <div class="m221-v4-nutrition-copy">
-            <span class="m221-v4-eyebrow">LEKKANTU / LEKKANTU.COM</span>
-            <h3>Food data, made readable.</h3>
-            <p>Products, brands, ingredients and nutrition facts in one growing local database.</p>
-            <div class="m221-v4-data-keys"><span class="m221-v4-data-key">products</span><span class="m221-v4-data-key">brands</span><span class="m221-v4-data-key">ingredients</span><span class="m221-v4-data-key">nutrition</span></div>
-            <div class="m221-v4-product-actions"><a class="m221-v4-product-link m221-v4-product-link-primary" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">Open Lekkantu ↗</a><a class="m221-v4-product-link" href="/nutrition/">Nutrition page →</a></div>
-          </div>
-          <div class="m221-v4-preview" aria-hidden="true">
-            <div class="m221-v4-preview-top"><strong>Lekkantu</strong><span>lekkantu.com</span></div>
-            <div class="m221-v4-preview-tabs"><span>products</span><span>ingredients</span><span>nutrition</span></div>
-            <div class="m221-v4-preview-body">
-              <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Product profile</strong><small>Brand · label · category</small></span><span>READ</span></div>
-              <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Ingredient layer</strong><small>What is actually inside</small></span><span>CHECK</span></div>
-              <div class="m221-v4-preview-row"><span class="m221-v4-preview-icon"></span><span><strong>Nutrition layer</strong><small>Facts made easier to compare</small></span><span>DATA</span></div>
-            </div>
-          </div>
+        <article class="m221-v4-lab-card">
+          <div class="m221-v4-index">LAB / 01</div>
+          <div><h3>Kurel Facts</h3><p>Culture and local knowledge, explored through data.</p></div>
+          <a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Open Kurel Facts ↗</a>
         </article>
       </div>
     </section>
 
-    <section class="m221-v4-chapter" id="lab" data-home-section data-nav-section="lab">
+    <section class="m221-v4-chapter" id="open" data-home-section>
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">02 / LAB<strong>From the lab</strong></div>
-          <h2>Ideas that deserve a place to breathe.</h2>
-          <p>Small experiments can stay small and still be useful.</p>
-        </header>
-        <article class="m221-v4-lab-card"><div class="m221-v4-index">LAB / 01</div><div><h3>Kurel Facts</h3><p>Culture and local knowledge, explored through data.</p></div><a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Open Kurel Facts ↗</a></article>
-      </div>
-    </section>
-
-    <section class="m221-v4-chapter" id="open" data-home-section data-nav-section="open">
-      <div class="m221-container">
-        <header class="m221-v4-chapter-head">
-          <div class="m221-v4-index">03 / OPEN<strong>Open</strong></div>
-          <h2>Use the data. Ask for the analysis.</h2>
-          <p>Selected data goes out. Methods stay in-house.</p>
+          <div class="m221-v4-index">04 / OPEN<strong>Open</strong></div>
+          <h2>Data out. Analysis on request.</h2>
+          <p>Selected datasets are shared. Methods stay in-house.</p>
         </header>
         <div class="m221-v4-open-grid">
-          <a class="m221-v4-open-card" data-kind="data" href="/open/#data"><div><span class="m221-v4-domain">SHARE / OPEN DATA</span><h3>Browse datasets</h3><p>Selected public releases ready to explore and reuse.</p></div><span class="m221-v4-open-arrow">→</span></a>
-          <a class="m221-v4-open-card" data-kind="report" href="mailto:m221tech@gmail.com?subject=M221Tech%20report%20request"><div><span class="m221-v4-domain">ANALYSE / REPORTS</span><h3>Request an analysis</h3><p>Focused reports prepared on request around a real question.</p></div><span class="m221-v4-open-arrow">→</span></a>
+          <a class="m221-v4-open-card" data-kind="data" href="/open/#data"><div><span class="m221-v4-domain">OPEN DATA</span><h3>Browse datasets</h3><p>Selected public releases.</p></div><span class="m221-v4-open-arrow">→</span></a>
+          <a class="m221-v4-open-card" data-kind="report" href="mailto:m221tech@gmail.com?subject=M221Tech%20report%20request"><div><span class="m221-v4-domain">REPORTS</span><h3>Request an analysis</h3><p>A focused answer to a real question.</p></div><span class="m221-v4-open-arrow">→</span></a>
         </div>
       </div>
     </section>
 
-    <section class="m221-v4-contact" id="contact" data-home-section data-nav-section="contact">
+    <section class="m221-v4-contact" id="contact" data-home-section>
       <div class="m221-container m221-v4-contact-inner">
-        <div class="m221-v4-index">04 / CONNECT<strong>Contact</strong></div>
-        <div><h2>Have a dataset, question or idea?</h2><p>Talk to us about data, a report or a collaboration.</p></div>
+        <div class="m221-v4-index">05 / CONTACT<strong>Contact</strong></div>
+        <div><h2>Dataset, question or idea?</h2><p>Talk to us.</p></div>
         <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">m221tech@gmail.com →</a>
       </div>
     </section>
   </div>
 
   <script>
-    document.querySelectorAll('[data-product-switcher]').forEach((switcher) => {
-      const tabs = Array.from(switcher.querySelectorAll('[role="tab"]'));
-      const panels = Array.from(switcher.querySelectorAll('[role="tabpanel"]'));
-      const activate = (tab) => {
-        const target = tab.getAttribute('aria-controls');
-        tabs.forEach((item) => item.setAttribute('aria-selected', item === tab ? 'true' : 'false'));
-        panels.forEach((panel) => { panel.hidden = panel.id !== target; });
-      };
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => activate(tab));
-        tab.addEventListener('keydown', (event) => {
-          if (!['ArrowDown','ArrowRight','ArrowUp','ArrowLeft'].includes(event.key)) return;
-          event.preventDefault();
-          const direction = ['ArrowDown','ArrowRight'].includes(event.key) ? 1 : -1;
-          const next = tabs[(index + direction + tabs.length) % tabs.length];
-          next.focus(); activate(next);
-        });
-      });
-    });
-
     const spineLinks = Array.from(document.querySelectorAll('[data-section-link]'));
     const sections = Array.from(document.querySelectorAll('[data-home-section]'));
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         const visible = entries.filter((entry) => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (!visible) return;
-        const navSection = visible.target.dataset.navSection || visible.target.id;
-        spineLinks.forEach((link) => link.setAttribute('aria-current', link.dataset.sectionLink === navSection ? 'true' : 'false'));
+        spineLinks.forEach((link) => link.setAttribute('aria-current', link.dataset.sectionLink === visible.target.id ? 'true' : 'false'));
       }, { rootMargin: '-22% 0px -58% 0px', threshold: [0,.1,.25,.5] });
       sections.forEach((section) => observer.observe(section));
     }
