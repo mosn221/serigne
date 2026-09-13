@@ -1,10 +1,10 @@
 ---
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
-const isHome = pathname === '/' || pathname === '/fr/' || pathname === '/fr';
 
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
+const whyHref = `${homeHref}#why`;
 const labHref = `${homeHref}#lab`;
 const openHref = `${homeHref}#open`;
 const contactHref = `${homeHref}#contact`;
@@ -13,8 +13,8 @@ const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : 
 const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
 
 const labels = isFrench
-  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open', contact: 'Contact' }
-  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open', contact: 'Contact' };
+  ? { projects: 'Projets', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' }
+  : { projects: 'Projects', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' };
 ---
 
 <header class="m221-header">
@@ -24,11 +24,11 @@ const labels = isFrench
     </a>
 
     <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
-      <a href={homeHref} aria-current={isHome ? 'page' : undefined}>{labels.home}</a>
-      <a href={projectsHref}>{labels.projects}</a>
-      <a href={labHref}>{labels.lab}</a>
-      <a href={openHref}>{labels.open}</a>
-      <a href={contactHref}>{labels.contact}</a>
+      <a href={projectsHref}><span>01</span> {labels.projects}</a>
+      <a href={whyHref}><span>02</span> {labels.why}</a>
+      <a href={labHref}><span>03</span> {labels.lab}</a>
+      <a href={openHref}><span>04</span> {labels.open}</a>
+      <a href={contactHref}><span>05</span> {labels.contact}</a>
     </nav>
 
     <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
@@ -40,11 +40,11 @@ const labels = isFrench
     <details class="m221-mobile-nav">
       <summary>Menu</summary>
       <div class="m221-mobile-panel">
-        <a href={homeHref}>{labels.home}</a>
-        <a href={projectsHref}>{labels.projects}</a>
-        <a href={labHref}>{labels.lab}</a>
-        <a href={openHref}>{labels.open}</a>
-        <a href={contactHref}>{labels.contact}</a>
+        <a href={projectsHref}>01 · {labels.projects}</a>
+        <a href={whyHref}>02 · {labels.why}</a>
+        <a href={labHref}>03 · {labels.lab}</a>
+        <a href={openHref}>04 · {labels.open}</a>
+        <a href={contactHref}>05 · {labels.contact}</a>
         <div class="m221-lang">
           <a href={englishPath} aria-current={!isFrench ? 'true' : undefined}>EN</a>
           <span aria-hidden="true">/</span>
