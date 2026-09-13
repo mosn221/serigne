@@ -6,6 +6,7 @@ const homeHref = isFrench ? '/fr/' : '/';
 const sportsHref = isFrench ? '/fr/sports/' : '/sports/';
 const nutritionHref = isFrench ? '/fr/nutrition/' : '/nutrition/';
 const openHref = isFrench ? '/fr/open/' : '/open/';
+const labHref = isFrench ? '/fr/#lab' : '/#lab';
 const contactHref = isFrench ? '/fr/#contact' : '/#contact';
 
 const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
@@ -22,7 +23,8 @@ const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${path
       <a href={sportsHref} aria-current={pathname.includes('/sports') ? 'page' : undefined}>Sports</a>
       <a href={nutritionHref} aria-current={pathname.includes('/nutrition') ? 'page' : undefined}>Nutrition</a>
       <a href={openHref} aria-current={pathname.includes('/open') ? 'page' : undefined}>Open</a>
-      <a href={contactHref}>{isFrench ? 'Contact' : 'Contact'}</a>
+      <a href={labHref}>Lab</a>
+      <a href={contactHref}>Contact</a>
     </nav>
 
     <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
@@ -32,11 +34,12 @@ const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${path
     </div>
 
     <details class="m221-mobile-nav">
-      <summary>{isFrench ? 'Menu' : 'Menu'}</summary>
+      <summary>Menu</summary>
       <div class="m221-mobile-panel">
         <a href={sportsHref}>Sports</a>
         <a href={nutritionHref}>Nutrition</a>
         <a href={openHref}>Open</a>
+        <a href={labHref}>Lab</a>
         <a href={contactHref}>Contact</a>
         <div class="m221-lang">
           <a href={englishPath} aria-current={!isFrench ? 'true' : undefined}>EN</a>
