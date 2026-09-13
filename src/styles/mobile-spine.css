@@ -96,7 +96,7 @@
 @media(min-width:981px){
   .m221-v4-spine-wrap{display:block}
   .m221-v4-spine{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important}
-  .m221-v4-spine a{transform:none!important;transition:color .16s ease,background-color .16s ease!important}
+  .m221-v4-spine a{font-size:.82rem!important;transform:none!important;transition:color .16s ease,background-color .16s ease!important}
 }
 
 @media(prefers-reduced-motion:reduce){
