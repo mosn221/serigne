@@ -1,3 +1,5 @@
+@import './mobile-spine.css';
+
 .m221-v4-spine{grid-template-columns:repeat(7,minmax(0,1fr))}
 .m221-v4-spine a{font-size:.72rem;padding-inline:10px}
 
