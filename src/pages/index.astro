@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/home-v4.css';
+import '../styles/home-v5.css';
 ---
 
 <Layout
@@ -10,7 +11,7 @@ import '../styles/home-v4.css';
   <div class="m221-home-v4">
     <section class="m221-v4-hero">
       <div class="m221-container m221-v4-hero-grid">
-        <div>
+        <div class="m221-v5-hero-copy">
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Local data, built into products.</h1>
           <p class="m221-v4-lead">Sports, nutrition, open data and a few experiments. Built to be used.</p>
@@ -18,6 +19,13 @@ import '../styles/home-v4.css';
             <a class="m221-btn m221-btn-primary" href="#projects">Explore projects</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
           </div>
+        </div>
+
+        <div class="m221-v5-signal" aria-hidden="true">
+          <div class="m221-v5-signal-core">LOCAL<br />DATA</div>
+          <span class="m221-v5-signal-node" data-node="sports">Sports</span>
+          <span class="m221-v5-signal-node" data-node="nutrition">Nutrition</span>
+          <span class="m221-v5-signal-node" data-node="open">Open</span>
         </div>
       </div>
     </section>
@@ -36,23 +44,42 @@ import '../styles/home-v4.css';
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
           <div class="m221-v4-index">01 / PROJECTS</div>
-          <h2>Two fields. Two direct ways in.</h2>
-          <p>Pick a space and explore.</p>
+          <h2>Two fields. Go deeper when you need to.</h2>
+          <p>Start with the project. Jump straight to the product if you already know where you're going.</p>
         </header>
 
-        <div class="m221-v4-build-grid">
-          <a class="m221-v4-build-card" data-tone="sports" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">
-            <span class="m221-v4-domain">FOOTBALL / DATA</span>
-            <strong>Sports</strong>
-            <p>sports.m221.tech</p>
-            <span class="m221-v4-build-arrow">↗</span>
-          </a>
-          <a class="m221-v4-build-card" data-tone="food" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">
-            <span class="m221-v4-domain">FOOD / DATA</span>
-            <strong>Nutrition</strong>
-            <p>lekkantu.com</p>
-            <span class="m221-v4-build-arrow">↗</span>
-          </a>
+        <div class="m221-v5-project-grid">
+          <article class="m221-v5-project" data-tone="sports">
+            <div class="m221-v5-project-top">
+              <span class="m221-v5-project-no">FIELD / 01</span>
+              <span class="m221-v5-project-status">Sports</span>
+            </div>
+            <div class="m221-v5-project-main">
+              <span class="m221-v4-domain">FOOTBALL / DATA PRODUCTS</span>
+              <h3>Sports</h3>
+              <p>The sports field, its products and experiments — including the football platform and tournament work.</p>
+            </div>
+            <div class="m221-v5-project-actions">
+              <a class="m221-v5-project-page" href="/sports/">Explore Sports →</a>
+              <a class="m221-v5-project-direct" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">sports.m221.tech ↗</a>
+            </div>
+          </article>
+
+          <article class="m221-v5-project" data-tone="food">
+            <div class="m221-v5-project-top">
+              <span class="m221-v5-project-no">FIELD / 02</span>
+              <span class="m221-v5-project-status">Nutrition</span>
+            </div>
+            <div class="m221-v5-project-main">
+              <span class="m221-v4-domain">FOOD / LOCAL DATA</span>
+              <h3>Nutrition</h3>
+              <p>Food products, ingredients and nutrition data built around what people actually find locally.</p>
+            </div>
+            <div class="m221-v5-project-actions">
+              <a class="m221-v5-project-page" href="/nutrition/">Explore Nutrition →</a>
+              <a class="m221-v5-project-direct" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">lekkantu.com ↗</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
