@@ -38,7 +38,7 @@ const labels = isFrench
     </div>
 
     <details class="m221-mobile-nav">
-      <summary>☰</summary>
+      <summary aria-label={isFrench ? 'Ouvrir le menu' : 'Open menu'}>☰</summary>
       <div class="m221-mobile-panel">
         <a href={projectsHref}>{labels.projects}</a>
         <a href={whyHref}>{labels.why}</a>
