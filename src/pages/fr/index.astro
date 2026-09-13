@@ -1,136 +1,224 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/home.css';
+import '../../styles/home-v2.css';
 ---
 
 <Layout
   title="M221Tech | Des produits utiles à partir de données locales"
-  description="M221Tech construit des produits simples et utiles à partir de données locales dans le sport et la nutrition, et partage certains jeux de données."
+  description="M221Tech transforme des données locales souvent négligées en produits numériques utiles autour du sport, de la nutrition et de l'open data."
 >
-  <section class="m221-hero m221-home-hero">
-    <div class="m221-container m221-home-hero-inner">
-      <span class="m221-kicker">Des données locales, rendues utiles.</span>
-      <h1>On construit des produits utiles à partir de données locales.</h1>
-      <p class="m221-home-hero-copy">Sport, nutrition, culture — et quelques idées entre les deux. On collecte, structure et transforme des données souvent négligées en choses simples à utiliser.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="#products">Voir ce qu'on construit</a>
-        <a class="m221-btn m221-btn-secondary" href="#contact">Nous écrire</a>
-      </div>
-      <div class="m221-home-hero-foot" aria-hidden="true">
-        <span>Sports</span><span>Nutrition</span><span>Open data</span><span>From the lab</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="m221-section m221-build" id="products">
-    <div class="m221-container">
-      <div class="m221-section-head m221-build-head">
-        <h2>Ce qu'on construit</h2>
-        <p class="m221-section-intro">Pour l'instant, deux terrains de jeu. On va au fond des sujets, on garde les choses simples, et on laisse les produits parler.</p>
-      </div>
-
-      <div class="m221-vertical-grid">
-        <a class="m221-vertical m221-vertical-sports" href="/fr/sports/">
-          <div class="m221-vertical-top">
-            <span class="m221-pill">Sports</span>
-            <span class="m221-vertical-index">01</span>
+  <div class="m221-home-v2">
+    <section class="m221-product-hero">
+      <div class="m221-container m221-product-hero-grid">
+        <div class="m221-product-hero-copy">
+          <span class="m221-kicker">Données locales. Produits utiles.</span>
+          <h1>Des produits utiles, construits à partir des données qui nous entourent.</h1>
+          <p class="m221-product-hero-lead">On transforme des données locales souvent négligées en choses vraiment utiles — en commençant par le football et la nutrition.</p>
+          <div class="m221-actions">
+            <a class="m221-btn m221-btn-primary" href="#products">Découvrir les produits</a>
+            <a class="m221-btn m221-btn-secondary" href="#contact">Nous écrire</a>
           </div>
-          <div class="m221-vertical-body">
-            <h3>Au plus près du jeu.</h3>
-            <p class="m221-project-signature">M221Foot <span>·</span> WC2026</p>
-            <p class="m221-vertical-copy">Des données football avec plus de contexte, plus de détail et moins de bruit.</p>
+          <div class="m221-hero-note">
+            <span class="m221-hero-note-dot" aria-hidden="true"></span>
+            <span>Petit studio. Produits ciblés. Travail patient.</span>
           </div>
-          <span class="m221-vertical-link">Découvrir Sports <span aria-hidden="true">↗</span></span>
-        </a>
+        </div>
 
-        <a class="m221-vertical m221-vertical-nutrition" href="/fr/nutrition/">
-          <div class="m221-vertical-top">
-            <span class="m221-pill">Nutrition</span>
-            <span class="m221-vertical-index">02</span>
+        <aside class="m221-studio-board" aria-label="Produits M221Tech">
+          <div class="m221-board-top">
+            <span>Dans M221Tech</span>
+            <span class="m221-board-dots" aria-hidden="true"><i></i><i></i><i></i></span>
           </div>
-          <div class="m221-vertical-body">
-            <h3>Ce qu'on met vraiment dans l'assiette.</h3>
-            <p class="m221-project-signature">Lekkantu</p>
-            <p class="m221-vertical-copy">Des données nutritionnelles ancrées dans les produits que les gens achètent et mangent réellement.</p>
+          <div class="m221-board-products">
+            <a class="m221-board-product m221-board-product-sports" href="/fr/sports/">
+              <span class="m221-board-arrow" aria-hidden="true">↗</span>
+              <small>Sports</small>
+              <strong>M221Foot</strong>
+              <span>Les données football, au plus près du jeu.</span>
+            </a>
+            <a class="m221-board-product m221-board-product-nutrition" href="/fr/nutrition/">
+              <span class="m221-board-arrow" aria-hidden="true">↗</span>
+              <small>Nutrition</small>
+              <strong>Lekkantu</strong>
+              <span>Au plus près de ce que les gens mangent vraiment.</span>
+            </a>
+            <div class="m221-board-row">
+              <a class="m221-board-mini" href="/fr/sports/">
+                <small>Produit événementiel</small>
+                <strong>WC2026</strong>
+                <span>La Coupe du monde, à notre façon.</span>
+              </a>
+              <a class="m221-board-mini m221-board-mini-lab" href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">
+                <small>From the lab</small>
+                <strong>Kurel Facts</strong>
+                <span>La culture observée par la donnée.</span>
+              </a>
+            </div>
           </div>
-          <span class="m221-vertical-link">Découvrir Nutrition <span aria-hidden="true">↗</span></span>
-        </a>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-section">
-    <div class="m221-container m221-statement">
-      <span class="m221-kicker">Pourquoi M221Tech</span>
-      <h2>Les données locales méritent de meilleurs produits.</h2>
-      <p>L'information utile est souvent dispersée, incomplète ou difficile à trouver. On fait le travail patient en coulisses, puis on garde le résultat simple.</p>
-    </div>
-  </section>
+    <section class="m221-section m221-showcase" id="products">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">Produits</span>
+            <h2>Trois produits. Deux univers.</h2>
+          </div>
+          <p class="m221-section-intro">Pas un catalogue. On choisit un terrain, on le comprend vraiment, puis on construit quelque chose qui donne envie de revenir.</p>
+        </div>
 
-  <section class="m221-section" id="open">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Certaines choses sont faites pour être partagées.</h2>
-        <p class="m221-section-intro">Nos méthodes restent internes, mais certains jeux de données sont ouverts et nos rapports peuvent être demandés.</p>
+        <div class="m221-product-showcase-grid">
+          <article class="m221-showcase-card m221-showcase-card-sports">
+            <div class="m221-showcase-head">
+              <span class="m221-pill">Sports</span>
+              <span class="m221-vertical-index">01</span>
+            </div>
+            <div class="m221-showcase-title">
+              <h3>Au plus près du jeu.</h3>
+              <p>Des données football avec du contexte, du détail et un vrai point de vue — autour des compétitions et équipes qu'on suit vraiment.</p>
+              <div class="m221-product-names">
+                <span class="m221-product-name"><i></i>M221Foot</span>
+                <span class="m221-product-name"><i></i>WC2026</span>
+              </div>
+              <a class="m221-showcase-cta" href="/fr/sports/">Découvrir Sports <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="m221-product-ui" aria-hidden="true">
+              <div class="m221-ui-top"><span class="m221-ui-brand">M221Foot</span><span>sports.m221.tech</span></div>
+              <div class="m221-ui-tabs"><span class="m221-ui-tab m221-ui-tab-active">Compétition</span><span class="m221-ui-tab">Club</span><span class="m221-ui-tab">Match</span></div>
+              <div class="m221-ui-body">
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Ligue 1 Sénégal</strong><small>Vue compétition</small></span><span class="m221-ui-tag">Data</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Pages clubs</strong><small>Effectifs, matchs, contexte</small></span><span class="m221-ui-tag">Explorer</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Pages matchs</strong><small>Compos, événements, insights</small></span><span class="m221-ui-tag">Détail</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="m221-showcase-card m221-showcase-card-nutrition">
+            <div class="m221-showcase-head">
+              <span class="m221-pill">Nutrition</span>
+              <span class="m221-vertical-index">02</span>
+            </div>
+            <div class="m221-showcase-title">
+              <h3>Au plus près de ce que les gens mangent.</h3>
+              <p>Des données nutritionnelles simples, ancrées dans les produits que les gens trouvent, achètent et mettent vraiment sur la table.</p>
+              <div class="m221-product-names">
+                <span class="m221-product-name"><i></i>Lekkantu</span>
+              </div>
+              <a class="m221-showcase-cta" href="/fr/nutrition/">Découvrir Nutrition <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="m221-product-ui" aria-hidden="true">
+              <div class="m221-ui-top"><span class="m221-ui-brand">Lekkantu</span><span>lekkantu.com</span></div>
+              <div class="m221-ui-tabs"><span class="m221-ui-tab m221-ui-tab-active">Produits</span><span class="m221-ui-tab">Ingrédients</span><span class="m221-ui-tab">Nutrition</span></div>
+              <div class="m221-ui-body">
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Fiche produit</strong><small>Étiquette, ingrédients, nutrition</small></span><span class="m221-ui-tag">Lire</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Rayon local</strong><small>Des produits réellement achetés</small></span><span class="m221-ui-tag">Local</span></div>
+                <div class="m221-ui-row"><span class="m221-ui-icon"></span><span><strong>Choix plus clairs</strong><small>Moins de bruit, plus de contexte</small></span><span class="m221-ui-tag">Utile</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="m221-grid-2">
-        <article class="m221-card">
-          <span class="m221-pill">Open Data</span>
-          <h3>Des datasets à explorer et réutiliser</h3>
-          <p>Des publications publiques sélectionnées autour du sport, de la nutrition et d'autres sujets de données locales, notamment sur Kaggle.</p>
-          <a class="m221-card-link" href="/fr/open/#data">Voir les datasets →</a>
+    <section class="m221-section">
+      <div class="m221-container m221-principle">
+        <div class="m221-principle-copy">
+          <span class="m221-section-eyebrow">Pourquoi M221Tech</span>
+          <h2>On s'occupe de la partie compliquée. Vous gardez la partie utile.</h2>
+          <p>L'information locale est souvent dispersée, incomplète ou cachée dans des endroits qui n'ont jamais été pensés pour être simples à utiliser. On fait le travail patient en coulisses, puis on garde le produit clair.</p>
+        </div>
+        <div class="m221-principle-flow" aria-label="Des données dispersées vers un produit utile">
+          <div class="m221-flow-row"><span class="m221-flow-index">01</span><span><strong>Dispersé</strong><small>Difficile à trouver, difficile à comparer</small></span><span class="m221-flow-arrow">↓</span></div>
+          <div class="m221-flow-row"><span class="m221-flow-index">02</span><span><strong>Structuré</strong><small>Assez propre pour avoir du sens</small></span><span class="m221-flow-arrow">↓</span></div>
+          <div class="m221-flow-row"><span class="m221-flow-index">03</span><span><strong>Utile</strong><small>Un produit auquel on peut revenir</small></span><span class="m221-flow-arrow">✓</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section" id="open">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">Open</span>
+            <h2>Une partie de la valeur mérite d'aller plus loin.</h2>
+          </div>
+          <p class="m221-section-intro">Certains jeux de données sont partagés publiquement. Les analyses plus poussées et rapports restent disponibles quand il y a une vraie question à creuser.</p>
+        </div>
+
+        <div class="m221-open-grid">
+          <article class="m221-open-card">
+            <span class="m221-pill">Open Data</span>
+            <h3>Des datasets utiles, sans cérémonie.</h3>
+            <p>Des publications publiques sélectionnées autour du sport, de la nutrition et d'autres thèmes de données locales.</p>
+            <div class="m221-data-preview" aria-hidden="true">
+              <div class="m221-data-line"><strong>Sports</strong><span class="m221-data-bar"><i style="width:82%"></i></span><span>structuré</span></div>
+              <div class="m221-data-line"><strong>Nutrition</strong><span class="m221-data-bar"><i style="width:66%"></i></span><span>sélectionné</span></div>
+              <div class="m221-data-line"><strong>Données locales</strong><span class="m221-data-bar"><i style="width:48%"></i></span><span>en croissance</span></div>
+            </div>
+            <a class="m221-card-link" href="/fr/open/#data">Voir l'Open Data →</a>
+          </article>
+
+          <article class="m221-open-card">
+            <span class="m221-pill">Rapports</span>
+            <h3>Une réponse ciblée quand les données méritent qu'on regarde de plus près.</h3>
+            <p>Les rapports sont préparés et partagés sur demande autour d'une question, d'un dataset ou d'un thème.</p>
+            <div class="m221-report-sheet" aria-hidden="true">
+              <small>M221Tech · Rapport</small>
+              <strong>Une question.<br />Une lecture claire.</strong>
+              <div class="m221-report-lines"><i></i><i></i><i></i></div>
+            </div>
+            <a class="m221-card-link" href="mailto:m221tech@gmail.com?subject=Demande%20de%20rapport%20M221Tech">Demander un rapport →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section">
+      <div class="m221-container">
+        <div class="m221-section-head">
+          <div>
+            <span class="m221-section-eyebrow">En mouvement</span>
+            <h2>Un petit studio avec quelques idées qui cuisent.</h2>
+          </div>
+          <p class="m221-section-intro">Chaque produit avance à son rythme. Le fil rouge reste simple : rendre les données locales plus faciles à utiliser.</p>
+        </div>
+        <div class="m221-motion-strip">
+          <div class="m221-motion-item"><small>Sports</small><strong>M221Foot</strong><span>Football intelligence</span></div>
+          <div class="m221-motion-item"><small>Sports</small><strong>WC2026</strong><span>Produit événementiel</span></div>
+          <div class="m221-motion-item"><small>Nutrition</small><strong>Lekkantu</strong><span>Données alimentaires</span></div>
+          <div class="m221-motion-item m221-motion-item-lab"><small>From the lab</small><strong>Kurel Facts</strong><span>Culture & savoir local</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-section" id="lab">
+      <div class="m221-container">
+        <article class="m221-lab-v2">
+          <div>
+            <span class="m221-pill">From the lab</span>
+            <h3>Kurel Facts</h3>
+            <p>Tout n'a pas besoin de devenir un gros produit. Le lab garde les petites idées, observations et expériences qui méritent quand même d'être explorées.</p>
+          </div>
+          <a class="m221-btn m221-btn-secondary" href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Ouvrir Kurel Facts ↗</a>
         </article>
-
-        <article class="m221-card">
-          <span class="m221-pill">Rapports</span>
-          <h3>Des rapports ciblés, sur demande</h3>
-          <p>Une question mérite qu'on creuse ? On peut préparer une analyse ciblée à partir des données que nous couvrons.</p>
-          <a class="m221-card-link" href="mailto:m221tech@gmail.com?subject=Demande%20de%20rapport%20M221Tech">Demander un rapport →</a>
-        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-section">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Un petit studio, déjà bien en mouvement.</h2>
-        <p class="m221-section-intro">Un aperçu simple pour l'instant. On ajoutera des métriques plus détaillées uniquement quand elles seront utiles et vérifiées.</p>
+    <section class="m221-contact-v2" id="contact">
+      <div class="m221-container m221-contact-v2-inner">
+        <div>
+          <span class="m221-section-eyebrow">Contact</span>
+          <h2>Quelque chose de local mérite d'être rendu plus utile ?</h2>
+          <p>Un dataset, un rapport, une collaboration ou juste une idée qu'on devrait regarder ensemble. On aime les bonnes questions.</p>
+        </div>
+        <div class="m221-actions">
+          <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">Nous écrire</a>
+        </div>
       </div>
-
-      <div class="m221-metrics">
-        <div class="m221-metric"><strong>3</strong><span>produits actifs</span></div>
-        <div class="m221-metric"><strong>2</strong><span>verticales produit</span></div>
-        <div class="m221-metric"><strong>1</strong><span>projet au lab</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="m221-section" id="lab">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>From the lab</h2>
-        <p class="m221-section-intro">Des idées de côté, des expériences et des questions qu'on a envie d'explorer.</p>
-      </div>
-
-      <article class="m221-lab">
-        <span class="m221-pill">Culture & savoir local</span>
-        <h3>Kurel Facts</h3>
-        <p>Une petite expérimentation data autour d'observations culturelles, de structure et d'exploration visuelle.</p>
-        <a href="https://kurel.m221.tech" target="_blank" rel="noopener noreferrer">Découvrir Kurel Facts →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="m221-contact" id="contact">
-    <div class="m221-container">
-      <span class="m221-kicker">Contact</span>
-      <h2>Une idée en tête ?</h2>
-      <p>Un dataset, un rapport, une collaboration ou simplement quelque chose qui mérite d'être discuté — écrivez-nous.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">Nous écrire</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Layout>
