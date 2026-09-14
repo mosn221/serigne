@@ -1,47 +1,232 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import '../../../styles/nutrition-v2.css';
 ---
 
 <Layout
   title="Nutrition & données alimentaires | M221Tech"
-  description="Découvrez les projets nutrition de M221Tech, à commencer par Lekkantu et sa base de produits, ingrédients et informations nutritionnelles."
+  description="Découvrez M221Tech Nutrition et Lekkantu : produits alimentaires, ingrédients, valeurs nutritionnelles et données structurées plus faciles à lire et à utiliser."
 >
-  <section class="m221-page-hero">
-    <div class="m221-container">
-      <a class="m221-back" href="/fr/">← M221Tech</a>
-      <span class="m221-kicker">Nutrition</span>
-      <h1>Des données alimentaires plus proches de la vraie vie.</h1>
-      <p>On s'intéresse aux produits que les gens trouvent, achètent et consomment vraiment — d'abord au Sénégal, avec l'ambition d'aller plus loin en Afrique.</p>
-    </div>
-  </section>
-
-  <section class="m221-section">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Ce qu'on construit</h2>
-        <p class="m221-section-intro">Un produit pour l'instant, construit patiemment et pensé pour grandir.</p>
+  <div class="m221-nutrition-page">
+    <section class="m221-nutrition-hero">
+      <div class="m221-container m221-nutrition-hero-inner">
+        <a class="m221-nutrition-breadcrumb" href="/fr/#projects">← M221Tech / Projets</a>
+        <span class="m221-nutrition-kicker">M221TECH / NUTRITION</span>
+        <h1>Des données alimentaires plus faciles à lire.</h1>
+        <p class="m221-nutrition-lead">Produits, ingrédients et valeurs nutritionnelles — structurés pour mieux comprendre l'étiquette avant de remettre le paquet en rayon.</p>
+        <div class="m221-nutrition-actions">
+          <a class="is-primary" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">Ouvrir Lekkantu ↗</a>
+          <a class="is-secondary" href="#product">Explorer Nutrition ↓</a>
+        </div>
       </div>
+    </section>
 
-      <div class="m221-product-list">
-        <article class="m221-product">
-          <div class="m221-product-meta">Plateforme nutrition</div>
-          <div>
+    <div class="m221-nutrition-local-wrap">
+      <nav class="m221-container m221-nutrition-local-nav" aria-label="Navigation Nutrition" data-nutrition-nav>
+        <a href="#product" data-nutrition-link="product"><span>01</span>Lekkantu</a>
+        <a href="#reading" data-nutrition-link="reading"><span>02</span>Lecture</a>
+        <a href="#data" data-nutrition-link="data"><span>03</span>Données</a>
+        <a href="#contact" data-nutrition-link="contact"><span>04</span>Contact</a>
+      </nav>
+    </div>
+
+    <section class="m221-nutrition-chapter" id="product" data-nutrition-section>
+      <div class="m221-container">
+        <header class="m221-nutrition-chapter-head">
+          <div class="m221-nutrition-index">01 / LEKKANTU</div>
+          <h2>Un produit, construit produit après produit.</h2>
+          <p>Lekkantu est le cœur de Nutrition : une base alimentaire en croissance qui rassemble les informations produit dans une structure lisible.</p>
+        </header>
+
+        <article class="m221-nutrition-core">
+          <div class="m221-nutrition-core-copy">
+            <span class="m221-nutrition-eyebrow">PRODUIT CŒUR / DONNÉES ALIMENTAIRES</span>
             <h3>Lekkantu</h3>
-            <p>Une base alimentaire et nutritionnelle en croissance, autour des ingrédients, valeurs nutritionnelles, marques, catégories et produits disponibles au Sénégal et plus largement en Afrique.</p>
+            <p>Une base en croissance autour des produits alimentaires, ingrédients, valeurs nutritionnelles, marques et catégories — en commençant par des produits disponibles au Sénégal, avec une structure pensée pour aller au-delà d'un seul marché.</p>
+            <div class="m221-nutrition-product-tags" aria-label="Types de données Lekkantu">
+              <span>PRODUITS</span><span>INGRÉDIENTS</span><span>NUTRITION</span><span>MARQUES</span><span>CATÉGORIES</span>
+            </div>
+            <div class="m221-nutrition-core-actions">
+              <a class="m221-nutrition-open" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">Entrer dans Lekkantu ↗</a>
+              <a class="m221-nutrition-domain" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">lekkantu.com</a>
+            </div>
           </div>
-          <a href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">Voir Lekkantu →</a>
+
+          <div class="m221-nutrition-sheet" aria-label="Anatomie d'une fiche produit structurée">
+            <div class="m221-nutrition-sheet-head">
+              <span>FICHE PRODUIT STRUCTURÉE</span>
+              <strong>Ce qu'on rassemble</strong>
+            </div>
+            <div class="m221-nutrition-sheet-row"><span>Produit</span><strong>Nom, marque et catégorie</strong></div>
+            <div class="m221-nutrition-sheet-row"><span>Ingrédients</span><strong>Ce qui est réellement indiqué sur l'emballage</strong></div>
+            <div class="m221-nutrition-sheet-row"><span>Nutrition</span><strong>Les valeurs déclarées sur l'étiquette</strong></div>
+            <div class="m221-nutrition-sheet-row"><span>Contexte</span><strong>Une lecture plus claire du produit dans son ensemble</strong></div>
+          </div>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-contact">
-    <div class="m221-container">
-      <h2>Curieux autour de la donnée nutritionnelle ?</h2>
-      <p>Un dataset, un rapport, ou une piste à explorer ensemble ? Écrivez-nous.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com?subject=Data%20nutrition%20M221Tech">Nous écrire</a>
+    <section class="m221-nutrition-chapter m221-nutrition-reading" id="reading" data-nutrition-section>
+      <div class="m221-container">
+        <header class="m221-nutrition-chapter-head">
+          <div class="m221-nutrition-index">02 / LECTURE</div>
+          <h2>L'étiquette est l'interface.</h2>
+          <p>La donnée nutritionnelle devient utile lorsque les informations d'un emballage sont plus simples à repérer, relier et comprendre.</p>
+        </header>
+
+        <div class="m221-nutrition-reader">
+          <aside class="m221-nutrition-reader-note">
+            <span>ANGLE DE LECTURE</span>
+            <h3>Moins de verdict. Plus de contexte.</h3>
+            <p>L'idée n'est pas de réduire un produit à une note magique. On part de ce qui est écrit, on le structure, puis on rend les éléments importants plus visibles.</p>
+          </aside>
+
+          <div class="m221-nutrition-reading-list">
+            <details class="m221-nutrition-reading-item" open>
+              <summary><span>01</span><strong>Ingrédients</strong></summary>
+              <p>L'ordre, la composition et les mots employés comptent. Une liste structurée aide à examiner l'emballage sans lui faire dire plus que ce qu'il indique.</p>
+            </details>
+            <details class="m221-nutrition-reading-item">
+              <summary><span>02</span><strong>Valeurs nutritionnelles</strong></summary>
+              <p>Énergie, sucres, sel, matières grasses, protéines et autres valeurs déclarées doivent rester ensemble, avec des unités et un contexte de portion clairs.</p>
+            </details>
+            <details class="m221-nutrition-reading-item">
+              <summary><span>03</span><strong>Contexte produit</strong></summary>
+              <p>Marque, catégorie, format et mentions en face avant replacent le tableau nutritionnel dans le produit que les gens voient et achètent réellement.</p>
+            </details>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="m221-nutrition-chapter" id="data" data-nutrition-section>
+      <div class="m221-container">
+        <header class="m221-nutrition-chapter-head">
+          <div class="m221-nutrition-index">03 / APPROCHE</div>
+          <h2>Collecter. Structurer. Rendre lisible.</h2>
+          <p>Le produit grandit par un travail patient sur la donnée : capter ce qui est disponible, l'organiser de façon cohérente, puis construire des manières utiles de la lire.</p>
+        </header>
+
+        <div class="m221-nutrition-data-grid">
+          <article class="m221-nutrition-data-item">
+            <span>01 / COLLECTER</span>
+            <h3>Partir de l'emballage.</h3>
+            <p>Les informations viennent de ce qui est réellement disponible : noms, étiquettes, ingrédients et données nutritionnelles déclarées.</p>
+          </article>
+          <article class="m221-nutrition-data-item">
+            <span>02 / STRUCTURER</span>
+            <h3>Donner une place à chaque champ.</h3>
+            <p>Marques, catégories, ingrédients et valeurs nutritionnelles deviennent des données cohérentes plutôt que des fragments d'étiquette isolés.</p>
+          </article>
+          <article class="m221-nutrition-data-item">
+            <span>03 / UTILISER</span>
+            <h3>Transformer les fiches en lecture.</h3>
+            <p>Pages produit, explications éditoriales et futures analyses peuvent ensuite reposer sur la même base structurée.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-nutrition-contact" id="contact" data-nutrition-section>
+      <div class="m221-container m221-nutrition-contact-inner">
+        <div class="m221-nutrition-index">04 / CONTACT</div>
+        <div>
+          <h2>Une donnée alimentaire, une question ou une idée ?</h2>
+          <p>Dites-nous ce que vous cherchez à comprendre.</p>
+        </div>
+        <a href="mailto:m221tech@gmail.com?subject=M221Tech%20Nutrition">m221tech@gmail.com →</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const header = document.querySelector('.m221-header');
+    const localWrap = document.querySelector('.m221-nutrition-local-wrap');
+    const links = Array.from(document.querySelectorAll('[data-nutrition-link]'));
+    const sections = links
+      .map((link) => document.getElementById(link.dataset.nutritionLink || ''))
+      .filter(Boolean);
+
+    let activeId = '';
+    let targetId = null;
+    let ticking = false;
+
+    const offset = () => (header?.offsetHeight || 0) + (localWrap?.offsetHeight || 0) + 1;
+
+    const setActive = (id) => {
+      if (!id || activeId === id) return;
+      activeId = id;
+      links.forEach((link) => {
+        if (link.dataset.nutritionLink === id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+
+    const currentSection = () => {
+      const marker = offset() + 8;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= marker) current = section;
+        else break;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 3;
+      return atBottom ? sections[sections.length - 1] : current;
+    };
+
+    const sync = () => {
+      ticking = false;
+      if (!sections.length) return;
+      if (targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          setActive(targetId);
+          if (Math.abs(target.getBoundingClientRect().top - offset()) > 3) return;
+        }
+        targetId = null;
+      }
+      setActive(currentSection()?.id);
+    };
+
+    const schedule = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(sync);
+    };
+
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const id = link.dataset.nutritionLink;
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+        event.preventDefault();
+        targetId = id;
+        setActive(id);
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset());
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+
+    const release = () => {
+      targetId = null;
+      schedule();
+    };
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    window.addEventListener('wheel', release, { passive: true });
+    window.addEventListener('touchstart', release, { passive: true });
+
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const id = location.hash.slice(1);
+        const target = document.getElementById(id);
+        if (target && links.some((link) => link.dataset.nutritionLink === id)) {
+          window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset()), behavior: 'auto' });
+        }
+      }
+      sync();
+    });
+  </script>
 </Layout>
