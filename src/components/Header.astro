@@ -14,6 +14,8 @@ const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${path
 
 const projectPage = /\/(sports|nutrition)\/?$/.test(pathname);
 const openPage = /\/open\/?$/.test(pathname);
+const menuOpenLabel = isFrench ? 'Ouvrir le menu' : 'Open menu';
+const menuCloseLabel = isFrench ? 'Fermer le menu' : 'Close menu';
 
 const labels = isFrench
   ? { projects: 'Projets', why: 'Pourquoi', lab: 'Lab', open: 'Open', contact: 'Contact' }
@@ -41,7 +43,11 @@ const labels = isFrench
     </div>
 
     <details class="m221-mobile-nav" data-mobile-menu>
-      <summary aria-label={isFrench ? 'Ouvrir le menu' : 'Open menu'}>
+      <summary
+        aria-label={menuOpenLabel}
+        data-open-label={menuOpenLabel}
+        data-close-label={menuCloseLabel}
+      >
         <span class="m221-burger" aria-hidden="true">
           <span></span><span></span><span></span>
         </span>
@@ -68,6 +74,15 @@ const labels = isFrench
   menus.forEach((menu) => {
     if (!(menu instanceof HTMLDetailsElement)) return;
     const summary = menu.querySelector('summary');
+
+    const syncLabel = () => {
+      if (!(summary instanceof HTMLElement)) return;
+      const label = menu.open ? summary.dataset.closeLabel : summary.dataset.openLabel;
+      if (label) summary.setAttribute('aria-label', label);
+    };
+
+    menu.addEventListener('toggle', syncLabel);
+    syncLabel();
 
     menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
