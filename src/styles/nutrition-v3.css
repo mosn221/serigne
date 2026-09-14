@@ -1,0 +1,234 @@
+.m221-nutrition-page{
+  --nutrition-yellow:#FFC300;
+  --nutrition-cream:#FFF0A8;
+  --nutrition-line:rgba(255,255,255,.075);
+  --nutrition-shelf:#11192A;
+  background:#0B1020;
+}
+
+/* V3: Nutrition keeps the M221Tech system, but feels closer to a shelf / label than a sports dashboard. */
+.m221-nutrition-page .m221-nutrition-hero{
+  min-height:560px;
+  display:flex;
+  align-items:center;
+  padding:78px 0 66px;
+  background:
+    linear-gradient(180deg,transparent 0 73%,rgba(255,255,255,.035) 73% 73.2%,transparent 73.2%),
+    radial-gradient(circle at 84% 24%,rgba(255,195,0,.12),transparent 0 25%),
+    #0B1020;
+}
+.m221-nutrition-page .m221-nutrition-hero:before{
+  width:min(39vw,520px);
+  opacity:.22;
+  background:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,transparent,rgba(255,195,0,.07));
+  background-size:38px 38px,38px 38px,auto;
+}
+.m221-nutrition-page .m221-nutrition-hero-inner{max-width:1100px}
+.m221-nutrition-page .m221-nutrition-breadcrumb{margin-bottom:28px;color:#5F6D82}
+.m221-nutrition-page .m221-nutrition-kicker{margin-bottom:14px;font-size:.62rem}
+.m221-nutrition-page .m221-nutrition-hero h1{
+  max-width:880px;
+  font-size:clamp(3.6rem,7vw,6.7rem);
+}
+.m221-nutrition-page .m221-nutrition-lead{
+  max-width:650px;
+  margin-top:20px;
+  color:#98A5B6;
+  font-size:clamp(1rem,1.45vw,1.12rem);
+}
+.m221-nutrition-page .m221-nutrition-actions{margin-top:28px}
+.m221-nutrition-page .m221-nutrition-actions a{
+  min-height:43px;
+  border-radius:9px;
+}
+
+/* Local navigation reads like a quiet shelf index. */
+.m221-nutrition-page .m221-nutrition-local-wrap{top:72px;background:rgba(10,15,29,.96)}
+.m221-nutrition-page .m221-nutrition-local-nav{min-height:46px}
+.m221-nutrition-page .m221-nutrition-local-nav a{font-size:.66rem}
+.m221-nutrition-page .m221-nutrition-local-nav a:after{left:26%;right:26%}
+
+.m221-nutrition-page .m221-nutrition-chapter{padding:78px 0}
+.m221-nutrition-page .m221-nutrition-chapter-head{
+  grid-template-columns:92px minmax(0,1fr) minmax(240px,.5fr);
+  gap:24px;
+  margin-bottom:34px;
+}
+.m221-nutrition-page .m221-nutrition-index{padding-top:6px;font-size:.57rem}
+.m221-nutrition-page .m221-nutrition-chapter-head h2{
+  max-width:700px;
+  font-size:clamp(2.5rem,4.7vw,4.35rem);
+}
+.m221-nutrition-page .m221-nutrition-chapter-head>p{
+  max-width:340px;
+  color:#8793A6;
+  font-size:.86rem;
+}
+
+/* Lekkantu is the product core, but not a giant landing-page card. */
+.m221-nutrition-page .m221-nutrition-core{
+  grid-template-columns:minmax(0,1.12fr) minmax(300px,.64fr);
+  border-color:rgba(255,195,0,.13);
+  border-radius:14px;
+  background:
+    linear-gradient(180deg,transparent calc(100% - 46px),rgba(255,195,0,.035) calc(100% - 46px)),
+    #0E1628;
+}
+.m221-nutrition-page .m221-nutrition-core-copy{
+  min-height:360px;
+  padding:28px;
+}
+.m221-nutrition-page .m221-nutrition-core h3{
+  font-size:clamp(3.5rem,6vw,5.7rem);
+  color:#FFE98A;
+}
+.m221-nutrition-page .m221-nutrition-core-copy>p{
+  max-width:610px;
+  font-size:.9rem;
+}
+.m221-nutrition-page .m221-nutrition-product-tags{gap:6px;margin-top:18px}
+.m221-nutrition-page .m221-nutrition-product-tags span{
+  padding:6px 8px;
+  border-radius:6px;
+  color:#718097;
+  transition:border-color .16s ease,color .16s ease,background .16s ease;
+}
+.m221-nutrition-page .m221-nutrition-product-tags span:hover{
+  color:#FFF0A8;
+  border-color:rgba(255,195,0,.2);
+  background:rgba(255,195,0,.035);
+}
+.m221-nutrition-page .m221-nutrition-core-actions{margin-top:22px}
+.m221-nutrition-page .m221-nutrition-core-actions a{border-radius:8px}
+
+/* The record reads like a real label dropped on the workbench. */
+.m221-nutrition-page .m221-nutrition-sheet{
+  margin:14px;
+  padding:21px;
+  border-radius:9px;
+  box-shadow:0 10px 26px rgba(0,0,0,.12);
+  transform:rotate(.25deg);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.m221-nutrition-page .m221-nutrition-sheet:hover{
+  transform:rotate(0deg) translateY(-2px);
+  box-shadow:0 14px 32px rgba(0,0,0,.16);
+}
+.m221-nutrition-page .m221-nutrition-sheet-head{padding-bottom:14px;border-bottom-width:2px}
+.m221-nutrition-page .m221-nutrition-sheet-head strong{font-size:1.35rem}
+.m221-nutrition-page .m221-nutrition-sheet-row{
+  grid-template-columns:88px 1fr;
+  gap:14px;
+  padding:14px 0;
+}
+
+/* Reading is the interactive part of the page. */
+.m221-nutrition-page .m221-nutrition-reading{background:#090F1B}
+.m221-nutrition-page .m221-nutrition-reader{grid-template-columns:minmax(0,.58fr) minmax(360px,1fr);gap:54px}
+.m221-nutrition-page .m221-nutrition-reader-note{
+  top:144px;
+  padding:22px 0 22px 22px;
+  background:transparent;
+}
+.m221-nutrition-page .m221-nutrition-reader-note h3{
+  margin-top:38px;
+  font-size:clamp(2rem,3.4vw,3.2rem);
+}
+.m221-nutrition-page .m221-nutrition-reading-item summary{
+  min-height:78px;
+  grid-template-columns:52px minmax(0,1fr) auto;
+  padding:0 4px;
+  transition:background .16s ease,color .16s ease;
+}
+.m221-nutrition-page .m221-nutrition-reading-item summary:hover,
+.m221-nutrition-page .m221-nutrition-reading-item summary:focus-visible{
+  background:rgba(255,195,0,.025);
+}
+.m221-nutrition-page .m221-nutrition-reading-item[open]{border-bottom-color:rgba(255,195,0,.14)}
+.m221-nutrition-page .m221-nutrition-reading-item p{
+  margin:-3px 34px 21px 56px;
+  font-size:.8rem;
+}
+
+/* Approach becomes a continuous rail rather than three SaaS cards. */
+.m221-nutrition-page .m221-nutrition-data-grid{
+  gap:0;
+  border-top:1px solid var(--nutrition-line);
+  border-bottom:1px solid var(--nutrition-line);
+}
+.m221-nutrition-page .m221-nutrition-data-item{
+  min-height:240px;
+  padding:24px;
+  border:0;
+  border-right:1px solid var(--nutrition-line);
+  border-radius:0;
+  background:transparent;
+}
+.m221-nutrition-page .m221-nutrition-data-item:last-child{border-right:0}
+.m221-nutrition-page .m221-nutrition-data-item:hover{
+  transform:none;
+  border-color:var(--nutrition-line);
+  background:rgba(255,195,0,.025);
+}
+.m221-nutrition-page .m221-nutrition-data-item h3{margin-top:46px;font-size:1.4rem}
+.m221-nutrition-page .m221-nutrition-data-item p{font-size:.8rem}
+
+.m221-nutrition-page .m221-nutrition-contact{padding:78px 0 86px}
+.m221-nutrition-page .m221-nutrition-contact:after{opacity:.7}
+.m221-nutrition-page .m221-nutrition-contact-inner{grid-template-columns:92px 1fr auto;gap:24px}
+.m221-nutrition-page .m221-nutrition-contact h2{font-size:clamp(2.4rem,4.2vw,4rem)}
+.m221-nutrition-page .m221-nutrition-contact a{border-radius:8px}
+
+@media(max-width:980px){
+  .m221-nutrition-page .m221-nutrition-hero{min-height:auto;padding:68px 0 56px}
+  .m221-nutrition-page .m221-nutrition-chapter-head{grid-template-columns:76px minmax(0,1fr)}
+  .m221-nutrition-page .m221-nutrition-chapter-head>p{grid-column:2;max-width:520px}
+  .m221-nutrition-page .m221-nutrition-core{grid-template-columns:1fr}
+  .m221-nutrition-page .m221-nutrition-core-copy{min-height:300px}
+  .m221-nutrition-page .m221-nutrition-reader{grid-template-columns:1fr;gap:24px}
+  .m221-nutrition-page .m221-nutrition-reader-note{position:relative;top:auto;max-width:620px}
+  .m221-nutrition-page .m221-nutrition-contact-inner{grid-template-columns:76px 1fr}
+  .m221-nutrition-page .m221-nutrition-contact-inner>a{grid-column:2;justify-self:start}
+}
+
+@media(max-width:760px){
+  .m221-nutrition-page [id]{scroll-margin-top:110px}
+  .m221-nutrition-page .m221-nutrition-hero{padding:52px 0 44px}
+  .m221-nutrition-page .m221-nutrition-hero:before{display:none}
+  .m221-nutrition-page .m221-nutrition-breadcrumb{margin-bottom:22px;font-size:.58rem}
+  .m221-nutrition-page .m221-nutrition-hero h1{font-size:clamp(3rem,14vw,4.7rem)}
+  .m221-nutrition-page .m221-nutrition-lead{font-size:.92rem}
+  .m221-nutrition-page .m221-nutrition-actions{display:grid;grid-template-columns:1fr;gap:7px}
+  .m221-nutrition-page .m221-nutrition-actions a{width:100%}
+  .m221-nutrition-page .m221-nutrition-local-wrap{top:66px}
+  .m221-nutrition-page .m221-nutrition-local-nav a{gap:4px;padding:0 3px;font-size:.59rem}
+  .m221-nutrition-page .m221-nutrition-local-nav a span{font-size:.48rem}
+  .m221-nutrition-page .m221-nutrition-chapter{padding:58px 0}
+  .m221-nutrition-page .m221-nutrition-chapter-head{grid-template-columns:1fr;gap:9px;margin-bottom:26px}
+  .m221-nutrition-page .m221-nutrition-chapter-head>p{grid-column:auto;margin-top:4px}
+  .m221-nutrition-page .m221-nutrition-index{padding-top:0}
+  .m221-nutrition-page .m221-nutrition-chapter-head h2{font-size:clamp(2.25rem,11vw,3.3rem)}
+  .m221-nutrition-page .m221-nutrition-core-copy{min-height:0;padding:22px}
+  .m221-nutrition-page .m221-nutrition-core h3{margin:52px 0 0;font-size:clamp(3.3rem,17vw,5rem)}
+  .m221-nutrition-page .m221-nutrition-sheet{margin:0 10px 10px;transform:none}
+  .m221-nutrition-page .m221-nutrition-reader-note{padding:18px 0 18px 18px}
+  .m221-nutrition-page .m221-nutrition-reader-note h3{margin-top:28px}
+  .m221-nutrition-page .m221-nutrition-reading-item summary{grid-template-columns:38px minmax(0,1fr) auto;min-height:68px}
+  .m221-nutrition-page .m221-nutrition-reading-item p{margin:0 28px 18px 42px}
+  .m221-nutrition-page .m221-nutrition-data-grid{grid-template-columns:1fr}
+  .m221-nutrition-page .m221-nutrition-data-item{min-height:0;border-right:0;border-bottom:1px solid var(--nutrition-line);padding:22px 0}
+  .m221-nutrition-page .m221-nutrition-data-item:last-child{border-bottom:0}
+  .m221-nutrition-page .m221-nutrition-data-item h3{margin-top:24px}
+  .m221-nutrition-page .m221-nutrition-contact{padding:60px 0 68px}
+  .m221-nutrition-page .m221-nutrition-contact-inner{grid-template-columns:1fr;gap:12px}
+  .m221-nutrition-page .m221-nutrition-contact-inner>a{grid-column:auto}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .m221-nutrition-page .m221-nutrition-sheet,
+  .m221-nutrition-page .m221-nutrition-product-tags span,
+  .m221-nutrition-page .m221-nutrition-reading-item summary{transition:none}
+}

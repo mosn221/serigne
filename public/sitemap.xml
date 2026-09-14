@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://m221.tech/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/sports/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/sports/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/sports/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/sports/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/fr/sports/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/sports/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/sports/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/sports/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/nutrition/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/nutrition/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/nutrition/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/nutrition/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/fr/nutrition/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/nutrition/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/nutrition/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/nutrition/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/open/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/open/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/open/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/open/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/fr/open/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/open/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/open/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/open/" />
+  </url>
+</urlset>

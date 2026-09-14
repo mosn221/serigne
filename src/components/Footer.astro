@@ -1,29 +1,54 @@
 ---
-// Footer.astro
-// -----------------------------------------------------------------------
-// Pied de page commun à toutes les pages. Le "new Date().getFullYear()"
-// calcule l'année en cours automatiquement à chaque build du site — vous
-// n'aurez donc plus jamais à changer le "© 2026" manuellement chaque
-// année : il se met à jour tout seul au prochain déploiement.
-// -----------------------------------------------------------------------
+const pathname = Astro.url.pathname;
+const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+const homeHref = isFrench ? '/fr/' : '/';
+const projectsHref = `${homeHref}#projects`;
+const labHref = `${homeHref}#lab`;
+const openHref = `${homeHref}#open`;
+
+const labels = isFrench
+  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open' }
+  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open' };
 ---
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-wrap">
-      <div>
-        © {new Date().getFullYear()} <strong>M221Tech</strong><br />
-        Plateformes de données & outils numériques
+<footer class="m221-footer">
+  <div class="m221-container m221-footer-shell">
+    <div class="m221-footer-main">
+      <div class="m221-footer-brand-block">
+        <a class="m221-footer-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
+          <img
+            src="/assets/img/logositeweb.svg"
+            alt="M221Tech"
+            width="160"
+            height="40"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        <div class="m221-footer-signature">
+          <span>M221TECH / DATA HOUSE</span>
+          <p>{isFrench ? 'La donnée, rendue utile.' : 'Data, made useful.'}</p>
+        </div>
       </div>
 
-      <div>
-        <a href="/mentions-legales">Mentions légales</a><br />
-        <a href="mailto:m221tech@gmail.com">Contact</a>
-      </div>
+      <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
+        <a href={homeHref}>{labels.home}</a>
+        <a href={projectsHref}>{labels.projects}</a>
+        <a href={labHref}>{labels.lab}</a>
+        <a href={openHref}>{labels.open}</a>
+        <a
+          class="m221-footer-linkedin"
+          href="https://www.linkedin.com/company/m221tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={isFrench ? 'M221Tech sur LinkedIn, nouvel onglet' : 'M221Tech on LinkedIn, opens in a new tab'}
+        >LinkedIn <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
 
-      <div>Dev • Data • Digital</div>
-
-      <p>Focus sur des process data-driven.</p>
+    <div class="m221-footer-meta">
+      <span>© {new Date().getFullYear()} M221Tech</span>
+      <span>{isFrench ? 'Des données aux usages.' : 'Data, shaped for use.'}</span>
     </div>
   </div>
 </footer>

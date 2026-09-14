@@ -1,22 +1,23 @@
-# netlify.toml
-# -----------------------------------------------------------------------
-# Fichier de configuration lu automatiquement par Netlify à chaque build.
-# Grâce à ce fichier, vous n'avez rien à taper manuellement dans
-# l'interface Netlify : tout est déjà pré-rempli dès l'import du repo.
-# -----------------------------------------------------------------------
-
 [build]
-  # Commande lancée par Netlify pour construire le site à partir du code
-  # source (équivalent à "npm run build" que vous lanceriez en local).
   command = "npm run build"
-
-  # Dossier généré par la commande ci-dessus, contenant le site final
-  # (HTML/CSS/JS statiques). C'est CE dossier que Netlify met en ligne,
-  # pas le code source.
   publish = "dist"
 
 [build.environment]
-  # Version de Node.js utilisée par Netlify pour le build. Astro 4
-  # nécessite Node 18 ou plus récent ; on fixe la 20 (LTS) pour éviter
-  # les surprises.
   NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
