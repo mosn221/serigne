@@ -12,6 +12,9 @@ const contactHref = `${homeHref}#contact`;
 const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
 const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
 
+const projectPage = /\/(sports|nutrition)\/?$/.test(pathname);
+const openPage = /\/open\/?$/.test(pathname);
+
 const labels = isFrench
   ? { projects: 'Projets', why: 'Pourquoi', lab: 'Lab', open: 'Open', contact: 'Contact' }
   : { projects: 'Projects', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' };
@@ -24,10 +27,10 @@ const labels = isFrench
     </a>
 
     <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
-      <a href={projectsHref}>{labels.projects}</a>
+      <a href={projectsHref} aria-current={projectPage ? 'true' : undefined}>{labels.projects}</a>
       <a href={whyHref}>{labels.why}</a>
       <a href={labHref}>{labels.lab}</a>
-      <a href={openHref}>{labels.open}</a>
+      <a href={openHref} aria-current={openPage ? 'true' : undefined}>{labels.open}</a>
       <a href={contactHref}>{labels.contact}</a>
     </nav>
 
@@ -37,13 +40,17 @@ const labels = isFrench
       <a href={frenchPath} aria-current={isFrench ? 'true' : undefined}>FR</a>
     </div>
 
-    <details class="m221-mobile-nav">
-      <summary aria-label={isFrench ? 'Ouvrir le menu' : 'Open menu'}>☰</summary>
+    <details class="m221-mobile-nav" data-mobile-menu>
+      <summary aria-label={isFrench ? 'Ouvrir le menu' : 'Open menu'}>
+        <span class="m221-burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </summary>
       <div class="m221-mobile-panel">
-        <a href={projectsHref}>{labels.projects}</a>
+        <a href={projectsHref} aria-current={projectPage ? 'true' : undefined}>{labels.projects}</a>
         <a href={whyHref}>{labels.why}</a>
         <a href={labHref}>{labels.lab}</a>
-        <a href={openHref}>{labels.open}</a>
+        <a href={openHref} aria-current={openPage ? 'true' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
         <div class="m221-lang">
           <a href={englishPath} aria-current={!isFrench ? 'true' : undefined}>EN</a>
@@ -54,3 +61,29 @@ const labels = isFrench
     </details>
   </div>
 </header>
+
+<script>
+  const menus = document.querySelectorAll('[data-mobile-menu]');
+
+  menus.forEach((menu) => {
+    if (!(menu instanceof HTMLDetailsElement)) return;
+    const summary = menu.querySelector('summary');
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.open = false;
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !menu.open) return;
+      menu.open = false;
+      if (summary instanceof HTMLElement) summary.focus();
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (!menu.open || menu.contains(event.target)) return;
+      menu.open = false;
+    });
+  });
+</script>
