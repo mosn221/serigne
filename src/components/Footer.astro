@@ -16,7 +16,14 @@ const labels = isFrench
     <div class="m221-footer-main">
       <div class="m221-footer-brand-block">
         <a class="m221-footer-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
-          <img src="/assets/img/logositeweb.svg" alt="M221Tech" />
+          <img
+            src="/assets/img/logositeweb.svg"
+            alt="M221Tech"
+            width="160"
+            height="40"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
         <div class="m221-footer-signature">
           <span>M221TECH / DATA HOUSE</span>
@@ -29,7 +36,13 @@ const labels = isFrench
         <a href={projectsHref}>{labels.projects}</a>
         <a href={labHref}>{labels.lab}</a>
         <a href={openHref}>{labels.open}</a>
-        <a class="m221-footer-linkedin" href="https://www.linkedin.com/company/m221tech" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a
+          class="m221-footer-linkedin"
+          href="https://www.linkedin.com/company/m221tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={isFrench ? 'M221Tech sur LinkedIn, nouvel onglet' : 'M221Tech on LinkedIn, opens in a new tab'}
+        >LinkedIn <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
 
