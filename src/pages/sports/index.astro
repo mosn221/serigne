@@ -9,49 +9,38 @@ import '../../styles/sports-v2.css';
 >
   <div class="m221-sports-page">
     <section class="m221-sports-hero">
-      <div class="m221-container m221-sports-hero-grid">
-        <div>
-          <a class="m221-sports-breadcrumb" href="/#projects">← M221Tech / Projects</a>
-          <span class="m221-sports-kicker">M221TECH / SPORTS</span>
-          <h1>Football data, shaped around the game.</h1>
-          <p class="m221-sports-lead">Competitions, clubs, matches and richer layers of context — structured into products made to explore, follow and use.</p>
-          <div class="m221-sports-actions">
-            <a class="is-primary" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Open M221Foot ↗</a>
-            <a class="is-secondary" href="#platform">Explore Sports ↓</a>
-          </div>
-        </div>
-
-        <div class="m221-sports-field" aria-hidden="true">
-          <div class="m221-sports-center-circle"></div>
-          <span class="m221-sports-zone" data-zone="competition">Competition</span>
-          <span class="m221-sports-zone" data-zone="club">Club</span>
-          <span class="m221-sports-zone" data-zone="match">Match</span>
-          <span class="m221-sports-zone" data-zone="intelligence">Intelligence</span>
-          <span class="m221-sports-field-label">SPORTS / DATA FIELD</span>
+      <div class="m221-container m221-sports-hero-inner">
+        <a class="m221-sports-breadcrumb" href="/#projects">← M221Tech / Projects</a>
+        <span class="m221-sports-kicker">M221TECH / SPORTS</span>
+        <h1>Football data, shaped around the game.</h1>
+        <p class="m221-sports-lead">Competitions, clubs, matches and richer layers of context — structured into products made to explore, follow and use.</p>
+        <div class="m221-sports-actions">
+          <a class="is-primary" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Open M221Foot ↗</a>
+          <a class="is-secondary" href="#platform">Explore the field ↓</a>
         </div>
       </div>
     </section>
 
-    <div class="m221-sports-strip" aria-label="Sports data layers">
-      <div class="m221-container m221-sports-strip-inner">
-        <div class="m221-sports-strip-item"><span>01</span>Competitions</div>
-        <div class="m221-sports-strip-item"><span>02</span>Clubs</div>
-        <div class="m221-sports-strip-item"><span>03</span>Matches</div>
-        <div class="m221-sports-strip-item"><span>04</span>Intelligence</div>
-      </div>
+    <div class="m221-sports-local-wrap">
+      <nav class="m221-container m221-sports-local-nav" aria-label="Sports navigation" data-sports-nav>
+        <a href="#platform" data-sports-link="platform"><span>01</span>M221Foot</a>
+        <a href="#tournament" data-sports-link="tournament"><span>02</span>WC2026</a>
+        <a href="#data" data-sports-link="data"><span>03</span>Data</a>
+        <a href="#contact" data-sports-link="contact"><span>04</span>Contact</a>
+      </nav>
     </div>
 
-    <section class="m221-sports-chapter" id="platform">
+    <section class="m221-sports-chapter" id="platform" data-sports-section>
       <div class="m221-container">
         <header class="m221-sports-chapter-head">
-          <div class="m221-sports-index">01 / PLATFORM</div>
-          <h2>One platform for the long run.</h2>
-          <p>M221Foot is the core Sports product: the place where competition structure and match detail come together.</p>
+          <div class="m221-sports-index">01 / M221FOOT</div>
+          <h2>The core of Sports.</h2>
+          <p>A platform built for the long run: competition structure, match detail and richer views when the data allows it.</p>
         </header>
 
         <article class="m221-sports-core">
           <div class="m221-sports-core-copy">
-            <span class="m221-sports-eyebrow">CORE PRODUCT / M221FOOT</span>
+            <span class="m221-sports-eyebrow">CORE PRODUCT / FOOTBALL PLATFORM</span>
             <h3>M221Foot</h3>
             <p>A football platform built around competitions, clubs, fixtures, results, match events and richer views when the data allows it.</p>
             <div class="m221-sports-core-actions">
@@ -60,75 +49,79 @@ import '../../styles/sports-v2.css';
             </div>
           </div>
 
-          <div class="m221-sports-layers" aria-label="M221Foot data layers">
-            <div class="m221-sports-layer"><strong>Competition</strong><span>Structure</span></div>
-            <div class="m221-sports-layer"><strong>Club</strong><span>Context</span></div>
-            <div class="m221-sports-layer"><strong>Match</strong><span>Detail</span></div>
-            <div class="m221-sports-layer"><strong>Intelligence</strong><span>Explore</span></div>
+          <div class="m221-sports-capabilities" aria-label="Explore M221Foot layers">
+            <details class="m221-sports-capability" open>
+              <summary>Competitions</summary>
+              <p>Seasons, fixtures, results and tables create the overall frame.</p>
+            </details>
+            <details class="m221-sports-capability">
+              <summary>Clubs</summary>
+              <p>A team-level view that keeps matches and the season in context.</p>
+            </details>
+            <details class="m221-sports-capability">
+              <summary>Matches</summary>
+              <p>Scores, events and match information when the available source data supports it.</p>
+            </details>
+            <details class="m221-sports-capability">
+              <summary>Intelligence</summary>
+              <p>Views and comparisons built on structured data without losing the match underneath.</p>
+            </details>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="m221-sports-chapter m221-sports-tournament" id="tournament">
+    <section class="m221-sports-chapter m221-sports-tournament" id="tournament" data-sports-section>
       <div class="m221-container">
         <header class="m221-sports-chapter-head">
-          <div class="m221-sports-index">02 / TOURNAMENT</div>
-          <h2>A tournament layer, not a second universe.</h2>
-          <p>WC2026 takes the same Sports logic and focuses it on one event: faster, seasonal and deliberately lighter than the core platform.</p>
+          <div class="m221-sports-index">02 / WC2026</div>
+          <h2>An event format inside the same universe.</h2>
+          <p>WC2026 takes the Sports logic and focuses it on one tournament: shorter, more direct and deliberately distinct from the permanent platform.</p>
         </header>
 
-        <div class="m221-sports-tournament-grid">
-          <div class="m221-sports-tournament-mark" aria-hidden="true">
-            <span>SPORTS / EVENT MODE</span>
-            <strong>Same field.<br />Different rhythm.</strong>
-          </div>
-
-          <article class="m221-sports-event">
-            <div class="m221-sports-event-top">
-              <span>EVENT EXPERIENCE</span>
-              <span>2026</span>
-            </div>
+        <article class="m221-sports-event">
+          <div class="m221-sports-event-meta">SPORTS EXTENSION<br />2026 EDITION</div>
+          <div class="m221-sports-event-copy">
             <h3>WC2026</h3>
-            <p>A focused World Cup experience built as an extension of the Sports universe rather than a separate product family.</p>
-            <div class="m221-sports-event-actions">
-              <a class="is-open" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">Open WC2026 ↗</a>
-              <a class="is-domain" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">wc2026.m221.tech</a>
-            </div>
-          </article>
-        </div>
+            <p>A focused World Cup experience designed as an extension of Sports. Its future integration into M221Foot remains open: today the page keeps both entry points visible without locking tomorrow's architecture.</p>
+          </div>
+          <div class="m221-sports-event-actions">
+            <a class="is-open" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">Open WC2026 ↗</a>
+            <a class="is-domain" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">wc2026.m221.tech</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="m221-sports-chapter" id="data">
+    <section class="m221-sports-chapter" id="data" data-sports-section>
       <div class="m221-container">
         <header class="m221-sports-chapter-head">
-          <div class="m221-sports-index">03 / DATA</div>
-          <h2>From raw match sheets to something navigable.</h2>
-          <p>The product starts with structure. Detail comes next, then the views that make the data easier to read and compare.</p>
+          <div class="m221-sports-index">03 / APPROACH</div>
+          <h2>Structure first. Explore next.</h2>
+          <p>The product starts with available data, organizes it, then builds views that make football easier to browse and compare.</p>
         </header>
 
         <div class="m221-sports-data-grid">
           <article class="m221-sports-data-item">
             <span>01 / STRUCTURE</span>
-            <h3>Competitions first.</h3>
-            <p>Seasons, clubs, fixtures, results and tables create the frame everything else sits inside.</p>
+            <h3>Set the frame.</h3>
+            <p>Seasons, clubs, fixtures, results and tables create a coherent base.</p>
           </article>
           <article class="m221-sports-data-item">
-            <span>02 / DETAIL</span>
-            <h3>Match context matters.</h3>
-            <p>Lineups, events, scorers, cards and substitutions add depth when the source data is available.</p>
+            <span>02 / CONTEXT</span>
+            <h3>Add what the match tells us.</h3>
+            <p>Lineups, events, scorers, cards and substitutions add depth when the source supports it.</p>
           </article>
           <article class="m221-sports-data-item">
-            <span>03 / INTELLIGENCE</span>
-            <h3>Then make it readable.</h3>
-            <p>Structured data becomes richer views, comparisons and signals without losing the match underneath.</p>
+            <span>03 / USE</span>
+            <h3>Make the data navigable.</h3>
+            <p>Pages, filters, comparisons and signals turn structure into a useful experience.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="m221-sports-contact">
+    <section class="m221-sports-contact" id="contact" data-sports-section>
       <div class="m221-container m221-sports-contact-inner">
         <div class="m221-sports-index">04 / CONTACT</div>
         <div>
@@ -139,4 +132,95 @@ import '../../styles/sports-v2.css';
       </div>
     </section>
   </div>
+
+  <script>
+    const header = document.querySelector('.m221-header');
+    const localWrap = document.querySelector('.m221-sports-local-wrap');
+    const links = Array.from(document.querySelectorAll('[data-sports-link]'));
+    const sections = links
+      .map((link) => document.getElementById(link.dataset.sportsLink || ''))
+      .filter(Boolean);
+
+    let activeId = '';
+    let targetId = null;
+    let ticking = false;
+
+    const offset = () => (header?.offsetHeight || 0) + (localWrap?.offsetHeight || 0) + 1;
+
+    const setActive = (id) => {
+      if (!id || activeId === id) return;
+      activeId = id;
+      links.forEach((link) => {
+        if (link.dataset.sportsLink === id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+
+    const currentSection = () => {
+      const marker = offset() + 8;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= marker) current = section;
+        else break;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 3;
+      return atBottom ? sections[sections.length - 1] : current;
+    };
+
+    const sync = () => {
+      ticking = false;
+      if (!sections.length) return;
+      if (targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          setActive(targetId);
+          if (Math.abs(target.getBoundingClientRect().top - offset()) > 3) return;
+        }
+        targetId = null;
+      }
+      setActive(currentSection()?.id);
+    };
+
+    const schedule = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(sync);
+    };
+
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const id = link.dataset.sportsLink;
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+        event.preventDefault();
+        targetId = id;
+        setActive(id);
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset());
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+
+    const release = () => {
+      targetId = null;
+      schedule();
+    };
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    window.addEventListener('wheel', release, { passive: true });
+    window.addEventListener('touchstart', release, { passive: true });
+
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const id = location.hash.slice(1);
+        const target = document.getElementById(id);
+        if (target && links.some((link) => link.dataset.sportsLink === id)) {
+          window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset()), behavior: 'auto' });
+        }
+      }
+      sync();
+    });
+  </script>
 </Layout>
