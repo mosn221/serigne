@@ -5,13 +5,10 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/refactor.css';
 import '../styles/brand.css';
-import '../styles/home-v4-skeleton.css';
 import '../styles/responsive.css';
 import '../styles/mobile-spine.css';
 import '../styles/footer-v2.css';
 import '../styles/global-polish.css';
-import '../styles/nutrition-v3.css';
-import '../styles/home-lab-v6.css';
 import '../styles/global-finish.css';
 
 interface Props {
@@ -37,6 +34,7 @@ const frenchURL = new URL(frenchPath, Astro.site);
 
 const isProduction = process.env.CONTEXT === 'production';
 const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
+const socialImageAlt = isFrench ? 'Identité visuelle M221Tech' : 'M221Tech visual identity';
 
 const organizationDescription = isFrench
   ? 'M221Tech est une data house qui construit des produits numériques, des datasets et des projets autour de la donnée.'
@@ -49,6 +47,7 @@ const organizationDescription = isFrench
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B1020" />
+  <meta name="color-scheme" content="dark" />
 
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -66,12 +65,15 @@ const organizationDescription = isFrench
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:locale" content={isFrench ? 'fr_FR' : 'en_US'} />
+  <meta property="og:locale:alternate" content={isFrench ? 'en_US' : 'fr_FR'} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:alt" content={socialImageAlt} />
 
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={socialImageAlt} />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
@@ -94,8 +96,9 @@ const organizationDescription = isFrench
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a class="m221-skip-link" href="#main-content">{isFrench ? 'Aller au contenu' : 'Skip to content'}</a>
   <Header />
-  <main>
+  <main id="main-content" tabindex="-1">
     <slot />
   </main>
   <Footer />
