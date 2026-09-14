@@ -1,51 +1,226 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import '../../../styles/open-v2.css';
 ---
 
 <Layout
   title="Open data & rapports | M221Tech"
-  description="Découvrez certains datasets M221Tech et demandez des rapports ciblés construits à partir des données que nous couvrons."
+  description="Découvrez certains datasets M221Tech, demandez des rapports ciblés et voyez comment M221Tech distingue données publiques et méthodes internes."
 >
-  <section class="m221-page-hero">
-    <div class="m221-container">
-      <a class="m221-back" href="/fr/">← M221Tech</a>
-      <span class="m221-kicker">Open</span>
-      <h1>Les données utiles gagnent parfois à circuler.</h1>
-      <p>On publie certains jeux de données quand ils sont prêts, et on prépare des rapports ciblés sur demande.</p>
-    </div>
-  </section>
-
-  <section class="m221-section" id="data">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Open Data</h2>
-        <p class="m221-section-intro">Assez propres pour être réutilisés, assez documentés pour être compris.</p>
-      </div>
-
-      <article class="m221-product">
-        <div class="m221-product-meta">Datasets publics</div>
-        <div>
-          <h3>Datasets M221Tech</h3>
-          <p>Sport, nutrition et autres thèmes de données locales, publiés lorsque la donnée est assez solide pour être vraiment utile.</p>
+  <div class="m221-open-page">
+    <section class="m221-open-hero">
+      <div class="m221-container m221-open-hero-inner">
+        <a class="m221-open-breadcrumb" href="/fr/#open">← M221Tech / Open</a>
+        <span class="m221-open-kicker">M221TECH / OPEN</span>
+        <h1>Certaines données gagnent à circuler.</h1>
+        <p class="m221-open-lead">Des datasets sélectionnés deviennent publics quand ils sont assez solides pour être réutilisés. Les questions qui demandent plus de contexte peuvent devenir des rapports ciblés.</p>
+        <div class="m221-open-actions">
+          <a class="is-primary" href="https://www.kaggle.com/m221tech" target="_blank" rel="noopener noreferrer">Voir les données publiques ↗</a>
+          <a class="is-secondary" href="#datasets">Comprendre Open ↓</a>
         </div>
-        <a href="https://www.kaggle.com/m221tech" target="_blank" rel="noopener noreferrer">Voir sur Kaggle →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="m221-section" id="reports">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Rapports</h2>
-        <p class="m221-section-intro">Pas une bibliothèque de PDF. Une réponse ciblée à une question, construite avec les données et le contexte que nous connaissons.</p>
       </div>
+    </section>
 
-      <article class="m221-lab">
-        <span class="m221-pill">Disponible sur demande</span>
-        <h3>Une question qui mérite qu'on creuse ?</h3>
-        <p>Football, nutrition ou un autre jeu de données que nous couvrons — envoyez-nous la question et un peu de contexte, on regarde ça avec vous.</p>
-        <a href="mailto:m221tech@gmail.com?subject=Demande%20de%20rapport%20M221Tech">Demander un rapport →</a>
-      </article>
+    <div class="m221-open-local-wrap">
+      <nav class="m221-container m221-open-local-nav" aria-label="Navigation Open" data-open-nav>
+        <a href="#datasets" data-open-link="datasets"><span>01</span>Datasets</a>
+        <a href="#reports" data-open-link="reports"><span>02</span>Rapports</a>
+        <a href="#boundary" data-open-link="boundary"><span>03</span>Périmètre</a>
+        <a href="#contact" data-open-link="contact"><span>04</span>Contact</a>
+      </nav>
     </div>
-  </section>
+
+    <section class="m221-open-chapter" id="datasets" data-open-section>
+      <div class="m221-container">
+        <header class="m221-open-chapter-head">
+          <div class="m221-open-index">01 / DATASETS</div>
+          <h2>Public quand c'est prêt.</h2>
+          <p>Open ne veut pas dire tout déverser. On publie certains datasets lorsque la structure, la documentation et le contexte sont assez solides pour être utiles hors de M221Tech.</p>
+        </header>
+
+        <article class="m221-open-dataset">
+          <div class="m221-open-dataset-main">
+            <span class="m221-open-eyebrow">DONNÉES PUBLIQUES / SÉLECTION</span>
+            <h3>Datasets M221Tech</h3>
+            <p>Des données réutilisables issues des domaines sur lesquels nous travaillons, publiées de manière sélective plutôt que par défaut. Les datasets publics sont partagés sur l'espace Kaggle M221Tech.</p>
+            <div class="m221-open-dataset-actions">
+              <a class="is-open" href="https://www.kaggle.com/m221tech" target="_blank" rel="noopener noreferrer">Ouvrir Kaggle ↗</a>
+              <a class="is-domain" href="https://www.kaggle.com/m221tech" target="_blank" rel="noopener noreferrer">kaggle.com/m221tech</a>
+            </div>
+          </div>
+          <div class="m221-open-dataset-meta" aria-label="Principes des datasets publics">
+            <div class="m221-open-meta-row"><span>Sélection</span><strong>Pas toutes les bases internes</strong></div>
+            <div class="m221-open-meta-row"><span>Qualité</span><strong>Structurées avant publication</strong></div>
+            <div class="m221-open-meta-row"><span>Contexte</span><strong>Assez documentées pour être réutilisées</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="m221-open-chapter is-alt" id="reports" data-open-section>
+      <div class="m221-container">
+        <header class="m221-open-chapter-head">
+          <div class="m221-open-index">02 / RAPPORTS</div>
+          <h2>Une question d'abord. Un rapport ensuite.</h2>
+          <p>Les rapports ne sont pas une étagère de PDF génériques. Ils partent d'une question concrète et utilisent les données et le contexte que M221Tech sait déjà travailler.</p>
+        </header>
+
+        <div class="m221-open-report-grid">
+          <article class="m221-open-report-step">
+            <span>01 / QUESTION</span>
+            <h3>Partir de ce que vous voulez comprendre.</h3>
+            <p>Une compétition, une catégorie, un ensemble de produits, une tendance ou une autre question liée aux données que nous couvrons.</p>
+          </article>
+          <article class="m221-open-report-step">
+            <span>02 / PÉRIMÈTRE</span>
+            <h3>Vérifier ce que les données permettent vraiment.</h3>
+            <p>On définit d'abord un périmètre utile avant de promettre une réponse que les données disponibles ne peuvent pas soutenir.</p>
+          </article>
+          <article class="m221-open-report-step">
+            <span>03 / SORTIE</span>
+            <h3>Construire la réponse autour de la question.</h3>
+            <p>Le résultat peut être une analyse ciblée, un extrait structuré ou un autre format utile selon le besoin.</p>
+          </article>
+        </div>
+
+        <div class="m221-open-report-cta">
+          <div>
+            <h3>Une question qui mérite qu'on creuse ?</h3>
+            <p>Envoyez la question et un peu de contexte. On vous dira si elle correspond aux données que nous couvrons aujourd'hui.</p>
+          </div>
+          <a href="mailto:m221tech@gmail.com?subject=Demande%20de%20rapport%20M221Tech">Demander un rapport →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-open-chapter" id="boundary" data-open-section>
+      <div class="m221-container">
+        <header class="m221-open-chapter-head">
+          <div class="m221-open-index">03 / PÉRIMÈTRE</div>
+          <h2>Open data. Pas tout en open.</h2>
+          <p>La couche publique est volontaire. M221Tech peut partager des données utiles sans publier automatiquement toutes les méthodes, pipelines ou bases de travail qui permettent de les construire.</p>
+        </header>
+
+        <div class="m221-open-boundary">
+          <article>
+            <span>PUBLIC</span>
+            <h3>Datasets sélectionnés.</h3>
+            <p>Des jeux de données choisis pour la réutilisation lorsqu'ils sont assez matures pour vivre seuls.</p>
+          </article>
+          <article>
+            <span>SUR DEMANDE</span>
+            <h3>Analyses ciblées.</h3>
+            <p>Des rapports et extractions peuvent être construits autour d'une question précise lorsque les données disponibles le permettent.</p>
+          </article>
+          <article>
+            <span>INTERNE</span>
+            <h3>Méthodes et pipelines.</h3>
+            <p>Les workflows de collecte, la logique de transformation et les outils internes restent une partie de la manière dont M221Tech construit ses produits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="m221-open-contact" id="contact" data-open-section>
+      <div class="m221-container m221-open-contact-inner">
+        <div class="m221-open-index">04 / CONTACT</div>
+        <div>
+          <h2>Un dataset, une question ou une idée ?</h2>
+          <p>Dites-nous ce que vous cherchez à comprendre ou à réutiliser.</p>
+        </div>
+        <a href="mailto:m221tech@gmail.com?subject=M221Tech%20Open">m221tech@gmail.com →</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const header = document.querySelector('.m221-header');
+    const localWrap = document.querySelector('.m221-open-local-wrap');
+    const links = Array.from(document.querySelectorAll('[data-open-link]'));
+    const sections = links
+      .map((link) => document.getElementById(link.dataset.openLink || ''))
+      .filter(Boolean);
+
+    let activeId = '';
+    let targetId = null;
+    let ticking = false;
+
+    const offset = () => (header?.offsetHeight || 0) + (localWrap?.offsetHeight || 0) + 1;
+
+    const setActive = (id) => {
+      if (!id || activeId === id) return;
+      activeId = id;
+      links.forEach((link) => {
+        if (link.dataset.openLink === id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+
+    const currentSection = () => {
+      const marker = offset() + 8;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= marker) current = section;
+        else break;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 3;
+      return atBottom ? sections[sections.length - 1] : current;
+    };
+
+    const sync = () => {
+      ticking = false;
+      if (!sections.length) return;
+      if (targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          setActive(targetId);
+          if (Math.abs(target.getBoundingClientRect().top - offset()) > 3) return;
+        }
+        targetId = null;
+      }
+      setActive(currentSection()?.id);
+    };
+
+    const schedule = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(sync);
+    };
+
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const id = link.dataset.openLink;
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+        event.preventDefault();
+        targetId = id;
+        setActive(id);
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset());
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+
+    const release = () => {
+      targetId = null;
+      schedule();
+    };
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    window.addEventListener('wheel', release, { passive: true });
+    window.addEventListener('touchstart', release, { passive: true });
+
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const id = location.hash.slice(1);
+        const target = document.getElementById(id);
+        if (target && links.some((link) => link.dataset.openLink === id)) {
+          window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset()), behavior: 'auto' });
+        }
+      }
+      sync();
+    });
+  </script>
 </Layout>
