@@ -1,56 +1,142 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import '../../../styles/sports-v2.css';
 ---
 
 <Layout
   title="Données football & projets sport | M221Tech"
-  description="Découvrez les projets sport de M221Tech, dont M221Foot et WC2026, autour des données football, des compétitions et d'expériences produit ciblées."
+  description="Découvrez M221Tech Sports : M221Foot, les données de compétition, le contexte match et l'expérience événementielle WC2026."
 >
-  <section class="m221-page-hero">
-    <div class="m221-container">
-      <a class="m221-back" href="/fr/">← M221Tech</a>
-      <span class="m221-kicker">Sports</span>
-      <h1>Des données football plus proches du jeu.</h1>
-      <p>On construit des produits simples pour suivre les compétitions locales comme les grands rendez-vous, sans perdre le contexte autour du jeu.</p>
-    </div>
-  </section>
+  <div class="m221-sports-page">
+    <section class="m221-sports-hero">
+      <div class="m221-container m221-sports-hero-grid">
+        <div>
+          <a class="m221-sports-breadcrumb" href="/fr/#projects">← M221Tech / Projets</a>
+          <span class="m221-sports-kicker">M221TECH / SPORTS</span>
+          <h1>La donnée football, pensée autour du jeu.</h1>
+          <p class="m221-sports-lead">Compétitions, clubs, matchs et couches de contexte plus riches — structurés dans des produits faits pour explorer, suivre et utiliser.</p>
+          <div class="m221-sports-actions">
+            <a class="is-primary" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Ouvrir M221Foot ↗</a>
+            <a class="is-secondary" href="#platform">Explorer Sports ↓</a>
+          </div>
+        </div>
 
-  <section class="m221-section">
-    <div class="m221-container">
-      <div class="m221-section-head">
-        <h2>Ce qu'on construit</h2>
-        <p class="m221-section-intro">Deux produits, deux rythmes : l'un pensé pour durer, l'autre autour d'un tournoi.</p>
+        <div class="m221-sports-field" aria-hidden="true">
+          <div class="m221-sports-center-circle"></div>
+          <span class="m221-sports-zone" data-zone="competition">Compétition</span>
+          <span class="m221-sports-zone" data-zone="club">Club</span>
+          <span class="m221-sports-zone" data-zone="match">Match</span>
+          <span class="m221-sports-zone" data-zone="intelligence">Intelligence</span>
+          <span class="m221-sports-field-label">SPORTS / DATA FIELD</span>
+        </div>
       </div>
+    </section>
 
-      <div class="m221-product-list">
-        <article class="m221-product">
-          <div class="m221-product-meta">Plateforme permanente</div>
-          <div>
+    <div class="m221-sports-strip" aria-label="Couches de données Sports">
+      <div class="m221-container m221-sports-strip-inner">
+        <div class="m221-sports-strip-item"><span>01</span>Compétitions</div>
+        <div class="m221-sports-strip-item"><span>02</span>Clubs</div>
+        <div class="m221-sports-strip-item"><span>03</span>Matchs</div>
+        <div class="m221-sports-strip-item"><span>04</span>Intelligence</div>
+      </div>
+    </div>
+
+    <section class="m221-sports-chapter" id="platform">
+      <div class="m221-container">
+        <header class="m221-sports-chapter-head">
+          <div class="m221-sports-index">01 / PLATEFORME</div>
+          <h2>Une plateforme pensée pour durer.</h2>
+          <p>M221Foot est le cœur du pôle Sports : l'endroit où la structure des compétitions et le détail des matchs se rejoignent.</p>
+        </header>
+
+        <article class="m221-sports-core">
+          <div class="m221-sports-core-copy">
+            <span class="m221-sports-eyebrow">PRODUIT CŒUR / M221FOOT</span>
             <h3>M221Foot</h3>
-            <p>Notre plateforme football de long terme. Compétitions, clubs, matchs et davantage de contexte local, réunis au même endroit.</p>
+            <p>Une plateforme football construite autour des compétitions, clubs, calendriers, résultats, événements de match et vues plus riches lorsque les données le permettent.</p>
+            <div class="m221-sports-core-actions">
+              <a class="m221-sports-open" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Entrer dans M221Foot ↗</a>
+              <a class="m221-sports-domain" href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">sports.m221.tech</a>
+            </div>
           </div>
-          <a href="https://sports.m221.tech" target="_blank" rel="noopener noreferrer">Voir M221Foot →</a>
-        </article>
 
-        <article class="m221-product">
-          <div class="m221-product-meta">Expérience événementielle</div>
-          <div>
+          <div class="m221-sports-layers" aria-label="Couches de données M221Foot">
+            <div class="m221-sports-layer"><strong>Compétition</strong><span>Structure</span></div>
+            <div class="m221-sports-layer"><strong>Club</strong><span>Contexte</span></div>
+            <div class="m221-sports-layer"><strong>Match</strong><span>Détail</span></div>
+            <div class="m221-sports-layer"><strong>Intelligence</strong><span>Explorer</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="m221-sports-chapter m221-sports-tournament" id="tournament">
+      <div class="m221-container">
+        <header class="m221-sports-chapter-head">
+          <div class="m221-sports-index">02 / TOURNOI</div>
+          <h2>Une couche tournoi, pas un deuxième univers.</h2>
+          <p>WC2026 reprend la logique Sports et la concentre sur un événement : plus rapide, saisonnier et volontairement plus léger que la plateforme cœur.</p>
+        </header>
+
+        <div class="m221-sports-tournament-grid">
+          <div class="m221-sports-tournament-mark" aria-hidden="true">
+            <span>SPORTS / MODE ÉVÉNEMENT</span>
+            <strong>Même terrain.<br />Autre rythme.</strong>
+          </div>
+
+          <article class="m221-sports-event">
+            <div class="m221-sports-event-top">
+              <span>EXPÉRIENCE ÉVÉNEMENTIELLE</span>
+              <span>2026</span>
+            </div>
             <h3>WC2026</h3>
-            <p>Une expérience dédiée à la Coupe du Monde 2026, avec un regard sénégalais et africain.</p>
-          </div>
-          <a href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">Voir WC2026 →</a>
-        </article>
+            <p>Une expérience Coupe du Monde ciblée, construite comme une extension de l'univers Sports plutôt que comme une famille de produit séparée.</p>
+            <div class="m221-sports-event-actions">
+              <a class="is-open" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">Ouvrir WC2026 ↗</a>
+              <a class="is-domain" href="https://wc2026.m221.tech" target="_blank" rel="noopener noreferrer">wc2026.m221.tech</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="m221-contact">
-    <div class="m221-container">
-      <h2>Quelque chose en tête autour de la donnée sportive ?</h2>
-      <p>Un dataset, un rapport, une collaboration, ou simplement envie d'échanger ? Écrivez-nous.</p>
-      <div class="m221-actions">
-        <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com?subject=Data%20sport%20M221Tech">Nous écrire</a>
+    <section class="m221-sports-chapter" id="data">
+      <div class="m221-container">
+        <header class="m221-sports-chapter-head">
+          <div class="m221-sports-index">03 / DATA</div>
+          <h2>De la feuille de match brute à quelque chose de navigable.</h2>
+          <p>Le produit commence par la structure. Le détail vient ensuite, puis les vues qui rendent la donnée plus simple à lire et à comparer.</p>
+        </header>
+
+        <div class="m221-sports-data-grid">
+          <article class="m221-sports-data-item">
+            <span>01 / STRUCTURE</span>
+            <h3>Les compétitions d'abord.</h3>
+            <p>Saisons, clubs, calendrier, résultats et classement posent le cadre dans lequel tout le reste vient s'inscrire.</p>
+          </article>
+          <article class="m221-sports-data-item">
+            <span>02 / DÉTAIL</span>
+            <h3>Le contexte match compte.</h3>
+            <p>Compositions, événements, buteurs, cartons et changements ajoutent de la profondeur lorsque la source le permet.</p>
+          </article>
+          <article class="m221-sports-data-item">
+            <span>03 / INTELLIGENCE</span>
+            <h3>Puis rendre tout ça lisible.</h3>
+            <p>La donnée structurée devient des vues, comparaisons et signaux plus riches sans perdre le match en dessous.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="m221-sports-contact">
+      <div class="m221-container m221-sports-contact-inner">
+        <div class="m221-sports-index">04 / CONTACT</div>
+        <div>
+          <h2>Une donnée sport, une question ou une idée ?</h2>
+          <p>Dites-nous ce que vous regardez.</p>
+        </div>
+        <a href="mailto:m221tech@gmail.com?subject=M221Tech%20Sports">m221tech@gmail.com →</a>
+      </div>
+    </section>
+  </div>
 </Layout>
