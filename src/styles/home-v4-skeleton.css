@@ -1,5 +1,3 @@
-@import './mobile-spine.css';
-
 .m221-v4-hero-grid{grid-template-columns:minmax(0,1fr)!important}
 .m221-v4-hero-grid>div:first-child{max-width:980px}
 .m221-v4-lead{max-width:680px}
