@@ -12,7 +12,7 @@ const contactHref = `${homeHref}#contact`;
 const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
 const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
 
-const projectPage = /\/(sports|nutrition)\/?$/.test(pathname);
+const projectPage = /\/(sports|nutrition|galsen-facts)\/?$/.test(pathname);
 const openPage = /\/open\/?$/.test(pathname);
 const menuOpenLabel = isFrench ? 'Ouvrir le menu' : 'Open menu';
 const menuCloseLabel = isFrench ? 'Fermer le menu' : 'Close menu';
@@ -119,7 +119,7 @@ const labels = isFrench
 
   const activeSectionId = () => {
     const activeLink = document.querySelector(
-      '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-open-link][aria-current="true"]'
+      '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-facts-link][aria-current="true"], [data-open-link][aria-current="true"]'
     );
 
     if (activeLink instanceof HTMLAnchorElement && activeLink.hash) {
