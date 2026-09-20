@@ -118,17 +118,20 @@ const labels = isFrench
   const positionKey = 'm221-language-position';
 
   const activeSectionId = () => {
+    const activeLink = document.querySelector(
+      '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-open-link][aria-current="true"]'
+    );
+
+    if (activeLink instanceof HTMLAnchorElement && activeLink.hash) {
+      return activeLink.hash.slice(1);
+    }
+
     if (window.location.hash) {
       const id = window.location.hash.slice(1);
       if (document.getElementById(id)) return id;
     }
 
-    const activeLink = document.querySelector(
-      '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-open-link][aria-current="true"]'
-    );
-
-    if (!(activeLink instanceof HTMLAnchorElement)) return '';
-    return activeLink.hash ? activeLink.hash.slice(1) : '';
+    return '';
   };
 
   languageLinks.forEach((link) => {
