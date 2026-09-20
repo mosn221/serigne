@@ -1,0 +1,355 @@
+---
+const pathname = Astro.url.pathname;
+const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+
+const copy = isFrench
+  ? {
+      breadcrumb: '← M221Tech / Projets',
+      kicker: 'M221TECH / GALSEN FACTS',
+      heroTitle: 'Comprendre le Sénégal à partir des faits.',
+      heroLead: 'Des projets, des chiffres, des lieux et des informations publiques remis en contexte pour mieux comprendre ce qui façonne le Sénégal.',
+      explore: 'Explorer ↓',
+      formatsCta: 'Voir les formats ↓',
+      nav: ['Sujets', 'Formats', 'Explorations', 'Sources'],
+      topicsIndex: '01 / SUJETS',
+      topicsTitle: 'Trois angles pour commencer.',
+      topicsIntro: 'La première version reste volontairement resserrée : dépenses publiques, développement, territoires et patrimoine. Chaque sujet pourra s’enrichir à mesure que des sources fiables deviennent exploitables.',
+      topics: [
+        {
+          key: 'spending',
+          no: '01 / DÉPENSES PUBLIQUES',
+          title: 'Dépenses publiques',
+          body: 'Comprendre ce que les acteurs publics achètent, construisent ou financent à partir de sources vérifiables.',
+          noteLabel: 'COUVERTURE IDENTIFIÉE',
+          note: 'Un historique de marchés publics 2010–2013 est déjà exploitable. Toute exploration issue de cette matière affichera clairement cette période historique : il ne s’agit pas d’une veille actuelle.'
+        },
+        {
+          key: 'development',
+          no: '02 / DÉVELOPPEMENT',
+          title: 'Développement',
+          body: 'Comprendre les projets et financements qui participent à transformer le pays.',
+          noteLabel: 'SOURCES POSSIBLES',
+          note: 'Documentation publique, projets officiels et sources comme AFD ou IATI peuvent être mobilisés lorsqu’ils sont pertinents, vérifiables et suffisamment documentés.'
+        },
+        {
+          key: 'places',
+          no: '03 / TERRITOIRES & PATRIMOINE',
+          title: 'Territoires & patrimoine',
+          body: 'Lire le pays à travers ses lieux, ses territoires et les éléments de patrimoine qui racontent son histoire.',
+          noteLabel: 'ANGLE',
+          note: 'Pas un guide touristique : une autre manière de relier lieux, histoire, institutions et transformations.'
+        }
+      ],
+      formatsIndex: '02 / FORMATS',
+      formatsTitle: 'Un sujet, plusieurs profondeurs.',
+      formatsIntro: 'Galsen Facts pourra traiter une même question sous différents formats, sans inventer aujourd’hui un catalogue qui n’existe pas encore.',
+      formats: [
+        { no: '01 / EXPLORATIONS', title: 'Explorations', body: 'Des pages web simples et interactives construites autour d’une question précise.' },
+        { no: '02 / BRIEFS', title: 'Briefs', body: 'Des lectures courtes pour comprendre rapidement un sujet, ses faits essentiels et ses limites.' },
+        { no: '03 / RAPPORTS', title: 'Rapports', body: 'Des analyses plus approfondies lorsqu’une question demande davantage de contexte, de croisements et d’explication.' }
+      ],
+      explorationsIndex: '03 / PREMIÈRES EXPLORATIONS',
+      explorationsTitle: 'Publiées quand la matière est prête.',
+      explorationsIntro: 'Pas de faux catalogue aujourd’hui. Cet espace accueillera les premières explorations dès qu’elles seront suffisamment documentées pour être utiles.',
+      emptyStatus: 'AUCUNE EXPLORATION PUBLIÉE',
+      emptyTitle: 'Le premier contenu viendra avec ses sources.',
+      emptyBody: 'La priorité est de construire une lecture claire avant d’ajouter du volume. La matière historique marchés publics 2010–2013 constitue déjà un premier terrain exploitable.',
+      emptyMeta: 'PÉRIODE HISTORIQUE IDENTIFIÉE / 2010–2013',
+      sourcesIndex: '04 / SOURCES & MÉTHODE',
+      sourcesTitle: 'Les sources restent visibles.',
+      sourcesIntro: 'Galsen Facts ne cherche pas à centraliser tous les documents publics. La valeur vient de la sélection, du croisement, du contexte et de l’explication.',
+      method: ['Sélectionner', 'Croiser', 'Contextualiser', 'Expliquer', 'Raconter'],
+      sourceEyebrow: 'TRANSPARENCE',
+      sourceTitle: 'Une source n’est jamais cachée derrière le récit.',
+      sourceBody1: 'Les futures explorations prévoiront un espace Sources avec l’origine, les liens, la période couverte et les limites connues des informations utilisées.',
+      sourceBody2: 'Vie-Publique.sn peut être une source importante parmi d’autres. Galsen Facts n’a pas vocation à le remplacer : il transforme des matières publiques sélectionnées en lectures plus simples et contextualisées.',
+      contactIndex: '05 / CONTACT',
+      contactTitle: 'Un sujet Sénégal à creuser ?',
+      contactBody: 'Envoyez la question. On vous dira si les sources actuellement disponibles permettent de la traiter sérieusement.',
+      contactSubject: 'Galsen Facts — sujet à explorer'
+    }
+  : {
+      breadcrumb: '← M221Tech / Projects',
+      kicker: 'M221TECH / GALSEN FACTS',
+      heroTitle: 'Understanding Senegal through facts.',
+      heroLead: 'Projects, numbers, places and public information brought into context to better understand what shapes Senegal.',
+      explore: 'Explore ↓',
+      formatsCta: 'See formats ↓',
+      nav: ['Topics', 'Formats', 'Explorations', 'Sources'],
+      topicsIndex: '01 / TOPICS',
+      topicsTitle: 'Three angles to start with.',
+      topicsIntro: 'The first version stays deliberately focused: public spending, development, and places & heritage. Each topic can grow as reliable material becomes usable.',
+      topics: [
+        {
+          key: 'spending',
+          no: '01 / PUBLIC SPENDING',
+          title: 'Public spending',
+          body: 'Understand what public actors buy, build or finance through verifiable sources.',
+          noteLabel: 'IDENTIFIED COVERAGE',
+          note: 'Historical public procurement material from 2010–2013 is already usable. Any exploration built from it will state that period clearly: this is not current procurement monitoring.'
+        },
+        {
+          key: 'development',
+          no: '02 / DEVELOPMENT',
+          title: 'Development',
+          body: 'Understand the projects and financing that help transform the country.',
+          noteLabel: 'POSSIBLE SOURCES',
+          note: 'Public documentation, official project records and sources such as AFD or IATI can be used when they are relevant, verifiable and documented well enough.'
+        },
+        {
+          key: 'places',
+          no: '03 / PLACES & HERITAGE',
+          title: 'Places & heritage',
+          body: 'Read the country through its places, territories and heritage, and the stories they carry.',
+          noteLabel: 'ANGLE',
+          note: 'Not a travel guide: another way to connect places with history, institutions and change.'
+        }
+      ],
+      formatsIndex: '02 / FORMATS',
+      formatsTitle: 'One subject, different depths.',
+      formatsIntro: 'Galsen Facts can approach the same question through different formats without pretending there is already a catalogue of published work.',
+      formats: [
+        { no: '01 / EXPLORATIONS', title: 'Explorations', body: 'Simple interactive web pages built around one clear question.' },
+        { no: '02 / BRIEFS', title: 'Briefs', body: 'Short reads that make a topic, its essential facts and its limits understandable quickly.' },
+        { no: '03 / REPORTS', title: 'Reports', body: 'Deeper analysis when a question needs more context, cross-checking and explanation.' }
+      ],
+      explorationsIndex: '03 / FIRST EXPLORATIONS',
+      explorationsTitle: 'Published when the material is ready.',
+      explorationsIntro: 'There is no catalogue to inflate today. This space will host the first explorations once they are documented well enough to be useful.',
+      emptyStatus: 'NO PUBLISHED EXPLORATION YET',
+      emptyTitle: 'The first piece will arrive with its sources.',
+      emptyBody: 'The priority is to build a clear reading before adding volume. Historical public procurement material from 2010–2013 already provides a first usable field.',
+      emptyMeta: 'IDENTIFIED HISTORICAL PERIOD / 2010–2013',
+      sourcesIndex: '04 / SOURCES & METHOD',
+      sourcesTitle: 'Keep the sources visible.',
+      sourcesIntro: 'Galsen Facts is not trying to centralize every public document. The value comes from selecting, cross-checking, contextualizing and explaining.',
+      method: ['Select', 'Cross-check', 'Contextualize', 'Explain', 'Tell'],
+      sourceEyebrow: 'TRANSPARENCY',
+      sourceTitle: 'The source never disappears behind the story.',
+      sourceBody1: 'Future exploration pages will include a Sources area with origin, links, covered period and known limits for the information used.',
+      sourceBody2: 'Vie-Publique.sn can be an important source among others. Galsen Facts is not designed to replace it: the role is to turn selected public material into clearer, contextualized readings.',
+      contactIndex: '05 / CONTACT',
+      contactTitle: 'A Senegal question worth digging into?',
+      contactBody: 'Send the question. We will tell you whether the sources currently available can support a serious answer.',
+      contactSubject: 'Galsen Facts — topic to explore'
+    };
+---
+
+<div class="m221-facts-page">
+  <section class="m221-facts-hero">
+    <div class="m221-container m221-facts-hero-inner">
+      <a class="m221-facts-breadcrumb" href={isFrench ? '/fr/#projects' : '/#projects'}>{copy.breadcrumb}</a>
+      <span class="m221-facts-kicker">{copy.kicker}</span>
+      <h1>Galsen Facts</h1>
+      <p class="m221-facts-lead"><strong>{copy.heroTitle}</strong><br />{copy.heroLead}</p>
+      <div class="m221-facts-actions">
+        <a class="is-primary" href="#themes">{copy.explore}</a>
+        <a class="is-secondary" href="#formats">{copy.formatsCta}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="m221-facts-local-wrap">
+    <nav class="m221-container m221-facts-local-nav" aria-label={isFrench ? 'Navigation Galsen Facts' : 'Galsen Facts navigation'} data-facts-nav>
+      <a href="#themes" data-facts-link="themes"><span>01</span>{copy.nav[0]}</a>
+      <a href="#formats" data-facts-link="formats"><span>02</span>{copy.nav[1]}</a>
+      <a href="#explorations" data-facts-link="explorations"><span>03</span>{copy.nav[2]}</a>
+      <a href="#sources" data-facts-link="sources"><span>04</span>{copy.nav[3]}</a>
+    </nav>
+  </div>
+
+  <section class="m221-facts-chapter" id="themes" data-facts-section>
+    <div class="m221-container">
+      <header class="m221-facts-chapter-head">
+        <div class="m221-facts-index">{copy.topicsIndex}</div>
+        <h2>{copy.topicsTitle}</h2>
+        <p>{copy.topicsIntro}</p>
+      </header>
+
+      <div class="m221-facts-topic-grid">
+        {copy.topics.map((topic) => (
+          <article class="m221-facts-topic" data-topic={topic.key}>
+            <span class="m221-facts-topic-no">{topic.no}</span>
+            <div>
+              <h3>{topic.title}</h3>
+              <p>{topic.body}</p>
+            </div>
+            <div class="m221-facts-topic-note">
+              <strong>{topic.noteLabel}</strong>
+              {topic.note}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="m221-facts-chapter is-alt" id="formats" data-facts-section>
+    <div class="m221-container">
+      <header class="m221-facts-chapter-head">
+        <div class="m221-facts-index">{copy.formatsIndex}</div>
+        <h2>{copy.formatsTitle}</h2>
+        <p>{copy.formatsIntro}</p>
+      </header>
+
+      <div class="m221-facts-format-rail">
+        {copy.formats.map((format) => (
+          <article class="m221-facts-format">
+            <span class="m221-facts-format-no">{format.no}</span>
+            <h3>{format.title}</h3>
+            <p>{format.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="m221-facts-chapter" id="explorations" data-facts-section>
+    <div class="m221-container">
+      <header class="m221-facts-chapter-head">
+        <div class="m221-facts-index">{copy.explorationsIndex}</div>
+        <h2>{copy.explorationsTitle}</h2>
+        <p>{copy.explorationsIntro}</p>
+      </header>
+
+      <article class="m221-facts-empty">
+        <span class="m221-facts-status">{copy.emptyStatus}</span>
+        <div>
+          <h3>{copy.emptyTitle}</h3>
+          <p>{copy.emptyBody}</p>
+        </div>
+        <span class="m221-facts-empty-meta">{copy.emptyMeta}</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="m221-facts-chapter is-alt" id="sources" data-facts-section>
+    <div class="m221-container">
+      <header class="m221-facts-chapter-head">
+        <div class="m221-facts-index">{copy.sourcesIndex}</div>
+        <h2>{copy.sourcesTitle}</h2>
+        <p>{copy.sourcesIntro}</p>
+      </header>
+
+      <div class="m221-facts-method">
+        <div class="m221-facts-source-steps" aria-label={isFrench ? 'Méthode Galsen Facts' : 'Galsen Facts method'}>
+          {copy.method.map((step, index) => (
+            <div class="m221-facts-source-step">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{step}</strong>
+            </div>
+          ))}
+        </div>
+
+        <aside class="m221-facts-source-note">
+          <span class="m221-facts-eyebrow">{copy.sourceEyebrow}</span>
+          <h3>{copy.sourceTitle}</h3>
+          <p>{copy.sourceBody1}</p>
+          <p>{copy.sourceBody2}</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="m221-facts-contact">
+    <div class="m221-container m221-facts-contact-inner">
+      <div class="m221-facts-index">{copy.contactIndex}</div>
+      <div>
+        <h2>{copy.contactTitle}</h2>
+        <p>{copy.contactBody}</p>
+      </div>
+      <a href={`mailto:m221tech@gmail.com?subject=${encodeURIComponent(copy.contactSubject)}`}>m221tech@gmail.com →</a>
+    </div>
+  </section>
+</div>
+
+<script>
+  const header = document.querySelector('.m221-header');
+  const localWrap = document.querySelector('.m221-facts-local-wrap');
+  const links = Array.from(document.querySelectorAll('[data-facts-link]'));
+  const sections = links
+    .map((link) => document.getElementById(link.dataset.factsLink || ''))
+    .filter(Boolean);
+
+  let activeId = '';
+  let targetId = null;
+  let ticking = false;
+
+  const offset = () => (header?.offsetHeight || 0) + (localWrap?.offsetHeight || 0) + 1;
+
+  const setActive = (id) => {
+    if (!id || activeId === id) return;
+    activeId = id;
+    links.forEach((link) => {
+      if (link.dataset.factsLink === id) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const currentSection = () => {
+    const marker = offset() + 8;
+    let current = sections[0];
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= marker) current = section;
+      else break;
+    }
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 3;
+    return atBottom ? sections[sections.length - 1] : current;
+  };
+
+  const sync = () => {
+    ticking = false;
+    if (!sections.length) return;
+    if (targetId) {
+      const target = document.getElementById(targetId);
+      if (target) {
+        setActive(targetId);
+        if (Math.abs(target.getBoundingClientRect().top - offset()) > 3) return;
+      }
+      targetId = null;
+    }
+    setActive(currentSection()?.id);
+  };
+
+  const schedule = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(sync);
+  };
+
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.dataset.factsLink;
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      event.preventDefault();
+      targetId = id;
+      setActive(id);
+      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset());
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      history.replaceState(null, '', `#${id}`);
+    });
+  });
+
+  const release = () => {
+    targetId = null;
+    schedule();
+  };
+
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule, { passive: true });
+  window.addEventListener('wheel', release, { passive: true });
+  window.addEventListener('touchstart', release, { passive: true });
+
+  requestAnimationFrame(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      const target = document.getElementById(id);
+      if (target && links.some((link) => link.dataset.factsLink === id)) {
+        window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset()), behavior: 'auto' });
+      }
+    }
+    sync();
+  });
+</script>

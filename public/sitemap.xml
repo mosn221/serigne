@@ -48,4 +48,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/open/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/open/" />
   </url>
+  <url>
+    <loc>https://m221.tech/galsen-facts/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/galsen-facts/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/galsen-facts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/galsen-facts/" />
+  </url>
+  <url>
+    <loc>https://m221.tech/fr/galsen-facts/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://m221.tech/galsen-facts/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://m221.tech/fr/galsen-facts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://m221.tech/galsen-facts/" />
+  </url>
 </urlset>

@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AboutM221 from '../../components/AboutM221.astro';
 import '../../styles/home-v4.css';
 import '../../styles/home-v5.css';
 ---
 
 <Layout
   title="M221Tech | Des données aux usages."
-  description="M221Tech est une data house qui construit des produits numériques, des datasets et des projets pensés pour être explorés, compris et utilisés."
+  description="M221Tech construit des produits autour du football, de l’alimentation et des informations publiques sur le Sénégal, avec des datasets et analyses lorsque c’est utile."
 >
   <div class="m221-home-v4">
     <section class="m221-v4-hero">
@@ -14,7 +15,7 @@ import '../../styles/home-v5.css';
         <div class="m221-v5-hero-copy">
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Des données, transformées en produits.</h1>
-          <p class="m221-v4-lead">Sport, nutrition, open data et quelques expérimentations. Pensés pour être utilisés.</p>
+          <p class="m221-v4-lead">Football, alimentation et ce qui façonne le Sénégal. Des produits pensés pour explorer et comprendre.</p>
           <div class="m221-v4-hero-actions">
             <a class="m221-btn m221-btn-primary" href="#projects">Voir les projets</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
@@ -25,7 +26,7 @@ import '../../styles/home-v5.css';
           <div class="m221-v5-signal-core">DATA<br />HOUSE</div>
           <span class="m221-v5-signal-node" data-node="sports">Sports</span>
           <span class="m221-v5-signal-node" data-node="nutrition">Nutrition</span>
-          <span class="m221-v5-signal-node" data-node="open">Open</span>
+          <span class="m221-v5-signal-node" data-node="facts">Galsen Facts</span>
         </div>
       </div>
     </section>
@@ -44,8 +45,8 @@ import '../../styles/home-v5.css';
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
           <div class="m221-v4-index">01 / PROJETS</div>
-          <h2>Deux pôles. On entre par le projet.</h2>
-          <p>Découvrez l'univers, puis accédez directement au produit si vous savez déjà où aller.</p>
+          <h2>Trois portes d’entrée. Trois manières d’explorer.</h2>
+          <p>Le football, l’alimentation et ce qui façonne le Sénégal, avec un produit pensé pour chaque sujet.</p>
         </header>
 
         <div class="m221-v5-project-grid">
@@ -78,6 +79,21 @@ import '../../styles/home-v5.css';
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/fr/nutrition/">Découvrir Nutrition →</a>
               <a class="m221-v5-project-direct" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">lekkantu.com ↗</a>
+            </div>
+          </article>
+
+          <article class="m221-v5-project" data-tone="facts">
+            <div class="m221-v5-project-top">
+              <span class="m221-v5-project-no">PROJET / 03</span>
+              <span class="m221-v5-project-status">Galsen Facts</span>
+            </div>
+            <div class="m221-v5-project-main">
+              <span class="m221-v4-domain">SÉNÉGAL / INFORMATION PUBLIQUE</span>
+              <h3>Galsen Facts</h3>
+              <p>Des explorations simples autour des projets, dépenses publiques, territoires et autres sujets qui façonnent le pays.</p>
+            </div>
+            <div class="m221-v5-project-actions">
+              <a class="m221-v5-project-page" href="/fr/galsen-facts/">Explorer Galsen Facts →</a>
             </div>
           </article>
         </div>
@@ -128,6 +144,8 @@ import '../../styles/home-v5.css';
         </div>
       </div>
     </section>
+
+    <AboutM221 />
 
     <section class="m221-v4-contact" id="contact" data-home-section>
       <div class="m221-container m221-v4-contact-inner">

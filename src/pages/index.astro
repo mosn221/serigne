@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AboutM221 from '../components/AboutM221.astro';
 import '../styles/home-v4.css';
 import '../styles/home-v5.css';
 ---
 
 <Layout
   title="M221Tech | Data, shaped for use."
-  description="M221Tech is a data house building focused digital products, datasets and projects designed to be explored, understood and used."
+  description="M221Tech builds focused products around football, food and public information about Senegal, with selected datasets and analysis when useful."
 >
   <div class="m221-home-v4">
     <section class="m221-v4-hero">
@@ -14,7 +15,7 @@ import '../styles/home-v5.css';
         <div class="m221-v5-hero-copy">
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Data, built into products.</h1>
-          <p class="m221-v4-lead">Sports, nutrition, open data and a few experiments. Built to be used.</p>
+          <p class="m221-v4-lead">Football, food and the forces shaping Senegal. Built into products made to explore and understand.</p>
           <div class="m221-v4-hero-actions">
             <a class="m221-btn m221-btn-primary" href="#projects">Explore projects</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
@@ -25,7 +26,7 @@ import '../styles/home-v5.css';
           <div class="m221-v5-signal-core">DATA<br />HOUSE</div>
           <span class="m221-v5-signal-node" data-node="sports">Sports</span>
           <span class="m221-v5-signal-node" data-node="nutrition">Nutrition</span>
-          <span class="m221-v5-signal-node" data-node="open">Open</span>
+          <span class="m221-v5-signal-node" data-node="facts">Galsen Facts</span>
         </div>
       </div>
     </section>
@@ -44,8 +45,8 @@ import '../styles/home-v5.css';
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
           <div class="m221-v4-index">01 / PROJECTS</div>
-          <h2>Two fields. Go deeper when you need to.</h2>
-          <p>Start with the project. Jump straight to the product if you already know where you're going.</p>
+          <h2>Three ways in. Each one goes deeper.</h2>
+          <p>Football, food and the forces shaping Senegal — each approached with a product built for the subject.</p>
         </header>
 
         <div class="m221-v5-project-grid">
@@ -78,6 +79,21 @@ import '../styles/home-v5.css';
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/nutrition/">Explore Nutrition →</a>
               <a class="m221-v5-project-direct" href="https://lekkantu.com" target="_blank" rel="noopener noreferrer">lekkantu.com ↗</a>
+            </div>
+          </article>
+
+          <article class="m221-v5-project" data-tone="facts">
+            <div class="m221-v5-project-top">
+              <span class="m221-v5-project-no">PROJECT / 03</span>
+              <span class="m221-v5-project-status">Galsen Facts</span>
+            </div>
+            <div class="m221-v5-project-main">
+              <span class="m221-v4-domain">SENEGAL / PUBLIC INFORMATION</span>
+              <h3>Galsen Facts</h3>
+              <p>Clear explorations of projects, public spending, places and other forces shaping Senegal.</p>
+            </div>
+            <div class="m221-v5-project-actions">
+              <a class="m221-v5-project-page" href="/galsen-facts/">Explore Galsen Facts →</a>
             </div>
           </article>
         </div>
@@ -128,6 +144,8 @@ import '../styles/home-v5.css';
         </div>
       </div>
     </section>
+
+    <AboutM221 />
 
     <section class="m221-v4-contact" id="contact" data-home-section>
       <div class="m221-container m221-v4-contact-inner">
