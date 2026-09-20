@@ -5,10 +5,11 @@ const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
 const labHref = `${homeHref}#lab`;
 const openHref = `${homeHref}#open`;
+const factsHref = isFrench ? '/fr/galsen-facts/' : '/galsen-facts/';
 
 const labels = isFrench
-  ? { home: 'Accueil', projects: 'Projets', lab: 'Lab', open: 'Open' }
-  : { home: 'Home', projects: 'Projects', lab: 'Lab', open: 'Open' };
+  ? { home: 'Accueil', projects: 'Projets', facts: 'Galsen Facts', lab: 'Lab', open: 'Open' }
+  : { home: 'Home', projects: 'Projects', facts: 'Galsen Facts', lab: 'Lab', open: 'Open' };
 ---
 
 <footer class="m221-footer">
@@ -34,6 +35,7 @@ const labels = isFrench
       <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
         <a href={homeHref}>{labels.home}</a>
         <a href={projectsHref}>{labels.projects}</a>
+        <a href={factsHref}>{labels.facts}</a>
         <a href={labHref}>{labels.lab}</a>
         <a href={openHref}>{labels.open}</a>
         <a
