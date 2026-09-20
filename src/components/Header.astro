@@ -45,9 +45,9 @@ const labels = isFrench
     </nav>
 
     <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-      <a href={englishPath} lang="en" hreflang="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+      <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
       <span aria-hidden="true">/</span>
-      <a href={frenchPath} lang="fr" hreflang="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+      <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
     </div>
 
     <details class="m221-mobile-nav" data-mobile-menu>
@@ -69,9 +69,9 @@ const labels = isFrench
         <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
         <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-          <a href={englishPath} lang="en" hreflang="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+          <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
           <span aria-hidden="true">/</span>
-          <a href={frenchPath} lang="fr" hreflang="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+          <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
         </div>
       </div>
     </details>
@@ -110,6 +110,89 @@ const labels = isFrench
     document.addEventListener('pointerdown', (event) => {
       if (!menu.open || menu.contains(event.target)) return;
       menu.open = false;
+    });
+
+  });
+
+  const languageLinks = document.querySelectorAll('[data-lang-link]');
+  const positionKey = 'm221-language-position';
+
+  const activeSectionId = () => {
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      if (document.getElementById(id)) return id;
+    }
+
+    const activeLink = document.querySelector(
+      '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-open-link][aria-current="true"]'
+    );
+
+    if (!(activeLink instanceof HTMLAnchorElement)) return '';
+    return activeLink.hash ? activeLink.hash.slice(1) : '';
+  };
+
+  languageLinks.forEach((link) => {
+    if (!(link instanceof HTMLAnchorElement)) return;
+
+    link.addEventListener('click', (event) => {
+      const target = new URL(link.href, window.location.origin);
+
+      if (target.pathname === window.location.pathname) return;
+
+      const sectionId = activeSectionId();
+      const section = sectionId ? document.getElementById(sectionId) : null;
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const ratio = window.scrollY / maxScroll;
+
+      const state = {
+        targetPath: target.pathname,
+        sectionId,
+        sectionDelta: section ? window.scrollY - section.offsetTop : null,
+        ratio
+      };
+
+      try {
+        sessionStorage.setItem(positionKey, JSON.stringify(state));
+      } catch {}
+
+      if (sectionId) target.hash = sectionId;
+      else if (window.location.hash) target.hash = window.location.hash;
+
+      event.preventDefault();
+      window.location.href = target.toString();
+    });
+  });
+
+  window.addEventListener('load', () => {
+    let state = null;
+
+    try {
+      const raw = sessionStorage.getItem(positionKey);
+      if (raw) state = JSON.parse(raw);
+      sessionStorage.removeItem(positionKey);
+    } catch {
+      state = null;
+    }
+
+    if (!state || state.targetPath !== window.location.pathname) return;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const section = state.sectionId ? document.getElementById(state.sectionId) : null;
+
+        if (section && Number.isFinite(state.sectionDelta)) {
+          window.scrollTo({
+            top: Math.max(0, section.offsetTop + state.sectionDelta),
+            behavior: 'auto'
+          });
+          return;
+        }
+
+        if (Number.isFinite(state.ratio)) {
+          const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+          window.scrollTo({ top: maxScroll * state.ratio, behavior: 'auto' });
+        }
+      });
     });
   });
 </script>
