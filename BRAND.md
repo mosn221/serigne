@@ -29,4 +29,4 @@ The cyan stroke is not an arrow and is not laid over the logo as decoration. It 
 
 Use the horizontal wordmark whenever the full name has enough room. Use the standalone M for compact identity surfaces. The `on-light` variants are for light backgrounds only.
 
-The canonical `m221tech-mark.svg` is used directly as the SVG favicon. Raster assets are derived from the same canonical M geometry by `scripts/generate-brand-assets.mjs` during the build so favicon fallbacks, touch icon, 512 mark and social card cannot drift from the vector mark.
+The dark `m221tech-mark-on-light.svg` variant is used as the SVG favicon for better visibility on light browser chrome. Raster assets are derived from the same canonical M geometry by `scripts/generate-brand-assets.mjs` during the build so favicon fallbacks, touch icon, 512 mark and social card cannot drift from the vector mark.
