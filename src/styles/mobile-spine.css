@@ -53,8 +53,8 @@
 }
 
 @media(max-width:760px){
-  .m221-header-inner{min-height:58px!important}
-  .m221-brand img{height:26px!important}
+  .m221-header-inner{min-height:74px!important}
+  .m221-brand img{height:44px!important}
 
   .m221-mobile-nav summary{
     min-width:46px!important;
@@ -69,7 +69,7 @@
 
   .m221-mobile-panel{top:44px!important}
 
-  .m221-v4-spine-wrap{top:58px!important}
+  .m221-v4-spine-wrap{top:74px!important}
   .m221-v4-spine{
     width:100%!important;
     min-height:40px!important;
@@ -86,7 +86,7 @@
 
   .m221-v4-spine a span:first-child{display:none!important}
   .m221-v4-spine a span:last-child{width:100%;text-align:center}
-  .m221-home-v4 [id]{scroll-margin-top:106px}
+  .m221-home-v4 [id]{scroll-margin-top:122px}
 }
 
 @media(max-width:390px){
