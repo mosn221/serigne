@@ -23,7 +23,7 @@ interface Props {
 const {
   title,
   description,
-  ogImage = 'https://m221.tech/assets/img/logo_carre_transp.png'
+  ogImage = 'https://m221.tech/assets/img/m221tech-social-card.png'
 } = Astro.props;
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
@@ -70,11 +70,15 @@ const organizationDescription = isFrench
   <meta property="og:locale" content={isFrench ? 'fr_FR' : 'en_US'} />
   <meta property="og:locale:alternate" content={isFrench ? 'en_US' : 'fr_FR'} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:secure_url" content={ogImage} />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content={socialImageAlt} />
 
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content={ogImage} />
   <meta name="twitter:image:alt" content={socialImageAlt} />
 
@@ -92,8 +96,9 @@ const organizationDescription = isFrench
   })} />
 
   <link rel="icon" type="image/svg+xml" href="/assets/img/m221tech-mark-signature.svg" />
-  <link rel="icon" type="image/png" href="/assets/img/icone_favicon_512.png" />
-  <link rel="apple-touch-icon" href="/assets/img/icone_favicon_512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
