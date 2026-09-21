@@ -46,7 +46,7 @@ h1,h2,h3,h4,h5,h6,
   backdrop-filter: blur(22px) saturate(135%);
 }
 
-.m221-header-inner { min-height: 76px; }
+.m221-header-inner { min-height: 94px; }
 
 .m221-brand {
   display: inline-flex;
@@ -57,7 +57,7 @@ h1,h2,h3,h4,h5,h6,
 .m221-brand img {
   display: block;
   width: auto;
-  height: 34px;
+  height: 64px;
 }
 
 .m221-nav {
@@ -168,8 +168,8 @@ body .m221-vertical-sports .m221-project-signature { color: #3FE6A8; }
 body .m221-vertical-nutrition .m221-project-signature { color: var(--m221-accent); }
 
 @media (max-width: 760px) {
-  .m221-header-inner { min-height: 66px; }
-  .m221-brand img { height: 30px; }
+  .m221-header-inner { min-height: 74px; }
+  .m221-brand img { height: 44px; }
   .m221-mobile-nav summary {
     padding: 8px 11px;
     border: 1px solid rgba(255,255,255,.08);
