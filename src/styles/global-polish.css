@@ -1,11 +1,12 @@
 :root{
-  --m221-header-h:76px;
+  --m221-header-h:94px;
   --m221-local-nav-h:50px;
 }
 
 /* Header: one predictable height and one navigation language everywhere. */
 .m221-header{z-index:60}
 .m221-header-inner{min-height:var(--m221-header-h)}
+.m221-brand img{height:64px!important}
 .m221-nav a[aria-current="true"]{
   color:#F5F7FA;
   background:rgba(0,136,204,.10);
@@ -109,12 +110,12 @@
 
 @media(max-width:760px){
   :root{
-    --m221-header-h:58px;
+    --m221-header-h:74px;
     --m221-local-nav-h:44px;
   }
 
   .m221-header-inner{min-height:var(--m221-header-h)!important}
-  .m221-brand img{height:26px!important}
+  .m221-brand img{height:44px!important}
 
   .m221-mobile-nav summary{
     width:44px;
