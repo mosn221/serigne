@@ -29,26 +29,10 @@
   padding:58px 0 44px;
 }
 
-.m221-footer-brand-block{display:grid;gap:26px}
+.m221-footer-brand-block{display:flex;align-items:center}
 
 .m221-footer-brand{display:inline-flex;width:fit-content;align-items:center}
 .m221-footer-brand img{display:block;width:auto;height:38px}
-
-.m221-footer-signature span{
-  display:block;
-  color:#68758B;
-  font:600 .62rem/1 'IBM Plex Mono',monospace;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.m221-footer-signature p{
-  max-width:560px;
-  margin:11px 0 0;
-  color:#DDE5EF;
-  font:550 clamp(1.45rem,2.8vw,2.3rem)/1.08 'Space Grotesk',sans-serif;
-  letter-spacing:-.04em;
-}
 
 .m221-footer-links{
   display:grid;
@@ -99,7 +83,6 @@
 @media(max-width:560px){
   .m221-footer-main{padding:42px 0 32px;gap:34px}
   .m221-footer-brand img{height:32px}
-  .m221-footer-signature p{font-size:1.45rem}
   .m221-footer-links{grid-template-columns:1fr}
   .m221-footer-links a,.m221-footer-links a:nth-child(odd),.m221-footer-links a:nth-child(even){min-height:48px;padding:0;border-left:0}
   .m221-footer-meta{align-items:flex-start;flex-direction:column;gap:8px;padding:16px 0 22px}
