@@ -4,9 +4,9 @@ Canonical brand assets live in `public/assets/img/`.
 
 | Asset | Role | Current use |
 | --- | --- | --- |
-| `m221tech-wordmark.svg` | Primary data-ribbon wordmark on dark surfaces | Header, footer |
-| `m221tech-wordmark-on-light.svg` | Wordmark on light surfaces | Light-surface variant |
-| `m221tech-mark.svg` | Standalone data-ribbon M on dark surfaces | JSON-LD, compact brand surfaces |
+| `m221tech-wordmark.svg` | Optional horizontal lockup on dark surfaces | Reserved; not used in primary site chrome |
+| `m221tech-wordmark-on-light.svg` | Optional horizontal lockup on light surfaces | Reserved; not used in primary site chrome |
+| `m221tech-mark.svg` | Primary standalone data-ribbon M on dark surfaces | Header, footer, JSON-LD, compact brand surfaces |
 | `m221tech-mark-on-light.svg` | Standalone mark on light surfaces | Favicon / light-surface variant |
 | `favicon-16x16.png` / `favicon-32x32.png` | Raster favicon fallbacks | Generated at build |
 | `apple-touch-icon.png` | 180×180 touch icon | Generated at build |
@@ -37,7 +37,7 @@ A restrained linear gradient is allowed **inside the data ribbons only**. It mus
 
 ## Usage
 
-Use the horizontal wordmark whenever the full name has enough room. Use the standalone data-ribbon M for compact identity surfaces, favicons, avatars and metadata.
+The standalone data-ribbon M is the primary visible identity across the site, including header and footer. Do not append `M221Tech`, `M221TECH / DATA HOUSE` or another text lockup directly beside the mark in primary site chrome. The horizontal wordmark is a secondary reserved lockup for cases where a full-name lockup is explicitly required.
 
 The `on-light` variants are for light backgrounds only. The darker `m221tech-mark-on-light.svg` remains the SVG favicon so the mark stays visible on light browser chrome.
 
