@@ -8,7 +8,6 @@ Canonical brand assets live in `public/assets/img/`.
 | `m221tech-wordmark-on-light.svg` | Wordmark on light surfaces | Reserved light-surface variant |
 | `m221tech-mark.svg` | Standalone signature M on dark surfaces | JSON-LD, compact brand surfaces |
 | `m221tech-mark-on-light.svg` | Standalone mark on light surfaces | Reserved light-surface variant |
-| `m221tech-favicon.svg` | Primary vector favicon | Browser favicon |
 | `favicon-16x16.png` / `favicon-32x32.png` | Raster favicon fallbacks | Generated at build |
 | `apple-touch-icon.png` | 180×180 touch icon | Generated at build |
 | `m221tech-mark-512.png` | 512×512 raster mark | Generated at build |
@@ -30,4 +29,4 @@ The cyan stroke is not an arrow and is not laid over the logo as decoration. It 
 
 Use the horizontal wordmark whenever the full name has enough room. Use the standalone M for compact identity surfaces. The `on-light` variants are for light backgrounds only.
 
-Raster assets are derived from the same canonical M geometry by `scripts/generate-brand-assets.mjs` during the build so favicon, touch icon, 512 mark and social card cannot drift from the vector mark.
+The canonical `m221tech-mark.svg` is used directly as the SVG favicon. Raster assets are derived from the same canonical M geometry by `scripts/generate-brand-assets.mjs` during the build so favicon fallbacks, touch icon, 512 mark and social card cannot drift from the vector mark.
