@@ -5,7 +5,6 @@ const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
 const whyHref = `${homeHref}#why`;
-const labHref = `${homeHref}#lab`;
 const openHref = `${homeHref}#open`;
 const contactHref = `${homeHref}#contact`;
 
@@ -19,8 +18,8 @@ const menuCloseLabel = isFrench ? 'Fermer le menu' : 'Close menu';
 const mobilePanelId = 'm221-mobile-navigation';
 
 const labels = isFrench
-  ? { projects: 'Projets', why: 'Pourquoi', lab: 'Lab', open: 'Open', contact: 'Contact' }
-  : { projects: 'Projects', why: 'Why', lab: 'Lab', open: 'Open', contact: 'Contact' };
+  ? { projects: 'Projets', why: 'Pourquoi', open: 'Open', contact: 'Contact' }
+  : { projects: 'Projects', why: 'Why', open: 'Open', contact: 'Contact' };
 ---
 
 <header class="m221-header">
@@ -39,7 +38,6 @@ const labels = isFrench
     <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
       <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
       <a href={whyHref}>{labels.why}</a>
-      <a href={labHref}>{labels.lab}</a>
       <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
       <a href={contactHref}>{labels.contact}</a>
     </nav>
@@ -65,7 +63,6 @@ const labels = isFrench
       <div id={mobilePanelId} class="m221-mobile-panel">
         <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
         <a href={whyHref}>{labels.why}</a>
-        <a href={labHref}>{labels.lab}</a>
         <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
         <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>

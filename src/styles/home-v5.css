@@ -166,6 +166,35 @@
 .m221-v4-contact{position:relative;overflow:hidden}
 .m221-v4-contact:after{content:"M221";position:absolute;right:-.05em;bottom:-.28em;color:rgba(255,255,255,.022);font:700 min(34vw,430px)/1 'Space Grotesk',sans-serif;letter-spacing:-.09em;pointer-events:none}
 
+
+/* Desktop simplification: keep the useful hero copy, remove the oversized signal field
+   and the persistent section spine. Mobile/tablet behavior stays unchanged. */
+@media(min-width:981px){
+  .m221-v5-signal{display:none}
+  .m221-v4-hero{
+    min-height:auto;
+    padding:76px 0 64px;
+  }
+  .m221-v4-hero-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:0;
+  }
+  .m221-v5-hero-copy{
+    max-width:980px;
+  }
+  .m221-v4-spine-wrap{
+    display:none!important;
+    visibility:hidden!important;
+    height:0!important;
+    min-height:0!important;
+    overflow:hidden!important;
+    border:0!important;
+  }
+  .m221-v4-spine{
+    display:none!important;
+  }
+}
+
 @media(max-width:1120px){
   .m221-v5-project-grid{grid-template-columns:1fr 1fr}
   .m221-v5-project[data-tone="facts"]{grid-column:1/-1;min-height:320px}
