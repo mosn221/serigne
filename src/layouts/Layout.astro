@@ -23,7 +23,7 @@ interface Props {
 const {
   title,
   description,
-  ogImage = 'https://m221.tech/assets/img/m221tech-social-card-arrow.png'
+  ogImage = 'https://m221.tech/assets/img/m221tech-social-card.png'
 } = Astro.props;
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
@@ -87,7 +87,7 @@ const organizationDescription = isFrench
     '@type': 'Organization',
     name: 'M221Tech',
     url: 'https://m221.tech',
-    logo: 'https://m221.tech/assets/img/m221tech-mark-arrow.svg',
+    logo: 'https://m221.tech/assets/img/m221tech-mark.svg',
     description: organizationDescription,
     sameAs: [
       'https://www.linkedin.com/company/m221tech',
@@ -96,9 +96,9 @@ const organizationDescription = isFrench
   })} />
 
   <link rel="icon" type="image/svg+xml" href="/assets/img/m221tech-favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32-arrow.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16-arrow.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-arrow.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
