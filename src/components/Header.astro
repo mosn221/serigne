@@ -25,30 +25,28 @@ const labels = isFrench
 <header class="m221-header">
   <div class="m221-container m221-header-inner">
     <a class="m221-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
-      <img
-        class="m221-brand-full"
-        src="/assets/img/m221tech-wordmark.svg"
-        alt=""
-        width="342"
-        height="64"
-        decoding="async"
-        fetchpriority="high"
-      />
-      <img
-        class="m221-brand-compact"
-        src="/assets/img/m221-site-lockup.svg"
-        alt=""
-        width="87"
-        height="32"
-        decoding="async"
-        fetchpriority="high"
-      />
+      <picture class="m221-brand-picture">
+        <source
+          media="(max-width: 760px)"
+          srcset="/assets/img/m221-site-lockup.svg"
+          width="87"
+          height="32"
+        />
+        <img
+          src="/assets/img/m221tech-wordmark.svg"
+          alt=""
+          width="342"
+          height="64"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
     </a>
 
     <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
-      <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
+      <a href={projectsHref} data-active={projectPage ? 'true' : undefined}>{labels.projects}</a>
       <a href={whyHref}>{labels.why}</a>
-      <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
+      <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
       <a href={contactHref}>{labels.contact}</a>
     </nav>
 
