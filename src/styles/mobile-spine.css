@@ -43,11 +43,11 @@
   .m221-v4-spine a:last-child{border-right:0}
   .m221-v4-spine a[aria-current="true"]{
     color:var(--m221-text)!important;
-    background:rgba(0,136,204,.07)!important;
-    box-shadow:inset 0 -2px 0 #1DE9FF;
+    background:rgba(0,191,214,.07)!important;
+    box-shadow:inset 0 -2px 0 #3FE6A8;
   }
   .m221-v4-spine a span:first-child{font-size:.54rem!important}
-  .m221-v4-spine a[aria-current="true"] span:first-child{color:#7EE8F7}
+  .m221-v4-spine a[aria-current="true"] span:first-child{color:#3FE6A8}
   .m221-v4-spine a span:last-child{min-width:0;overflow:hidden;text-overflow:clip;white-space:nowrap}
   .m221-home-v4 [id]{scroll-margin-top:128px}
 }
