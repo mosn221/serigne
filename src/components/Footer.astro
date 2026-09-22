@@ -4,11 +4,11 @@ const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
 const openHref = `${homeHref}#open`;
-const factsHref = isFrench ? '/fr/galsen-facts/' : '/galsen-facts/';
+const contactHref = `${homeHref}#contact`;
 
 const labels = isFrench
-  ? { home: 'Accueil', projects: 'Projets', facts: 'Galsen Facts', open: 'Open' }
-  : { home: 'Home', projects: 'Projects', facts: 'Galsen Facts', open: 'Open' };
+  ? { home: 'Accueil', projects: 'Projets', open: 'Open', contact: 'Contact' }
+  : { home: 'Home', projects: 'Projects', open: 'Open', contact: 'Contact' };
 ---
 
 <footer class="m221-footer">
@@ -30,8 +30,8 @@ const labels = isFrench
       <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
         <a href={homeHref}>{labels.home}</a>
         <a href={projectsHref}>{labels.projects}</a>
-        <a href={factsHref}>{labels.facts}</a>
         <a href={openHref}>{labels.open}</a>
+        <a href={contactHref}>{labels.contact}</a>
         <a
           class="m221-footer-linkedin"
           href="https://www.linkedin.com/company/m221tech"
