@@ -4,7 +4,7 @@
   padding:0;
   border-top:1px solid rgba(255,255,255,.08);
   background:
-    radial-gradient(circle at 88% 12%,rgba(0,136,204,.09),transparent 0 24%),
+    radial-gradient(circle at 88% 12%,rgba(0,191,214,.09),transparent 0 24%),
     #070C17;
 }
 
@@ -59,7 +59,7 @@
 .m221-footer-links a:nth-child(odd){padding-right:18px}
 .m221-footer-links a:nth-child(even){padding-left:18px;border-left:1px solid rgba(255,255,255,.08)}
 .m221-footer-links a:hover{color:#F5F7FA;background:rgba(255,255,255,.025)}
-.m221-footer-linkedin{color:#7EE8F7!important}
+.m221-footer-linkedin{color:#3FE6A8!important}
 .m221-footer-linkedin span{font-size:.9rem}
 
 .m221-footer-meta{
