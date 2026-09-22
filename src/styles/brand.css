@@ -44,9 +44,19 @@ h1,h2,h3,h4,h5,h6,
   border-bottom: 1px solid rgba(255,255,255,.07);
   background: rgba(11,16,32,.78);
   backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
 }
 
-.m221-header-inner { min-height: 82px; }
+.m221-header.is-scrolled {
+  border-bottom-color: rgba(255,255,255,.05);
+  background: rgba(11,16,32,.58);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+
+.m221-header-inner { min-height: 78px; }
 
 .m221-brand {
   display: inline-flex;
@@ -57,7 +67,7 @@ h1,h2,h3,h4,h5,h6,
 .m221-brand img {
   display: block;
   width: auto;
-  height: 52px;
+  height: 46px;
 }
 
 .m221-nav {
@@ -168,8 +178,8 @@ body .m221-vertical-sports .m221-project-signature { color: #3FE6A8; }
 body .m221-vertical-nutrition .m221-project-signature { color: var(--m221-accent); }
 
 @media (max-width: 760px) {
-  .m221-header-inner { min-height: 66px; }
-  .m221-brand img { height: 36px; }
+  .m221-header-inner { min-height: 62px; }
+  .m221-brand img { height: 32px; }
   .m221-mobile-nav summary {
     padding: 8px 11px;
     border: 1px solid rgba(255,255,255,.08);
