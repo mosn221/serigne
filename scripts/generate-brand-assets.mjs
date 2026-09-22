@@ -33,4 +33,4 @@ for(const s of [16,32]) save(`favicon-${s}x${s}.png`,s,s,{background:true,scale:
 save('apple-touch-icon.png',180,180,{background:true,scale:180/128});
 save('m221tech-mark-512.png',512,512,{background:false,scale:4});
 save('m221tech-social-card.png',1200,630,{background:true,scale:3.6,ox:(1200-128*3.6)/2,oy:(630-128*3.6)/2});
-console.log('Generated M221Tech data-ribbon raster brand assets.');
+save('icon-192.png',192,192,{background:true,scale:192/128});\nsave('icon-512.png',512,512,{background:true,scale:4});\nconsole.log('Generated compact M221Tech mark assets. Social assets remain curated committed files.');
