@@ -4,9 +4,9 @@ Canonical brand assets live in `public/assets/img/`.
 
 | Asset | Role | Current use |
 | --- | --- | --- |
-| `m221tech-wordmark.svg` | Optional horizontal lockup on dark surfaces | Reserved; not used in primary site chrome |
-| `m221tech-wordmark-on-light.svg` | Optional horizontal lockup on light surfaces | Reserved; not used in primary site chrome |
-| `m221tech-mark.svg` | Primary standalone data-ribbon M on dark surfaces | Header, footer, JSON-LD, compact brand surfaces |
+| `m221tech-wordmark.svg` | Primary M + 221Tech lockup on dark surfaces | Header, footer, organization identity |
+| `m221tech-wordmark-on-light.svg` | Primary M + 221Tech lockup on light surfaces | Light-surface identity |
+| `m221tech-mark.svg` | Standalone data-ribbon M on dark surfaces | Favicon, avatar and compact brand surfaces |
 | `m221tech-mark-on-light.svg` | Standalone mark on light surfaces | Favicon / light-surface variant |
 | `favicon-16x16.png` / `favicon-32x32.png` | Raster favicon fallbacks | Generated at build |
 | `apple-touch-icon.png` | 180×180 touch icon | Generated at build |
@@ -37,7 +37,7 @@ A restrained linear gradient is allowed **inside the data ribbons only**. It mus
 
 ## Usage
 
-The standalone data-ribbon M is the primary visible identity across the site, including header and footer. Do not append `M221Tech`, `M221TECH / DATA HOUSE` or another text lockup directly beside the mark in primary site chrome. The horizontal wordmark is a secondary reserved lockup for cases where a full-name lockup is explicitly required.
+The primary visible identity is the horizontal **M + 221Tech** lockup. It combines the data-ribbon M with `221` in the same cyan/teal data accent and `Tech` in the neutral light tone. Use this lockup in the header, footer and other brand-forward surfaces. Use the standalone M only where horizontal space is genuinely constrained, such as favicons, avatars and compact marks.
 
 The `on-light` variants are for light backgrounds only. The darker `m221tech-mark-on-light.svg` remains the SVG favicon so the mark stays visible on light browser chrome.
 
