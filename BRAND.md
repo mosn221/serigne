@@ -27,6 +27,7 @@ The build also runs this automatically before Astro.
 
 | Asset | Size / format | Use |
 | --- | --- | --- |
+| `favicon.ico` | Multi-size ICO (16/32/48) | Legacy browser / shortcut fallback |
 | `favicon-16x16.png` | 16×16 PNG | Browser fallback |
 | `favicon-32x32.png` | 32×32 PNG | Browser fallback |
 | `favicon-48x48.png` | 48×48 PNG | High-density browser fallback |
