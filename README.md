@@ -37,6 +37,8 @@ Do not merge `staging` into `main` or deploy production changes without explicit
 
 ## Current structure
 
-The site is bilingual (EN/FR) and organized around the M221Tech brand plus independent project pages. Shared brand, navigation, metadata and accessibility behavior live in common components/layouts; project-specific CSS is loaded from the relevant page rather than globally when possible.
+The site is bilingual (EN/FR) and organized around the M221Tech brand plus independent project pages. Shared metadata and document structure live in `src/layouts/Layout.astro`; header/footer markup lives in shared components.
+
+`src/styles/chrome.css` is the canonical source for site chrome: header geometry, desktop/mobile navigation, local section navigation, home spine, focus states, footer and their shared breakpoints. Do not add new late-stage chrome override files; update `chrome.css` instead. Project-specific CSS is loaded from the relevant page when possible.
 
 Brand derivatives are generated with `npm run brand:generate`; SEO route discovery is generated with `npm run seo:generate`.
