@@ -18,22 +18,20 @@ export default {
 
   theme: {
     extend: {
-      // On réutilise exactement les couleurs déjà définies dans
-      // legacy.css (variables CSS :root) pour que tout nouveau composant
-      // Tailwind reste visuellement cohérent avec le reste du site.
+      // Tokens de marque M221Tech partagés avec le CSS du site.
       colors: {
         bg: '#0B1020',       // fond général (bleu nuit très sombre)
         card: '#121A2E',     // fond des cartes/blocs
-        primary: '#0088CC',  // bleu principal (boutons, liens actifs)
-        cyan: '#1DE9FF',     // accent cyan (hover, highlights)
+        primary: '#00BFD6',  // cyan principal M221Tech
+        cyan: '#3FE6A8',     // accent mint M221Tech
         accent: '#FFC300',   // jaune/or (badges, eyebrow, accents)
         muted: '#AEB6C2'     // gris clair (texte secondaire)
       },
       fontFamily: {
-        // Même logique que le CSS existant : Inter pour le texte courant,
-        // Montserrat pour les titres.
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif']
+        // Typographies de marque du site.
+        sans: ['Space Grotesk', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
+        data: ['IBM Plex Mono', 'monospace']
       }
     }
   },
