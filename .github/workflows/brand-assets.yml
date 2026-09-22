@@ -1,0 +1,52 @@
+name: Refresh brand assets
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - "public/assets/img/m221tech-*.svg"
+      - "public/assets/img/favicon.svg"
+      - "public/assets/img/safari-pinned-tab.svg"
+      - "scripts/generate-brand-assets.mjs"
+      - "package.json"
+      - ".github/workflows/brand-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staging
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate brand kit
+        run: npm run brand:generate
+
+      - name: Commit generated raster assets
+        shell: bash
+        run: |
+          git add public/favicon.ico public/assets/img/*.png public/assets/img/*.webp
+          if git diff --cached --quiet; then
+            echo "Brand raster assets are already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "brand: refresh generated raster assets [skip ci]"
+          git pull --rebase origin staging
+          git push origin HEAD:staging

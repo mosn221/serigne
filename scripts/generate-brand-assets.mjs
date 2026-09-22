@@ -1,26 +1,129 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { deflateSync } from 'node:zlib';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
-const out = new URL('../public/assets/img/', import.meta.url);
-mkdirSync(out, { recursive: true });
+const rootDir = fileURLToPath(new URL('..', import.meta.url));
+const outDir = path.join(rootDir, 'public', 'assets', 'img');
+await mkdir(outDir, { recursive: true });
 
-const C = { bg:[11,16,32,255], white:[244,247,250,255], cyan:[85,217,230,255], transparent:[0,0,0,0] };
-const polys = {
-  left:[[22,102],[22,26],[39,26],[64,61],[54,76],[38,53],[38,102]],
-  right:[[90,44],[106,26],[106,102],[90,102]],
-  cyan:[[54,76],[89,26],[106,26],[64,87]]
-};
+const asset = (name) => path.join(outDir, name);
+const [markSvg, markOnLightSvg, lockupSvg, lockupOnLightSvg, faviconSvg] = await Promise.all([
+  readFile(asset('m221tech-mark.svg')),
+  readFile(asset('m221tech-mark-on-light.svg')),
+  readFile(asset('m221tech-wordmark.svg')),
+  readFile(asset('m221tech-wordmark-on-light.svg')),
+  readFile(asset('favicon.svg'))
+]);
 
-function crc32(buf){let c=0xffffffff;for(const b of buf){c^=b;for(let k=0;k<8;k++)c=(c>>>1)^((c&1)?0xedb88320:0);}return (c^0xffffffff)>>>0;}
-function chunk(type,data){const t=Buffer.from(type);const len=Buffer.alloc(4);len.writeUInt32BE(data.length);const crc=Buffer.alloc(4);crc.writeUInt32BE(crc32(Buffer.concat([t,data])));return Buffer.concat([len,t,data,crc]);}
-function png(w,h,pixels){const sig=Buffer.from([137,80,78,71,13,10,26,10]);const ihdr=Buffer.alloc(13);ihdr.writeUInt32BE(w,0);ihdr.writeUInt32BE(h,4);ihdr[8]=8;ihdr[9]=6;const rows=[];for(let y=0;y<h;y++){rows.push(Buffer.from([0]));rows.push(pixels.subarray(y*w*4,(y+1)*w*4));}return Buffer.concat([sig,chunk('IHDR',ihdr),chunk('IDAT',deflateSync(Buffer.concat(rows),{level:9})),chunk('IEND',Buffer.alloc(0))]);}
-function inside(x,y,p){let c=false;for(let i=0,j=p.length-1;i<p.length;j=i++){const [xi,yi]=p[i],[xj,yj]=p[j];if(((yi>y)!=(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))c=!c;}return c;}
-function fillPoly(px,w,h,p,color){const xs=p.map(v=>v[0]),ys=p.map(v=>v[1]);const minX=Math.max(0,Math.floor(Math.min(...xs))),maxX=Math.min(w-1,Math.ceil(Math.max(...xs)));const minY=Math.max(0,Math.floor(Math.min(...ys))),maxY=Math.min(h-1,Math.ceil(Math.max(...ys)));for(let y=minY;y<=maxY;y++)for(let x=minX;x<=maxX;x++)if(inside(x+.5,y+.5,p)){const i=(y*w+x)*4;px.set(color,i);}}
-function make(w,h,{background=true,scale=1,ox=0,oy=0}={}){const px=Buffer.alloc(w*h*4);for(let i=0;i<px.length;i+=4)px.set(background?C.bg:C.transparent,i);const map=p=>p.map(([x,y])=>[ox+x*scale,oy+y*scale]);fillPoly(px,w,h,map(polys.left),C.white);fillPoly(px,w,h,map(polys.right),C.white);fillPoly(px,w,h,map(polys.cyan),C.cyan);return px;}
-function save(name,w,h,opts){writeFileSync(new URL(name,out),png(w,h,make(w,h,opts)));}
+async function renderSvg(input, name, width, format = 'png', options = {}) {
+  let pipeline = sharp(input, { density: 384 }).resize({ width });
+  if (format === 'webp') {
+    pipeline = pipeline.webp({ quality: options.quality ?? 94, lossless: options.lossless ?? true });
+  } else {
+    pipeline = pipeline.png({ compressionLevel: 9, adaptiveFiltering: true });
+  }
+  await pipeline.toFile(asset(name));
+}
 
-for(const s of [16,32]) save(`favicon-${s}x${s}.png`,s,s,{background:true,scale:s/128});
-save('apple-touch-icon.png',180,180,{background:true,scale:180/128});
-save('m221tech-mark-512.png',512,512,{background:false,scale:4});
-save('m221tech-social-card.png',1200,630,{background:true,scale:3.6,ox:(1200-128*3.6)/2,oy:(630-128*3.6)/2});
-console.log('Generated M221Tech raster brand assets.');
+async function brandedSquare(name, size, markWidth, format = 'png') {
+  const mark = await sharp(markSvg, { density: 384 })
+    .resize({ width: markWidth })
+    .png()
+    .toBuffer();
+
+  let pipeline = sharp({
+    create: {
+      width: size,
+      height: size,
+      channels: 4,
+      background: '#0B1020'
+    }
+  }).composite([{ input: mark, gravity: 'center' }]);
+
+  if (format === 'webp') {
+    pipeline = pipeline.webp({ quality: 94 });
+  } else {
+    pipeline = pipeline.png({ compressionLevel: 9, adaptiveFiltering: true });
+  }
+
+  await pipeline.toFile(asset(name));
+}
+
+async function socialCard() {
+  const lockup = await sharp(lockupSvg, { density: 384 })
+    .resize({ width: 980 })
+    .png()
+    .toBuffer();
+
+  const base = sharp({
+    create: {
+      width: 1200,
+      height: 630,
+      channels: 4,
+      background: '#0B1020'
+    }
+  }).composite([{ input: lockup, gravity: 'center' }]);
+
+  await base.clone().png({ compressionLevel: 9, adaptiveFiltering: true }).toFile(asset('m221tech-social-card.png'));
+  await base.clone().webp({ quality: 94 }).toFile(asset('m221tech-social-card.webp'));
+}
+
+const faviconSizes = [16, 32, 48];
+const faviconBuffers = [];
+
+for (const size of faviconSizes) {
+  const buffer = await sharp(faviconSvg, { density: 384 })
+    .resize({ width: size, height: size })
+    .png({ compressionLevel: 9, adaptiveFiltering: true })
+    .toBuffer();
+  faviconBuffers.push(buffer);
+  await writeFile(asset(`favicon-${size}x${size}.png`), buffer);
+}
+
+function buildIco(buffers, sizes) {
+  const header = Buffer.alloc(6 + buffers.length * 16);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(buffers.length, 4);
+
+  let offset = header.length;
+  buffers.forEach((buffer, index) => {
+    const size = sizes[index];
+    const base = 6 + index * 16;
+    header.writeUInt8(size === 256 ? 0 : size, base);
+    header.writeUInt8(size === 256 ? 0 : size, base + 1);
+    header.writeUInt8(0, base + 2);
+    header.writeUInt8(0, base + 3);
+    header.writeUInt16LE(1, base + 4);
+    header.writeUInt16LE(32, base + 6);
+    header.writeUInt32LE(buffer.length, base + 8);
+    header.writeUInt32LE(offset, base + 12);
+    offset += buffer.length;
+  });
+
+  return Buffer.concat([header, ...buffers]);
+}
+
+await writeFile(path.join(rootDir, 'public', 'favicon.ico'), buildIco(faviconBuffers, faviconSizes));
+
+await renderSvg(faviconSvg, 'apple-touch-icon.png', 180);
+await renderSvg(faviconSvg, 'icon-192.png', 192);
+await renderSvg(faviconSvg, 'icon-512.png', 512);
+
+await renderSvg(markSvg, 'm221tech-mark-256.png', 256);
+await renderSvg(markSvg, 'm221tech-mark-512.png', 512);
+await renderSvg(markSvg, 'm221tech-mark-1024.png', 1024);
+
+await renderSvg(lockupSvg, 'm221tech-lockup.png', 1400);
+await renderSvg(lockupSvg, 'm221tech-lockup.webp', 1400, 'webp');
+await renderSvg(lockupOnLightSvg, 'm221tech-lockup-on-light.png', 1400);
+await renderSvg(lockupOnLightSvg, 'm221tech-lockup-on-light.webp', 1400, 'webp');
+
+await brandedSquare('icon-maskable-512.png', 512, 350);
+await brandedSquare('m221tech-social-square.png', 1200, 660);
+await brandedSquare('m221tech-social-square.webp', 1200, 660, 'webp');
+
+await socialCard();
+
+console.log('Generated M221Tech brand kit: favicons, app icons, raster lockups and social assets.');

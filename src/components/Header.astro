@@ -26,10 +26,10 @@ const labels = isFrench
   <div class="m221-container m221-header-inner">
     <a class="m221-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
       <img
-        src="/assets/img/m221tech-wordmark.svg"
-        alt="M221Tech"
-        width="187"
-        height="46"
+        src="/assets/img/m221-site-lockup.svg"
+        alt=""
+        width="82"
+        height="30"
         decoding="async"
         fetchpriority="high"
       />
@@ -76,6 +76,15 @@ const labels = isFrench
 </header>
 
 <script>
+  const siteHeader = document.querySelector('.m221-header');
+  const syncHeaderScroll = () => {
+    if (!(siteHeader instanceof HTMLElement)) return;
+    siteHeader.classList.toggle('is-scrolled', window.scrollY > 18);
+  };
+
+  syncHeaderScroll();
+  window.addEventListener('scroll', syncHeaderScroll, { passive: true });
+
   const menus = document.querySelectorAll('[data-mobile-menu]');
 
   menus.forEach((menu) => {
