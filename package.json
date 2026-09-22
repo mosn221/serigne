@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "brand:generate": "node scripts/generate-brand-assets.mjs",
-    "build": "npm run brand:generate && npm run seo:generate && astro build",
+    "build": "npm run brand:generate && astro build && npm run seo:generate",
     "preview": "astro preview",
     "seo:generate": "node scripts/generate-sitemap.mjs"
   },
