@@ -28,35 +28,15 @@ npm run preview
 
 Do not merge `staging` into `main` or deploy production changes without explicit approval.
 
-## Static public files
+## SEO and public files
 
-Files that must be copied directly to the deployed site live in `public/`:
-
-- `robots.txt`
-- `sitemap.xml`
-- `_redirects`
-- Google site verification
-
-Non-production Netlify builds are marked `noindex,nofollow` from `Layout.astro` using Netlify's build context.
+- `robots.txt`, `_redirects` and verification files live in `public/`.
+- `sitemap.xml` is regenerated automatically from public static Astro routes with `npm run seo:generate` and on every production build.
+- Non-production Netlify builds are marked `noindex,nofollow,noarchive` from `Layout.astro`.
+- Canonical URLs, hreflang, Open Graph, Twitter metadata and structured data are centralized in `src/layouts/Layout.astro`.
 
 ## Current structure
 
-```text
-src/
-  layouts/Layout.astro
-  components/Header.astro
-  components/Footer.astro
-  components/DataDashboard.astro
-  data/dashboard-demo.json
-  pages/index.astro
-  styles/global.css
-  styles/legacy.css
-  scripts/site.js
-public/
-  robots.txt
-  sitemap.xml
-  _redirects
-  google7965e3e4cffc7ddf.html
-```
+The site is bilingual (EN/FR) and organized around the M221Tech brand plus independent project pages. Shared brand, navigation, metadata and accessibility behavior live in common components/layouts; project-specific CSS is loaded from the relevant page rather than globally when possible.
 
-The current homepage is legacy content and is being progressively replaced by the new M221Tech product-studio experience on `staging`.
+Brand derivatives are generated with `npm run brand:generate`; SEO route discovery is generated with `npm run seo:generate`.
