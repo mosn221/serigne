@@ -1,4 +1,4 @@
-import { mkdir, readFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import sharp from 'sharp';
 
 const outDir = new URL('../public/assets/img/', import.meta.url);
@@ -66,9 +66,43 @@ async function socialCard() {
   await base.clone().webp({ quality: 94 }).toFile(asset('m221tech-social-card.webp'));
 }
 
-for (const size of [16, 32, 48]) {
-  await renderSvg(faviconSvg, `favicon-${size}x${size}.png`, size);
+const faviconSizes = [16, 32, 48];
+const faviconBuffers = [];
+
+for (const size of faviconSizes) {
+  const buffer = await sharp(faviconSvg, { density: 384 })
+    .resize({ width: size, height: size })
+    .png({ compressionLevel: 9, adaptiveFiltering: true })
+    .toBuffer();
+  faviconBuffers.push(buffer);
+  await writeFile(asset(`favicon-${size}x${size}.png`), buffer);
 }
+
+function buildIco(buffers, sizes) {
+  const header = Buffer.alloc(6 + buffers.length * 16);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(buffers.length, 4);
+
+  let offset = header.length;
+  buffers.forEach((buffer, index) => {
+    const size = sizes[index];
+    const base = 6 + index * 16;
+    header.writeUInt8(size === 256 ? 0 : size, base);
+    header.writeUInt8(size === 256 ? 0 : size, base + 1);
+    header.writeUInt8(0, base + 2);
+    header.writeUInt8(0, base + 3);
+    header.writeUInt16LE(1, base + 4);
+    header.writeUInt16LE(32, base + 6);
+    header.writeUInt32LE(buffer.length, base + 8);
+    header.writeUInt32LE(offset, base + 12);
+    offset += buffer.length;
+  });
+
+  return Buffer.concat([header, ...buffers]);
+}
+
+await writeFile(new URL('../public/favicon.ico', import.meta.url), buildIco(faviconBuffers, faviconSizes));
 
 await renderSvg(faviconSvg, 'apple-touch-icon.png', 180);
 await renderSvg(faviconSvg, 'icon-192.png', 192);
