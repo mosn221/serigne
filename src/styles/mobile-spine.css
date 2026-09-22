@@ -54,8 +54,7 @@
 
 @media(max-width:760px){
   .m221-header-inner{min-height:58px!important}
-  .m221-brand-full{display:none!important}
-  .m221-brand-compact{display:block!important;height:27px!important}
+  .m221-brand-picture img{height:27px!important}
 
   .m221-mobile-nav summary{
     min-width:46px!important;
