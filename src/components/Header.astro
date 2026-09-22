@@ -1,6 +1,19 @@
 ---
+interface Props {
+  activeSection?: 'projects' | 'open';
+  englishPath: string;
+  frenchPath: string;
+  hasAlternate?: boolean;
+}
+
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+const {
+  activeSection,
+  englishPath,
+  frenchPath,
+  hasAlternate = true
+} = Astro.props;
 
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
@@ -8,11 +21,8 @@ const whyHref = `${homeHref}#why`;
 const openHref = `${homeHref}#open`;
 const contactHref = `${homeHref}#contact`;
 
-const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
-const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
-
-const projectPage = /\/(sports|nutrition|galsen-facts)\/?$/.test(pathname);
-const openPage = /\/open\/?$/.test(pathname);
+const projectPage = activeSection === 'projects';
+const openPage = activeSection === 'open';
 const menuOpenLabel = isFrench ? 'Ouvrir le menu' : 'Open menu';
 const menuCloseLabel = isFrench ? 'Fermer le menu' : 'Close menu';
 const mobilePanelId = 'm221-mobile-navigation';
@@ -50,11 +60,13 @@ const labels = isFrench
       <a href={contactHref}>{labels.contact}</a>
     </nav>
 
-    <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-      <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
-      <span aria-hidden="true">/</span>
-      <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
-    </div>
+    {hasAlternate && (
+      <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
+        <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+        <span aria-hidden="true">/</span>
+        <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+      </div>
+    )>
 
     <details class="m221-mobile-nav" data-mobile-menu>
       <summary
@@ -73,11 +85,13 @@ const labels = isFrench
         <a href={whyHref}>{labels.why}</a>
         <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
-        <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-          <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
-          <span aria-hidden="true">/</span>
-          <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
-        </div>
+        {hasAlternate && (
+          <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
+            <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+            <span aria-hidden="true">/</span>
+            <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+          </div>
+        )>
       </div>
     </details>
   </div>
