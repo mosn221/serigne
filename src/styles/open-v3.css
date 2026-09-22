@@ -1,6 +1,6 @@
 .m221-open-page{
   --open-accent:#9DEBF3;
-  --open-blue:#0088CC;
+  --open-blue:#00BFD6;
   --open-paper:#DCE7EA;
   --open-line:rgba(255,255,255,.075);
   --open-line-strong:rgba(157,235,243,.18);
@@ -201,7 +201,7 @@
   background:#66748A;
 }
 .m221-open-boundary article:nth-child(1):before{background:var(--open-accent);box-shadow:0 0 0 5px rgba(157,235,243,.055)}
-.m221-open-boundary article:nth-child(2):before{background:#0088CC;box-shadow:0 0 0 5px rgba(0,136,204,.055)}
+.m221-open-boundary article:nth-child(2):before{background:#00BFD6;box-shadow:0 0 0 5px rgba(0,191,214,.055)}
 .m221-open-boundary article:nth-child(3):before{background:#526078}
 .m221-open-boundary h3{margin:28px 0 0;font-size:1.4rem}
 
