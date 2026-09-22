@@ -12,12 +12,16 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  navSection?: 'projects' | 'open';
+  alternatePath?: string | null;
 }
 
 const {
   title,
   description,
-  ogImage = '/assets/img/m221tech-social-card.png'
+  ogImage = '/assets/img/m221tech-social-card.png',
+  navSection,
+  alternatePath
 } = Astro.props;
 
 const rawPathname = Astro.url.pathname;
@@ -27,10 +31,14 @@ const isFrench = pathname === '/fr/' || pathname.startsWith('/fr/');
 const lang = isFrench ? 'fr' : 'en';
 
 const canonicalURL = new URL(pathname, Astro.site);
-const englishPath = isFrench ? normalizePath(pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
-const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : normalizePath(`/fr${pathname}`));
+const inferredEnglishPath = isFrench ? normalizePath(pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
+const inferredFrenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : normalizePath(`/fr${pathname}`));
+const hasAlternate = alternatePath !== null;
+const englishPath = isFrench && alternatePath ? normalizePath(alternatePath) : inferredEnglishPath;
+const frenchPath = !isFrench && alternatePath ? normalizePath(alternatePath) : inferredFrenchPath;
 const englishURL = new URL(englishPath, Astro.site);
 const frenchURL = new URL(frenchPath, Astro.site);
+const xDefaultURL = isFrench && !hasAlternate ? canonicalURL : englishURL;
 const socialImageURL = new URL(ogImage, Astro.site);
 
 const isProduction = process.env.CONTEXT === 'production';
@@ -66,9 +74,9 @@ const webpageId = `${canonicalURL.href}#webpage`;
   <meta name="googlebot" content={robotsContent} />
 
   <link rel="canonical" href={canonicalURL} />
-  <link rel="alternate" href={englishURL} hreflang="en" />
-  <link rel="alternate" href={frenchURL} hreflang="fr" />
-  <link rel="alternate" href={englishURL} hreflang="x-default" />
+  {(!isFrench || hasAlternate) && <link rel="alternate" href={englishURL} hreflang="en" />}
+  {(isFrench || hasAlternate) && <link rel="alternate" href={frenchURL} hreflang="fr" />}
+  <link rel="alternate" href={xDefaultURL} hreflang="x-default" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="M221Tech" />
@@ -152,7 +160,7 @@ const webpageId = `${canonicalURL.href}#webpage`;
 </head>
 <body>
   <a class="m221-skip-link" href="#main-content">{isFrench ? 'Aller au contenu' : 'Skip to content'}</a>
-  <Header />
+  <Header activeSection={navSection} englishPath={englishPath} frenchPath={frenchPath} hasAlternate={hasAlternate} />
   <main id="main-content" tabindex="-1">
     <slot />
   </main>
