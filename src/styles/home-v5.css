@@ -66,11 +66,11 @@
   text-transform:uppercase;
 }
 .m221-v5-signal-node:before{content:"";width:7px;height:7px;border-radius:50%;background:#3FE6A8;box-shadow:0 0 0 5px rgba(63,230,168,.055)}
-.m221-v5-signal-node[data-node="sports"]{top:22%;right:0;color:#BDEFF6}
-.m221-v5-signal-node[data-node="nutrition"]{bottom:20%;left:0;color:#FFE582}
-.m221-v5-signal-node[data-node="nutrition"]:before{background:#FFC300;box-shadow:0 0 0 5px rgba(255,195,0,.055)}
-.m221-v5-signal-node[data-node="facts"]{bottom:3%;right:-2%;color:#BFEDE3}
-.m221-v5-signal-node[data-node="facts"]:before{background:#69D8C0;box-shadow:0 0 0 5px rgba(105,216,192,.055)}
+.m221-v5-signal-node[data-node="products"]{top:22%;right:0;color:#BDEFF6}
+.m221-v5-signal-node[data-node="datasets"]{bottom:20%;left:0;color:#FFE582}
+.m221-v5-signal-node[data-node="datasets"]:before{background:#FFC300;box-shadow:0 0 0 5px rgba(255,195,0,.055)}
+.m221-v5-signal-node[data-node="reports"]{bottom:3%;right:-2%;color:#BFEDE3}
+.m221-v5-signal-node[data-node="reports"]:before{background:#69D8C0;box-shadow:0 0 0 5px rgba(105,216,192,.055)}
 
 /* STICKY NAV — quieter, almost instrument-like */
 .m221-v4-spine-wrap{box-shadow:0 10px 30px rgba(0,0,0,.08)}
