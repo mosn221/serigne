@@ -63,7 +63,7 @@
 }
 .m221-mobile-panel>a:hover,
 .m221-mobile-panel>a:focus-visible,
-.m221-mobile-panel>a[aria-current="true"]{
+.m221-mobile-panel>a[data-active="true"]{
   color:#F5F7FA!important;
   background:rgba(63,230,168,.055)!important;
 }
