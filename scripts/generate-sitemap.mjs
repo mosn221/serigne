@@ -53,7 +53,7 @@ function escapeXml(value) {
 }
 
 function absolute(route) {
-  return `${site}${route === '/' ? '/' : route.slice(1)}`;
+  return `${site}${route}`;
 }
 
 function englishRoute(route) {
