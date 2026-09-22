@@ -21,8 +21,8 @@
   --text: #F5F7FA;
   --text-dark: #1B2333;
   --muted: #AEB6C2;
-  --primary: #0088CC;
-  --cyan: #1DE9FF;
+  --primary: #00BFD6;
+  --cyan: #3FE6A8;
   --accent: #FFC300;
   --max-width: 1120px;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
@@ -1307,11 +1307,11 @@ button:focus-visible {
   background:
     linear-gradient(
       135deg,
-      rgba(0,136,204,0.18),
+      rgba(0,191,214,0.18),
       rgba(29,233,255,0.08)
     );
   box-shadow:
-    0 10px 24px rgba(0,136,204,0.18);
+    0 10px 24px rgba(0,191,214,0.18);
 }
 
 .tech-tab.active {
@@ -1320,12 +1320,12 @@ button:focus-visible {
   background:
     linear-gradient(
       135deg,
-      #0088CC,
-      #1DE9FF,
+      #00BFD6,
+      #3FE6A8,
       #FFC300
     );
   box-shadow:
-    0 14px 30px rgba(0,136,204,0.28);
+    0 14px 30px rgba(0,191,214,0.28);
 }
 
 .tech-tab.active::before {
