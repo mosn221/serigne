@@ -26,10 +26,20 @@ const labels = isFrench
   <div class="m221-container m221-header-inner">
     <a class="m221-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
       <img
+        class="m221-brand-full"
+        src="/assets/img/m221tech-wordmark.svg"
+        alt=""
+        width="342"
+        height="64"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <img
+        class="m221-brand-compact"
         src="/assets/img/m221-site-lockup.svg"
         alt=""
-        width="82"
-        height="30"
+        width="87"
+        height="32"
         decoding="async"
         fetchpriority="high"
       />
