@@ -10,7 +10,7 @@
 .m221-brand-compact{display:none!important}
 .m221-nav a[aria-current="true"]{
   color:#F5F7FA;
-  background:rgba(0,136,204,.10);
+  background:rgba(0,191,214,.10);
 }
 
 /* Accessible custom burger instead of a font glyph. */
@@ -66,7 +66,7 @@
 .m221-mobile-panel>a:focus-visible,
 .m221-mobile-panel>a[aria-current="true"]{
   color:#F5F7FA!important;
-  background:rgba(126,232,247,.055)!important;
+  background:rgba(63,230,168,.055)!important;
 }
 .m221-mobile-panel>a:last-of-type{color:#FFE16A!important}
 .m221-mobile-panel .m221-lang{
@@ -105,7 +105,7 @@
 
 /* Keyboard focus should remain visible on dark surfaces. */
 :where(.m221-nav a,.m221-mobile-nav summary,.m221-mobile-panel a,.m221-sports-local-nav a,.m221-nutrition-local-nav a,.m221-open-local-nav a,.m221-footer a):focus-visible{
-  outline:2px solid #7EE8F7;
+  outline:2px solid #3FE6A8;
   outline-offset:3px;
 }
 
