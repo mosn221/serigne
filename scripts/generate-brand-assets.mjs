@@ -1,10 +1,13 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
-const outDir = new URL('../public/assets/img/', import.meta.url);
+const rootDir = fileURLToPath(new URL('..', import.meta.url));
+const outDir = path.join(rootDir, 'public', 'assets', 'img');
 await mkdir(outDir, { recursive: true });
 
-const asset = (name) => new URL(name, outDir);
+const asset = (name) => path.join(outDir, name);
 const [markSvg, markOnLightSvg, lockupSvg, lockupOnLightSvg, faviconSvg] = await Promise.all([
   readFile(asset('m221tech-mark.svg')),
   readFile(asset('m221tech-mark-on-light.svg')),
@@ -102,7 +105,7 @@ function buildIco(buffers, sizes) {
   return Buffer.concat([header, ...buffers]);
 }
 
-await writeFile(new URL('../public/favicon.ico', import.meta.url), buildIco(faviconBuffers, faviconSizes));
+await writeFile(path.join(rootDir, 'public', 'favicon.ico'), buildIco(faviconBuffers, faviconSizes));
 
 await renderSvg(faviconSvg, 'apple-touch-icon.png', 180);
 await renderSvg(faviconSvg, 'icon-192.png', 192);
