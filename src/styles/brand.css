@@ -64,13 +64,17 @@ h1,h2,h3,h4,h5,h6,
   flex: 0 0 auto;
 }
 
+.m221-brand-picture {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
 .m221-brand img {
   display: block;
   width: auto;
+  height: 34px;
 }
-
-.m221-brand-full { height: 34px; }
-.m221-brand-compact { display: none; }
 
 .m221-nav {
   gap: 4px;
@@ -94,7 +98,7 @@ h1,h2,h3,h4,h5,h6,
   background: rgba(255,255,255,.05);
 }
 
-.m221-nav a[aria-current="page"] {
+.m221-nav a[data-active="true"] {
   color: var(--m221-text);
   background: rgba(0,191,214,.13);
 }
@@ -181,8 +185,7 @@ body .m221-vertical-nutrition .m221-project-signature { color: var(--m221-accent
 
 @media (max-width: 760px) {
   .m221-header-inner { min-height: 58px; }
-  .m221-brand-full { display: none; }
-  .m221-brand-compact { display: block; height: 27px; }
+  .m221-brand img { height: 27px; }
   .m221-mobile-nav summary {
     padding: 8px 11px;
     border: 1px solid rgba(255,255,255,.08);
