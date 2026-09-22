@@ -1,7 +1,7 @@
 .m221-home-v4{
   --v5-line:rgba(255,255,255,.075);
   --v5-soft:rgba(255,255,255,.035);
-  --v5-sports:#7EE8F7;
+  --v5-sports:#3FE6A8;
   --v5-food:#FFC300;
   --v5-facts:#69D8C0;
 }
@@ -13,7 +13,7 @@
   align-items:center;
   padding:112px 0 88px;
   background:
-    radial-gradient(circle at 82% 22%,rgba(0,136,204,.16),transparent 0 26%),
+    radial-gradient(circle at 82% 22%,rgba(0,191,214,.16),transparent 0 26%),
     linear-gradient(90deg,transparent 0 74%,rgba(255,255,255,.022) 74% 74.1%,transparent 74.1%),
     #0B1020;
 }
@@ -33,7 +33,7 @@
 .m221-v5-signal:before,.m221-v5-signal:after{
   content:"";
   position:absolute;
-  border:1px solid rgba(126,232,247,.16);
+  border:1px solid rgba(63,230,168,.16);
   border-radius:50%;
 }
 .m221-v5-signal:before{width:min(28vw,330px);aspect-ratio:1}
@@ -45,10 +45,10 @@
   aspect-ratio:1;
   display:grid;
   place-items:center;
-  border:1px solid rgba(126,232,247,.34);
+  border:1px solid rgba(63,230,168,.34);
   border-radius:50%;
   background:rgba(11,16,32,.82);
-  box-shadow:0 0 0 18px rgba(0,136,204,.035);
+  box-shadow:0 0 0 18px rgba(0,191,214,.035);
   font:600 .64rem/1.25 'IBM Plex Mono',monospace;
   letter-spacing:.08em;
   text-align:center;
@@ -65,7 +65,7 @@
   letter-spacing:.055em;
   text-transform:uppercase;
 }
-.m221-v5-signal-node:before{content:"";width:7px;height:7px;border-radius:50%;background:#7EE8F7;box-shadow:0 0 0 5px rgba(126,232,247,.055)}
+.m221-v5-signal-node:before{content:"";width:7px;height:7px;border-radius:50%;background:#3FE6A8;box-shadow:0 0 0 5px rgba(63,230,168,.055)}
 .m221-v5-signal-node[data-node="sports"]{top:22%;right:0;color:#BDEFF6}
 .m221-v5-signal-node[data-node="nutrition"]{bottom:20%;left:0;color:#FFE582}
 .m221-v5-signal-node[data-node="nutrition"]:before{background:#FFC300;box-shadow:0 0 0 5px rgba(255,195,0,.055)}
@@ -77,7 +77,7 @@
 .m221-v4-spine a{position:relative;justify-content:center;border-right:0!important;letter-spacing:.01em}
 .m221-v4-spine a:after{content:"";position:absolute;left:16%;right:16%;bottom:0;height:1px;background:transparent;transition:background .18s ease}
 .m221-v4-spine a[aria-current="true"]{background:transparent!important}
-.m221-v4-spine a[aria-current="true"]:after{background:#7EE8F7}
+.m221-v4-spine a[aria-current="true"]:after{background:#3FE6A8}
 
 /* CHAPTER HEADS */
 .m221-v4-chapter{position:relative;overflow:hidden}
@@ -125,10 +125,10 @@
   transition:transform .35s ease,border-color .35s ease;
 }
 .m221-v5-project:hover:after{transform:scale(1.06)}
-.m221-v5-project[data-tone="sports"]{background:linear-gradient(145deg,rgba(0,136,204,.10),transparent 48%),#0F1729}
+.m221-v5-project[data-tone="sports"]{background:linear-gradient(145deg,rgba(0,191,214,.10),transparent 48%),#0F1729}
 .m221-v5-project[data-tone="food"]{background:linear-gradient(145deg,rgba(255,195,0,.075),transparent 48%),#0F1729}
 .m221-v5-project[data-tone="facts"]{background:linear-gradient(145deg,rgba(105,216,192,.075),transparent 48%),#0F1729}
-.m221-v5-project[data-tone="sports"]:after{border-color:rgba(126,232,247,.18)}
+.m221-v5-project[data-tone="sports"]:after{border-color:rgba(63,230,168,.18)}
 .m221-v5-project[data-tone="food"]:after{border-color:rgba(255,195,0,.18)}
 .m221-v5-project[data-tone="facts"]:after{border-color:rgba(105,216,192,.18)}
 .m221-v5-project-top,.m221-v5-project-main,.m221-v5-project-actions{position:relative;z-index:2}
@@ -146,7 +146,7 @@
 .m221-v5-project-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:34px}
 .m221-v5-project-actions a{display:inline-flex;align-items:center;min-height:42px;padding:0 13px;border-radius:10px;text-decoration:none;font-size:.78rem;font-weight:650}
 .m221-v5-project-page{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.035)}
-.m221-v5-project-page:hover{border-color:rgba(126,232,247,.32);background:rgba(126,232,247,.06)}
+.m221-v5-project-page:hover{border-color:rgba(63,230,168,.32);background:rgba(63,230,168,.06)}
 .m221-v5-project-direct{color:#7E8B9E;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}
 .m221-v5-project-direct:hover{color:#F5F7FA}
 
