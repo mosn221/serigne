@@ -2,14 +2,16 @@
 
 Canonical assets live in `public/assets/img/`.
 
-The approved primary identity is the horizontal **M + 221Tech** lockup. The standalone **data-ribbon M** is the compact mark used when horizontal space is limited.
+The approved full brand identity is the horizontal **M + 221Tech** lockup. For the website chrome, the preferred signature is the more compact **M221** lockup. The standalone **data-ribbon M** remains the compact mark for favicons, avatars and constrained spaces.
 
 ## Source assets
 
 | Asset | Role | Use |
 | --- | --- | --- |
-| `m221tech-wordmark.svg` | Primary lockup on dark surfaces | Header, footer, presentations, brand-forward UI |
-| `m221tech-wordmark-on-light.svg` | Primary lockup on light surfaces | Light backgrounds |
+| `m221tech-wordmark.svg` | Full M221Tech lockup on dark surfaces | Social cards, presentations, external brand use |
+| `m221tech-wordmark-on-light.svg` | Full M221Tech lockup on light surfaces | External brand use on light backgrounds |
+| `m221-site-lockup.svg` | Compact M221 site signature | Header and footer |
+| `m221-site-lockup-on-light.svg` | Compact M221 site signature on light | Reserved light-surface site use |
 | `m221tech-mark.svg` | Standalone mark on dark surfaces | Compact identity, avatars, app/social marks |
 | `m221tech-mark-on-light.svg` | Standalone mark on light surfaces | Compact identity on light backgrounds |
 | `favicon.svg` | Branded dark-square favicon source | Browser favicon |
@@ -61,10 +63,11 @@ The build also runs this automatically before Astro.
 
 ## Usage hierarchy
 
-1. **Primary logo:** horizontal M + 221Tech lockup.
-2. **Compact mark:** standalone M for favicons, avatars and constrained spaces.
-3. **Social preview:** 1200×630 full lockup card.
-4. **Square social / profile:** 1200×1200 standalone mark.
-5. **PWA / device icons:** dark-square compact mark.
+1. **Website chrome:** compact M221 lockup.
+2. **Full brand logo:** horizontal M + 221Tech lockup for external and brand-forward use.
+3. **Compact mark:** standalone M for favicons, avatars and constrained spaces.
+4. **Social preview:** 1200×630 full M221Tech lockup card.
+5. **Square social / profile:** 1200×1200 standalone mark.
+6. **PWA / device icons:** dark-square compact mark.
 
 Do not recreate the logo manually in page markup. Use the canonical assets or the generated derivatives so the identity stays consistent.
