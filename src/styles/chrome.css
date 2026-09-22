@@ -340,11 +340,11 @@
   color:#F5F7FA;
   background:rgba(255,255,255,.025);
 }
-.m221-footer-linkedin{
+.m221-footer-links .m221-footer-linkedin{
   grid-column:1/-1;
-  padding-inline:4px!important;
-  border-left:0!important;
-  color:#3FE6A8!important;
+  padding-inline:4px;
+  border-left:0;
+  color:#3FE6A8;
 }
 .m221-footer-linkedin span{font-size:.9rem}
 .m221-footer-meta{
@@ -389,7 +389,7 @@
     border-right:1px solid rgba(255,255,255,.05);
     background:transparent!important;
     box-shadow:inset 0 0 0 transparent;
-    font-size:.72rem!important;
+    font-size:.72rem;
     line-height:1;
     white-space:nowrap;
     transform:none!important;
@@ -426,30 +426,30 @@
 
   .m221-container{width:min(calc(100% - 24px),var(--m221-max))}
   .m221-header-inner{
-    min-height:var(--m221-header-h)!important;
+    min-height:var(--m221-header-h);
     gap:10px;
   }
-  .m221-brand-picture img{height:27px!important}
+  .m221-brand-picture img{height:27px}
   .m221-nav,
   .m221-header-inner>.m221-lang{display:none}
   .m221-mobile-nav{display:block}
 
   .m221-mobile-nav summary{
     width:42px;
-    min-width:42px!important;
+    min-width:42px;
     height:34px;
-    min-height:34px!important;
+    min-height:34px;
   }
   .m221-mobile-panel{
-    top:41px!important;
-    width:min(300px,calc(100vw - 24px))!important;
-    max-height:calc(100dvh - 68px)!important;
-    padding:7px!important;
+    top:41px;
+    width:min(300px,calc(100vw - 24px));
+    max-height:calc(100dvh - 68px);
+    padding:7px;
   }
   .m221-mobile-panel>a{
-    min-height:43px!important;
-    padding:0 10px!important;
-    font-size:.72rem!important;
+    min-height:43px;
+    padding:0 10px;
+    font-size:.72rem;
   }
 
   .m221-sports-local-nav a,
@@ -492,11 +492,11 @@
   .m221-footer-links a,
   .m221-footer-links a:nth-child(odd),
   .m221-footer-links a:nth-child(even),
-  .m221-footer-linkedin{
+  .m221-footer-links .m221-footer-linkedin{
     grid-column:auto;
     min-height:48px;
-    padding:0!important;
-    border-left:0!important;
+    padding:0;
+    border-left:0;
   }
   .m221-footer-meta{
     align-items:flex-start;
@@ -508,7 +508,7 @@
 
 @media(max-width:430px){
   .m221-container{width:min(calc(100% - 22px),var(--m221-max))}
-  .m221-mobile-panel{width:calc(100vw - 22px)!important}
+  .m221-mobile-panel{width:calc(100vw - 22px)}
   .m221-v4-spine a,
   .m221-sports-local-nav a,
   .m221-nutrition-local-nav a,
