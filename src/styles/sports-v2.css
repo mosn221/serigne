@@ -1,9 +1,9 @@
 .m221-sports-page{
-  --sports-cyan:#7EE8F7;
-  --sports-blue:#0088CC;
+  --sports-cyan:#3FE6A8;
+  --sports-blue:#00BFD6;
   --sports-yellow:#FFC300;
   --sports-line:rgba(255,255,255,.08);
-  --sports-soft:rgba(0,136,204,.08);
+  --sports-soft:rgba(0,191,214,.08);
   background:#0B1020;
 }
 
@@ -15,7 +15,7 @@
   padding:86px 0 76px;
   border-bottom:1px solid var(--sports-line);
   background:
-    radial-gradient(circle at 84% 16%,rgba(0,136,204,.14),transparent 0 28%),
+    radial-gradient(circle at 84% 16%,rgba(0,191,214,.14),transparent 0 28%),
     linear-gradient(180deg,#0B1020,#0B1121);
 }
 .m221-sports-hero:before{
@@ -81,7 +81,7 @@
 .m221-sports-actions .is-primary{color:#07101A;border-color:var(--sports-cyan);background:var(--sports-cyan)}
 .m221-sports-actions .is-primary:hover{background:#BDF6FC;border-color:#BDF6FC}
 .m221-sports-actions .is-secondary{color:#C0CBD9;background:rgba(255,255,255,.025)}
-.m221-sports-actions .is-secondary:hover{border-color:rgba(126,232,247,.35);color:#F5F7FA}
+.m221-sports-actions .is-secondary:hover{border-color:rgba(63,230,168,.35);color:#F5F7FA}
 
 .m221-sports-local-wrap{
   position:sticky;
@@ -155,9 +155,9 @@
   display:grid;
   grid-template-columns:minmax(0,1.1fr) minmax(310px,.68fr);
   overflow:hidden;
-  border:1px solid rgba(126,232,247,.15);
+  border:1px solid rgba(63,230,168,.15);
   border-radius:24px;
-  background:linear-gradient(135deg,rgba(0,136,204,.10),transparent 46%),#0E1628;
+  background:linear-gradient(135deg,rgba(0,191,214,.10),transparent 46%),#0E1628;
 }
 .m221-sports-core-copy{display:flex;min-height:420px;flex-direction:column;padding:34px}
 .m221-sports-eyebrow{color:var(--sports-cyan);font:600 .62rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
@@ -170,7 +170,7 @@
 .m221-sports-domain{color:#8492A6;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}
 .m221-sports-domain:hover{color:#F5F7FA}
 
-.m221-sports-capabilities{padding:20px;border-left:1px solid rgba(126,232,247,.1);background:rgba(7,12,22,.28)}
+.m221-sports-capabilities{padding:20px;border-left:1px solid rgba(63,230,168,.1);background:rgba(7,12,22,.28)}
 .m221-sports-capability{border-bottom:1px solid rgba(255,255,255,.07)}
 .m221-sports-capability:last-child{border-bottom:0}
 .m221-sports-capability summary{
@@ -222,7 +222,7 @@
   background:#0F1729;
   transition:border-color .18s ease,transform .18s ease,background-color .18s ease;
 }
-.m221-sports-data-item:hover{transform:translateY(-2px);border-color:rgba(126,232,247,.22);background:#101A2E}
+.m221-sports-data-item:hover{transform:translateY(-2px);border-color:rgba(63,230,168,.22);background:#101A2E}
 .m221-sports-data-item span{color:#59677D;font:600 .6rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em}
 .m221-sports-data-item h3{max-width:280px;margin:54px 0 0;font:650 1.55rem/1.03 'Space Grotesk',sans-serif;letter-spacing:-.04em}
 .m221-sports-data-item p{max-width:320px;margin:12px 0 0;color:#8793A5;font-size:.84rem;line-height:1.55}
@@ -232,8 +232,8 @@
 .m221-sports-contact-inner{position:relative;z-index:1;display:grid;grid-template-columns:110px 1fr auto;gap:28px;align-items:end}
 .m221-sports-contact h2{max-width:650px;margin:0;font:650 clamp(2.5rem,4.7vw,4.6rem)/.95 'Space Grotesk',sans-serif;letter-spacing:-.055em}
 .m221-sports-contact p{margin:12px 0 0;color:#8995A7}
-.m221-sports-contact a{display:inline-flex;min-height:44px;align-items:center;padding:0 15px;border:1px solid rgba(126,232,247,.2);border-radius:11px;background:rgba(126,232,247,.06);text-decoration:none;font-size:.78rem;font-weight:650}
-.m221-sports-contact a:hover{background:rgba(126,232,247,.10)}
+.m221-sports-contact a{display:inline-flex;min-height:44px;align-items:center;padding:0 15px;border:1px solid rgba(63,230,168,.2);border-radius:11px;background:rgba(63,230,168,.06);text-decoration:none;font-size:.78rem;font-weight:650}
+.m221-sports-contact a:hover{background:rgba(63,230,168,.10)}
 
 @media(max-width:980px){
   .m221-sports-page [id]{scroll-margin-top:130px}
@@ -243,7 +243,7 @@
   .m221-sports-chapter-head>p{grid-column:2}
   .m221-sports-core{grid-template-columns:1fr}
   .m221-sports-core-copy{min-height:360px}
-  .m221-sports-capabilities{border-left:0;border-top:1px solid rgba(126,232,247,.1)}
+  .m221-sports-capabilities{border-left:0;border-top:1px solid rgba(63,230,168,.1)}
   .m221-sports-event{grid-template-columns:150px 1fr}
   .m221-sports-event-actions{grid-column:2;margin-top:2px}
   .m221-sports-contact-inner{grid-template-columns:90px 1fr}
