@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pagesDir = path.join(rootDir, 'src', 'pages');
-const outputFile = path.join(rootDir, 'public', 'sitemap.xml');
+const outputFile = path.join(rootDir, 'dist', 'sitemap.xml');
 const site = 'https://m221.tech';
 
 const pageExtensions = new Set(['.astro', '.md', '.mdx']);
