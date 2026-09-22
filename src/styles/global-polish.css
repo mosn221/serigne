@@ -6,9 +6,8 @@
 /* Header: one predictable height and one navigation language everywhere. */
 .m221-header{z-index:60}
 .m221-header-inner{min-height:var(--m221-header-h)}
-.m221-brand-full{height:34px!important}
-.m221-brand-compact{display:none!important}
-.m221-nav a[aria-current="true"]{
+.m221-brand-picture img{height:34px!important}
+.m221-nav a[data-active="true"]{
   color:#F5F7FA;
   background:rgba(0,191,214,.10);
 }
@@ -116,8 +115,7 @@
   }
 
   .m221-header-inner{min-height:var(--m221-header-h)!important}
-  .m221-brand-full{display:none!important}
-  .m221-brand-compact{display:block!important;height:27px!important}
+  .m221-brand-picture img{height:27px!important}
 
   .m221-mobile-nav summary{
     width:44px;
