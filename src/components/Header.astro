@@ -69,9 +69,9 @@ const labels = isFrench
         </span>
       </summary>
       <div id={mobilePanelId} class="m221-mobile-panel">
-        <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
+        <a href={projectsHref} data-active={projectPage ? 'true' : undefined}>{labels.projects}</a>
         <a href={whyHref}>{labels.why}</a>
-        <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
+        <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
         <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
           <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
