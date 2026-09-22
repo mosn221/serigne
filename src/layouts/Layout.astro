@@ -22,25 +22,37 @@ interface Props {
 const {
   title,
   description,
-  ogImage = 'https://m221.tech/assets/img/m221tech-social-card.png'
+  ogImage = '/assets/img/m221tech-social-card.png'
 } = Astro.props;
-const pathname = Astro.url.pathname;
-const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+
+const rawPathname = Astro.url.pathname;
+const normalizePath = (path: string) => path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`;
+const pathname = normalizePath(rawPathname);
+const isFrench = pathname === '/fr/' || pathname.startsWith('/fr/');
 const lang = isFrench ? 'fr' : 'en';
 
 const canonicalURL = new URL(pathname, Astro.site);
-const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
-const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
+const englishPath = isFrench ? normalizePath(pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
+const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : normalizePath(`/fr${pathname}`));
 const englishURL = new URL(englishPath, Astro.site);
 const frenchURL = new URL(frenchPath, Astro.site);
+const socialImageURL = new URL(ogImage, Astro.site);
 
 const isProduction = process.env.CONTEXT === 'production';
-const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
-const socialImageAlt = isFrench ? 'Identité visuelle M221Tech' : 'M221Tech visual identity';
+const robotsContent = isProduction
+  ? 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
+  : 'noindex,nofollow,noarchive';
+const socialImageAlt = isFrench
+  ? 'M221Tech — identité visuelle'
+  : 'M221Tech — visual identity';
 
 const organizationDescription = isFrench
-  ? 'M221Tech est une data house qui construit des produits numériques, des datasets et des projets autour de la donnée.'
-  : 'M221Tech is a data house building digital products, datasets and projects around data.';
+  ? 'M221Tech construit des produits numériques autour du sport, de l’alimentation et de l’information publique au Sénégal.'
+  : 'M221Tech builds digital products around sports, food and public information in Senegal.';
+
+const organizationId = new URL('/#organization', Astro.site).href;
+const websiteId = new URL('/#website', Astro.site).href;
+const webpageId = `${canonicalURL.href}#webpage`;
 ---
 
 <!DOCTYPE html>
@@ -50,6 +62,8 @@ const organizationDescription = isFrench
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B1020" />
   <meta name="color-scheme" content="dark" />
+  <meta name="application-name" content="M221Tech" />
+  <meta name="apple-mobile-web-app-title" content="M221Tech" />
 
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -68,8 +82,8 @@ const organizationDescription = isFrench
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:locale" content={isFrench ? 'fr_FR' : 'en_US'} />
   <meta property="og:locale:alternate" content={isFrench ? 'en_US' : 'fr_FR'} />
-  <meta property="og:image" content={ogImage} />
-  <meta property="og:image:secure_url" content={ogImage} />
+  <meta property="og:image" content={socialImageURL} />
+  <meta property="og:image:secure_url" content={socialImageURL} />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -78,19 +92,53 @@ const organizationDescription = isFrench
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={socialImageURL} />
   <meta name="twitter:image:alt" content={socialImageAlt} />
 
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'M221Tech',
-    url: 'https://m221.tech',
-    logo: 'https://m221.tech/assets/img/m221tech-mark-512.png',
-    description: organizationDescription,
-    sameAs: [
-      'https://www.linkedin.com/company/m221tech',
-      'https://www.kaggle.com/m221tech'
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': organizationId,
+        name: 'M221Tech',
+        url: 'https://m221.tech/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://m221.tech/assets/img/m221tech-mark-512.png',
+          width: 512,
+          height: 512
+        },
+        description: organizationDescription,
+        sameAs: [
+          'https://www.linkedin.com/company/m221tech',
+          'https://www.kaggle.com/m221tech'
+        ]
+      },
+      {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        url: 'https://m221.tech/',
+        name: 'M221Tech',
+        inLanguage: ['en', 'fr'],
+        publisher: { '@id': organizationId }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': webpageId,
+        url: canonicalURL.href,
+        name: title,
+        description,
+        inLanguage: lang,
+        isPartOf: { '@id': websiteId },
+        about: { '@id': organizationId },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: socialImageURL.href,
+          width: 1200,
+          height: 630
+        }
+      }
     ]
   })} />
 
