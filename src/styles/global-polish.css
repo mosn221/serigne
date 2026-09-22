@@ -1,12 +1,13 @@
 :root{
-  --m221-header-h:68px;
+  --m221-header-h:72px;
   --m221-local-nav-h:50px;
 }
 
 /* Header: one predictable height and one navigation language everywhere. */
 .m221-header{z-index:60}
 .m221-header-inner{min-height:var(--m221-header-h)}
-.m221-brand img{height:30px!important}
+.m221-brand-full{height:34px!important}
+.m221-brand-compact{display:none!important}
 .m221-nav a[aria-current="true"]{
   color:#F5F7FA;
   background:rgba(0,136,204,.10);
@@ -110,12 +111,13 @@
 
 @media(max-width:760px){
   :root{
-    --m221-header-h:56px;
+    --m221-header-h:58px;
     --m221-local-nav-h:44px;
   }
 
   .m221-header-inner{min-height:var(--m221-header-h)!important}
-  .m221-brand img{height:25px!important}
+  .m221-brand-full{display:none!important}
+  .m221-brand-compact{display:block!important;height:27px!important}
 
   .m221-mobile-nav summary{
     width:44px;
