@@ -73,3 +73,7 @@ The build also runs this automatically before Astro.
 8. **Structured-data organization logo:** square 512px standalone M.
 
 Do not recreate the logo manually in page markup. Use the canonical assets or the generated derivatives so the identity stays consistent.
+
+## Site chrome
+
+`src/styles/chrome.css` is the single canonical stylesheet for how the brand is presented in the shared site chrome: header, responsive brand lockup, navigation, mobile menu, section navigation, focus treatment and footer. Brand asset choices remain defined here in `BRAND.md`; their layout and responsive presentation belong in `chrome.css`.
