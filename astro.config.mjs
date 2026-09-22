@@ -13,6 +13,7 @@ export default defineConfig({
   // URL finale du site en production. Astro s'en sert pour générer les
   // URLs canoniques (<link rel="canonical">) et les balises Open Graph.
   site: 'https://m221.tech',
+  trailingSlash: 'always',
 
   integrations: [
     tailwind({
