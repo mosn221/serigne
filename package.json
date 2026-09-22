@@ -6,8 +6,9 @@
     "dev": "astro dev",
     "start": "astro dev",
     "brand:generate": "node scripts/generate-brand-assets.mjs",
-    "build": "npm run brand:generate && astro build",
-    "preview": "astro preview"
+    "build": "npm run brand:generate && npm run seo:generate && astro build",
+    "preview": "astro preview",
+    "seo:generate": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.2",
