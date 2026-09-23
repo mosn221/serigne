@@ -1,3 +1,16 @@
+/* ==========================================================================
+   STRUCTURAL BASE
+   --------------------------------------------------------------------------
+   Shared non-brand layout primitives inherited from the first Astro refactor:
+   box sizing, document flow, generic sections/cards/buttons and content grids.
+
+   IMPORTANT:
+   - brand tokens belong in brand.css;
+   - header/nav/footer/sticky navigation belong only in chrome.css;
+   - viewport-specific product tuning belongs in responsive.css or page CSS.
+   This file must never become another late-stage override layer.
+   ========================================================================== */
+
 :root{--m221-max:1120px}*{ box-sizing: border-box; }html{ scroll-behavior: smooth; background: var(--m221-bg); }body{
   margin: 0;
   background: var(--m221-bg);
