@@ -1,3 +1,16 @@
+/* ==========================================================================
+   SHARED CONTENT RESPONSIVE RULES
+   --------------------------------------------------------------------------
+   Cross-page responsive adjustments for content layouts only.
+
+   Deliberately excluded:
+   - header / desktop navigation / mobile menu;
+   - product-local sticky navigation;
+   - homepage section spine;
+   - footer.
+   Those are canonicalized in chrome.css so breakpoint geometry has one owner.
+   ========================================================================== */
+
 /* M221Tech responsive system */
 html,
 body{max-width:100%;overflow-x:clip}img,
