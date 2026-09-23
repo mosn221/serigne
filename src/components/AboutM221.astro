@@ -1,7 +1,10 @@
 ---
+// Brand-level About block shared by both homepages. Copy stays intentionally
+// project-agnostic so new M221Tech products do not require rewriting the identity.
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 
+// Keep EN/FR copy colocated to make parity obvious during future edits.
 const copy = isFrench
   ? {
       eyebrow: 'À PROPOS / M221TECH',
