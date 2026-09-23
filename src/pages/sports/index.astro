@@ -3,6 +3,7 @@
 // English Sports project page. navSection=projects activates the portfolio-level header state without hard-coding this route in Header.astro.
 // -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
+import M221FootBrandMark from '../../components/m221foot/M221FootBrandMark.astro';
 import '../../styles/sports-v2.css';
 ---
 
@@ -15,6 +16,7 @@ import '../../styles/sports-v2.css';
     <section class="m221-sports-hero">
       <div class="m221-container m221-sports-hero-inner">
         <a class="m221-sports-breadcrumb" href="/#projects">← M221Tech / Projects</a>
+        <M221FootBrandMark size={78} className="m221-sports-hero-mark" />
         <span class="m221-sports-kicker">M221TECH / SPORTS</span>
         <h1>Football data, shaped around the game.</h1>
         <p class="m221-sports-lead">Competitions, clubs, matches and richer layers of context — structured into products made to explore, follow and use.</p>
