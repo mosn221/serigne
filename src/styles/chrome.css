@@ -491,11 +491,20 @@
     --m221-home-nav-h:42px;
   }
 
-  .m221-header-inner{gap:10px}
+  .m221-header-inner{gap:8px}
   .m221-brand-picture img{height:27px}
-  .m221-nav,
-  .m221-header-inner>.m221-lang{display:none}
-  .m221-mobile-nav{display:block}
+  .m221-nav{display:none}
+  .m221-header-inner>.m221-lang{
+    display:flex;
+    margin-left:auto;
+    gap:5px;
+    padding:4px 6px;
+  }
+  .m221-header-inner>.m221-lang a{font-size:.64rem}
+  .m221-mobile-nav{
+    display:block;
+    margin-left:0;
+  }
 
   .m221-mobile-nav summary{
     width:42px;
