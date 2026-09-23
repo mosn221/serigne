@@ -1,3 +1,13 @@
+/* ==========================================================================
+   M221TECH BRAND TOKENS
+   --------------------------------------------------------------------------
+   Canonical site colors, type families and shared brand treatments that are
+   not part of the navigation chrome.
+
+   BRAND.md defines asset usage; chrome.css defines how the shared header,
+   navigation and footer present those assets responsively.
+   ========================================================================== */
+
 :root{
   --m221-bg: #0B1020;
   --m221-surface: #121A2E;
