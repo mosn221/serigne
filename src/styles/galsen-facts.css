@@ -8,9 +8,9 @@
    ========================================================================== */
 
 .m221-facts-page{
-  --facts-brand-green:#008751;
-  --facts-brand-yellow:#FFC300;
-  --facts-brand-red:#E11D48;
+  --facts-brand-green:#07683E;
+  --facts-brand-yellow:#FAC118;
+  --facts-brand-red:#E9223D;
   --facts-accent:#69D8C0;
   --facts-accent-soft:rgba(105,216,192,.11);
   --facts-warm:#E6CF78;
@@ -31,9 +31,9 @@
   padding:96px 0 74px;
   border-bottom:1px solid var(--facts-line);
   background:
-    radial-gradient(circle at 82% 15%,rgba(0,135,81,.10),transparent 0 25%),
-    radial-gradient(circle at 94% 40%,rgba(255,195,0,.055),transparent 0 19%),
-    radial-gradient(circle at 86% 76%,rgba(225,29,72,.045),transparent 0 22%),
+    radial-gradient(circle at 82% 15%,rgba(7,104,62,.10),transparent 0 25%),
+    radial-gradient(circle at 94% 40%,rgba(250,193,24,.055),transparent 0 19%),
+    radial-gradient(circle at 86% 76%,rgba(233,34,61,.045),transparent 0 22%),
     linear-gradient(90deg,transparent 0 77%,rgba(105,216,192,.03) 77% 77.1%,transparent 77.1%),
     #0B1020;
 }.m221-facts-hero:before{
