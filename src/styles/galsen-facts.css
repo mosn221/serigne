@@ -1,3 +1,12 @@
+/* ==========================================================================
+   GALSEN FACTS PRODUCT PAGE
+   --------------------------------------------------------------------------
+   Topic cards, source methodology, formats, explorations and contact styling
+   for Galsen Facts. The component is reused by EN/FR route wrappers.
+
+   Shared sticky local navigation is owned by chrome.css.
+   ========================================================================== */
+
 .m221-facts-page{
   --facts-accent:#69D8C0;
   --facts-accent-soft:rgba(105,216,192,.11);
