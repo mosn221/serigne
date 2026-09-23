@@ -1,3 +1,11 @@
+/* ==========================================================================
+   HOME — CURRENT VISUAL REFINEMENT
+   --------------------------------------------------------------------------
+   Final homepage-specific art direction layered on top of home-v4.css.
+   This file may refine hero/content presentation, but shared navigation and
+   global chrome must remain in chrome.css.
+   ========================================================================== */
+
 .m221-home-v4{
   --v5-line:rgba(255,255,255,.075);
   --v5-soft:rgba(255,255,255,.035);
