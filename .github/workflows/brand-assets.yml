@@ -42,7 +42,7 @@ jobs:
       - name: Commit generated raster assets
         shell: bash
         run: |
-          git add public/favicon.ico public/assets/img/*.png public/assets/img/*.webp public/assets/galsen-facts/*.png public/assets/galsen-facts/*.webp
+          git add public/favicon.ico public/assets/img/*.png public/assets/img/*.webp public/assets/galsen-facts/*.png
           if git diff --cached --quiet; then
             echo "Brand raster assets are already up to date."
             exit 0
