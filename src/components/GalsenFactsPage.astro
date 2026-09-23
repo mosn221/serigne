@@ -1,4 +1,6 @@
 ---
+// Galsen Facts page body is shared by the EN and FR route wrappers. This keeps the
+// structure and interactions identical while only the copy changes with the pathname.
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 
@@ -264,6 +266,9 @@ const copy = isFrench
 </div>
 
 <script>
+  // Local section-navigation controller. It computes the combined sticky-header offset,
+  // keeps aria-current synchronized with scroll position, and honors reduced motion.
+  // The same interaction pattern is used by the other product pages for consistency.
   const header = document.querySelector('.m221-header');
   const localWrap = document.querySelector('.m221-facts-local-wrap');
   const links = Array.from(document.querySelectorAll('[data-facts-link]'));
