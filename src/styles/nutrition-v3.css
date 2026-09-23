@@ -1,3 +1,11 @@
+/* ==========================================================================
+   NUTRITION PRODUCT PAGE — CURRENT REFINEMENT
+   --------------------------------------------------------------------------
+   Final Nutrition-specific art direction layered on nutrition-v2.css.
+   Keep this file focused on product content; shared navigation belongs in
+   chrome.css.
+   ========================================================================== */
+
 .m221-nutrition-page{
   --nutrition-yellow:#FFC300;
   --nutrition-cream:#FFF0A8;
