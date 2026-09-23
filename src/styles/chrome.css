@@ -215,17 +215,6 @@
   background:rgba(63,230,168,.055);
 }
 .m221-mobile-panel>a:last-of-type{color:#FFE16A}
-.m221-mobile-panel .m221-lang{
-  min-height:46px;
-  justify-content:flex-start;
-  margin-top:6px;
-  padding:10px 11px;
-  border:0;
-  border-top:1px solid rgba(255,255,255,.08);
-  border-radius:0;
-  background:transparent;
-}
-
 /* Shared project-local navigation */
 .m221-sports-local-wrap,
 .m221-nutrition-local-wrap,
