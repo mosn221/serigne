@@ -96,13 +96,6 @@ const labels = isFrench
         <a href={whyHref}>{labels.why}</a>
         <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
-        {hasAlternate && (
-          <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-            <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
-            <span aria-hidden="true">/</span>
-            <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
-          </div>
-        )>
       </div>
     </details>
   </div>
