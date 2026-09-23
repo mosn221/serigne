@@ -7,19 +7,24 @@
    ========================================================================== */
 
 .m221-sports-page{
-  --sports-cyan:#3FE6A8;
-  --sports-blue:#00BFD6;
+  --sports-cyan:#52E7E2;
+  --sports-blue:#0A9F95;
+  --sports-lime:#D2FF4C;
   --sports-yellow:#FFC300;
   --sports-line:rgba(255,255,255,.08);
   --sports-soft:rgba(0,191,214,.08);
   background:#0B1020;
 }.m221-sports-hero{
   position:relative;
+  min-height:560px;
+  display:flex;
+  align-items:center;
   overflow:hidden;
-  padding:86px 0 76px;
+  padding:78px 0 66px;
   border-bottom:1px solid var(--sports-line);
   background:
-    radial-gradient(circle at 84% 16%,rgba(0,191,214,.14),transparent 0 28%),
+    radial-gradient(circle at 84% 18%,rgba(82,231,226,.12),transparent 0 27%),
+    radial-gradient(circle at 95% 58%,rgba(210,255,76,.045),transparent 0 21%),
     linear-gradient(180deg,#0B1020,#0B1121);
 }.m221-sports-hero:before{
   content:"";
@@ -36,7 +41,7 @@
   display:inline-flex;
   align-items:center;
   gap:9px;
-  margin-bottom:34px;
+  margin-bottom:28px;
   color:#6E7B90;
   font:500 .68rem/1 'IBM Plex Mono',monospace;
   text-decoration:none;
@@ -44,64 +49,65 @@
   letter-spacing:.07em;
 }.m221-sports-breadcrumb:hover{color:#D9F9FD}.m221-sports-kicker{
   display:block;
-  margin-bottom:16px;
+  margin-bottom:14px;
   color:var(--sports-cyan);
-  font:600 .68rem/1 'IBM Plex Mono',monospace;
+  font:600 .62rem/1 'IBM Plex Mono',monospace;
   text-transform:uppercase;
   letter-spacing:.11em;
 }.m221-sports-hero h1{
-  max-width:900px;
+  max-width:880px;
   margin:0;
-  font:650 clamp(3.4rem,7.2vw,7rem)/.9 'Space Grotesk',sans-serif;
+  font:650 clamp(3.6rem,7vw,6.7rem)/.9 'Space Grotesk',sans-serif;
   letter-spacing:-.07em;
 }.m221-sports-lead{
-  max-width:730px;
-  margin:24px 0 0;
-  color:#9BA7B8;
-  font-size:clamp(1.02rem,1.7vw,1.2rem);
+  max-width:650px;
+  margin:20px 0 0;
+  color:#98A5B6;
+  font-size:clamp(1rem,1.45vw,1.12rem);
   line-height:1.55;
-}.m221-sports-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}.m221-sports-actions a{
+}.m221-sports-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.m221-sports-actions a{
   display:inline-flex;
-  min-height:46px;
+  min-height:43px;
   align-items:center;
   justify-content:center;
   padding:0 17px;
   border:1px solid rgba(255,255,255,.12);
-  border-radius:12px;
+  border-radius:9px;
   text-decoration:none;
   font-size:.82rem;
   font-weight:650;
   transition:border-color .18s ease,background-color .18s ease,color .18s ease;
-}.m221-sports-actions .is-primary{color:#07101A;border-color:var(--sports-cyan);background:var(--sports-cyan)}.m221-sports-actions .is-primary:hover{background:#BDF6FC;border-color:#BDF6FC}.m221-sports-actions .is-secondary{color:#C0CBD9;background:rgba(255,255,255,.025)}.m221-sports-actions .is-secondary:hover{border-color:rgba(63,230,168,.35);color:#F5F7FA}.m221-sports-chapter{padding:92px 0;border-bottom:1px solid var(--sports-line)}.m221-sports-chapter-head{
+}.m221-sports-actions .is-primary{color:#07101A;border-color:var(--sports-cyan);background:var(--sports-cyan)}.m221-sports-actions .is-primary:hover{background:#BDF6FC;border-color:#BDF6FC}.m221-sports-actions .is-secondary{color:#C0CBD9;background:rgba(255,255,255,.025)}.m221-sports-actions .is-secondary:hover{border-color:rgba(63,230,168,.35);color:#F5F7FA}.m221-sports-chapter{padding:78px 0;border-bottom:1px solid var(--sports-line)}.m221-sports-chapter-head{
   display:grid;
-  grid-template-columns:110px minmax(0,1fr) minmax(250px,.56fr);
-  gap:28px;
+  grid-template-columns:92px minmax(0,1fr) minmax(240px,.5fr);
+  gap:24px;
   align-items:start;
-  margin-bottom:42px;
+  margin-bottom:34px;
 }.m221-sports-index{
-  padding-top:8px;
+  padding-top:6px;
   color:#536079;
-  font:600 .62rem/1.35 'IBM Plex Mono',monospace;
+  font:600 .57rem/1.35 'IBM Plex Mono',monospace;
   text-transform:uppercase;
   letter-spacing:.07em;
 }.m221-sports-chapter-head h2{
-  max-width:760px;
+  max-width:700px;
   margin:0;
-  font:650 clamp(2.7rem,5vw,4.8rem)/.94 'Space Grotesk',sans-serif;
+  font:650 clamp(2.5rem,4.7vw,4.35rem)/.94 'Space Grotesk',sans-serif;
   letter-spacing:-.06em;
 }.m221-sports-chapter-head>p{
+  max-width:340px;
   margin:4px 0 0;
-  color:#8D99AA;
-  font-size:.94rem;
+  color:#8793A6;
+  font-size:.86rem;
   line-height:1.55;
 }.m221-sports-core{
   display:grid;
   grid-template-columns:minmax(0,1.1fr) minmax(310px,.68fr);
   overflow:hidden;
   border:1px solid rgba(63,230,168,.15);
-  border-radius:24px;
-  background:linear-gradient(135deg,rgba(0,191,214,.10),transparent 46%),#0E1628;
-}.m221-sports-core-copy{display:flex;min-height:420px;flex-direction:column;padding:34px}.m221-sports-eyebrow{color:var(--sports-cyan);font:600 .62rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.m221-sports-core h3{margin:auto 0 0;font:650 clamp(3.8rem,7vw,6.6rem)/.87 'Space Grotesk',sans-serif;letter-spacing:-.075em;color:#D4FAFF}.m221-sports-core-copy>p{max-width:650px;margin:16px 0 0;color:#99A5B5;font-size:.97rem;line-height:1.55}.m221-sports-core-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.m221-sports-core-actions a{display:inline-flex;min-height:42px;align-items:center;padding:0 13px;border-radius:10px;text-decoration:none;font-size:.78rem;font-weight:650}.m221-sports-open{background:#D4FAFF;color:#07101A}.m221-sports-open:hover{background:#F0FDFF}.m221-sports-domain{color:#8492A6;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}.m221-sports-domain:hover{color:#F5F7FA}.m221-sports-capabilities{padding:20px;border-left:1px solid rgba(63,230,168,.1);background:rgba(7,12,22,.28)}.m221-sports-capability{border-bottom:1px solid rgba(255,255,255,.07)}.m221-sports-capability:last-child{border-bottom:0}.m221-sports-capability summary{
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(10,159,149,.12),transparent 46%),#0E1628;
+}.m221-sports-core-copy{display:flex;min-height:360px;flex-direction:column;padding:28px}.m221-sports-eyebrow{color:var(--sports-cyan);font:600 .62rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.m221-sports-core h3{margin:auto 0 0;font:650 clamp(3.5rem,6vw,5.7rem)/.87 'Space Grotesk',sans-serif;letter-spacing:-.075em;color:#D4FAFF}.m221-sports-core-copy>p{max-width:650px;margin:16px 0 0;color:#99A5B5;font-size:.97rem;line-height:1.55}.m221-sports-core-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.m221-sports-core-actions a{display:inline-flex;min-height:42px;align-items:center;padding:0 13px;border-radius:10px;text-decoration:none;font-size:.78rem;font-weight:650}.m221-sports-open{background:#D4FAFF;color:#07101A}.m221-sports-open:hover{background:#F0FDFF}.m221-sports-domain{color:#8492A6;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}.m221-sports-domain:hover{color:#F5F7FA}.m221-sports-capabilities{padding:20px;border-left:1px solid rgba(63,230,168,.1);background:rgba(7,12,22,.28)}.m221-sports-capability{border-bottom:1px solid rgba(255,255,255,.07)}.m221-sports-capability:last-child{border-bottom:0}.m221-sports-capability summary{
   display:grid;
   grid-template-columns:1fr auto;
   gap:18px;
@@ -132,10 +138,10 @@
   transition:border-color .18s ease,transform .18s ease,background-color .18s ease;
 }.m221-sports-data-item:hover{transform:translateY(-2px);border-color:rgba(63,230,168,.22);background:#101A2E}.m221-sports-data-item span{color:#59677D;font:600 .6rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em}.m221-sports-data-item h3{max-width:280px;margin:54px 0 0;font:650 1.55rem/1.03 'Space Grotesk',sans-serif;letter-spacing:-.04em}.m221-sports-data-item p{max-width:320px;margin:12px 0 0;color:#8793A5;font-size:.84rem;line-height:1.55}.m221-sports-contact{position:relative;overflow:hidden;padding:96px 0 104px;background:#080D19}.m221-sports-contact:after{content:"SPORTS";position:absolute;right:-.03em;bottom:-.28em;color:rgba(255,255,255,.022);font:700 min(23vw,300px)/1 'Space Grotesk',sans-serif;letter-spacing:-.08em;pointer-events:none}.m221-sports-contact-inner{position:relative;z-index:1;display:grid;grid-template-columns:110px 1fr auto;gap:28px;align-items:end}.m221-sports-contact h2{max-width:650px;margin:0;font:650 clamp(2.5rem,4.7vw,4.6rem)/.95 'Space Grotesk',sans-serif;letter-spacing:-.055em}.m221-sports-contact p{margin:12px 0 0;color:#8995A7}.m221-sports-contact a{display:inline-flex;min-height:44px;align-items:center;padding:0 15px;border:1px solid rgba(63,230,168,.2);border-radius:11px;background:rgba(63,230,168,.06);text-decoration:none;font-size:.78rem;font-weight:650}.m221-sports-contact a:hover{background:rgba(63,230,168,.10)}
 
-@media(max-width:980px){.m221-sports-hero{padding:74px 0 62px}.m221-sports-chapter{padding:76px 0}.m221-sports-chapter-head{grid-template-columns:90px minmax(0,1fr);gap:20px}.m221-sports-chapter-head>p{grid-column:2}.m221-sports-core{grid-template-columns:1fr}.m221-sports-core-copy{min-height:360px}.m221-sports-capabilities{border-left:0;border-top:1px solid rgba(63,230,168,.1)}.m221-sports-event{grid-template-columns:150px 1fr}.m221-sports-event-actions{grid-column:2;margin-top:2px}.m221-sports-contact-inner{grid-template-columns:90px 1fr}.m221-sports-contact-inner>a{grid-column:2;justify-self:start}
+@media(max-width:980px){.m221-sports-hero{min-height:auto;padding:68px 0 56px}.m221-sports-chapter{padding:76px 0}.m221-sports-chapter-head{grid-template-columns:90px minmax(0,1fr);gap:20px}.m221-sports-chapter-head>p{grid-column:2}.m221-sports-core{grid-template-columns:1fr}.m221-sports-core-copy{min-height:360px}.m221-sports-capabilities{border-left:0;border-top:1px solid rgba(63,230,168,.1)}.m221-sports-event{grid-template-columns:150px 1fr}.m221-sports-event-actions{grid-column:2;margin-top:2px}.m221-sports-contact-inner{grid-template-columns:90px 1fr}.m221-sports-contact-inner>a{grid-column:2;justify-self:start}
 }
 
-@media(max-width:760px){.m221-sports-hero{padding:58px 0 50px}.m221-sports-breadcrumb{margin-bottom:26px}.m221-sports-hero-mark{width:64px;height:64px;margin-bottom:17px}.m221-sports-hero h1{font-size:clamp(3rem,14vw,4.7rem)}.m221-sports-actions{display:grid;grid-template-columns:1fr}.m221-sports-actions a{width:100%}.m221-sports-chapter{padding:62px 0}.m221-sports-chapter-head{grid-template-columns:1fr;gap:12px;margin-bottom:28px}.m221-sports-chapter-head>p{grid-column:auto}.m221-sports-index{padding-top:0}.m221-sports-core{border-radius:19px}.m221-sports-core-copy{min-height:310px;padding:22px}.m221-sports-core h3{font-size:clamp(3.5rem,18vw,5rem)}.m221-sports-core-actions{display:grid;grid-template-columns:1fr}.m221-sports-core-actions a{justify-content:center}.m221-sports-domain{justify-content:flex-start!important;padding-left:0!important}.m221-sports-capabilities{padding:10px 20px}.m221-sports-capability summary{min-height:62px}.m221-sports-event{grid-template-columns:1fr;min-height:0;padding:22px;border-radius:19px}.m221-sports-event-actions{grid-column:auto;margin-top:10px}.m221-sports-data-grid{grid-template-columns:1fr}.m221-sports-data-item{min-height:220px}.m221-sports-contact{padding:70px 0 80px}.m221-sports-contact-inner{grid-template-columns:1fr;gap:18px}.m221-sports-contact-inner>a{grid-column:auto}
+@media(max-width:760px){.m221-sports-hero{padding:52px 0 44px}.m221-sports-breadcrumb{margin-bottom:22px}.m221-sports-hero-mark{width:64px;height:64px;margin-bottom:17px}.m221-sports-hero h1{font-size:clamp(3rem,14vw,4.7rem)}.m221-sports-actions{display:grid;grid-template-columns:1fr}.m221-sports-actions a{width:100%}.m221-sports-chapter{padding:58px 0}.m221-sports-chapter-head{grid-template-columns:1fr;gap:12px;margin-bottom:28px}.m221-sports-chapter-head>p{grid-column:auto}.m221-sports-index{padding-top:0}.m221-sports-core{border-radius:19px}.m221-sports-core-copy{min-height:0;padding:22px}.m221-sports-core h3{font-size:clamp(3.5rem,18vw,5rem)}.m221-sports-core-actions{display:grid;grid-template-columns:1fr}.m221-sports-core-actions a{justify-content:center}.m221-sports-domain{justify-content:flex-start!important;padding-left:0!important}.m221-sports-capabilities{padding:10px 20px}.m221-sports-capability summary{min-height:62px}.m221-sports-event{grid-template-columns:1fr;min-height:0;padding:22px;border-radius:19px}.m221-sports-event-actions{grid-column:auto;margin-top:10px}.m221-sports-data-grid{grid-template-columns:1fr}.m221-sports-data-item{min-height:220px}.m221-sports-contact{padding:70px 0 80px}.m221-sports-contact-inner{grid-template-columns:1fr;gap:18px}.m221-sports-contact-inner>a{grid-column:auto}
 }
 
 @media(prefers-reduced-motion:reduce){.m221-sports-actions a,
