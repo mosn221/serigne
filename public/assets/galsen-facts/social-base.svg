@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">M221 editorial social card base</title>
+  <desc id="desc">Dark editorial card with the project symbol and subtle Senegal-inspired accents. No project name is embedded.</desc>
+  <rect width="1200" height="630" fill="#0B1020"/>
+  <circle cx="1080" cy="-40" r="260" fill="#008751" opacity=".08"/>
+  <circle cx="1210" cy="525" r="250" fill="#E11D48" opacity=".07"/>
+  <circle cx="940" cy="700" r="220" fill="#FFC300" opacity=".07"/>
+  <path d="M72 546H1128" stroke="#FFFFFF" stroke-opacity=".08"/>
+  <path d="M72 546H250" stroke="#008751" stroke-width="5"/>
+  <path d="M250 546H428" stroke="#FFC300" stroke-width="5"/>
+  <path d="M428 546H606" stroke="#E11D48" stroke-width="5"/>
+  <g transform="translate(60 54) scale(.22)">
+    <circle cx="256" cy="82" r="42" fill="#FFC300"/>
+    <path d="M150 210C191 158 316 153 362 220" fill="none" stroke="#FFC300" stroke-width="52" stroke-linecap="round"/>
+    <circle cx="121" cy="326" r="36" fill="#008751"/>
+    <path d="M113 245C84 326 126 408 228 428" fill="none" stroke="#008751" stroke-width="54" stroke-linecap="round"/>
+    <circle cx="391" cy="347" r="36" fill="#E11D48"/>
+    <path d="M399 250C425 329 386 410 286 439" fill="none" stroke="#E11D48" stroke-width="54" stroke-linecap="round"/>
+  </g>
+</svg>
