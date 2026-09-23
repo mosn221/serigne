@@ -1,8 +1,21 @@
+// -----------------------------------------------------------------------------
+// BRAND ASSET BUILD PIPELINE
+//
+// Canonical inputs are the SVG assets committed in public/assets/img/.
+// This script creates every raster derivative used by browsers, devices, social
+// previews and structured data. It runs before every production Astro build.
+//
+// Keep geometry/colors in the source SVGs; do not hand-edit generated PNG/WebP/ICO
+// files. Re-running this script is the single source of truth for raster output.
+// -----------------------------------------------------------------------------
+
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
+// Resolve paths from this module instead of process.cwd() so the script behaves the
+// same locally, in CI and on Netlify.
 const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const outDir = path.join(rootDir, 'public', 'assets', 'img');
 await mkdir(outDir, { recursive: true });
@@ -16,6 +29,8 @@ const [markSvg, markOnLightSvg, lockupSvg, lockupOnLightSvg, faviconSvg] = await
   readFile(asset('favicon.svg'))
 ]);
 
+// Generic SVG -> raster helper. High input density preserves vector edge quality
+// before resizing to the exact output width.
 async function renderSvg(input, name, width, format = 'png', options = {}) {
   let pipeline = sharp(input, { density: 384 }).resize({ width });
   if (format === 'webp') {
@@ -26,6 +41,8 @@ async function renderSvg(input, name, width, format = 'png', options = {}) {
   await pipeline.toFile(asset(name));
 }
 
+// Square surfaces need a safe dark field around the standalone M mark. This is used
+// for maskable/PWA and square social contexts where a horizontal lockup would crop.
 async function brandedSquare(name, size, markWidth, format = 'png') {
   const mark = await sharp(markSvg, { density: 384 })
     .resize({ width: markWidth })
@@ -50,6 +67,8 @@ async function brandedSquare(name, size, markWidth, format = 'png') {
   await pipeline.toFile(asset(name));
 }
 
+// Open Graph/Twitter card: use the full horizontal lockup because this is a
+// brand-forward surface with enough horizontal space.
 async function socialCard() {
   const lockup = await sharp(lockupSvg, { density: 384 })
     .resize({ width: 980 })
@@ -81,6 +100,8 @@ for (const size of faviconSizes) {
   await writeFile(asset(`favicon-${size}x${size}.png`), buffer);
 }
 
+// ICO is assembled manually from the generated PNG buffers so no extra dependency is
+// needed just for the legacy browser fallback.
 function buildIco(buffers, sizes) {
   const header = Buffer.alloc(6 + buffers.length * 16);
   header.writeUInt16LE(0, 0);
