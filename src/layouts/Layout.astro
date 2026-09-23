@@ -1,4 +1,17 @@
 ---
+// -----------------------------------------------------------------------------
+// Global document shell for every public M221Tech page.
+//
+// Responsibilities kept here on purpose:
+// - load the shared CSS layers in a deterministic order;
+// - normalize public URLs and trailing slashes;
+// - expose canonical / hreflang / Open Graph / Twitter metadata;
+// - emit Organization + WebSite + WebPage structured data;
+// - keep deploy previews out of search indexes;
+// - pass navigation/language state to the shared header.
+//
+// Page-specific content, styling and interaction should stay in the page itself.
+// -----------------------------------------------------------------------------
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -8,6 +21,9 @@ import '../styles/brand.css';
 import '../styles/responsive.css';
 import '../styles/chrome.css';
 
+// Public page contract. New project pages should normally only need title,
+// description and navSection. alternatePath=null explicitly marks a page as
+// single-language so we never emit a language link to a route that does not exist.
 interface Props {
   title: string;
   description: string;
@@ -24,12 +40,16 @@ const {
   alternatePath
 } = Astro.props;
 
+// Normalize every route to the site's canonical trailing-slash convention before
+// building SEO URLs. This keeps canonical, hreflang and navigation paths aligned.
 const rawPathname = Astro.url.pathname;
 const normalizePath = (path: string) => path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`;
 const pathname = normalizePath(rawPathname);
 const isFrench = pathname === '/fr/' || pathname.startsWith('/fr/');
 const lang = isFrench ? 'fr' : 'en';
 
+// Language pairing defaults to the mirrored /fr/... structure. alternatePath can
+// override that pairing, while null disables alternates entirely for one-language pages.
 const canonicalURL = new URL(pathname, Astro.site);
 const inferredEnglishPath = isFrench ? normalizePath(pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
 const inferredFrenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : normalizePath(`/fr${pathname}`));
@@ -41,6 +61,8 @@ const frenchURL = new URL(frenchPath, Astro.site);
 const xDefaultURL = isFrench && !hasAlternate ? canonicalURL : englishURL;
 const socialImageURL = new URL(ogImage, Astro.site);
 
+// Netlify exposes CONTEXT=production only for the production deploy. Every preview
+// therefore receives noindex automatically and cannot compete with m221.tech.
 const isProduction = process.env.CONTEXT === 'production';
 const robotsContent = isProduction
   ? 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
@@ -49,6 +71,8 @@ const socialImageAlt = isFrench
   ? 'M221Tech — identité visuelle'
   : 'M221Tech — visual identity';
 
+// Keep the organization description deliberately broad: individual project pages
+// can be specific, but M221Tech itself must remain able to host future verticals.
 const organizationDescription = isFrench
   ? 'M221Tech conçoit des produits numériques, des jeux de données et des outils utiles à partir d’informations structurées.'
   : 'M221Tech designs digital products, datasets and useful tools from structured information.';
@@ -68,6 +92,7 @@ const webpageId = `${canonicalURL.href}#webpage`;
   <meta name="application-name" content="M221Tech" />
   <meta name="apple-mobile-web-app-title" content="M221Tech" />
 
+    <!-- Core search metadata -->
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="robots" content={robotsContent} />
@@ -78,6 +103,8 @@ const webpageId = `${canonicalURL.href}#webpage`;
   {(isFrench || hasAlternate) && <link rel="alternate" href={frenchURL} hreflang="fr" />}
   <link rel="alternate" href={xDefaultURL} hreflang="x-default" />
 
+  <!-- Social sharing metadata. The default card is the canonical M221Tech brand card;
+       pages may override it with the ogImage prop when a product-specific card exists. -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="M221Tech" />
   <meta property="og:title" content={title} />
@@ -98,6 +125,8 @@ const webpageId = `${canonicalURL.href}#webpage`;
   <meta name="twitter:image" content={socialImageURL} />
   <meta name="twitter:image:alt" content={socialImageAlt} />
 
+  <!-- Structured data is centralized here so every page emits the same organization
+       identity and only the WebPage node changes with the current route. -->
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -145,6 +174,7 @@ const webpageId = `${canonicalURL.href}#webpage`;
     ]
   })} />
 
+  <!-- Brand/device assets: SVG first, then raster and platform fallbacks. -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48x48.png" />
@@ -154,11 +184,13 @@ const webpageId = `${canonicalURL.href}#webpage`;
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#00BFD6" />
 
+  <!-- Fonts are intentionally limited to the two brand families used by the site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Keyboard users can bypass all shared navigation and land on page content. -->
   <a class="m221-skip-link" href="#main-content">{isFrench ? 'Aller au contenu' : 'Skip to content'}</a>
   <Header activeSection={navSection} englishPath={englishPath} frenchPath={frenchPath} hasAlternate={hasAlternate} />
   <main id="main-content" tabindex="-1">
