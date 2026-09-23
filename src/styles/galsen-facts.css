@@ -8,6 +8,9 @@
    ========================================================================== */
 
 .m221-facts-page{
+  --facts-brand-green:#008751;
+  --facts-brand-yellow:#FFC300;
+  --facts-brand-red:#E11D48;
   --facts-accent:#69D8C0;
   --facts-accent-soft:rgba(105,216,192,.11);
   --facts-warm:#E6CF78;
@@ -28,8 +31,10 @@
   padding:96px 0 74px;
   border-bottom:1px solid var(--facts-line);
   background:
-    radial-gradient(circle at 78% 18%,rgba(0,124,145,.17),transparent 0 28%),
-    linear-gradient(90deg,transparent 0 77%,rgba(105,216,192,.035) 77% 77.1%,transparent 77.1%),
+    radial-gradient(circle at 82% 15%,rgba(0,135,81,.10),transparent 0 25%),
+    radial-gradient(circle at 94% 40%,rgba(255,195,0,.055),transparent 0 19%),
+    radial-gradient(circle at 86% 76%,rgba(225,29,72,.045),transparent 0 22%),
+    linear-gradient(90deg,transparent 0 77%,rgba(105,216,192,.03) 77% 77.1%,transparent 77.1%),
     #0B1020;
 }.m221-facts-hero:before{
   content:"";
@@ -52,7 +57,7 @@
   letter-spacing:-.08em;
   pointer-events:none;
   white-space:nowrap;
-}.m221-facts-hero-inner{position:relative;z-index:2;max-width:1040px}.m221-facts-breadcrumb{
+}.m221-facts-hero-inner{position:relative;z-index:2;max-width:1040px}.m221-facts-hero-mark{display:block;width:78px;height:78px;margin:0 0 20px}.m221-facts-breadcrumb{
   display:inline-flex;
   margin-bottom:52px;
   color:#6F7D92;
@@ -269,7 +274,7 @@
 }
 @media(max-width:860px){.m221-facts-hero{min-height:auto;padding:76px 0 62px}.m221-facts-chapter-head{grid-template-columns:110px minmax(0,1fr);gap:18px}.m221-facts-chapter-head>p{grid-column:2}.m221-facts-format-rail{grid-template-columns:1fr}.m221-facts-format+.m221-facts-format{border-left:0;border-top:1px solid var(--facts-line)}.m221-facts-format{min-height:180px}.m221-facts-format h3{margin-top:42px}.m221-facts-method{grid-template-columns:1fr}.m221-facts-contact-inner{grid-template-columns:110px minmax(0,1fr)}.m221-facts-contact a{grid-column:2;justify-self:start}
 }
-@media(max-width:760px){.m221-facts-hero{padding-top:66px}.m221-facts-breadcrumb{margin-bottom:38px}.m221-facts-hero h1{font-size:clamp(3.25rem,15vw,5rem)}.m221-facts-chapter{padding:68px 0}.m221-facts-chapter-head{grid-template-columns:1fr;gap:10px;margin-bottom:28px}.m221-facts-chapter-head>p{grid-column:1}.m221-facts-topic-grid{grid-template-columns:1fr}.m221-facts-topic[data-topic="places"]{grid-column:auto}.m221-facts-topic{min-height:300px;padding:20px}.m221-facts-topic h3,
+@media(max-width:760px){.m221-facts-hero{padding-top:66px}.m221-facts-breadcrumb{margin-bottom:32px}.m221-facts-hero-mark{width:64px;height:64px;margin-bottom:17px}.m221-facts-hero h1{font-size:clamp(3.25rem,15vw,5rem)}.m221-facts-chapter{padding:68px 0}.m221-facts-chapter-head{grid-template-columns:1fr;gap:10px;margin-bottom:28px}.m221-facts-chapter-head>p{grid-column:1}.m221-facts-topic-grid{grid-template-columns:1fr}.m221-facts-topic[data-topic="places"]{grid-column:auto}.m221-facts-topic{min-height:300px;padding:20px}.m221-facts-topic h3,
 .m221-facts-topic[data-topic="places"] h3{margin-top:46px}.m221-facts-empty{grid-template-columns:1fr;gap:13px}.m221-facts-empty-meta{text-align:left;max-width:none}.m221-facts-source-steps{grid-template-columns:1fr}.m221-facts-source-step{min-height:110px}.m221-facts-source-step+.m221-facts-source-step{border-left:0;border-top:1px solid var(--facts-line)}.m221-facts-source-step strong{margin-top:34px}.m221-facts-contact{padding:62px 0 76px}.m221-facts-contact-inner{grid-template-columns:1fr;gap:14px}.m221-facts-contact a{grid-column:1}
 }
 @media(max-width:430px){.m221-facts-actions{display:grid;grid-template-columns:1fr}.m221-facts-actions a{width:100%}
