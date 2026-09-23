@@ -1,3 +1,10 @@
+/* ==========================================================================
+   OPEN PRODUCT PAGE — CURRENT REFINEMENT
+   --------------------------------------------------------------------------
+   Final editorial/product treatment layered on open-v2-base.css.
+   Keep shared local-navigation geometry in chrome.css.
+   ========================================================================== */
+
 .m221-open-page{
   --open-accent:#9DEBF3;
   --open-blue:#00BFD6;
