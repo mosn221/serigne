@@ -1,3 +1,13 @@
+# =============================================================================
+# NETLIFY DEPLOYMENT CONTRACT
+# -----------------------------------------------------------------------------
+# - build/publish match package.json + Astro static output;
+# - Node is pinned for reproducible CI builds;
+# - baseline security/privacy headers apply to every response;
+# - hashed Astro assets are immutable; public brand assets use a shorter cache
+#   because their filenames are stable across brand updates.
+# =============================================================================
+
 [build]
   command = "npm run build"
   publish = "dist"
