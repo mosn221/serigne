@@ -1,4 +1,7 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of Open. Keep section ids aligned with EN for position-preserving language changes.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/open-v2.css';
 ---
@@ -135,6 +138,8 @@ import '../../../styles/open-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-open-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-open-link]'));
