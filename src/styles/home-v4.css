@@ -1,3 +1,12 @@
+/* ==========================================================================
+   HOME — PRODUCT SYSTEM FOUNDATION
+   --------------------------------------------------------------------------
+   Base visual system for homepage sections, cards, product previews and CTA
+   blocks. home-v5.css is the refinement layer loaded after this file.
+
+   Do not add shared header/footer/spine rules here; chrome.css owns them.
+   ========================================================================== */
+
 .m221-home-v4{overflow:clip;background:var(--m221-bg)}.m221-home-v4 a,
 .m221-home-v4 button{transition:color .18s ease,border-color .18s ease,background .18s ease,transform .18s ease,opacity .18s ease}/* HERO */
 .m221-v4-hero{position:relative;padding:92px 0 62px;overflow:hidden;border-bottom:1px solid var(--m221-border);background:radial-gradient(circle at 78% 10%,rgba(0,191,214,.17),transparent 0 28%),radial-gradient(circle at 12% 78%,rgba(255,195,0,.07),transparent 0 24%),#0B1020}.m221-v4-hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,#000,transparent 86%)}.m221-v4-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(390px,.94fr);gap:72px;align-items:center}.m221-v4-kicker,
