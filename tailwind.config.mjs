@@ -17,7 +17,9 @@ export default {
 
   theme: {
     extend: {
-      // Tokens de marque M221Tech partagés avec le CSS du site.
+      // Convenience aliases only. Canonical visual decisions still live in the
+      // authored CSS/BRAND.md; these values let future utility-based components
+      // reuse the same palette without inventing close-but-different colors.
       colors: {
         bg: '#0B1020',       // fond général (bleu nuit très sombre)
         card: '#121A2E',     // fond des cartes/blocs
