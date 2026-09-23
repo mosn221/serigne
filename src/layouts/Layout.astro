@@ -84,7 +84,7 @@ const webpageId = `${canonicalURL.href}#webpage`;
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:locale" content={isFrench ? 'fr_FR' : 'en_US'} />
-  <meta property="og:locale:alternate" content={isFrench ? 'en_US' : 'fr_FR'} />
+  {hasAlternate && <meta property="og:locale:alternate" content={isFrench ? 'en_US' : 'fr_FR'} />}
   <meta property="og:image" content={socialImageURL} />
   <meta property="og:image:secure_url" content={socialImageURL} />
   <meta property="og:image:type" content="image/png" />
