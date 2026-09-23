@@ -2,15 +2,15 @@
 
 Canonical assets live in `public/assets/img/`.
 
-The approved full brand identity is the horizontal **M + 221Tech** lockup. For the website chrome, the preferred signature is the more compact **M221** lockup. The standalone **data-ribbon M** remains the compact mark for favicons, avatars and constrained spaces.
+The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **data-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
 
 ## Source assets
 
 | Asset | Role | Use |
 | --- | --- | --- |
-| `m221tech-wordmark.svg` | Full M221Tech lockup on dark surfaces | Social cards, presentations, external brand use |
+| `m221tech-wordmark.svg` | Primary full M221Tech lockup on dark surfaces | Desktop header, footer, social cards, presentations, external brand use |
 | `m221tech-wordmark-on-light.svg` | Full M221Tech lockup on light surfaces | External brand use on light backgrounds |
-| `m221-site-lockup.svg` | Compact M221 site signature | Header and footer |
+| `m221-site-lockup.svg` | Compact M221 signature | Mobile header / narrow navigation only |
 | `m221-site-lockup-on-light.svg` | Compact M221 site signature on light | Reserved light-surface site use |
 | `m221tech-mark.svg` | Standalone mark on dark surfaces | Compact identity, avatars, app/social marks |
 | `m221tech-mark-on-light.svg` | Standalone mark on light surfaces | Compact identity on light backgrounds |
@@ -63,11 +63,17 @@ The build also runs this automatically before Astro.
 
 ## Usage hierarchy
 
-1. **Website chrome:** compact M221 lockup.
-2. **Full brand logo:** horizontal M + 221Tech lockup for external and brand-forward use.
-3. **Compact mark:** standalone M for favicons, avatars and constrained spaces.
-4. **Social preview:** 1200×630 full M221Tech lockup card.
-5. **Square social / profile:** 1200×1200 standalone mark.
-6. **PWA / device icons:** dark-square compact mark.
+1. **Primary identity:** horizontal M + 221Tech lockup.
+2. **Desktop site chrome:** full M221Tech lockup.
+3. **Mobile / narrow navigation:** compact M221 lockup.
+4. **Footer:** full M221Tech lockup.
+5. **Favicons / avatars / PWA / device icons:** standalone M mark.
+6. **Social preview:** 1200×630 full M221Tech lockup card.
+7. **Square social / profile:** 1200×1200 standalone mark.
+8. **Structured-data organization logo:** square 512px standalone M.
 
 Do not recreate the logo manually in page markup. Use the canonical assets or the generated derivatives so the identity stays consistent.
+
+## Site chrome
+
+`src/styles/chrome.css` is the single canonical stylesheet for how the brand is presented in the shared site chrome: header, responsive brand lockup, navigation, mobile menu, section navigation, focus treatment and footer. Brand asset choices remain defined here in `BRAND.md`; their layout and responsive presentation belong in `chrome.css`.

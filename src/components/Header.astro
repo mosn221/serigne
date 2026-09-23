@@ -1,18 +1,37 @@
 ---
+// -----------------------------------------------------------------------------
+// Shared site header.
+//
+// The component does not know project route names. Pages declare their high-level
+// section through activeSection, which keeps this component extensible when new
+// projects are added. englishPath/frenchPath are resolved by Layout.astro.
+// -----------------------------------------------------------------------------
+interface Props {
+  activeSection?: 'projects' | 'open';
+  englishPath: string;
+  frenchPath: string;
+  hasAlternate?: boolean;
+}
+
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
+const {
+  activeSection,
+  englishPath,
+  frenchPath,
+  hasAlternate = true
+} = Astro.props;
 
+// All primary links intentionally return to sections of the brand homepage. Product
+// pages therefore share one stable information architecture instead of duplicating it.
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
 const whyHref = `${homeHref}#why`;
 const openHref = `${homeHref}#open`;
 const contactHref = `${homeHref}#contact`;
 
-const englishPath = isFrench ? (pathname.replace(/^\/fr(?=\/|$)/, '') || '/') : pathname;
-const frenchPath = isFrench ? pathname : (pathname === '/' ? '/fr/' : `/fr${pathname}`);
-
-const projectPage = /\/(sports|nutrition|galsen-facts)\/?$/.test(pathname);
-const openPage = /\/open\/?$/.test(pathname);
+const projectPage = activeSection === 'projects';
+const openPage = activeSection === 'open';
 const menuOpenLabel = isFrench ? 'Ouvrir le menu' : 'Open menu';
 const menuCloseLabel = isFrench ? 'Fermer le menu' : 'Close menu';
 const mobilePanelId = 'm221-mobile-navigation';
@@ -22,31 +41,43 @@ const labels = isFrench
   : { projects: 'Projects', why: 'Why', open: 'Open', contact: 'Contact' };
 ---
 
+<!-- Desktop and mobile use the same semantic header. The <picture> swaps only the
+     approved brand lockup according to available width. -->
 <header class="m221-header">
   <div class="m221-container m221-header-inner">
     <a class="m221-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
-      <img
-        src="/assets/img/m221-site-lockup.svg"
-        alt=""
-        width="82"
-        height="30"
-        decoding="async"
-        fetchpriority="high"
-      />
+      <picture class="m221-brand-picture">
+        <source
+          media="(max-width: 760px)"
+          srcset="/assets/img/m221-site-lockup.svg"
+          width="87"
+          height="32"
+        />
+        <img
+          src="/assets/img/m221tech-wordmark.svg"
+          alt=""
+          width="342"
+          height="64"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
     </a>
 
     <nav class="m221-nav" aria-label={isFrench ? 'Navigation principale' : 'Main navigation'}>
-      <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
+      <a href={projectsHref} data-active={projectPage ? 'true' : undefined}>{labels.projects}</a>
       <a href={whyHref}>{labels.why}</a>
-      <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
+      <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
       <a href={contactHref}>{labels.contact}</a>
     </nav>
 
-    <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-      <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
-      <span aria-hidden="true">/</span>
-      <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
-    </div>
+    {hasAlternate && (
+      <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
+        <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+        <span aria-hidden="true">/</span>
+        <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+      </div>
+    )>
 
     <details class="m221-mobile-nav" data-mobile-menu>
       <summary
@@ -61,21 +92,25 @@ const labels = isFrench
         </span>
       </summary>
       <div id={mobilePanelId} class="m221-mobile-panel">
-        <a href={projectsHref} aria-current={projectPage ? 'page' : undefined}>{labels.projects}</a>
+        <a href={projectsHref} data-active={projectPage ? 'true' : undefined}>{labels.projects}</a>
         <a href={whyHref}>{labels.why}</a>
-        <a href={openHref} aria-current={openPage ? 'page' : undefined}>{labels.open}</a>
+        <a href={openHref} data-active={openPage ? 'true' : undefined}>{labels.open}</a>
         <a href={contactHref}>{labels.contact}</a>
-        <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
-          <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
-          <span aria-hidden="true">/</span>
-          <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
-        </div>
+        {hasAlternate && (
+          <div class="m221-lang" aria-label={isFrench ? 'Choix de la langue' : 'Language selector'}>
+            <a href={englishPath} lang="en" hreflang="en" data-lang-link="en" aria-current={!isFrench ? 'true' : undefined}>EN</a>
+            <span aria-hidden="true">/</span>
+            <a href={frenchPath} lang="fr" hreflang="fr" data-lang-link="fr" aria-current={isFrench ? 'true' : undefined}>FR</a>
+          </div>
+        )>
       </div>
     </details>
   </div>
 </header>
 
 <script>
+  // Keep the header visually quiet at the top of the page and slightly more compact
+  // once content scrolls underneath it. The listener is passive to avoid blocking scroll.
   const siteHeader = document.querySelector('.m221-header');
   const syncHeaderScroll = () => {
     if (!(siteHeader instanceof HTMLElement)) return;
@@ -85,6 +120,8 @@ const labels = isFrench
   syncHeaderScroll();
   window.addEventListener('scroll', syncHeaderScroll, { passive: true });
 
+  // <details> gives us a native disclosure fallback. This controller synchronizes the
+  // accessible label/state and closes the menu on selection, Escape or outside click.
   const menus = document.querySelectorAll('[data-mobile-menu]');
 
   menus.forEach((menu) => {
@@ -120,9 +157,14 @@ const labels = isFrench
 
   });
 
+  // Language changes try to preserve the user's reading position. We first preserve a
+  // matching section id when available; otherwise we retain the relative scroll ratio.
+  // sessionStorage is intentionally short-lived and cleared immediately on arrival.
   const languageLinks = document.querySelectorAll('[data-lang-link]');
   const positionKey = 'm221-language-position';
 
+  // Local page navigations expose aria-current=true. Reading that state here avoids
+  // hard-coding project-specific section names into the language switcher.
   const activeSectionId = () => {
     const activeLink = document.querySelector(
       '[data-section-link][aria-current="true"], [data-sports-link][aria-current="true"], [data-nutrition-link][aria-current="true"], [data-facts-link][aria-current="true"], [data-open-link][aria-current="true"]'
@@ -172,6 +214,8 @@ const labels = isFrench
     });
   });
 
+  // Restore position only when the stored state targets the page that actually loaded;
+  // stale state can therefore never move an unrelated page.
   window.addEventListener('load', () => {
     let state = null;
 

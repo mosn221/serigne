@@ -1,26 +1,30 @@
 ---
+// Shared portfolio-neutral footer. Keep project names out of this component so the
+// global navigation does not need to change whenever the portfolio evolves.
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
 const projectsHref = `${homeHref}#projects`;
 const openHref = `${homeHref}#open`;
-const factsHref = isFrench ? '/fr/galsen-facts/' : '/galsen-facts/';
+const contactHref = `${homeHref}#contact`;
 
 const labels = isFrench
-  ? { home: 'Accueil', projects: 'Projets', facts: 'Galsen Facts', open: 'Open' }
-  : { home: 'Home', projects: 'Projects', facts: 'Galsen Facts', open: 'Open' };
+  ? { home: 'Accueil', projects: 'Projets', open: 'Open', contact: 'Contact' }
+  : { home: 'Home', projects: 'Projects', open: 'Open', contact: 'Contact' };
 ---
 
+<!-- The full horizontal lockup is intentional here: the footer is a brand-forward
+     surface, unlike favicon/PWA contexts that use the standalone M mark. -->
 <footer class="m221-footer">
   <div class="m221-container m221-footer-shell">
     <div class="m221-footer-main">
       <div class="m221-footer-brand-block">
         <a class="m221-footer-brand" href={homeHref} aria-label={isFrench ? 'Accueil M221Tech' : 'M221Tech home'}>
           <img
-            src="/assets/img/m221-site-lockup.svg"
+            src="/assets/img/m221tech-wordmark.svg"
             alt=""
-            width="87"
-            height="32"
+            width="342"
+            height="64"
             loading="lazy"
             decoding="async"
           />
@@ -30,8 +34,8 @@ const labels = isFrench
       <nav class="m221-footer-links" aria-label={isFrench ? 'Liens de pied de page' : 'Footer links'}>
         <a href={homeHref}>{labels.home}</a>
         <a href={projectsHref}>{labels.projects}</a>
-        <a href={factsHref}>{labels.facts}</a>
         <a href={openHref}>{labels.open}</a>
+        <a href={contactHref}>{labels.contact}</a>
         <a
           class="m221-footer-linkedin"
           href="https://www.linkedin.com/company/m221tech"

@@ -1,11 +1,15 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of Open. Keep section ids aligned with EN for position-preserving language changes.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/open-v2.css';
 ---
 
 <Layout
-  title="Open data & rapports | M221Tech"
-  description="Découvrez certains datasets M221Tech, demandez des rapports ciblés et voyez comment M221Tech distingue données publiques et méthodes internes."
+  title="M221Tech Open | Jeux de données & rapports du Sénégal"
+  description="Explorez une sélection de jeux de données et rapports M221Tech, avec une séparation claire entre contenus ouverts et méthodes internes."
+  navSection="open"
 >
   <div class="m221-open-page">
     <section class="m221-open-hero">
@@ -134,6 +138,8 @@ import '../../../styles/open-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-open-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-open-link]'));

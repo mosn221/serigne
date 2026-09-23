@@ -1,21 +1,16 @@
-/*
-  global.css
-  -----------------------------------------------------------------------
-  Point d'entrée CSS unique du site, importé une seule fois dans
-  Layout.astro. Il fait deux choses, dans cet ordre précis :
+/* ==========================================================================
+   TAILWIND ENTRYPOINT
+   --------------------------------------------------------------------------
+   Tailwind utilities are available to components, but M221Tech does not rely
+   on Tailwind's preflight/reset. Layout.astro explicitly loads the authored
+   CSS layers after this file so custom design remains deterministic.
+   ========================================================================== */
 
-  1. Charge les 3 couches Tailwind (base, components, utilities) —
-     l'ordre est important : Tailwind doit être chargé AVANT le CSS
-     existant pour que nos styles custom (legacy.css) puissent au besoin
-     surcharger une classe Tailwind si conflit.
-
-  2. Importe legacy.css : c'est TOUT le design déjà validé du site actuel
-     (couleurs, cartes, sections, pages projets, responsive...). On ne
-     le réécrit pas, on le garde tel quel pour ne rien casser visuellement.
-  -----------------------------------------------------------------------
-*/
+/* M221Tech global Tailwind entrypoint.
+   Shared structural styles live in refactor.css, brand tokens in brand.css,
+   responsive content rules in responsive.css, and shared site chrome in
+   chrome.css. Layout.astro controls their load order. */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

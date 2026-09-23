@@ -1,11 +1,15 @@
 ---
+// -----------------------------------------------------------------------------
+// English Sports project page. navSection=projects activates the portfolio-level header state without hard-coding this route in Header.astro.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/sports-v2.css';
 ---
 
 <Layout
-  title="Football data & sports products | M221Tech"
-  description="Explore M221Tech Sports: M221Foot, football competition data, match context and the WC2026 tournament experience."
+  title="M221Tech Sports | Football products from Senegal"
+  description="Explore M221Foot and M221Tech Sports: Senegalese football competitions, match context, player insights and the WC2026 experience."
+  navSection="projects"
 >
   <div class="m221-sports-page">
     <section class="m221-sports-hero">
@@ -134,6 +138,8 @@ import '../../styles/sports-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-sports-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-sports-link]'));

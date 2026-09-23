@@ -1,11 +1,16 @@
 ---
+// -----------------------------------------------------------------------------
+// English Nutrition project page. nutrition-v2 provides the foundation; nutrition-v3 is the current product-specific refinement layer.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/nutrition-v2.css';
+import '../../styles/nutrition-v3.css';
 ---
 
 <Layout
-  title="Nutrition data & food products | M221Tech"
-  description="Explore M221Tech Nutrition and Lekkantu: food products, ingredients, nutrition facts and structured product data made easier to read and use."
+  title="M221Tech Nutrition | Understand food products in Senegal"
+  description="Explore Lekkantu and M221Tech Nutrition to understand food products, ingredients and nutrition facts through clear, useful product experiences."
+  navSection="projects"
 >
   <div class="m221-nutrition-page">
     <section class="m221-nutrition-hero">
@@ -140,6 +145,8 @@ import '../../styles/nutrition-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-nutrition-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-nutrition-link]'));

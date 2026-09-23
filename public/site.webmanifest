@@ -1,7 +1,7 @@
 {
   "name": "M221Tech",
   "short_name": "M221Tech",
-  "description": "Data products built to explore and understand.",
+  "description": "Digital products, datasets and useful tools built from structured information.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -1,12 +1,16 @@
 ---
+// -----------------------------------------------------------------------------
+// English Galsen Facts route wrapper. The shared GalsenFactsPage component owns bilingual structure/copy and interaction.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import GalsenFactsPage from '../../components/GalsenFactsPage.astro';
 import '../../styles/galsen-facts.css';
 ---
 
 <Layout
-  title="Galsen Facts | Understanding Senegal through facts | M221Tech"
-  description="Galsen Facts turns public information and verifiable sources into clear explorations, briefs and reports about Senegal."
+  title="Galsen Facts | Public information made clear | M221Tech"
+  description="Galsen Facts turns public documents and verifiable sources about Senegal into clear explorations, briefs and reports."
+  navSection="projects"
 >
   <GalsenFactsPage />
 </Layout>

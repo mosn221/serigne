@@ -1,13 +1,17 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of the brand homepage. Keep structure/section ids aligned with the EN route so language switching can preserve reading position.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import AboutM221 from '../../components/AboutM221.astro';
+import '../../styles/home-v4-skeleton.css';
 import '../../styles/home-v4.css';
 import '../../styles/home-v5.css';
 ---
 
 <Layout
   title="M221Tech | Des données aux usages."
-  description="M221Tech construit des produits autour du football, de l’alimentation et des informations publiques sur le Sénégal, avec des datasets et analyses lorsque c’est utile."
+  description="M221Tech conçoit des produits numériques, des jeux de données et des outils utiles pour transformer l’information structurée en usages concrets."
 >
   <div class="m221-home-v4">
     <section class="m221-v4-hero">
@@ -15,7 +19,7 @@ import '../../styles/home-v5.css';
         <div class="m221-v5-hero-copy">
           <span class="m221-v4-kicker">M221TECH / DATA HOUSE</span>
           <h1>Des données, transformées en produits.</h1>
-          <p class="m221-v4-lead">Sport, alimentation et ce qui façonne le Sénégal. Des produits pensés pour explorer et comprendre.</p>
+          <p class="m221-v4-lead">Nous transformons l’information structurée en produits numériques, outils utiles et publications ouvertes — pensés pour explorer, comprendre et utiliser.</p>
           <div class="m221-v4-hero-actions">
             <a class="m221-btn m221-btn-primary" href="#projects">Voir les projets</a>
             <a class="m221-btn m221-btn-secondary" href="#open">Open data</a>
@@ -24,9 +28,9 @@ import '../../styles/home-v5.css';
 
         <div class="m221-v5-signal" aria-hidden="true">
           <div class="m221-v5-signal-core">DATA<br />HOUSE</div>
-          <span class="m221-v5-signal-node" data-node="sports">Sports</span>
-          <span class="m221-v5-signal-node" data-node="nutrition">Nutrition</span>
-          <span class="m221-v5-signal-node" data-node="facts">Galsen Facts</span>
+          <span class="m221-v5-signal-node" data-node="products">Produits</span>
+          <span class="m221-v5-signal-node" data-node="datasets">Datasets</span>
+          <span class="m221-v5-signal-node" data-node="reports">Rapports</span>
         </div>
       </div>
     </section>
@@ -44,8 +48,8 @@ import '../../styles/home-v5.css';
       <div class="m221-container">
         <header class="m221-v4-chapter-head">
           <div class="m221-v4-index">01 / PROJETS</div>
-          <h2>Trois portes d’entrée. Trois manières d’explorer.</h2>
-          <p>Le football, l’alimentation et ce qui façonne le Sénégal, avec un produit pensé pour chaque sujet.</p>
+          <h2>Les projets du moment. Des sujets différents, une même approche.</h2>
+          <p>Le portefeuille évolue. Voici les produits aujourd’hui au premier plan, chacun pensé autour des besoins de son sujet.</p>
         </header>
 
         <div class="m221-v5-project-grid">
@@ -108,7 +112,7 @@ import '../../styles/home-v5.css';
         </header>
 
         <div class="m221-v4-why-grid">
-          <div class="m221-v4-why-item"><span class="m221-v4-domain">01 / CONTEXTE</span><strong>Garder le contexte.</strong><p>Partir de lieux, produits et compétitions réels.</p></div>
+          <div class="m221-v4-why-item"><span class="m221-v4-domain">01 / CONTEXTE</span><strong>Garder le contexte.</strong><p>Partir de sujets, sources et usages réels.</p></div>
           <div class="m221-v4-why-item"><span class="m221-v4-domain">02 / STRUCTURE</span><strong>Rendre la donnée utilisable.</strong><p>Transformer l'information dispersée en quelque chose de navigable.</p></div>
           <div class="m221-v4-why-item"><span class="m221-v4-domain">03 / PRODUIT</span><strong>Construire pour l'usage.</strong><p>Des interfaces d'abord. L'action avant la présentation.</p></div>
         </div>
@@ -134,13 +138,15 @@ import '../../styles/home-v5.css';
     <section class="m221-v4-contact" id="contact" data-home-section>
       <div class="m221-container m221-v4-contact-inner">
         <div class="m221-v4-index">04 / CONTACT</div>
-        <div><h2>Un dataset, une question ou une idée ?</h2><p>Écrivez-nous.</p></div>
+        <div><h2>Un projet, un dataset, une question ou une idée ?</h2><p>Écrivez-nous.</p></div>
         <a class="m221-btn m221-btn-primary" href="mailto:m221tech@gmail.com">m221tech@gmail.com →</a>
       </div>
     </section>
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const spine = document.querySelector('.m221-v4-spine-wrap');
     const header = document.querySelector('.m221-header');
     const spineLinks = Array.from(document.querySelectorAll('[data-section-link]'));

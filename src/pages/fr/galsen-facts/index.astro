@@ -1,12 +1,16 @@
 ---
+// -----------------------------------------------------------------------------
+// French Galsen Facts route wrapper. The shared component keeps structure identical across languages.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import GalsenFactsPage from '../../../components/GalsenFactsPage.astro';
 import '../../../styles/galsen-facts.css';
 ---
 
 <Layout
-  title="Galsen Facts | Comprendre le Sénégal à partir des faits | M221Tech"
-  description="Galsen Facts transforme des informations publiques et des sources vérifiables en explorations, briefs et rapports clairs sur le Sénégal."
+  title="Galsen Facts | L’information publique en clair | M221Tech"
+  description="Galsen Facts transforme documents publics et sources vérifiables sur le Sénégal en explorations, synthèses et rapports clairs."
+  navSection="projects"
 >
   <GalsenFactsPage />
 </Layout>

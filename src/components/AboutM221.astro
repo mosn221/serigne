@@ -1,19 +1,22 @@
 ---
+// Brand-level About block shared by both homepages. Copy stays intentionally
+// project-agnostic so new M221Tech products do not require rewriting the identity.
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 
+// Keep EN/FR copy colocated to make parity obvious during future edits.
 const copy = isFrench
   ? {
       eyebrow: 'À PROPOS / M221TECH',
       title: 'Indépendante, concrète, construite de près.',
-      body: "M221Tech est une data house indépendante avec une idée simple : une donnée utile doit finir dans un produit que l’on peut réellement explorer. M221Foot, Lekkantu et Galsen Facts donnent aujourd’hui trois formes à cette idée ; l’approche reste la même — structurer proprement, construire simplement, publier ce qui sert.",
+      body: "M221Tech est une structure indépendante qui transforme l’information structurée en produits numériques, jeux de données et outils utiles. Les projets évoluent ; l’approche reste la même — comprendre le contexte, structurer proprement, construire simplement et publier ce qui sert.",
       signature: 'DATA × PRODUIT × INGÉNIERIE',
       alt: 'Avatar M221Tech'
     }
   : {
       eyebrow: 'ABOUT / M221TECH',
       title: 'Independent, hands-on by design.',
-      body: 'M221Tech is an independent data house built around one simple idea: useful data should end up in products people can actually explore. M221Foot, Lekkantu and Galsen Facts are three current expressions of that idea; the approach stays the same — structure carefully, build simply, ship what is useful.',
+      body: 'M221Tech is an independent studio that turns structured information into digital products, datasets and useful tools. Projects evolve; the approach stays the same — understand the context, structure carefully, build simply and publish what is useful.',
       signature: 'DATA × PRODUCT × ENGINEERING',
       alt: 'M221Tech avatar'
     };
@@ -95,7 +98,7 @@ const avatarSrc = '/assets/img/m221tech-about-avatar.webp';
   .m221-about-eyebrow{
     display:block;
     margin-bottom:12px;
-    color:#7EE8F7;
+    color:#3FE6A8;
     font-size:.62rem;
     font-weight:600;
   }

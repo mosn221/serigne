@@ -1,11 +1,15 @@
 ---
+// -----------------------------------------------------------------------------
+// English Open page. open-v2.css composes base + refinement styles; navSection=open activates the correct global header state.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/open-v2.css';
 ---
 
 <Layout
-  title="Open data & reports | M221Tech"
-  description="Explore selected M221Tech datasets, request focused reports, and see how M221Tech separates public data from in-house methods."
+  title="M221Tech Open | Public datasets & reports from Senegal"
+  description="Explore selected public datasets and focused reports from M221Tech, with clear boundaries between open outputs and internal methods."
+  navSection="open"
 >
   <div class="m221-open-page">
     <section class="m221-open-hero">
@@ -134,6 +138,8 @@ import '../../styles/open-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-open-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-open-link]'));

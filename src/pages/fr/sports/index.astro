@@ -1,11 +1,15 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of Sports. Keep section ids identical to EN because the language switch preserves the active section.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/sports-v2.css';
 ---
 
 <Layout
-  title="Données football & projets sport | M221Tech"
-  description="Découvrez M221Tech Sports : M221Foot, les données de compétition, le contexte match et l'expérience événementielle WC2026."
+  title="M221Tech Sports | Produits autour du football sénégalais"
+  description="Découvrez M221Foot et M221Tech Sports : compétitions sénégalaises, contexte des matchs, profils joueurs et expérience WC2026."
+  navSection="projects"
 >
   <div class="m221-sports-page">
     <section class="m221-sports-hero">
@@ -134,6 +138,8 @@ import '../../../styles/sports-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-sports-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-sports-link]'));
