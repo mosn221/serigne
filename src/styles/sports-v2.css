@@ -1,3 +1,11 @@
+/* ==========================================================================
+   SPORTS PRODUCT PAGE
+   --------------------------------------------------------------------------
+   Visual language and responsive content layout for M221Tech Sports.
+   The shared sticky local navigation is styled centrally in chrome.css;
+   this file owns Sports-specific hero, cards, data modules and CTA content.
+   ========================================================================== */
+
 .m221-sports-page{
   --sports-cyan:#3FE6A8;
   --sports-blue:#00BFD6;
