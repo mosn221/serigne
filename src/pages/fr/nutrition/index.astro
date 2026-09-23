@@ -1,4 +1,7 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of Nutrition. Keep section ids and interaction structure aligned with EN.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/nutrition-v2.css';
 import '../../../styles/nutrition-v3.css';
@@ -142,6 +145,8 @@ import '../../../styles/nutrition-v3.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-nutrition-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-nutrition-link]'));
