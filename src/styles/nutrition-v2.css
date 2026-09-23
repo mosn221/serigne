@@ -1,3 +1,12 @@
+/* ==========================================================================
+   NUTRITION PRODUCT PAGE — FOUNDATION
+   --------------------------------------------------------------------------
+   Base visual language for the Nutrition/Lekkantu presentation page.
+   nutrition-v3.css refines the current shelf/label direction afterwards.
+
+   Shared sticky navigation geometry lives in chrome.css.
+   ========================================================================== */
+
 .m221-nutrition-page{
   --nutrition-yellow:#FFC300;
   --nutrition-cream:#FFF0A8;
