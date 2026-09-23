@@ -1,6 +1,8 @@
 ---
 // Galsen Facts page body is shared by the EN and FR route wrappers. This keeps the
 // structure and interactions identical while only the copy changes with the pathname.
+import GalsenFactsBrandMark from './galsen-facts/GalsenFactsBrandMark.astro';
+
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 
@@ -141,6 +143,7 @@ const copy = isFrench
   <section class="m221-facts-hero">
     <div class="m221-container m221-facts-hero-inner">
       <a class="m221-facts-breadcrumb" href={isFrench ? '/fr/#projects' : '/#projects'}>{copy.breadcrumb}</a>
+      <GalsenFactsBrandMark size={78} className="m221-facts-hero-mark" />
       <span class="m221-facts-kicker">{copy.kicker}</span>
       <h1>Galsen Facts</h1>
       <p class="m221-facts-lead"><strong>{copy.heroTitle}</strong><br />{copy.heroLead}</p>

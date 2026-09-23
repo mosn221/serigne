@@ -3,6 +3,7 @@
 // English Nutrition project page. nutrition-v2 provides the foundation; nutrition-v3 is the current product-specific refinement layer.
 // -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
+import LekkantuBrandMark from '../../components/lekkantu/LekkantuBrandMark.astro';
 import '../../styles/nutrition-v2.css';
 import '../../styles/nutrition-v3.css';
 ---
@@ -11,11 +12,13 @@ import '../../styles/nutrition-v3.css';
   title="M221Tech Nutrition | Understand food products in Senegal"
   description="Explore Lekkantu and M221Tech Nutrition to understand food products, ingredients and nutrition facts through clear, useful product experiences."
   navSection="projects"
+  ogImage="/assets/lekkantu/social-base.png"
 >
   <div class="m221-nutrition-page">
     <section class="m221-nutrition-hero">
       <div class="m221-container m221-nutrition-hero-inner">
         <a class="m221-nutrition-breadcrumb" href="/#projects">← M221Tech / Projects</a>
+        <LekkantuBrandMark size={78} className="m221-nutrition-hero-mark" />
         <span class="m221-nutrition-kicker">M221TECH / NUTRITION</span>
         <h1>Food data, made easier to read.</h1>
         <p class="m221-nutrition-lead">Products, ingredients and nutrition facts — structured so the label makes more sense before the pack goes back on the shelf.</p>

@@ -3,6 +3,7 @@
 // French mirror of Nutrition. Keep section ids and interaction structure aligned with EN.
 // -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
+import LekkantuBrandMark from '../../../components/lekkantu/LekkantuBrandMark.astro';
 import '../../../styles/nutrition-v2.css';
 import '../../../styles/nutrition-v3.css';
 ---
@@ -11,11 +12,13 @@ import '../../../styles/nutrition-v3.css';
   title="M221Tech Nutrition | Produits alimentaires au Sénégal"
   description="Découvrez Lekkantu et M221Tech Nutrition pour mieux comprendre les produits alimentaires, leurs ingrédients et leurs valeurs nutritionnelles."
   navSection="projects"
+  ogImage="/assets/lekkantu/social-base.png"
 >
   <div class="m221-nutrition-page">
     <section class="m221-nutrition-hero">
       <div class="m221-container m221-nutrition-hero-inner">
         <a class="m221-nutrition-breadcrumb" href="/fr/#projects">← M221Tech / Projets</a>
+        <LekkantuBrandMark size={78} className="m221-nutrition-hero-mark" />
         <span class="m221-nutrition-kicker">M221TECH / NUTRITION</span>
         <h1>Des données alimentaires plus faciles à lire.</h1>
         <p class="m221-nutrition-lead">Produits, ingrédients et valeurs nutritionnelles — structurés pour mieux comprendre l'étiquette avant de remettre le paquet en rayon.</p>

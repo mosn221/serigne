@@ -4,6 +4,9 @@
 // -----------------------------------------------------------------------------
 import Layout from '../layouts/Layout.astro';
 import AboutM221 from '../components/AboutM221.astro';
+import M221FootBrandMark from '../components/m221foot/M221FootBrandMark.astro';
+import LekkantuBrandMark from '../components/lekkantu/LekkantuBrandMark.astro';
+import GalsenFactsBrandMark from '../components/galsen-facts/GalsenFactsBrandMark.astro';
 import '../styles/home-v4-skeleton.css';
 import '../styles/home-v4.css';
 import '../styles/home-v5.css';
@@ -59,9 +62,13 @@ import '../styles/home-v5.css';
               <span class="m221-v5-project-status">Sports</span>
             </div>
             <div class="m221-v5-project-main">
-              <span class="m221-v4-domain">FOOTBALL / DATA PRODUCTS</span>
-              <h3>Sports</h3>
-              <p>The sports field, its products and experiments — including the football platform and tournament work.</p>
+              <div class="m221-v5-project-brand">
+                <M221FootBrandMark size={52} className="m221-v5-project-mark" />
+                <span>CORE PRODUCT</span>
+              </div>
+              <span class="m221-v4-domain">FOOTBALL / DATA PLATFORM</span>
+              <h3>M221Foot</h3>
+              <p>Competitions, clubs, matches and player context shaped into a football product built for exploration.</p>
             </div>
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/sports/">Explore Sports →</a>
@@ -75,9 +82,13 @@ import '../styles/home-v5.css';
               <span class="m221-v5-project-status">Nutrition</span>
             </div>
             <div class="m221-v5-project-main">
-              <span class="m221-v4-domain">FOOD / NUTRITION DATA</span>
-              <h3>Nutrition</h3>
-              <p>Food products, ingredients and nutrition data built around what people actually find, buy and eat.</p>
+              <div class="m221-v5-project-brand">
+                <LekkantuBrandMark size={52} className="m221-v5-project-mark" />
+                <span>CORE PRODUCT</span>
+              </div>
+              <span class="m221-v4-domain">FOOD / NUTRITION</span>
+              <h3>Lekkantu</h3>
+              <p>Products, ingredients and nutrition facts organized into a clearer way to read what is on the pack.</p>
             </div>
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/nutrition/">Explore Nutrition →</a>
@@ -88,9 +99,13 @@ import '../styles/home-v5.css';
           <article class="m221-v5-project" data-tone="facts">
             <div class="m221-v5-project-top">
               <span class="m221-v5-project-no">PROJECT / 03</span>
-              <span class="m221-v5-project-status">Galsen Facts</span>
+              <span class="m221-v5-project-status">Editorial</span>
             </div>
             <div class="m221-v5-project-main">
+              <div class="m221-v5-project-brand">
+                <GalsenFactsBrandMark size={52} className="m221-v5-project-mark" />
+                <span>EDITORIAL COLLECTION</span>
+              </div>
               <span class="m221-v4-domain">SENEGAL / PUBLIC INFORMATION</span>
               <h3>Galsen Facts</h3>
               <p>Clear explorations of projects, public spending, places and other forces shaping Senegal.</p>

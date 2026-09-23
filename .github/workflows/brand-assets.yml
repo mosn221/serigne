@@ -8,7 +8,12 @@ on:
       - "public/assets/img/m221tech-*.svg"
       - "public/assets/img/favicon.svg"
       - "public/assets/img/safari-pinned-tab.svg"
+      - "public/assets/galsen-facts/*.svg"
+      - "public/assets/lekkantu/mark-master.png"
+      - "public/assets/lekkantu/favicon-source.png"
       - "scripts/generate-brand-assets.mjs"
+      - "scripts/generate-galsen-facts-assets.mjs"
+      - "scripts/generate-lekkantu-assets.mjs"
       - "package.json"
       - ".github/workflows/brand-assets.yml"
   workflow_dispatch:
@@ -40,7 +45,7 @@ jobs:
       - name: Commit generated raster assets
         shell: bash
         run: |
-          git add public/favicon.ico public/assets/img/*.png public/assets/img/*.webp
+          git add public/favicon.ico public/assets/img/*.png public/assets/img/*.webp public/assets/galsen-facts/*.png public/assets/lekkantu/*.png
           if git diff --cached --quiet; then
             echo "Brand raster assets are already up to date."
             exit 0
