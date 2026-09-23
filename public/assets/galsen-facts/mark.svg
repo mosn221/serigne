@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">M221 editorial project mark</title>
+  <desc id="desc">Three abstract figures forming an open circle in green, yellow and red.</desc>
+  <circle cx="256" cy="82" r="42" fill="#FFC300"/>
+  <path d="M150 210C191 158 316 153 362 220" fill="none" stroke="#FFC300" stroke-width="52" stroke-linecap="round"/>
+  <circle cx="121" cy="326" r="36" fill="#008751"/>
+  <path d="M113 245C84 326 126 408 228 428" fill="none" stroke="#008751" stroke-width="54" stroke-linecap="round"/>
+  <circle cx="391" cy="347" r="36" fill="#E11D48"/>
+  <path d="M399 250C425 329 386 410 286 439" fill="none" stroke="#E11D48" stroke-width="54" stroke-linecap="round"/>
+</svg>
