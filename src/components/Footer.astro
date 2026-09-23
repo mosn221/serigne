@@ -1,4 +1,6 @@
 ---
+// Shared portfolio-neutral footer. Keep project names out of this component so the
+// global navigation does not need to change whenever the portfolio evolves.
 const pathname = Astro.url.pathname;
 const isFrench = pathname === '/fr' || pathname.startsWith('/fr/');
 const homeHref = isFrench ? '/fr/' : '/';
@@ -11,6 +13,8 @@ const labels = isFrench
   : { home: 'Home', projects: 'Projects', open: 'Open', contact: 'Contact' };
 ---
 
+<!-- The full horizontal lockup is intentional here: the footer is a brand-forward
+     surface, unlike favicon/PWA contexts that use the standalone M mark. -->
 <footer class="m221-footer">
   <div class="m221-container m221-footer-shell">
     <div class="m221-footer-main">
