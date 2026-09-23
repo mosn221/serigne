@@ -1,4 +1,4 @@
-import { readdir, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -103,5 +103,6 @@ ${rows.join('\n')}
 </urlset>
 `;
 
+await mkdir(path.dirname(outputFile), { recursive: true });
 await writeFile(outputFile, xml, 'utf8');
 console.log(`Generated sitemap.xml with ${routes.length} public static routes.`);
