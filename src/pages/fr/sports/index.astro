@@ -3,6 +3,7 @@
 // French mirror of Sports. Keep section ids identical to EN because the language switch preserves the active section.
 // -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
+import M221FootBrandMark from '../../../components/m221foot/M221FootBrandMark.astro';
 import '../../../styles/sports-v2.css';
 ---
 
@@ -15,6 +16,7 @@ import '../../../styles/sports-v2.css';
     <section class="m221-sports-hero">
       <div class="m221-container m221-sports-hero-inner">
         <a class="m221-sports-breadcrumb" href="/fr/#projects">← M221Tech / Projets</a>
+        <M221FootBrandMark size={78} className="m221-sports-hero-mark" />
         <span class="m221-sports-kicker">M221TECH / SPORTS</span>
         <h1>La donnée football, pensée autour du jeu.</h1>
         <p class="m221-sports-lead">Compétitions, clubs, matchs et couches de contexte plus riches — structurés dans des produits faits pour explorer, suivre et utiliser.</p>
