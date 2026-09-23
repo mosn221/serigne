@@ -1,3 +1,12 @@
+/* ==========================================================================
+   OPEN PRODUCT PAGE — FOUNDATION
+   --------------------------------------------------------------------------
+   Base layout for datasets, reports, scope/boundary and contact content.
+   open-v3.css supplies the current editorial refinement.
+
+   Shared sticky navigation geometry lives in chrome.css.
+   ========================================================================== */
+
 .m221-open-page{
   --open-cyan:#3FE6A8;
   --open-blue:#00BFD6;
