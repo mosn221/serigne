@@ -1,4 +1,7 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of Sports. Keep section ids identical to EN because the language switch preserves the active section.
+// -----------------------------------------------------------------------------
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/sports-v2.css';
 ---
@@ -135,6 +138,8 @@ import '../../../styles/sports-v2.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const header = document.querySelector('.m221-header');
     const localWrap = document.querySelector('.m221-sports-local-wrap');
     const links = Array.from(document.querySelectorAll('[data-sports-link]'));
