@@ -4,6 +4,9 @@
 // -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import AboutM221 from '../../components/AboutM221.astro';
+import M221FootBrandMark from '../../components/m221foot/M221FootBrandMark.astro';
+import LekkantuBrandMark from '../../components/lekkantu/LekkantuBrandMark.astro';
+import GalsenFactsBrandMark from '../../components/galsen-facts/GalsenFactsBrandMark.astro';
 import '../../styles/home-v4-skeleton.css';
 import '../../styles/home-v4.css';
 import '../../styles/home-v5.css';
@@ -59,9 +62,13 @@ import '../../styles/home-v5.css';
               <span class="m221-v5-project-status">Sports</span>
             </div>
             <div class="m221-v5-project-main">
-              <span class="m221-v4-domain">FOOTBALL / PRODUITS DATA</span>
-              <h3>Sports</h3>
-              <p>Le pôle sport, ses produits et ses expérimentations — de la plateforme football aux formats événementiels.</p>
+              <div class="m221-v5-project-brand">
+                <M221FootBrandMark size={52} className="m221-v5-project-mark" />
+                <span>PRODUIT CŒUR</span>
+              </div>
+              <span class="m221-v4-domain">FOOTBALL / PLATEFORME DATA</span>
+              <h3>M221Foot</h3>
+              <p>Compétitions, clubs, matchs et contexte joueurs réunis dans un produit football pensé pour l’exploration.</p>
             </div>
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/fr/sports/">Découvrir Sports →</a>
@@ -75,9 +82,13 @@ import '../../styles/home-v5.css';
               <span class="m221-v5-project-status">Nutrition</span>
             </div>
             <div class="m221-v5-project-main">
-              <span class="m221-v4-domain">ALIMENTATION / DONNÉES NUTRITIONNELLES</span>
-              <h3>Nutrition</h3>
-              <p>Produits, ingrédients et données nutritionnelles à partir de ce qu'on trouve réellement dans les rayons.</p>
+              <div class="m221-v5-project-brand">
+                <LekkantuBrandMark size={52} className="m221-v5-project-mark" />
+                <span>PRODUIT CŒUR</span>
+              </div>
+              <span class="m221-v4-domain">ALIMENTATION / NUTRITION</span>
+              <h3>Lekkantu</h3>
+              <p>Produits, ingrédients et valeurs nutritionnelles organisés pour rendre l’étiquette plus simple à lire.</p>
             </div>
             <div class="m221-v5-project-actions">
               <a class="m221-v5-project-page" href="/fr/nutrition/">Découvrir Nutrition →</a>
@@ -88,9 +99,13 @@ import '../../styles/home-v5.css';
           <article class="m221-v5-project" data-tone="facts">
             <div class="m221-v5-project-top">
               <span class="m221-v5-project-no">PROJET / 03</span>
-              <span class="m221-v5-project-status">Galsen Facts</span>
+              <span class="m221-v5-project-status">Éditorial</span>
             </div>
             <div class="m221-v5-project-main">
+              <div class="m221-v5-project-brand">
+                <GalsenFactsBrandMark size={52} className="m221-v5-project-mark" />
+                <span>COLLECTION ÉDITORIALE</span>
+              </div>
               <span class="m221-v4-domain">SÉNÉGAL / INFORMATION PUBLIQUE</span>
               <h3>Galsen Facts</h3>
               <p>Des explorations simples autour des projets, dépenses publiques, territoires et autres sujets qui façonnent le pays.</p>
