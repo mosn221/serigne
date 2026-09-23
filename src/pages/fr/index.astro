@@ -1,4 +1,7 @@
 ---
+// -----------------------------------------------------------------------------
+// French mirror of the brand homepage. Keep structure/section ids aligned with the EN route so language switching can preserve reading position.
+// -----------------------------------------------------------------------------
 import Layout from '../../layouts/Layout.astro';
 import AboutM221 from '../../components/AboutM221.astro';
 import '../../styles/home-v4-skeleton.css';
@@ -142,6 +145,8 @@ import '../../styles/home-v5.css';
   </div>
 
   <script>
+    // Scrollspy/local-navigation controller: sticky offsets are read from the real
+    // rendered header/nav heights so responsive geometry stays synchronized.
     const spine = document.querySelector('.m221-v4-spine-wrap');
     const header = document.querySelector('.m221-header');
     const spineLinks = Array.from(document.querySelectorAll('[data-section-link]'));
