@@ -1,3 +1,11 @@
+/* ==========================================================================
+   TAILWIND ENTRYPOINT
+   --------------------------------------------------------------------------
+   Tailwind utilities are available to components, but M221Tech does not rely
+   on Tailwind's preflight/reset. Layout.astro explicitly loads the authored
+   CSS layers after this file so custom design remains deterministic.
+   ========================================================================== */
+
 /* M221Tech global Tailwind entrypoint.
    Shared structural styles live in refactor.css, brand tokens in brand.css,
    responsive content rules in responsive.css, and shared site chrome in
