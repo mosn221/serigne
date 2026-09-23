@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">M221Foot</title>
+  <desc id="desc">Official M221Foot mark: geometric M with a rising football trajectory.</desc>
+  <defs>
+    <linearGradient id="white" x1="42" y1="52" x2="142" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D7DEE6"/>
+    </linearGradient>
+    <linearGradient id="green" x1="105" y1="190" x2="215" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A9F95"/>
+      <stop offset=".45" stop-color="#52E7E2"/>
+      <stop offset="1" stop-color="#D2FF4C"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="#05090F"/>
+  <path d="M44 202V54l82 67 43-36 17 19-60 51-48-39v86H44Z" fill="url(#white)"/>
+  <path d="M93 185 194 103v99l-27 15v-58l-49 40-25-14Z" fill="url(#green)"/>
+  <path d="m124 120 58-49 19-15-14 23-54 46-9-5Z" fill="url(#green)"/>
+  <path d="m136 136 50-42 12 14-49 42-13-14Z" fill="url(#green)"/>
+  <circle cx="207" cy="55" r="21" fill="url(#green)"/>
+</svg>
