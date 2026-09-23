@@ -4,10 +4,9 @@
 // (ex: "flex", "gap-4", "text-cyan") à la volée, uniquement pour celles
 // réellement utilisées dans le code (voir "content" ci-dessous).
 //
-// Important : ce fichier ne remplace PAS le design existant du site
-// (src/styles/legacy.css). Il vient en complément, pour les NOUVEAUX
-// composants qu'on construit (comme le dashboard Chart.js) sans avoir à
-// écrire du CSS custom à chaque fois.
+// Tailwind reste une couche utilitaire légère. Le design partagé est porté
+// par les feuilles CSS du site, avec chrome.css comme source canonique pour
+// le header, les navigations et le footer.
 // -----------------------------------------------------------------------
 
 /** @type {import('tailwindcss').Config} */
