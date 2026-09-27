@@ -2,7 +2,7 @@
 
 Canonical assets live in `public/assets/img/`.
 
-The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **split-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
+The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **fluid data-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
 
 ## Source assets
 
@@ -51,15 +51,15 @@ The build also runs this automatically before Astro.
 
 ## Visual rules
 
-- The left M structure is off-white / silver.
-- The right side is formed by two rising cyan-to-teal planes separated by one clean diagonal cut, with both branches aligned on the same central hinge for a fluid M silhouette.
+- The left M structure is off-white / silver, with softly rounded terminals and a controlled cool fade at the central hinge.
+- The right side is a continuous cyan-to-teal data ribbon that separates into two rising branches after one shared central hinge. The black channel between the branches remains open and clean.
 - `221` uses the same data accent family.
 - `Tech` is neutral light on dark surfaces and dark neutral on light surfaces.
 - Canonical dark background: `#0B1020`.
 - Canonical data range: `#00BFD6` → `#3FE6A8`.
 - Light-surface data range: `#007C91` → `#00A67E`.
-- Gradients are restrained and belong inside the cyan-to-teal data planes only.
-- No glow, neon halo, arrowhead, gaming treatment or decorative shadow. The M must remain immediately legible at favicon size.
+- Gradients are restrained: the data ribbon uses cyan → teal, while the white branch only picks up a subtle cool tint at the hinge.
+- Rounded branch ends are intentional, but the vertical legs remain geometric so the mark stays aligned with Space Grotesk. No glow, neon halo, arrowhead, gaming treatment or decorative shadow.
 
 ## Usage hierarchy
 
