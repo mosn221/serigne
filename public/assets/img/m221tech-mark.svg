@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
   <title id="title">M221Tech</title>
-  <desc id="desc">M221Tech split-ribbon M mark</desc>
+  <desc id="desc">M221Tech rounded data-ribbon M mark</desc>
   <defs>
-    <linearGradient id="m221-data" x1="58" y1="104" x2="108" y2="24" gradientUnits="userSpaceOnUse">
+    <linearGradient id="m221-data" x1="58" y1="104" x2="108" y2="23" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00BFD6"/>
       <stop offset="1" stop-color="#3FE6A8"/>
     </linearGradient>
   </defs>
-  <path d="M20 104V24L60 56V68L38 51V104Z" fill="#F4F7FA"/>
-  <path d="M60 56L101 24H108V36L60 68Z" fill="url(#m221-data)"/>
-  <path d="M60 71L108 39V104H94V65L69 84Z" fill="url(#m221-data)"/>
+  <path d="M57.6 54.8L99.2 24.7C100.8 23.6 102.2 23 104 23H105C106.7 23 108 24.3 108 26V32C108 34.6 106.9 36.2 104.8 37.7L61.8 68.3C60.8 69.1 60 68.5 60 66.6V60C60 57.7 59.1 56.2 57.6 54.8Z" fill="url(#m221-data)"/>
+  <path d="M63.1 69.5L98.9 44.1C101.6 42.2 104.2 42.1 106.1 43.5C107.3 44.4 108 45.7 108 47.4V101C108 102.7 106.7 104 105 104H95C93.3 104 92 102.7 92 101V67.1L70.1 82.5C68.2 83.9 66.1 83.5 64.8 81.7L61.5 76.9C59.8 74.4 60.5 71.4 63.1 69.5Z" fill="url(#m221-data)"/>
+  <path d="M24 23C21.8 23 20 24.8 20 27V101C20 102.7 21.3 104 23 104H35C36.7 104 38 102.7 38 101V53L55.4 67.8C57.1 69.2 59.6 68.4 60 66.3V60C60 57.7 59 56.2 57.4 54.8L26.2 24.7C25.5 24 24.8 23.5 24 23Z" fill="#F4F7FA"/>
 </svg>
