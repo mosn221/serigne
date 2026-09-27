@@ -52,7 +52,7 @@ The build also runs this automatically before Astro.
 ## Visual rules
 
 - The left M structure is off-white / silver.
-- The right side is formed by two rising cyan-to-teal planes separated by one clean diagonal cut.
+- The right side is formed by two rising cyan-to-teal planes separated by one clean diagonal cut, with both branches aligned on the same central hinge for a fluid M silhouette.
 - `221` uses the same data accent family.
 - `Tech` is neutral light on dark surfaces and dark neutral on light surfaces.
 - Canonical dark background: `#0B1020`.

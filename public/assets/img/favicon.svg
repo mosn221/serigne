@@ -13,7 +13,7 @@
   </defs>
   <rect width="128" height="128" rx="24" fill="#0B1020"/>
   <rect x="3" y="3" width="122" height="122" rx="21" fill="none" stroke="url(#rim)" stroke-opacity=".72" stroke-width="2.5"/>
-  <path d="M20 104V24L60 56V72L38 54V104Z" fill="#F4F7FA"/>
+  <path d="M20 104V24L60 56V68L38 51V104Z" fill="#F4F7FA"/>
   <path d="M60 56L101 24H108V36L60 68Z" fill="url(#data)"/>
-  <path d="M62 71L108 40V104H94V65L70 82Z" fill="url(#data)"/>
+  <path d="M60 71L108 39V104H94V65L69 84Z" fill="url(#data)"/>
 </svg>
