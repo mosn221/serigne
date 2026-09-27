@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
   <title id="title">M221Tech</title>
-  <desc id="desc">M221Tech data-ribbon M mark</desc>
+  <desc id="desc">M221Tech split-ribbon M mark</desc>
   <defs>
-    <linearGradient id="m221-data" x1="54" y1="102" x2="108" y2="22" gradientUnits="userSpaceOnUse">
+    <linearGradient id="m221-data" x1="58" y1="104" x2="108" y2="24" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00BFD6"/>
       <stop offset="1" stop-color="#3FE6A8"/>
     </linearGradient>
   </defs>
-  <path d="M20 104V24L64 57L58 69L38 54V104Z" fill="#F4F7FA"/>
-  <path d="M58 55L101 24H108V36L64 67Z" fill="url(#m221-data)"/>
-  <path d="M64 69L101 41H108V53L70 81Z" fill="url(#m221-data)"/>
-  <path d="M70 84L94 66V56L108 45V103H94V78L76 91Z" fill="url(#m221-data)"/>
+  <path d="M20 104V24L60 56V72L38 54V104Z" fill="#F4F7FA"/>
+  <path d="M60 56L101 24H108V36L60 68Z" fill="url(#m221-data)"/>
+  <path d="M62 71L108 40V104H94V65L70 82Z" fill="url(#m221-data)"/>
 </svg>

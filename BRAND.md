@@ -2,7 +2,7 @@
 
 Canonical assets live in `public/assets/img/`.
 
-The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **data-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
+The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **split-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
 
 ## Source assets
 
@@ -52,14 +52,14 @@ The build also runs this automatically before Astro.
 ## Visual rules
 
 - The left M structure is off-white / silver.
-- The right side is formed by three rising cyan-to-teal data ribbons.
+- The right side is formed by two rising cyan-to-teal planes separated by one clean diagonal cut.
 - `221` uses the same data accent family.
 - `Tech` is neutral light on dark surfaces and dark neutral on light surfaces.
 - Canonical dark background: `#0B1020`.
 - Canonical data range: `#00BFD6` → `#3FE6A8`.
 - Light-surface data range: `#007C91` → `#00A67E`.
-- Gradients are restrained and belong inside the data elements only.
-- No glow, neon halo, arrowhead, gaming treatment or decorative shadow.
+- Gradients are restrained and belong inside the cyan-to-teal data planes only.
+- No glow, neon halo, arrowhead, gaming treatment or decorative shadow. The M must remain immediately legible at favicon size.
 
 ## Usage hierarchy
 
