@@ -2,6 +2,8 @@
 
 Canonical assets live in `public/assets/img/`.
 
+> **Logo lock — 28 September 2026:** the approved M221Tech mark, wordmark, compact M221 lockup and all generated derivatives are frozen. Do not redraw, reshape, reconnect, recolor or regenerate their SVG geometry during ordinary site maintenance. Brand-system maintenance belongs in CSS tokens, layout and documented usage rules unless a future explicit logo redesign is approved.
+
 The approved primary brand identity is the horizontal **M + 221Tech** lockup. It is the default whenever the full name has room to breathe. The **M221** lockup is the responsive compact signature for narrow navigation only. The standalone **fluid data-ribbon M** is the icon layer for favicons, avatars, PWA/device icons and genuinely constrained spaces.
 
 ## Source assets
@@ -60,6 +62,37 @@ The build also runs this automatically before Astro.
 - Light-surface data range: `#007C91` → `#00A67E`.
 - Gradients are restrained: the data ribbon uses cyan → teal, while the white branch only picks up a subtle cool tint at the hinge.
 - Rounded branch ends are intentional, but the vertical legs remain geometric so the mark stays aligned with Space Grotesk. No glow, neon halo, arrowhead, gaming treatment or decorative shadow.
+
+## Core design tokens
+
+Shared M221Tech UI must use the canonical tokens below instead of introducing near-duplicate corporate colors.
+
+| Role | Token | Value |
+| --- | --- | --- |
+| Primary background | `--m221-bg` | `#0B1020` |
+| Deep background | `--m221-bg-deep` | `#070C17` |
+| Shared panel | `--m221-panel` | `#0F1729` |
+| Surface | `--m221-surface` | `#121A2E` |
+| Primary text | `--m221-text` | `#F5F7FA` |
+| Muted text | `--m221-muted` | `#AEB6C2` |
+| Data gradient start | `--m221-data-start` | `#00BFD6` |
+| Data gradient end | `--m221-data-end` | `#3FE6A8` |
+| Secondary accent | `--m221-accent-yellow` | `#FFC300` |
+| House typeface | `--m221-font-house` | Space Grotesk |
+| Data typeface | `--m221-font-data` | IBM Plex Mono |
+
+The aliases `--m221-blue`, `--m221-blue-bright` and `--m221-accent` remain only for backward compatibility. New CSS uses semantic token names.
+
+### Product accents
+
+| Product / vertical | Accent logic |
+| --- | --- |
+| Sports / M221Foot | aqua + teal, with lime/yellow as controlled secondary accents |
+| Lekkantu / Nutrition | mint/green + M221Tech yellow |
+| Galsen Facts | Senegal green/yellow/red + editorial mint |
+| Open / Data | pale cyan + M221Tech data cyan |
+
+All product pages retain the M221Tech dark foundation and the same two type families. Product colors are accents, not alternate corporate identities.
 
 ## Usage hierarchy
 
