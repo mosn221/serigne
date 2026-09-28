@@ -7,18 +7,18 @@
    ========================================================================== */
 
 .m221-nutrition-page{
-  --nutrition-yellow:#FFC300;
+  --nutrition-yellow:var(--m221-accent-yellow);
   --nutrition-cream:#FFF0A8;
   --lekkantu-ink:#173C36;
   --lekkantu-green:#0A5E57;
   --lekkantu-green-deep:#063F3A;
   --lekkantu-mint:#00BFA6;
-  --lekkantu-sun:#FFC300;
+  --lekkantu-sun:var(--m221-accent-yellow);
   --lekkantu-sand:#F0EEE9;
   --lekkantu-paper:#FFFDF8;
   --nutrition-line:rgba(255,255,255,.075);
   --nutrition-shelf:#11192A;
-  background:#0B1020;
+  background:var(--m221-bg);
 }/* V3: Nutrition keeps the M221Tech system, but feels closer to a shelf / label than a sports dashboard. */
 .m221-nutrition-page .m221-nutrition-hero{
   min-height:560px;
@@ -29,7 +29,7 @@
     linear-gradient(180deg,transparent 0 73%,rgba(255,255,255,.035) 73% 73.2%,transparent 73.2%),
     radial-gradient(circle at 84% 22%,rgba(10,94,87,.16),transparent 0 27%),
     radial-gradient(circle at 95% 58%,rgba(255,195,0,.07),transparent 0 20%),
-    #0B1020;
+    var(--m221-bg);
 }.m221-nutrition-page .m221-nutrition-hero:before{
   width:min(39vw,520px);
   opacity:.22;
