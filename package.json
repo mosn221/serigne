@@ -10,7 +10,8 @@
     "brand:generate": "node scripts/generate-brand-assets.mjs && npm run brand:galsen && npm run brand:lekkantu",
     "build": "npm run brand:generate && astro build && npm run seo:generate",
     "preview": "astro preview",
-    "seo:generate": "node scripts/generate-sitemap.mjs"
+    "seo:generate": "node scripts/generate-sitemap.mjs",
+    "brand:check": "node scripts/check-brand-tokens.mjs"
   },
   "dependencies": {
     "astro": "^7.3.5",
