@@ -27,8 +27,10 @@ jobs:
         with:
           node-version: 22.12.0
 
-      - name: Refresh lockfile
-        run: npm install --package-lock-only
+      - name: Rebuild lockfile from scratch
+        run: |
+          rm -f package-lock.json
+          npm install --package-lock-only
 
       - name: Install locked dependencies
         run: npm ci
