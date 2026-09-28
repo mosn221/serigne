@@ -35,5 +35,8 @@ jobs:
       - name: Audit high severity dependencies
         run: npm audit --audit-level=high
 
+      - name: Validate M221Tech brand tokens
+        run: npm run brand:check
+
       - name: Build production site
         run: npm run build
