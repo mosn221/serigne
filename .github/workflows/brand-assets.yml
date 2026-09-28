@@ -1,5 +1,7 @@
 name: Refresh brand assets
 
+# Generated brand derivatives are verified with the same locked Node 22 toolchain as production.
+
 on:
   push:
     branches:
