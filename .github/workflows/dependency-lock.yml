@@ -1,0 +1,51 @@
+name: Bootstrap dependency lock
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - "package.json"
+      - ".github/workflows/dependency-lock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lock-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staging
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate lockfile
+        run: npm install --package-lock-only
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Verify production build
+        run: npm run build
+
+      - name: Commit lockfile
+        shell: bash
+        run: |
+          git add package-lock.json
+          if git diff --cached --quiet; then
+            echo "package-lock.json is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: lock npm dependencies [skip ci]"
+          git pull --rebase origin staging
+          git push origin HEAD:staging
