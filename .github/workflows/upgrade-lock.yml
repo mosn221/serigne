@@ -6,6 +6,7 @@ on:
       - staging
     paths:
       - "package.json"
+      - "src/content.config.ts"
       - ".github/workflows/upgrade-lock.yml"
   workflow_dispatch:
 
