@@ -17,7 +17,7 @@
   --facts-line:rgba(255,255,255,.08);
   --facts-panel:#0F1728;
   overflow:clip;
-  background:#0B1020;
+  background:var(--m221-bg);
 }.m221-facts-page a,
 .m221-facts-page button,
 .m221-facts-page article{
@@ -35,7 +35,7 @@
     radial-gradient(circle at 94% 40%,rgba(250,193,24,.055),transparent 0 19%),
     radial-gradient(circle at 86% 76%,rgba(233,34,61,.045),transparent 0 22%),
     linear-gradient(90deg,transparent 0 77%,rgba(105,216,192,.03) 77% 77.1%,transparent 77.1%),
-    #0B1020;
+    var(--m221-bg);
 }.m221-facts-hero:before{
   content:"";
   position:absolute;
@@ -249,7 +249,7 @@
   margin:28px 0 0;
   font:650 1.65rem/1.05 'Space Grotesk',sans-serif;
   letter-spacing:-.04em;
-}.m221-facts-source-note p{margin:12px 0 0;color:#929DAF;font-size:.84rem;line-height:1.58}.m221-facts-source-note p+p{padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}.m221-facts-contact{padding:78px 0 94px;background:#0B1020}.m221-facts-contact-inner{
+}.m221-facts-source-note p{margin:12px 0 0;color:#929DAF;font-size:.84rem;line-height:1.58}.m221-facts-source-note p+p{padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}.m221-facts-contact{padding:78px 0 94px;background:var(--m221-bg)}.m221-facts-contact-inner{
   display:grid;
   grid-template-columns:150px minmax(0,1fr) auto;
   gap:30px;
