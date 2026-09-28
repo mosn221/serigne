@@ -1,5 +1,7 @@
 name: Refresh brand assets
 
+# Generated brand derivatives are verified with the same locked Node 22 toolchain as production.
+
 on:
   push:
     branches:
@@ -15,6 +17,7 @@ on:
       - "scripts/generate-galsen-facts-assets.mjs"
       - "scripts/generate-lekkantu-assets.mjs"
       - "package.json"
+      - "package-lock.json"
       - ".github/workflows/brand-assets.yml"
   workflow_dispatch:
 
@@ -31,13 +34,14 @@ jobs:
           ref: staging
           fetch-depth: 0
 
-      - name: Use Node 20
+      - name: Use Node 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.12.0
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install locked dependencies
+        run: npm ci
 
       - name: Generate brand kit
         run: npm run brand:generate

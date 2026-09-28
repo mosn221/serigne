@@ -1,4 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const editorialSource = z.object({
   label: z.string(),
@@ -16,7 +18,10 @@ const keyFigure = z.object({
 });
 
 const galsenFacts = defineCollection({
-  type: 'content',
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/galsen-facts'
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string(),

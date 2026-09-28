@@ -7,7 +7,7 @@
 
 .m221-open-page{
   --open-accent:#9DEBF3;
-  --open-blue:#00BFD6;
+  --open-blue:var(--m221-data-start);
   --open-paper:#DCE7EA;
   --open-line:rgba(255,255,255,.075);
   --open-line-strong:rgba(157,235,243,.18);
@@ -16,7 +16,7 @@
 }/* OPEN / V3 — publication registry, not another product landing page. */
 .m221-open-hero{
   padding:72px 0 62px;
-  background:#0B1020;
+  background:var(--m221-bg);
 }.m221-open-hero:before{
   opacity:1;
   background:
@@ -132,7 +132,7 @@
   margin-bottom:22px;
   border-radius:50%;
   background:#66748A;
-}.m221-open-boundary article:nth-child(1):before{background:var(--open-accent);box-shadow:0 0 0 5px rgba(157,235,243,.055)}.m221-open-boundary article:nth-child(2):before{background:#00BFD6;box-shadow:0 0 0 5px rgba(0,191,214,.055)}.m221-open-boundary article:nth-child(3):before{background:#526078}.m221-open-boundary h3{margin:28px 0 0;font-size:1.4rem}/* Contact stays quiet. */
+}.m221-open-boundary article:nth-child(1):before{background:var(--open-accent);box-shadow:0 0 0 5px rgba(157,235,243,.055)}.m221-open-boundary article:nth-child(2):before{background:var(--m221-data-start);box-shadow:0 0 0 5px rgba(0,191,214,.055)}.m221-open-boundary article:nth-child(3):before{background:#526078}.m221-open-boundary h3{margin:28px 0 0;font-size:1.4rem}/* Contact stays quiet. */
 .m221-open-contact{
   padding:82px 0 90px;
   background:#080D19;

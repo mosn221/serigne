@@ -2,18 +2,29 @@
 
 This repository powers the main M221Tech website.
 
+## Runtime
+
+- Astro: 7.x
+- Node.js: 22.12.0 or newer compatible Node 22 release
+- Package manager: npm with committed `package-lock.json`
+- Styling: authored CSS only; Tailwind is not used
+
 ## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
 The site runs at `http://localhost:4321`.
 
+Use `npm install` only when intentionally changing dependencies and refreshing the lockfile.
+
 ## Production build
 
 ```bash
+npm ci
+npm audit --audit-level=high
 npm run build
 npm run preview
 ```
@@ -25,8 +36,11 @@ npm run preview
 - Netlify build command: `npm run build`
 - Publish directory: `dist`
 - Production domain: `https://m221.tech`
+- Netlify Node version: `22.12.0`
 
 Do not merge `staging` into `main` or deploy production changes without explicit approval.
+
+Every push to `staging` and every pull request targeting `main` runs the `Validate site` workflow: locked dependency install, high-severity npm audit, and full production build.
 
 ## SEO and public files
 

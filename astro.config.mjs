@@ -7,19 +7,14 @@
 // -----------------------------------------------------------------------------
 
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://m221.tech',
   trailingSlash: 'always',
 
-  integrations: [
-    tailwind({
-      // M221Tech owns its authored base/reset layers. Enabling Tailwind preflight
-      // here would reintroduce a second reset and make CSS ownership ambiguous.
-      applyBaseStyles: false
-    })
-  ],
+  // M221Tech uses authored CSS only. Tailwind was removed because no page/component
+  // used utility classes, which keeps the dependency surface and build pipeline lean.
+  integrations: [],
 
   // Fully static output for Netlify.
   output: 'static'

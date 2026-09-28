@@ -8,12 +8,12 @@
    ========================================================================== */
 
 .m221-nutrition-page{
-  --nutrition-yellow:#FFC300;
+  --nutrition-yellow:var(--m221-accent-yellow);
   --nutrition-cream:#FFF0A8;
   --nutrition-ink:#17140A;
   --nutrition-line:rgba(255,255,255,.08);
   --nutrition-soft:rgba(255,195,0,.07);
-  background:#0B1020;
+  background:var(--m221-bg);
 }.m221-nutrition-hero{
   position:relative;
   overflow:hidden;
@@ -21,7 +21,7 @@
   border-bottom:1px solid var(--nutrition-line);
   background:
     radial-gradient(circle at 82% 10%,rgba(255,195,0,.13),transparent 0 28%),
-    linear-gradient(180deg,#0B1020,#0B1121);
+    linear-gradient(180deg,var(--m221-bg),#0B1121);
 }.m221-nutrition-hero:before{
   content:"";
   position:absolute;
@@ -71,7 +71,7 @@
   font-size:.82rem;
   font-weight:650;
   transition:border-color .18s ease,background-color .18s ease,color .18s ease;
-}.m221-nutrition-actions .is-primary{color:var(--nutrition-ink);border-color:var(--nutrition-yellow);background:var(--nutrition-yellow)}.m221-nutrition-actions .is-primary:hover{background:#FFD84C;border-color:#FFD84C}.m221-nutrition-actions .is-secondary{color:#C0CBD9;background:rgba(255,255,255,.025)}.m221-nutrition-actions .is-secondary:hover{border-color:rgba(255,195,0,.30);color:#F5F7FA}.m221-nutrition-chapter{padding:92px 0;border-bottom:1px solid var(--nutrition-line)}.m221-nutrition-chapter-head{
+}.m221-nutrition-actions .is-primary{color:var(--nutrition-ink);border-color:var(--nutrition-yellow);background:var(--nutrition-yellow)}.m221-nutrition-actions .is-primary:hover{background:#FFD84C;border-color:#FFD84C}.m221-nutrition-actions .is-secondary{color:#C0CBD9;background:rgba(255,255,255,.025)}.m221-nutrition-actions .is-secondary:hover{border-color:rgba(255,195,0,.30);color:var(--m221-text)}.m221-nutrition-chapter{padding:92px 0;border-bottom:1px solid var(--nutrition-line)}.m221-nutrition-chapter-head{
   display:grid;
   grid-template-columns:110px minmax(0,1fr) minmax(250px,.56fr);
   gap:28px;
@@ -100,7 +100,7 @@
   border:1px solid rgba(255,195,0,.16);
   border-radius:24px;
   background:linear-gradient(135deg,rgba(255,195,0,.075),transparent 48%),#0E1628;
-}.m221-nutrition-core-copy{display:flex;min-height:430px;flex-direction:column;padding:34px}.m221-nutrition-eyebrow{color:var(--nutrition-yellow);font:600 .62rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.m221-nutrition-core h3{margin:auto 0 0;font:650 clamp(3.8rem,7vw,6.6rem)/.87 'Space Grotesk',sans-serif;letter-spacing:-.075em;color:#FFF0A8}.m221-nutrition-core-copy>p{max-width:650px;margin:16px 0 0;color:#99A5B5;font-size:.97rem;line-height:1.55}.m221-nutrition-product-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.m221-nutrition-product-tags span{padding:7px 9px;border:1px solid rgba(255,255,255,.08);border-radius:999px;color:#758399;font:500 .6rem/1 'IBM Plex Mono',monospace}.m221-nutrition-core-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.m221-nutrition-core-actions a{display:inline-flex;min-height:42px;align-items:center;padding:0 13px;border-radius:10px;text-decoration:none;font-size:.78rem;font-weight:650}.m221-nutrition-open{background:var(--nutrition-cream);color:var(--nutrition-ink)}.m221-nutrition-open:hover{background:#FFF7D1}.m221-nutrition-domain{color:#8492A6;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}.m221-nutrition-domain:hover{color:#F5F7FA}.m221-nutrition-sheet{
+}.m221-nutrition-core-copy{display:flex;min-height:430px;flex-direction:column;padding:34px}.m221-nutrition-eyebrow{color:var(--nutrition-yellow);font:600 .62rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.m221-nutrition-core h3{margin:auto 0 0;font:650 clamp(3.8rem,7vw,6.6rem)/.87 'Space Grotesk',sans-serif;letter-spacing:-.075em;color:#FFF0A8}.m221-nutrition-core-copy>p{max-width:650px;margin:16px 0 0;color:#99A5B5;font-size:.97rem;line-height:1.55}.m221-nutrition-product-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.m221-nutrition-product-tags span{padding:7px 9px;border:1px solid rgba(255,255,255,.08);border-radius:999px;color:#758399;font:500 .6rem/1 'IBM Plex Mono',monospace}.m221-nutrition-core-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.m221-nutrition-core-actions a{display:inline-flex;min-height:42px;align-items:center;padding:0 13px;border-radius:10px;text-decoration:none;font-size:.78rem;font-weight:650}.m221-nutrition-open{background:var(--nutrition-cream);color:var(--nutrition-ink)}.m221-nutrition-open:hover{background:#FFF7D1}.m221-nutrition-domain{color:#8492A6;font-family:'IBM Plex Mono',monospace;font-size:.66rem!important}.m221-nutrition-domain:hover{color:var(--m221-text)}.m221-nutrition-sheet{
   align-self:stretch;
   margin:20px;
   padding:24px;
@@ -133,7 +133,7 @@
   padding:26px 24px;
   border:1px solid var(--nutrition-line);
   border-radius:18px;
-  background:#0F1729;
+  background:var(--m221-panel);
   transition:border-color .18s ease,transform .18s ease,background-color .18s ease;
 }.m221-nutrition-data-item:hover{transform:translateY(-2px);border-color:rgba(255,195,0,.20);background:#101A2E}.m221-nutrition-data-item span{color:#59677D;font:600 .6rem/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em}.m221-nutrition-data-item h3{max-width:280px;margin:58px 0 0;font:650 1.55rem/1.03 'Space Grotesk',sans-serif;letter-spacing:-.04em}.m221-nutrition-data-item p{max-width:320px;margin:12px 0 0;color:#8793A5;font-size:.84rem;line-height:1.55}.m221-nutrition-contact{position:relative;overflow:hidden;padding:96px 0 104px;background:#080D19}.m221-nutrition-contact:after{content:"NUTRITION";position:absolute;right:-.03em;bottom:-.28em;color:rgba(255,255,255,.018);font:700 min(18vw,230px)/1 'Space Grotesk',sans-serif;letter-spacing:-.08em;pointer-events:none}.m221-nutrition-contact-inner{position:relative;z-index:1;display:grid;grid-template-columns:110px 1fr auto;gap:28px;align-items:end}.m221-nutrition-contact h2{max-width:680px;margin:0;font:650 clamp(2.5rem,4.7vw,4.6rem)/.95 'Space Grotesk',sans-serif;letter-spacing:-.055em}.m221-nutrition-contact p{margin:12px 0 0;color:#8995A7}.m221-nutrition-contact a{display:inline-flex;min-height:44px;align-items:center;padding:0 15px;border:1px solid rgba(255,195,0,.18);border-radius:11px;background:rgba(255,195,0,.055);text-decoration:none;font-size:.78rem;font-weight:650}.m221-nutrition-contact a:hover{background:rgba(255,195,0,.10)}
 

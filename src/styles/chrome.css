@@ -17,8 +17,8 @@
   padding:9px 12px;
   border:1px solid rgba(0,191,214,.35);
   border-radius:8px;
-  background:#0B1020;
-  color:#F5F7FA;
+  background:var(--m221-bg);
+  color:var(--m221-text);
   font:600 .72rem/1 'IBM Plex Mono',monospace;
   text-decoration:none;
   transform:translateY(-160%);
@@ -26,7 +26,7 @@
 }
 .m221-skip-link:focus{
   transform:translateY(0);
-  outline:2px solid #3FE6A8;
+  outline:2px solid var(--m221-data-end);
   outline-offset:2px;
 }
 #main-content:focus{outline:none}
@@ -41,7 +41,7 @@
   .m221-v4-spine a,
   .m221-footer a
 ):focus-visible{
-  outline:2px solid #3FE6A8;
+  outline:2px solid var(--m221-data-end);
   outline-offset:3px;
 }
 
@@ -101,7 +101,7 @@
   align-items:center;
   padding:0 10px;
   border-radius:8px;
-  color:#7F8CA0;
+  color:var(--m221-muted-nav);
   text-decoration:none;
   font:600 .7rem/1 'IBM Plex Mono',monospace;
   transition:color .16s ease,background-color .16s ease;
@@ -109,7 +109,7 @@
 .m221-nav a:hover,
 .m221-nav a:focus-visible,
 .m221-nav a[data-active="true"]{
-  color:#F5F7FA;
+  color:var(--m221-text);
   background:rgba(0,191,214,.055);
 }
 .m221-nav a:last-child{
@@ -129,14 +129,14 @@
   font-family:'IBM Plex Mono',ui-monospace,monospace;
 }
 .m221-lang a{
-  color:#7F8CA0;
+  color:var(--m221-muted-nav);
   text-decoration:none;
   font-size:.7rem;
   font-weight:500;
 }
 .m221-lang a:hover,
-.m221-lang a[aria-current="true"]{color:#F5F7FA}
-.m221-lang span{color:#566378}
+.m221-lang a[aria-current="true"]{color:var(--m221-text)}
+.m221-lang span{color:var(--m221-muted-dim)}
 
 /* Mobile menu */
 .m221-mobile-nav{
@@ -172,7 +172,7 @@
   width:18px;
   height:1.5px;
   border-radius:999px;
-  background:#DCE5EF;
+  background:var(--m221-text-soft);
   transform-origin:center;
   transition:transform .18s ease,opacity .14s ease,top .18s ease;
 }
@@ -211,7 +211,7 @@
 .m221-mobile-panel>a:hover,
 .m221-mobile-panel>a:focus-visible,
 .m221-mobile-panel>a[data-active="true"]{
-  color:#F5F7FA;
+  color:var(--m221-text);
   background:rgba(63,230,168,.055);
 }
 .m221-mobile-panel>a:last-of-type{color:#FFE16A}
@@ -258,7 +258,7 @@
 .m221-nutrition-local-nav a span,
 .m221-open-local-nav a span,
 .m221-facts-local-nav a span{
-  color:#46556C;
+  color:var(--m221-muted-faint);
   font-size:.56rem;
 }
 .m221-sports-local-nav a:after,
@@ -277,19 +277,19 @@
 .m221-nutrition-local-nav a:hover,
 .m221-open-local-nav a:hover,
 .m221-facts-local-nav a:hover{
-  color:#F5F7FA;
+  color:var(--m221-text);
   background:rgba(255,255,255,.018);
 }
 .m221-sports-local-nav a[aria-current="true"],
 .m221-nutrition-local-nav a[aria-current="true"],
 .m221-open-local-nav a[aria-current="true"],
-.m221-facts-local-nav a[aria-current="true"]{color:#F5F7FA}
-.m221-sports-local-nav a[aria-current="true"] span{color:var(--sports-cyan,#3FE6A8)}
-.m221-sports-local-nav a[aria-current="true"]:after{background:var(--sports-cyan,#3FE6A8)}
-.m221-nutrition-local-nav a[aria-current="true"] span{color:var(--nutrition-yellow,#FFC300)}
-.m221-nutrition-local-nav a[aria-current="true"]:after{background:var(--nutrition-yellow,#FFC300)}
-.m221-open-local-nav a[aria-current="true"] span{color:var(--open-accent,var(--open-cyan,#3FE6A8))}
-.m221-open-local-nav a[aria-current="true"]:after{background:var(--open-accent,var(--open-cyan,#3FE6A8))}
+.m221-facts-local-nav a[aria-current="true"]{color:var(--m221-text)}
+.m221-sports-local-nav a[aria-current="true"] span{color:var(--sports-cyan,var(--m221-data-end))}
+.m221-sports-local-nav a[aria-current="true"]:after{background:var(--sports-cyan,var(--m221-data-end))}
+.m221-nutrition-local-nav a[aria-current="true"] span{color:var(--nutrition-yellow,var(--m221-accent-yellow))}
+.m221-nutrition-local-nav a[aria-current="true"]:after{background:var(--nutrition-yellow,var(--m221-accent-yellow))}
+.m221-open-local-nav a[aria-current="true"] span{color:var(--open-accent,var(--open-cyan,var(--m221-data-end)))}
+.m221-open-local-nav a[aria-current="true"]:after{background:var(--open-accent,var(--open-cyan,var(--m221-data-end)))}
 .m221-facts-local-nav a[aria-current="true"] span{color:var(--facts-accent,#69D8C0)}
 .m221-facts-local-nav a[aria-current="true"]:after{background:var(--facts-accent,#69D8C0)}
 .m221-sports-page [id],
@@ -353,12 +353,12 @@
   }
   .m221-v4-spine a:hover,
   .m221-v4-spine a[aria-current="true"]{color:var(--m221-text)}
-  .m221-v4-spine a[aria-current="true"]:after{background:#3FE6A8}
+  .m221-v4-spine a[aria-current="true"]:after{background:var(--m221-data-end)}
   .m221-v4-spine a span:first-child{
     color:#556177;
     font:600 .54rem/1 'IBM Plex Mono',monospace;
   }
-  .m221-v4-spine a[aria-current="true"] span:first-child{color:#3FE6A8}
+  .m221-v4-spine a[aria-current="true"] span:first-child{color:var(--m221-data-end)}
   .m221-v4-spine a span:last-child{
     min-width:0;
     overflow:hidden;
@@ -378,7 +378,7 @@
   border-top:1px solid rgba(255,255,255,.08);
   background:
     radial-gradient(circle at 88% 12%,rgba(0,191,214,.09),transparent 0 24%),
-    #070C17;
+    var(--m221-bg-deep);
 }
 .m221-footer:before{
   content:"M221";
@@ -429,7 +429,7 @@
   justify-content:space-between;
   padding:0 4px;
   border-bottom:1px solid rgba(255,255,255,.08);
-  color:#AEB6C2;
+  color:var(--m221-muted);
   text-decoration:none;
   font:600 .71rem/1 'IBM Plex Mono',monospace;
   letter-spacing:.02em;
@@ -442,14 +442,14 @@
   border-left:1px solid rgba(255,255,255,.08);
 }
 .m221-footer-links a:hover{
-  color:#F5F7FA;
+  color:var(--m221-text);
   background:rgba(255,255,255,.025);
 }
 .m221-footer-links .m221-footer-linkedin{
   grid-column:1/-1;
   padding-inline:4px;
   border-left:0;
-  color:#3FE6A8;
+  color:var(--m221-data-end);
 }
 .m221-footer-linkedin span{font-size:.9rem}
 .m221-footer-meta{
@@ -459,7 +459,7 @@
   gap:20px;
   padding:16px 0 20px;
   border-top:1px solid rgba(255,255,255,.07);
-  color:#566378;
+  color:var(--m221-muted-dim);
   font:500 .57rem/1.4 'IBM Plex Mono',monospace;
   letter-spacing:.045em;
   text-transform:uppercase;
