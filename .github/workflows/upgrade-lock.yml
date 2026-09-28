@@ -1,0 +1,54 @@
+name: Refresh dependency lock
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - "package.json"
+      - ".github/workflows/upgrade-lock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lock-audit-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staging
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+
+      - name: Refresh lockfile
+        run: npm install --package-lock-only
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Audit high severity dependencies
+        run: npm audit --audit-level=high
+
+      - name: Verify production build
+        run: npm run build
+
+      - name: Commit refreshed lockfile
+        shell: bash
+        run: |
+          git add package-lock.json
+          if git diff --cached --quiet; then
+            echo "package-lock.json is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh npm lockfile for Astro 7 [skip ci]"
+          git pull --rebase origin staging
+          git push origin HEAD:staging
